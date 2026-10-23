@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Campus — Course registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Campus home"><span class="brand-mark" aria-hidden="true">c</span><span>campus<span class="brand-period">.</span></span></a>
+      <div class="term-chip"><span class="live-dot" aria-hidden="true"></span> FALL 2025 <span class="term-divider">·</span> REGISTRATION OPEN</div>
+      <p class="nav-label">YOUR CAMPUS</p>
+      <nav class="primary-nav">
+        <a href="#home" class="nav-link active" data-page="home"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a href="#courses" class="nav-link" data-page="courses"><span class="nav-icon" aria-hidden="true">▤</span>Course catalog<span class="nav-count">48</span></a>
+        <a href="#registration" class="nav-link" data-page="registration"><span class="nav-icon" aria-hidden="true">＋</span>Registration</a>
+        <a href="#profile" class="nav-link" data-page="profile"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon" aria-hidden="true">✳</div><strong>Need a hand?</strong><p>Your academic advisor is just a message away.</p><a href="mailto:advisor@campus.edu">Contact advisor <span aria-hidden="true">↗</span></a></div>
+        <div class="sidebar-user"><div class="avatar avatar-small">JD</div><div><strong>Jamie Davidson</strong><span>Undergraduate</span></div><button class="more-button" aria-label="More account options">···</button></div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumbs"><span>Student portal</span><span aria-hidden="true">/</span><strong id="crumb-current">Overview</strong></div>
+        <div class="topbar-actions"><span class="term-label">Fall semester <span aria-hidden="true">⌄</span></span><button class="icon-button notification-button" aria-label="Notifications, 2 unread"><span aria-hidden="true">♧</span><i></i></button><div class="avatar avatar-top" aria-label="Jamie Davidson">JD</div></div>
+      </header>
+      <main id="main" tabindex="-1">
+        <section class="page active" id="page-home" aria-labelledby="home-title">
+          <div class="welcome-row"><div><p class="eyebrow">MONDAY, AUGUST 18, 2025 <span class="sun-icon" aria-hidden="true">✳</span></p><h1 id="home-title">Good morning, Jamie<span class="heading-dot">.</span></h1><p class="muted intro">A new semester is just around the corner. Ready to make it yours?</p></div><a class="button button-primary" href="#courses">Explore courses <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-card"><div class="hero-copy"><span class="hero-kicker"><span aria-hidden="true">✦</span> FALL 2025 REGISTRATION</span><h2>Your next chapter<br>starts <em>here.</em></h2><p>Shape a semester that moves you forward. Browse 48 courses and find your next favorite class.</p><a href="#courses" class="button button-light">Find your courses <span aria-hidden="true">→</span></a></div><div class="hero-art" aria-hidden="true"><div class="art-sun"></div><div class="art-book book-one"></div><div class="art-book book-two"></div><div class="art-book book-three"></div><div class="art-plant">✳</div><div class="art-sticker">YOUR<br>TIME TO<br><b>GROW</b> ✦</div><div class="art-star star-one">✳</div><div class="art-star star-two">✦</div></div><div class="hero-index">01 <span></span> 03</div></div>
+          <div class="section-heading"><div><p class="eyebrow">YOUR SEMESTER AT A GLANCE</p><h2>Let’s get organized</h2></div><a class="text-link" href="#registration">View registration <span aria-hidden="true">→</span></a></div>
+          <div class="stats-grid"><article class="stat-card stat-lilac"><div class="stat-top"><span>Registered credits</span><span class="stat-icon" aria-hidden="true">◷</span></div><div class="stat-number"><span id="stat-credits">12</span><small>/ 18</small></div><div class="progress-track" role="progressbar" aria-label="Registered credits" aria-valuenow="12" aria-valuemin="0" aria-valuemax="18"><span id="credit-progress" style="width:67%"></span></div><p>6 credits left to your max</p></article><article class="stat-card stat-peach"><div class="stat-top"><span>Courses enrolled</span><span class="stat-icon" aria-hidden="true">▤</span></div><div class="stat-number"><span id="stat-courses">4</span><small> classes</small></div><p class="stat-note"><span aria-hidden="true">✦</span> Looking good, Jamie!</p></article><article class="stat-card stat-mint"><div class="stat-top"><span>Registration closes</span><span class="stat-icon" aria-hidden="true">◷</span></div><div class="stat-number">Aug 29</div><p class="stat-note"><span aria-hidden="true">↗</span> 11 days to finalize</p></article></div>
+          <div class="lower-grid"><section class="panel schedule-panel"><div class="panel-heading"><div><p class="eyebrow">COMING UP</p><h2>Your week</h2></div><button class="icon-button" aria-label="View full schedule">↗</button></div><div class="week-days"><span>MON<small>18</small></span><span class="day-active">TUE<small>19</small></span><span>WED<small>20</small></span><span>THU<small>21</small></span><span>FRI<small>22</small></span></div><div class="empty-schedule"><span class="empty-spark" aria-hidden="true">✳</span><div><strong>Your Tuesday is wide open</strong><p>Classes for fall start September 2.</p></div></div></section><section class="panel deadline-panel"><p class="eyebrow">DON’T FORGET</p><h2>On your radar</h2><div class="deadline-item"><span class="deadline-date">AUG<b>29</b></span><div><strong>Course registration closes</strong><p>Fall semester · 11 days left</p></div><span class="deadline-arrow" aria-hidden="true">↗</span></div><div class="deadline-item"><span class="deadline-date date-teal">SEP<b>02</b></span><div><strong>First day of classes</strong><p>Fall semester · 15 days left</p></div><span class="deadline-arrow" aria-hidden="true">↗</span></div></section></div>
+        </section>
+
+        <section class="page" id="page-courses" aria-labelledby="courses-title" hidden>
+          <div class="page-heading"><div><p class="eyebrow">FALL SEMESTER · 2025</p><h1 id="courses-title">Find your next class<span class="heading-dot">.</span></h1><p class="muted">Good courses make a good semester. Let’s find yours.</p></div><div class="catalog-count"><strong id="result-count">6</strong><span>courses to explore</span></div></div>
+          <div class="catalog-tools"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search courses</span><input id="search-input" type="search" placeholder="Search by course, subject, or instructor…"><kbd>⌘ K</kbd></label><label class="filter-wrap"><span class="sr-only">Filter by subject</span><select id="subject-filter"><option value="all">All subjects</option><option value="Design">Design</option><option value="Computer Science">Computer science</option><option value="Psychology">Psychology</option><option value="Business">Business</option><option value="Biology">Biology</option></select></label><label class="filter-wrap"><span class="sr-only">Filter by credits</span><select id="credits-filter"><option value="all">Any credits</option><option value="3">3 credits</option><option value="4">4 credits</option></select></label></div>
+          <div class="catalog-subhead"><span>Showing <strong id="showing-count">6 courses</strong></span><button class="sort-button" id="sort-button">Recommended <span aria-hidden="true">⌄</span></button></div><div class="course-grid" id="course-grid" aria-live="polite"></div><div class="no-results" id="no-results" hidden><span aria-hidden="true">⌕</span><h2>No courses found</h2><p>Try another search or clear your filters.</p><button class="button button-outline" id="clear-filters">Clear filters</button></div>
+        </section>
+
+        <section class="page" id="page-registration" aria-labelledby="registration-title" hidden>
+          <div class="page-heading"><div><p class="eyebrow">FALL SEMESTER · 2025</p><h1 id="registration-title">Your registration<span class="heading-dot">.</span></h1><p class="muted">You’re building a good one. Keep it up.</p></div><button class="button button-primary" id="add-course-button">＋ Add a course</button></div>
+          <div class="registration-summary"><div class="summary-main"><div class="summary-icon" aria-hidden="true">✦</div><div><span class="eyebrow">YOUR CURRENT LOAD</span><strong><span id="registered-credits">12</span> credits <span class="summary-slash">/ 18 max</span></strong></div></div><div class="summary-track"><div class="progress-track" role="progressbar" aria-label="Credit limit progress" aria-valuenow="12" aria-valuemin="0" aria-valuemax="18"><span id="registration-progress" style="width:67%"></span></div><span id="credits-remaining">6 credits remaining</span></div></div>
+          <section class="table-panel"><div class="table-heading"><div><p class="eyebrow">YOUR FALL SCHEDULE</p><h2>Registered courses <span class="table-badge" id="table-course-count">4</span></h2></div><button class="button button-outline button-small" id="download-button">↓ <span>Download schedule</span></button></div><div class="table-scroll"><table><caption class="sr-only">Your courses registered for Fall 2025</caption><thead><tr><th scope="col">COURSE</th><th scope="col">INSTRUCTOR</th><th scope="col">SCHEDULE</th><th scope="col">CREDITS</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="registered-table"></tbody></table><div class="table-empty" id="table-empty" hidden><span aria-hidden="true">✳</span><strong>No courses yet</strong><p>Add a course to start building your schedule.</p></div></div><div class="table-footer"><span id="table-footer-count">Showing 4 courses</span><span>Last updated just now <span class="green-check" aria-hidden="true">✓</span></span></div></section>
+          <div class="registration-note"><span aria-hidden="true">✳</span><p><strong>A little reminder</strong> — Changes to your schedule are saved automatically. You can adjust your courses until August 29.</p></div>
+        </section>
+
+        <section class="page" id="page-profile" aria-labelledby="profile-title" hidden>
+          <div class="page-heading"><div><p class="eyebrow">YOUR CAMPUS ID</p><h1>Student profile<span class="heading-dot">.</span></h1><p class="muted">Your details, all in one place.</p></div><button class="button button-outline" id="edit-profile">Edit profile <span aria-hidden="true">↗</span></button></div>
+          <section class="profile-card"><div class="profile-banner"><div class="profile-orbit orbit-one"></div><div class="profile-orbit orbit-two"></div><span>CLASS OF 2027 <span aria-hidden="true">✦</span></span></div><div class="profile-content"><div class="avatar avatar-large">JD</div><div class="profile-name"><h2>Jamie Davidson</h2><p>They / Them <span>·</span> Undergraduate</p></div><span class="profile-status"><i></i> Active student</span><div class="profile-details"><div><span>STUDENT ID</span><strong>U00284731</strong></div><div><span>EMAIL ADDRESS</span><strong>jamie.davidson@campus.edu</strong></div><div><span>MAJOR</span><strong>Communication Design</strong></div><div><span>MINOR</span><strong>Psychology</strong></div><div><span>ACADEMIC YEAR</span><strong>Junior · Year 3</strong></div><div><span>ACADEMIC ADVISOR</span><strong>Morgan Lee <a href="mailto:morgan.lee@campus.edu">↗</a></strong></div></div></div></section>
+          <div class="profile-lower"><section class="panel"><p class="eyebrow">YOUR ACADEMIC JOURNEY</p><h2>Making good progress</h2><div class="degree-progress"><div><strong>72%</strong><span>degree completed</span></div><div class="degree-bar"><span></span></div><p>88 of 122 credits completed</p></div></section><section class="panel profile-contact"><p class="eyebrow">HERE FOR YOU</p><h2>Say hello to Morgan</h2><p>Your advisor can help with course planning, degree requirements, and anything in between.</p><a href="mailto:morgan.lee@campus.edu" class="text-link">Email your advisor <span aria-hidden="true">→</span></a></section></div>
+        </section>
+      </main>
+      <footer class="footer"><span>© 2025 Campus University</span><div><a href="#help">Help center</a><a href="#accessibility">Accessibility</a><a href="#privacy">Privacy</a></div></footer>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="confirm-modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" tabindex="-1"><button class="modal-close" id="modal-close" aria-label="Close dialog">×</button><div class="modal-illustration" aria-hidden="true">✳</div><p class="eyebrow">ONE STEP CLOSER</p><h2 id="modal-title">Add this course?</h2><p id="modal-description">You’re about to add <strong id="modal-course-name">this course</strong> to your Fall 2025 schedule.</p><div class="modal-course-summary" id="modal-course-summary"></div><div class="modal-actions"><button class="button button-outline" id="modal-cancel">Take another look</button><button class="button button-primary" id="modal-confirm">Yes, add course <span aria-hidden="true">→</span></button></div></section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174b45">
+  <title>Course registration | Northstar University</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Northstar University, home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-name">NORTHSTAR <small>UNIVERSITY</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation menu</span><span aria-hidden="true">☰</span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="#home" data-route="home">Home</a>
+        <a href="#catalog" data-route="catalog">Course catalog</a>
+        <a href="#registration" data-route="registration">Registration</a>
+        <a href="#profile" data-route="profile">My profile</a>
+      </nav>
+      <div class="term-chip"><span class="status-dot" aria-hidden="true"></span> Fall 2026</div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page active" id="page-home" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1 id="home-title">Make this semester <span>count.</span></h1>
+          <p class="hero-description">Explore courses, build your schedule, and get ready for a semester full of possibility.</p>
+          <a class="button button-light" href="#catalog">Explore the course catalog <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="art-card card-one">✳</div><div class="art-card card-two">✦</div><div class="art-ring"></div><div class="art-caption">LEARN<br>WHAT'S NEXT</div></div>
+        <div class="hero-note"><span aria-hidden="true">✦</span> Registration is open <strong>through August 28</strong></div>
+      </div>
+      <div class="content-wrap">
+        <div class="section-heading"><div><p class="eyebrow">A GOOD PLACE TO BEGIN</p><h2>Find your next favorite class</h2></div><a class="text-link" href="#catalog">View all courses <span aria-hidden="true">→</span></a></div>
+        <div class="feature-grid" id="featured-courses"></div>
+        <section class="registered-preview" aria-labelledby="preview-title"><div><p class="eyebrow">YOUR SEMESTER</p><h2 id="preview-title">Ready when you are</h2><p>Keep track of your classes and make sure your schedule works for you.</p></div><a class="button button-dark" href="#registration">Manage registration <span aria-hidden="true">→</span></a></section>
+      </div>
+    </section>
+
+    <section class="page content-wrap" id="page-catalog" aria-labelledby="catalog-title" hidden>
+      <div class="page-heading"><div><p class="eyebrow">FALL 2026 · COURSE CATALOG</p><h1 id="catalog-title">Find your <span>curiosity.</span></h1><p>Discover classes taught by people who love what they do.</p></div><div class="heading-decoration" aria-hidden="true">✳</div></div>
+      <div class="catalog-tools">
+        <div class="search-wrap"><label for="course-search">Search courses</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="course-search" type="search" placeholder="Try a title, subject, or instructor"><button id="clear-search" type="button" aria-label="Clear course search">×</button></div></div>
+        <div class="filter-wrap"><label for="subject-filter">Subject</label><select id="subject-filter"><option value="all">All subjects</option></select></div>
+        <div class="filter-wrap"><label for="format-filter">Format</label><select id="format-filter"><option value="all">Any format</option><option value="In person">In person</option><option value="Hybrid">Hybrid</option><option value="Online">Online</option></select></div>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="course-grid" id="catalog-courses"></div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h2>No courses found</h2><p>Try a different search or clear your filters.</p></div>
+    </section>
+
+    <section class="page content-wrap" id="page-registration" aria-labelledby="registration-title" hidden>
+      <div class="page-heading compact"><div><p class="eyebrow">MAKE IT OFFICIAL</p><h1 id="registration-title">Your <span>registration.</span></h1><p>Choose a course and tell us how to reach you.</p></div><div class="heading-decoration" aria-hidden="true">✦</div></div>
+      <div class="registration-layout">
+        <form id="registration-form" novalidate>
+          <fieldset class="form-panel"><legend><span class="step-number">01</span> Choose a course</legend>
+            <div class="field"><label for="registration-course">Course <span class="required">(required)</span></label><select id="registration-course" name="course" required aria-describedby="course-error"><option value="">Select a course</option></select><p class="error-message" id="course-error" hidden></p></div>
+            <div class="field-row"><div class="field"><label for="student-name">Full name <span class="required">(required)</span></label><input id="student-name" name="name" autocomplete="name" required aria-describedby="name-error"><p class="error-message" id="name-error" hidden></p></div><div class="field"><label for="student-email">University email <span class="required">(required)</span></label><input id="student-email" name="email" type="email" autocomplete="email" placeholder="you@northstar.edu" required aria-describedby="email-error"><p class="error-message" id="email-error" hidden></p></div></div>
+            <div class="field"><label for="student-id">Student ID <span class="required">(required)</span></label><input id="student-id" name="studentId" inputmode="numeric" autocomplete="off" placeholder="e.g. 20261234" required aria-describedby="id-hint id-error"><span class="field-hint" id="id-hint">Enter your 8-digit university ID.</span><p class="error-message" id="id-error" hidden></p></div>
+            <div class="field checkbox-field"><input id="terms" name="terms" type="checkbox" required aria-describedby="terms-error"><label for="terms">I confirm that my information is accurate and I meet the course prerequisites.</label><p class="error-message" id="terms-error" hidden></p></div>
+            <button class="button button-dark submit-button" type="submit">Review registration <span aria-hidden="true">→</span></button>
+          </fieldset>
+        </form>
+        <aside class="schedule-panel" aria-labelledby="schedule-title"><div class="schedule-top"><p class="eyebrow">YOUR SCHEDULE</p><h2 id="schedule-title">Registered courses</h2><span class="schedule-count" id="schedule-count">0 courses</span></div><div class="table-wrap"><table><caption class="sr-only">Your registered courses for Fall 2026</caption><thead><tr><th scope="col">Course</th><th scope="col">Schedule</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="registered-courses"></tbody></table></div><p class="table-empty" id="table-empty">Your schedule is ready for its first class.</p><p class="schedule-footnote"><span aria-hidden="true">✦</span> You can adjust your schedule until August 28.</p></aside>
+      </div>
+    </section>
+
+    <section class="page content-wrap" id="page-profile" aria-labelledby="profile-title" hidden>
+      <div class="page-heading compact"><div><p class="eyebrow">YOUR NORTHSTAR</p><h1 id="profile-title">Student <span>profile.</span></h1><p>Your information, all in one place.</p></div><div class="heading-decoration" aria-hidden="true">✿</div></div>
+      <div class="profile-layout"><section class="profile-card" aria-labelledby="profile-name"><div class="avatar" aria-hidden="true">JM</div><p class="eyebrow">UNDERGRADUATE STUDENT</p><h2 id="profile-name">Jordan Morgan</h2><p class="profile-major">Environmental Studies · Class of 2027</p><div class="profile-rule"></div><dl class="profile-details"><div><dt>Student ID</dt><dd>20261234</dd></div><div><dt>University email</dt><dd><a href="mailto:jordan.morgan@northstar.edu">jordan.morgan@northstar.edu</a></dd></div><div><dt>Academic advisor</dt><dd>Dr. Avery Chen</dd></div><div><dt>Current term</dt><dd>Fall 2026</dd></div></dl><a class="button button-outline" href="#registration">Register for a course <span aria-hidden="true">→</span></a></section><section class="profile-side"><div class="profile-callout"><span aria-hidden="true">✳</span><div><p class="eyebrow">A LITTLE REMINDER</p><h2>You're building something great.</h2><p>Every class is a chance to follow a new question. Keep going.</p></div></div><h2 class="profile-side-title">Your academic journey</h2><div class="journey-item"><span class="journey-icon">01</span><div><strong>Environmental Studies</strong><p>School of Earth &amp; Society</p></div><span class="journey-status">IN PROGRESS</span></div><div class="journey-item"><span class="journey-icon">✦</span><div><strong>Fall 2026 registration</strong><p><span id="profile-course-count">0 courses</span> on your schedule</p></div><a href="#registration" aria-label="View your registered courses">→</a></div></section></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">N</span><span class="brand-name">NORTHSTAR <small>UNIVERSITY</small></span></a><p>Find your way forward.</p><span>© 2026 Northstar University</span></div></footer>
+
+  <dialog id="confirmation-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"><div class="dialog-content"><button class="dialog-close" type="button" aria-label="Close confirmation">×</button><div class="dialog-icon" aria-hidden="true">✦</div><p class="eyebrow">LOOKING GOOD</p><h2 id="dialog-title">Ready to join the class?</h2><p id="dialog-description">Review your registration details before adding this course to your schedule.</p><dl class="confirmation-details" id="confirmation-details"></dl><div class="dialog-actions"><button class="button button-outline" id="edit-registration" type="button">Go back and edit</button><button class="button button-dark" id="confirm-registration" type="button">Confirm registration <span aria-hidden="true">→</span></button></div></div></dialog>
+  <div class="sr-only" id="status-message" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
