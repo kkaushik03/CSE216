@@ -12,7 +12,7 @@ case "$ASSISTANT" in
   claude)
     version="$(claude --version)"
     cmd=(claude -p "$prompt" --model "$MODEL" --dangerously-skip-permissions
-         --output-format stream-json --verbose) ;;
+         --strict-mcp-config --output-format stream-json --verbose) ;;
   codex)
     version="$(codex --version)"
     if [[ -f /input/codex-auth.json ]]; then
@@ -28,7 +28,7 @@ case "$ASSISTANT" in
   copilot)
     version="$(copilot --version | head -1)"
     cmd=(copilot -p "$prompt" --model "$MODEL" --allow-all --no-auto-update
-         --output-format json) ;;
+         --disable-builtin-mcps --output-format json) ;;
   *) echo "Unknown assistant: $ASSISTANT" >&2; exit 2 ;;
 esac
 
