@@ -39,11 +39,14 @@ status=$?
 set -e
 end="$(date -u +%FT%TZ)"
 
+# Record the model that actually answered (differs from $MODEL when it is "auto").
+resolved_model="$(jq -r 'select(.type=="session.auto_mode_resolved") | .data.chosenModel' /out/transcript.jsonl 2>/dev/null | head -1)"
+
 # Keep the generated site. Drop git data and installed packages (reinstall them from the lockfile).
 mkdir -p /out/site
 tar -C /work --exclude=.git --exclude=node_modules -cf - . | tar -C /out/site -xf -
 
-jq -n --arg assistant "$ASSISTANT" --arg cli_version "$version" --arg model "$MODEL" \
+jq -n --arg assistant "$ASSISTANT" --arg cli_version "$version" --arg model "$MODEL" --arg resolved_model "${resolved_model:-$MODEL}" \
       --argjson level "$LEVEL" --arg run "$RUN" --arg runner "$RUNNER" \
       --arg arch "$(uname -m)" --arg repo_commit "$REPO_COMMIT" --arg prompt_sha256 "$PROMPT_SHA" \
       --arg start "$start" --arg end "$end" --argjson exit_code "$status" \

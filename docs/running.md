@@ -52,7 +52,7 @@ The runner writes to `results/<assistant>/L<level>/run-<NN>/`:
 | `site/` | The generated website, without `.git` and `node_modules`. |
 | `transcript.jsonl` | Full log of the assistant session. |
 | `stderr.log` | Errors from the assistant CLI. |
-| `meta.json` | CLI version, model, level, run, your name, CPU architecture, repo commit (it pins `env/` and `prompts/`), prompt hash, start and end time, exit code. |
+| `meta.json` | CLI version, model (and `resolved_model` if the model is `auto`), level, run, your name, CPU architecture, repo commit (it pins `env/` and `prompts/`), prompt hash, start and end time, exit code. |
 
 ## Push your results
 
