@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f7ff">
+    <title>Campusly — Course registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#home" aria-label="Campusly home">
+          <span class="brand-mark" aria-hidden="true">c</span>
+          <span>campusly<span class="brand-dot">.</span></span>
+        </a>
+        <div class="term-card">
+          <span class="eyebrow">CURRENT TERM</span>
+          <strong>Fall semester</strong>
+          <span>September – December 2026</span>
+          <span class="term-progress"><i></i></span>
+          <span class="term-note">Registration closes in <b>12 days</b></span>
+        </div>
+        <span class="nav-label">YOUR CAMPUS</span>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-page="home"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-link" data-page="catalog"><span class="nav-icon">▤</span>Course catalog<span class="nav-count">24</span></button>
+          <button class="nav-link" data-page="registration"><span class="nav-icon">▣</span>My registration</button>
+          <button class="nav-link" data-page="profile"><span class="nav-icon">♙</span>Student profile</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <span class="help-sparkle">✦</span>
+            <strong>Need a little help?</strong>
+            <p>Your academic advisor is just a message away.</p>
+            <a href="mailto:advising@northstar.edu">Contact advising <span>↗</span></a>
+          </div>
+          <button class="student-mini" data-page="profile">
+            <span class="avatar avatar-small">JD</span>
+            <span><strong>Jamie Davis</strong><small>Class of 2027</small></span>
+            <span class="mini-more">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+          <div class="breadcrumb">Northstar University <span>/</span> <b id="breadcrumb-current">Overview</b></div>
+          <div class="topbar-actions">
+            <span class="semester-pill"><i></i> Fall 2026</span>
+            <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+            <button class="topbar-profile" data-page="profile"><span class="avatar avatar-tiny">JD</span><span>Jamie Davis</span><span class="chevron">⌄</span></button>
+          </div>
+        </header>
+
+        <section class="page active" id="page-home" aria-labelledby="home-title">
+          <div class="welcome-row">
+            <div>
+              <div class="date-line"><span class="sun-icon">☼</span> MONDAY, AUGUST 24, 2026</div>
+              <h1 id="home-title">Good morning, Jamie <span class="wave">✦</span></h1>
+              <p class="page-subtitle">Your next big semester starts with one good choice.</p>
+            </div>
+            <button class="button button-primary" data-page="catalog"><span>＋</span> Explore courses</button>
+          </div>
+
+          <div class="hero-banner">
+            <div class="hero-copy">
+              <span class="hero-kicker"><span>✦</span> YOUR NEXT CHAPTER</span>
+              <h2>A semester full of<br>possibilities awaits.</h2>
+              <p>Build a schedule that brings your goals to life. Your fall registration is open now.</p>
+              <button class="button button-light" data-page="catalog">Find your next favorite class <span>→</span></button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <div class="art-book book-back"></div><div class="art-book book-front"></div>
+              <div class="art-sun"></div><div class="art-star">✳</div><div class="art-spark">✦</div>
+              <div class="art-caption">make it<br>your semester</div>
+            </div>
+            <span class="hero-confetti confetti-one">✳</span><span class="hero-confetti confetti-two">✦</span>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card stat-lilac">
+              <div class="stat-top"><span>REGISTERED CREDITS</span><span class="stat-icon">◉</span></div>
+              <strong id="credit-count">9 <small>/ 18</small></strong>
+              <div class="stat-bottom"><span class="progress-track"><i id="credit-progress"></i></span><span>Halfway there!</span></div>
+            </article>
+            <article class="stat-card stat-peach">
+              <div class="stat-top"><span>CLASSES THIS TERM</span><span class="stat-icon">▤</span></div>
+              <strong id="class-count">3</strong>
+              <div class="stat-bottom"><span class="stat-dot peach-dot"></span><span>Across 3 departments</span></div>
+            </article>
+            <article class="stat-card stat-mint">
+              <div class="stat-top"><span>REGISTRATION STATUS</span><span class="stat-icon">✓</span></div>
+              <strong class="status-text">On track</strong>
+              <div class="stat-bottom"><span class="stat-dot mint-dot"></span><span>You're all set to enroll</span></div>
+            </article>
+          </div>
+
+          <div class="section-heading">
+            <div><span class="eyebrow">HANDPICKED FOR YOU</span><h2>Courses to get you inspired</h2></div>
+            <button class="text-link" data-page="catalog">Browse all courses <span>→</span></button>
+          </div>
+          <div class="course-grid featured-grid" id="featured-courses"></div>
+          <div class="home-bottom">
+            <div class="tip-card"><span class="tip-icon">✦</span><div><b>A little planning goes a long way</b><p>Meet with your advisor to make sure every course gets you closer to your goals.</p></div><span class="tip-arrow">↗</span></div>
+            <div class="deadline-card"><span class="deadline-icon">◷</span><div><span class="eyebrow">COMING UP</span><b>Last day to add classes</b><small>September 4, 2026 <span>·</span> 11 days left</small></div></div>
+          </div>
+        </section>
+
+        <section class="page" id="page-catalog" aria-labelledby="catalog-title">
+          <div class="page-heading">
+            <div><div class="date-line">YOUR NEXT GREAT CLASS</div><h1 id="catalog-title">Course catalog<span class="heading-period">.</span></h1><p class="page-subtitle">Find a class that fits your curiosity and your schedule.</p></div>
+            <div class="catalog-count"><strong id="catalog-count">8</strong><span>courses<br>available</span></div>
+          </div>
+          <div class="catalog-toolbar">
+            <label class="search-box"><span>⌕</span><input type="search" id="course-search" placeholder="Search by course, topic, or instructor..." aria-label="Search courses"><kbd>⌘ K</kbd></label>
+            <label class="select-wrap"><span class="sr-only">Filter by department</span><select id="department-filter"><option value="all">All departments</option></select><span class="select-arrow">⌄</span></label>
+            <label class="select-wrap"><span class="sr-only">Filter by schedule</span><select id="schedule-filter"><option value="all">Any schedule</option><option value="MWF">Mon / Wed / Fri</option><option value="TR">Tue / Thu</option><option value="online">Online</option></select><span class="select-arrow">⌄</span></label>
+          </div>
+          <div class="filter-tags"><span class="filter-label">POPULAR:</span><button data-search-tag="design">Design</button><button data-search-tag="data">Data science</button><button data-search-tag="writing">Writing</button><span class="filter-result" id="filter-result"></span></div>
+          <div class="course-grid catalog-grid" id="catalog-courses"></div>
+          <div class="empty-state" id="empty-state" hidden><span>✦</span><h3>No courses found just yet</h3><p>Try a different search or clear your filters.</p><button class="button button-outline" id="clear-filters">Clear filters</button></div>
+        </section>
+
+        <section class="page" id="page-registration" aria-labelledby="registration-title">
+          <div class="page-heading">
+            <div><div class="date-line">YOUR FALL 2026 SCHEDULE</div><h1 id="registration-title">My registration<span class="heading-period">.</span></h1><p class="page-subtitle">Keep your semester organized, one class at a time.</p></div>
+            <button class="button button-primary" data-page="catalog"><span>＋</span> Add a course</button>
+          </div>
+          <div class="registration-summary">
+            <div class="registration-summary-icon">▣</div><div><span class="eyebrow">YOUR CURRENT LOAD</span><strong><span id="registration-credits">9</span> credits <i>·</i> <span id="registration-course-count">3</span> courses</strong></div>
+            <span class="summary-spacer"></span><span class="load-label">Full-time status</span><span class="fulltime-badge">✓ Full time</span>
+          </div>
+          <div class="table-card">
+            <div class="table-header"><div><h2>Registered courses</h2><p>Your confirmed classes for this semester</p></div><button class="button button-outline button-small" id="download-schedule">↓ <span>Download schedule</span></button></div>
+            <div class="table-scroll"><table><thead><tr><th>COURSE</th><th>INSTRUCTOR</th><th>SCHEDULE</th><th>CREDITS</th><th>STATUS</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="registration-table"></tbody></table></div>
+            <div class="table-footer"><span>Showing <b id="table-course-count">3</b> registered courses</span><span>Need to make a change? <a href="mailto:registrar@northstar.edu">Contact the registrar</a></span></div>
+          </div>
+          <div class="registration-form-card">
+            <div class="form-intro"><span class="form-icon">✦</span><div><h2>Ready to add a class?</h2><p>Choose a course and we'll add it to your schedule.</p></div></div>
+            <form id="registration-form" class="registration-form">
+              <label class="form-field"><span>SELECT A COURSE</span><select id="course-select" required><option value="">Choose a course...</option></select></label>
+              <label class="form-field"><span>STUDENT NAME</span><input id="student-name" value="Jamie Davis" required></label>
+              <label class="form-field"><span>STUDENT EMAIL</span><input id="student-email" type="email" value="jamie.davis@northstar.edu" required></label>
+              <button class="button button-primary" type="submit">Confirm registration <span>→</span></button>
+            </form>
+          </div>
+        </section>
+
+        <section class="page" id="page-profile" aria-labelledby="profile-title">
+          <div class="page-heading">
+            <div><div class="date-line">A LITTLE ABOUT YOU</div><h1 id="profile-title">Student profile<span class="heading-period">.</span></h1><p class="page-subtitle">Your details, your goals, your next steps.</p></div>
+            <button class="button button-outline" id="edit-profile">✎ <span>Edit profile</span></button>
+          </div>
+          <div class="profile-hero">
+            <div class="profile-avatar">JD<span class="avatar-online"></span></div>
+            <div class="profile-identity"><span class="eyebrow">NORTHSTAR UNIVERSITY</span><h2>Jamie Davis</h2><p>Undergraduate student <span>·</span> Class of 2027</p></div>
+            <div class="profile-major"><span class="eyebrow">YOUR MAJOR</span><strong>Digital Media &amp; Design</strong><span class="major-badge">School of Arts &amp; Sciences</span></div>
+          </div>
+          <div class="profile-layout">
+            <div class="profile-details-card">
+              <div class="table-header"><div><h2>Personal information</h2><p>Keep your information up to date.</p></div><span class="verified-badge">✓ Verified</span></div>
+              <div class="details-grid">
+                <div><span>FULL NAME</span><b id="profile-name">Jamie Davis</b></div><div><span>STUDENT ID</span><b>NSU-204819</b></div>
+                <div><span>EMAIL ADDRESS</span><b id="profile-email">jamie.davis@northstar.edu</b></div><div><span>YEAR OF STUDY</span><b>Junior · Year 3</b></div>
+                <div><span>MAJOR</span><b>Digital Media &amp; Design</b></div><div><span>EXPECTED GRADUATION</span><b>May 2027</b></div>
+              </div>
+            </div>
+            <div class="advisor-card"><span class="advisor-spark">✳</span><span class="eyebrow">IN YOUR CORNER</span><h2>Your advisor</h2><div class="advisor-person"><span class="advisor-avatar">MR</span><div><b>Dr. Morgan Reed</b><small>Academic advisor</small></div></div><p>Questions about your schedule? Dr. Reed can help you map out your next steps.</p><a href="mailto:m.reed@northstar.edu" class="button button-light">Send a message <span>→</span></a></div>
+          </div>
+          <div class="profile-note"><span>✦</span><div><b>You're doing great, Jamie.</b><p>You're making steady progress toward your degree. Keep exploring classes that excite you.</p></div></div>
+        </section>
+
+        <footer class="page-footer"><span>© 2026 Northstar University</span><span>Made for the curious <i>✦</i></span><a href="mailto:registrar@northstar.edu">Help &amp; support</a></footer>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="confirmation-modal" hidden>
+      <section class="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="modal-close" aria-label="Close confirmation">×</button>
+        <div class="modal-check">✓</div><span class="eyebrow">YOU'RE OFFICIALLY IN</span>
+        <h2 id="modal-title">That's a great choice!</h2><p id="modal-message">Your course has been added to your fall schedule.</p>
+        <div class="modal-course" id="modal-course"></div>
+        <button class="button button-primary modal-done" id="modal-done">See my schedule <span>→</span></button>
+        <button class="modal-secondary" id="modal-continue">Keep exploring courses</button>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
