@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Course Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">UniReg System</div>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active" aria-current="page" data-target="home">Home</a></li>
+                <li><a href="#catalog" class="nav-item" data-target="catalog">Course Catalog</a></li>
+                <li><a href="#registration" class="nav-item" data-target="registration">Registration</a></li>
+                <li><a href="#profile" class="nav-item" data-target="profile">Student Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page active" aria-labelledby="home-heading">
+            <div class="hero">
+                <h1 id="home-heading">Welcome to the Course Registration System</h1>
+                <p>Easily browse available courses, register for the upcoming semester, and manage your student profile.</p>
+            </div>
+        </section>
+
+        <!-- Course Catalog Page -->
+        <section id="catalog" class="page" aria-labelledby="catalog-heading" hidden>
+            <h2 id="catalog-heading">Course Catalog</h2>
+            
+            <div class="search-filter-section">
+                <div class="form-group">
+                    <label for="searchInput">Search Courses</label>
+                    <input type="search" id="searchInput" placeholder="e.g., Introduction to Computer Science...">
+                </div>
+                <div class="form-group">
+                    <label for="departmentFilter">Filter by Department</label>
+                    <select id="departmentFilter">
+                        <option value="all">All Departments</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="math">Mathematics</option>
+                        <option value="art">Art & Design</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+            </div>
+
+            <div class="course-grid">
+                <article class="course-card">
+                    <h3>CS 101: Introduction to Programming</h3>
+                    <p><strong>Department:</strong> Computer Science</p>
+                    <p><strong>Credits:</strong> 4</p>
+                    <p>Learn the basics of computer programming using Python.</p>
+                </article>
+                <article class="course-card">
+                    <h3>MATH 201: Calculus I</h3>
+                    <p><strong>Department:</strong> Mathematics</p>
+                    <p><strong>Credits:</strong> 4</p>
+                    <p>Fundamental concepts of differential and integral calculus.</p>
+                </article>
+                <article class="course-card">
+                    <h3>ART 110: Art History</h3>
+                    <p><strong>Department:</strong> Art & Design</p>
+                    <p><strong>Credits:</strong> 3</p>
+                    <p>A survey of major artistic movements throughout history.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Registration Page -->
+        <section id="registration" class="page" aria-labelledby="registration-heading" hidden>
+            <h2 id="registration-heading">Course Registration</h2>
+            
+            <form id="registrationForm" class="registration-form" novalidate>
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="courseSelect">Select Course</label>
+                    <select id="courseSelect" required aria-required="true">
+                        <option value="">-- Please choose a course --</option>
+                        <option value="cs101">CS 101: Introduction to Programming</option>
+                        <option value="math201">MATH 201: Calculus I</option>
+                        <option value="art110">ART 110: Art History</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register for Course</button>
+            </form>
+        </section>
+
+        <!-- Student Profile Page -->
+        <section id="profile" class="page" aria-labelledby="profile-heading" hidden>
+            <h2 id="profile-heading">Student Profile</h2>
+            
+            <div class="profile-header">
+                <h3>Jane Doe</h3>
+                <p><strong>Student ID:</strong> 987654321</p>
+                <p><strong>Major:</strong> Computer Science</p>
+            </div>
+
+            <h3 id="table-heading">Registered Courses</h3>
+            <div class="table-container">
+                <table aria-labelledby="table-heading">
+                    <thead>
+                        <tr>
+                            <th scope="col">Course Code</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Credits</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS 101</td>
+                            <td>Introduction to Programming</td>
+                            <td>4</td>
+                            <td><span class="status enrolled">Enrolled</span></td>
+                        </tr>
+                        <tr>
+                            <td>MATH 201</td>
+                            <td>Calculus I</td>
+                            <td>4</td>
+                            <td><span class="status waitlisted">Waitlisted</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-content">
+            <h2 id="modal-title">Registration Successful</h2>
+            <p>You have successfully registered for the selected course. It has been added to your schedule.</p>
+            <button type="button" class="btn btn-secondary" id="closeModalBtn">Close Window</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
