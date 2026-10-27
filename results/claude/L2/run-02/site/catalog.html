@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search and filter all courses offered at Horizon University.">
+  <meta name="theme-color" content="#4338ca">
+  <title>Course Catalog | Horizon University Registration</title>
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="container nav-bar" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">🎓</span>
+        Horizon University
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        Menu
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html" aria-current="page">Course Catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">My Profile<span class="nav-badge" id="nav-reg-count" aria-hidden="true" hidden>0</span><span class="visually-hidden" id="nav-reg-count-label"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Course Catalog</h1>
+        <p>Search by keyword, then narrow results by department, level, and credit hours.</p>
+      </div>
+    </div>
+
+    <div class="section container">
+      <form class="filters" id="filter-form" role="search" aria-label="Filter courses">
+        <div class="field field-search">
+          <label for="search">Search courses</label>
+          <input type="search" id="search" name="q" placeholder="Title, code, instructor…" autocomplete="off" aria-describedby="search-hint">
+          <span class="hint" id="search-hint">Results update as you type.</span>
+        </div>
+        <div class="field">
+          <label for="filter-dept">Department</label>
+          <select id="filter-dept" name="dept">
+            <option value="">All departments</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-level">Course level</label>
+          <select id="filter-level" name="level">
+            <option value="">All levels</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-credits">Credits</label>
+          <select id="filter-credits" name="credits">
+            <option value="">Any credits</option>
+          </select>
+        </div>
+        <div class="filters-footer">
+          <label class="checkbox" for="filter-open">
+            <input type="checkbox" id="filter-open" name="open" value="1">
+            Show only courses with open seats
+          </label>
+          <div class="form-actions" style="margin:0">
+            <button type="submit" class="btn btn-primary btn-sm">Apply filters</button>
+            <button type="reset" class="btn btn-outline btn-sm">Reset filters</button>
+          </div>
+        </div>
+      </form>
+
+      <section aria-labelledby="results-title">
+        <h2 id="results-title" class="visually-hidden">Search results</h2>
+        <p class="results-count" id="results-count">Loading courses…</p>
+        <ul class="grid" id="course-list"></ul>
+        <div class="empty-state" id="no-results" hidden>
+          <p class="empty-state-icon" aria-hidden="true">🔍</p>
+          <h3>No courses match your search</h3>
+          <p>Try a different keyword or remove some filters.</p>
+          <button type="button" class="btn btn-primary" id="clear-filters">Clear all filters</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Horizon University · Office of the Registrar</p>
+      <ul class="footer-links">
+        <li><a href="catalog.html">Course Catalog</a></li>
+        <li><a href="mailto:registrar@horizon.edu">registrar@horizon.edu</a></li>
+        <li><a href="tel:+15555550123">(555) 555-0123</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Shared confirmation modal -->
+  <dialog class="modal" id="confirm-modal" aria-labelledby="modal-title" aria-describedby="modal-body">
+    <div class="modal-header">
+      <h2 id="modal-title">Confirm</h2>
+      <button type="button" class="modal-close" data-modal-close aria-label="Close dialog">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline" id="modal-cancel" data-modal-close>Cancel</button>
+      <button type="button" class="btn btn-primary" id="modal-confirm">Confirm</button>
+    </div>
+  </dialog>
+
+  <!-- Polite live region for dynamic status announcements -->
+  <div id="live-region" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

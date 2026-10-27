@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniReg — University Course Registration</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-tag">🌟 Spring 2027 registration is open</span>
+          <h1>Build your perfect semester, one course at a time.</h1>
+          <p>Browse the catalog, check seat availability in real time, avoid schedule clashes and register in just a few clicks.</p>
+          <form class="hero-search" id="hero-search" role="search">
+            <input type="search" id="hero-query" placeholder="Search by course, code or instructor…" aria-label="Search courses">
+            <button class="btn btn-warm" type="submit">Search</button>
+          </form>
+          <div class="hero-actions">
+            <a href="catalog.html" class="btn btn-light">📚 Browse Catalog</a>
+            <a href="register.html" class="btn btn-outline">📝 Register Now</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>📅 Key Dates</h3>
+          <ul class="timeline">
+            <li><span class="dot" style="background:#facc15;color:#1e1b4b">1</span><div><strong>Early registration</strong><small>Nov 3 – Nov 14</small></div></li>
+            <li><span class="dot" style="background:#22c55e">2</span><div><strong>Open registration</strong><small>Nov 17 – Dec 12</small></div></li>
+            <li><span class="dot" style="background:#0ea5e9">3</span><div><strong>Add / drop deadline</strong><small>Jan 23</small></div></li>
+            <li><span class="dot" style="background:#ec4899">4</span><div><strong>Classes begin</strong><small>Jan 12</small></div></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="stats-grid" id="stats-grid"></div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Explore <span class="gradient-text">Departments</span></h2>
+      <p class="section-subtitle">Jump straight into the subjects that excite you.</p>
+      <div class="dept-grid" id="dept-grid"></div>
+    </section>
+
+    <section class="section container" style="padding-top:0">
+      <h2 class="section-title">Popular <span class="gradient-text">Courses</span></h2>
+      <p class="section-subtitle">Filling up fast — grab a seat before they're gone.</p>
+      <div class="course-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="section container" style="padding-top:0">
+      <div class="feature-grid">
+        <div class="feature bg-main"><span class="emoji">⚡</span><h3>Instant Registration</h3><p>Register for multiple courses at once with live seat availability.</p></div>
+        <div class="feature bg-cool"><span class="emoji">🧭</span><h3>Clash Detection</h3><p>We automatically flag time conflicts and credit-limit issues.</p></div>
+        <div class="feature bg-warm"><span class="emoji">📊</span><h3>Your Dashboard</h3><p>See your weekly schedule and registered courses in one place.</p></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta">
+        <div>
+          <h2>Ready to get started?</h2>
+          <p>Create your student profile and register for up to <strong>18 credits</strong> this semester.</p>
+        </div>
+        <a href="register.html" class="btn btn-light">Start Registration →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="rainbow"></div>
+    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

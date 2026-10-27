@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration — UniReg</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="register">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-header warm">
+      <div class="container">
+        <h1>📝 Course Registration</h1>
+        <p>Fill in your details, pick your courses and confirm your enrollment.</p>
+      </div>
+    </section>
+
+    <section class="container register-layout">
+      <form class="panel" id="register-form" novalidate>
+        <div class="form-section">
+          <h2><span class="step-badge">1</span> Student Information</h2>
+          <p class="muted">We'll use this to create your student profile.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First name *</label>
+              <input class="input" id="firstName" name="firstName" autocomplete="given-name" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Last name *</label>
+              <input class="input" id="lastName" name="lastName" autocomplete="family-name" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="studentId">Student ID *</label>
+              <input class="input" id="studentId" name="studentId" placeholder="e.g. S2024001" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="email">University email *</label>
+              <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="you@university.edu" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="program">Program / Major *</label>
+              <select id="program" name="program" required>
+                <option value="">Select your major</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="studyYear">Year of study *</label>
+              <select id="studyYear" name="studyYear" required>
+                <option value="">Select year</option>
+                <option>Freshman</option>
+                <option>Sophomore</option>
+                <option>Junior</option>
+                <option>Senior</option>
+                <option>Graduate</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input class="input" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+1 555 123 4567">
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="semester">Semester</label>
+              <select id="semester" name="semester">
+                <option>Spring 2027</option>
+                <option>Summer 2027</option>
+                <option>Fall 2027</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2><span class="step-badge">2</span> Select Courses</h2>
+          <p class="muted">Choose one or more courses. Full classes and schedule clashes are flagged.</p>
+          <div class="form-grid" style="margin-bottom:1rem">
+            <div class="field">
+              <label for="pick-search">Search</label>
+              <div class="search-wrap"><input class="input" type="search" id="pick-search" placeholder="Filter courses…"></div>
+            </div>
+            <div class="field">
+              <label for="pick-dept">Department</label>
+              <select id="pick-dept"><option value="">All departments</option></select>
+            </div>
+          </div>
+          <div class="course-picker" id="course-picker"></div>
+          <div class="field" id="courses-field"><span class="error-msg"></span></div>
+        </div>
+
+        <div class="form-section">
+          <h2><span class="step-badge">3</span> Review &amp; Submit</h2>
+          <div class="field">
+            <label class="checkbox-line" style="text-transform:none;letter-spacing:0;font-weight:500;color:var(--text);font-size:0.92rem">
+              <input type="checkbox" id="terms">
+              <span>I confirm that the information above is correct and agree to the university's registration and tuition policies.</span>
+            </label>
+            <span class="error-msg"></span>
+          </div>
+          <div class="form-actions">
+            <button type="reset" class="btn btn-ghost">Clear</button>
+            <button type="submit" class="btn btn-primary">Review Registration →</button>
+          </div>
+        </div>
+      </form>
+
+      <aside class="panel summary" aria-live="polite">
+        <h2>🧾 Summary</h2>
+        <p>Your selected courses for this semester.</p>
+        <ul class="summary-list" id="summary-list"></ul>
+        <div class="credit-meter" id="credit-meter"><span></span></div>
+        <div class="summary-total"><span>Total credits</span><span id="summary-credits">0 / 18</span></div>
+        <div id="summary-alerts"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="rainbow"></div>
+    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

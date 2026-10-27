@@ -1,289 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Halden Accessible Registration</title>
-<meta name="description" content="Halden University course registration for Spring 2027: browse the catalog, register for courses and manage your schedule.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · Northfield University Course Registration</title>
+  <meta name="description" content="Browse courses, register for classes and manage your schedule at Northfield University.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to main content</a>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a class="brand" href="#home">
-      <span class="brand-mark" aria-hidden="true">
-        <span style="background:var(--math)"></span><span style="background:var(--mus)"></span>
-        <span style="background:var(--cse)"></span><span style="background:var(--phys)"></span>
-      </span>
-      <span>Halden University<small>Office of the Registrar</small></span>
-    </a>
-    <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
-    <nav aria-label="Main" class="main-nav" id="mainNav">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-view="home">Home</a></li>
-        <li><a href="#catalog" data-view="catalog">Course Catalog</a></li>
-        <li><a href="#register" data-view="register">Register <span class="badge num" id="cartBadge" aria-hidden="true">0</span><span class="sr-only" id="cartBadgeSr"></span></a></li>
-        <li><a href="#profile" data-view="profile">My Profile</a></li>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">🎓</span>
+        <span>Northfield University<small>Course Registration</small></span>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="catalog.html">Course Catalog</a></li>
+        <li><a href="register.html">Registration
+          <span class="count-badge" data-cart-count data-count="0"><span aria-hidden="true">0</span><span class="visually-hidden"></span></span></a></li>
+        <li><a href="profile.html">My Profile</a></li>
       </ul>
     </nav>
-    <div class="nav-tools" role="group" aria-label="Display settings">
-      <button class="icon-btn" id="textSizeBtn" type="button" aria-pressed="false">A+<span class="sr-only"> Larger text</span></button>
-      <button class="icon-btn" id="themeBtn" type="button" aria-pressed="false">Dark<span class="sr-only"> mode</span></button>
-    </div>
-  </div>
-</header>
-
-<main id="main" class="wrap" tabindex="-1">
-
-  <!-- ================= HOME ================= -->
-  <section class="view" id="view-home" aria-labelledby="homeTitle">
-    <div class="hero">
-      <div class="hero-copy">
-        <p class="term-pill"><span class="dot" aria-hidden="true"></span>Spring 2027 enrollment is open</p>
-        <h1 id="homeTitle" tabindex="-1">Build your <em>Spring 2027</em> schedule.</h1>
-        <p>Browse every section offered this term, check open seats and meeting times, and register for up to 20 units in one pass.</p>
-        <form class="hero-search" id="heroSearch" role="search" aria-label="Course search">
-          <label for="heroQuery" class="legend-label">Find a course</label>
-          <div class="row">
-            <input class="input" id="heroQuery" type="search" aria-describedby="heroHint" autocomplete="off">
-            <button class="btn btn-primary" type="submit">Search catalog</button>
-          </div>
-          <span class="hint" id="heroHint">Search by course code, title or instructor, for example CSE 110.</span>
-        </form>
-      </div>
-      <section class="panel" style="padding:16px" aria-labelledby="homeWeekTitle">
-        <div class="section-title" style="margin-bottom:10px">
-          <h2 class="eyebrow" id="homeWeekTitle">Your week so far</h2>
-          <a href="#profile" class="eyebrow" style="color:var(--primary-text)">View full schedule<span aria-hidden="true"> →</span></a>
-        </div>
-        <div id="homeTimetable"></div>
-      </section>
-    </div>
-
-    <section aria-labelledby="datesTitle" class="view" style="gap:14px">
-      <h2 id="datesTitle" style="font-size:1.5rem">Key dates</h2>
-      <ol class="deadlines">
-        <li class="deadline"><time datetime="2026-11-02">NOV 02 · 2026</time><h3>Priority enrollment</h3><p>Graduate students and seniors register first.</p></li>
-        <li class="deadline now" aria-current="step"><time datetime="2026-11-09">NOV 09 · 2026</time><h3>Open enrollment</h3><p>All continuing students. <strong>Current phase.</strong></p></li>
-        <li class="deadline"><time datetime="2027-01-22">JAN 22 · 2027</time><h3>Add deadline</h3><p>Last day to add a course without approval.</p></li>
-        <li class="deadline"><time datetime="2027-02-05">FEB 05 · 2027</time><h3>Drop deadline</h3><p>Drop without a W on your transcript.</p></li>
-      </ol>
-    </section>
-
-    <section aria-labelledby="deptTitle" class="view" style="gap:14px">
-      <div class="section-title">
-        <h2 id="deptTitle">Browse by department</h2>
-        <a href="#catalog" class="btn btn-outline">See all courses</a>
-      </div>
-      <ul class="depts" id="deptTiles"></ul>
-    </section>
-  </section>
-
-  <!-- ================= CATALOG ================= -->
-  <section class="view" id="view-catalog" hidden aria-labelledby="catTitle">
-    <div class="page-head">
-      <p class="eyebrow">Spring 2027 · <span id="catTotal" class="num"></span> sections</p>
-      <h1 id="catTitle" tabindex="-1">Course Catalog</h1>
-      <p>Filter by department, level, units and meeting pattern. Add courses to your cart, then finish on the registration page.</p>
-    </div>
-
-    <form class="panel" id="filterForm" role="search" aria-label="Filter courses">
-      <fieldset class="toolbar">
-        <legend class="sr-only">Search and filters</legend>
-        <div class="field search-field">
-          <label for="q">Search</label>
-          <div class="search-wrap">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-            <input class="input" id="q" type="search" autocomplete="off" aria-describedby="qHint">
-          </div>
-          <span class="hint" id="qHint">Course code, title or instructor. Results update as you type.</span>
-        </div>
-        <div class="field"><label for="fDept">Department</label><select class="select" id="fDept"></select></div>
-        <div class="field"><label for="fLevel">Level</label>
-          <select class="select" id="fLevel">
-            <option value="">All levels</option><option>Lower Division</option><option>Upper Division</option><option>Graduate</option>
-          </select></div>
-        <div class="field"><label for="fUnits">Units</label>
-          <select class="select" id="fUnits">
-            <option value="">Any units</option><option value="1">1 unit</option><option value="2">2 units</option><option value="4">4 units</option>
-          </select></div>
-        <div class="field"><label for="fDays">Meeting days</label>
-          <select class="select" id="fDays">
-            <option value="">Any days</option><option value="MWF">Monday, Wednesday, Friday</option><option value="MW">Monday and Wednesday</option><option value="TuTh">Tuesday and Thursday</option><option value="single">One day a week</option>
-          </select></div>
-      </fieldset>
-      <div class="toolbar-foot">
-        <label class="toggle"><input type="checkbox" id="fOpen"> Only show sections with open seats</label>
-        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-          <label for="fSort" class="sr-only">Sort courses by</label>
-          <select class="select" id="fSort" style="width:auto">
-            <option value="code">Sort: Course code</option><option value="seats">Sort: Most open seats</option><option value="time">Sort: Start time</option>
-          </select>
-          <button class="btn btn-ghost" id="clearFilters" type="button">Clear filters</button>
-        </div>
-      </div>
-    </form>
-
-    <p class="result-count num" id="resultCount" role="status" aria-live="polite" aria-atomic="true"></p>
-    <ul class="cards" id="cards" aria-label="Courses"></ul>
-  </section>
-
-  <!-- ================= REGISTER ================= -->
-  <section class="view" id="view-register" hidden aria-labelledby="regTitle">
-    <div class="page-head">
-      <p class="eyebrow">Step 2 of 2</p>
-      <h1 id="regTitle" tabindex="-1">Registration</h1>
-      <p>Confirm your details, pick the courses you want to enroll in, and choose a grading option for each. Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
-    </div>
-
-    <div class="reg-grid">
-      <form class="panel" id="regForm" novalidate aria-labelledby="regTitle">
-        <div id="errorSummary" class="error-summary" tabindex="-1" hidden style="margin-bottom:20px"></div>
-
-        <fieldset class="form-sec">
-          <legend>Student information</legend>
-          <div class="grid-2">
-            <div class="field">
-              <label for="sName">Full name <span class="req" aria-hidden="true">*</span></label>
-              <input class="input" id="sName" name="name" autocomplete="name" required aria-describedby="sNameErr">
-              <span class="err" id="sNameErr"></span>
-            </div>
-            <div class="field">
-              <label for="sId">Student ID <span class="req" aria-hidden="true">*</span></label>
-              <input class="input mono" id="sId" name="sid" required inputmode="text" autocomplete="off" aria-describedby="sIdHint sIdErr">
-              <span class="hint" id="sIdHint">A followed by 8 digits, for example A12345678.</span>
-              <span class="err" id="sIdErr"></span>
-            </div>
-            <div class="field">
-              <label for="sEmail">University email <span class="req" aria-hidden="true">*</span></label>
-              <input class="input" id="sEmail" name="email" type="email" autocomplete="email" required aria-describedby="sEmailHint sEmailErr">
-              <span class="hint" id="sEmailHint">Must end in @halden.edu.</span>
-              <span class="err" id="sEmailErr"></span>
-            </div>
-            <div class="field"><label for="sMajor">Major</label>
-              <select class="select" id="sMajor" name="major">
-                <option>Computer Science</option><option>Cognitive Science</option><option>Mathematics</option><option>Physics</option><option>Economics</option><option>Biology</option><option>Music</option><option>Literature</option>
-              </select></div>
-            <div class="field"><label for="sYear">Class level</label>
-              <select class="select" id="sYear" name="year"><option>First year</option><option>Second year</option><option>Third year</option><option>Fourth year</option><option>Graduate</option></select></div>
-            <div class="field"><label for="sTerm">Term</label>
-              <select class="select" id="sTerm" name="term"><option>Spring 2027</option></select></div>
-          </div>
-        </fieldset>
-
-        <fieldset class="form-sec" id="pickFieldset" aria-describedby="pickErr">
-          <legend>Courses to enroll <span class="req" aria-hidden="true">*</span></legend>
-          <ul class="pick-list" id="pickList"></ul>
-          <div class="field">
-            <label for="addCourse">Add another course</label>
-            <div class="add-row">
-              <select class="select" id="addCourse"></select>
-              <button class="btn btn-ghost" type="button" id="addCourseBtn">Add course</button>
-            </div>
-          </div>
-          <span class="err" id="pickErr"></span>
-        </fieldset>
-
-        <fieldset class="form-sec">
-          <legend class="sr-only">Acknowledgment</legend>
-          <label class="check-row"><input type="checkbox" id="ack" required aria-describedby="ackErr"> <span>I confirm I meet the prerequisites for these courses and understand that the drop deadline is February 5, 2027. <span class="req" aria-hidden="true">*</span></span></label>
-          <span class="err" id="ackErr"></span>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <button class="btn btn-primary" type="submit">Review and register</button>
-            <a class="btn btn-outline" href="#catalog">Back to catalog</a>
-          </div>
-        </fieldset>
-      </form>
-
-      <aside class="panel summary" aria-labelledby="sumTitle">
-        <h2 id="sumTitle">Term load</h2>
-        <div class="unit-meter">
-          <p class="big num" id="sumUnits">0 <small>/ 20 units</small></p>
-          <div class="stack-bar" id="sumBar" aria-hidden="true"></div>
-        </div>
-        <ul class="legend" id="sumLegend"></ul>
-        <div id="sumNotices" style="display:grid;gap:8px" role="status" aria-live="polite"></div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ================= PROFILE ================= -->
-  <section class="view" id="view-profile" hidden aria-labelledby="profTitle">
-    <div class="page-head">
-      <p class="eyebrow">Spring 2027</p>
-      <h1 id="profTitle" tabindex="-1">Student Profile</h1>
-    </div>
-
-    <div class="profile-top">
-      <section class="panel id-card" aria-labelledby="pName">
-        <div class="avatar" id="pAvatar" aria-hidden="true">AM</div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
         <div>
-          <h2 id="pName"></h2>
-          <p class="sub" id="pSub"></p>
+          <span class="eyebrow">Spring 2027 registration is open</span>
+          <h1 id="hero-title">Find your next favorite class</h1>
+          <p class="lead">Explore courses across eight departments, build a schedule that fits your life and register in minutes.</p>
+
+          <form class="hero-search" role="search" action="catalog.html" method="get">
+            <label for="hero-q" class="visually-hidden">Search courses by title, code or instructor</label>
+            <input id="hero-q" name="q" type="search" placeholder="Try “calculus”, “CS 350” or “Rivera”" autocomplete="off">
+            <button type="submit" class="btn btn-primary">Search courses</button>
+          </form>
+
+          <p style="margin-top:1.5rem">
+            <a class="btn btn-accent" href="catalog.html">Browse full catalog</a>
+            <a class="btn btn-ghost-light" href="register.html">Start registration</a>
+          </p>
         </div>
-        <dl class="id-facts">
-          <div><dt>Student ID</dt><dd class="mono" id="pId"></dd></div>
-          <div><dt>Email</dt><dd id="pEmail"></dd></div>
-          <div><dt>Advisor</dt><dd>Dr. Hannah Cole</dd></div>
-        </dl>
-      </section>
-      <dl class="stats" aria-label="Term summary">
-        <div class="stat" style="--c:var(--cse)"><dt>Courses</dt><dd class="num" id="stCourses">0</dd></div>
-        <div class="stat" style="--c:var(--math)"><dt>Units enrolled</dt><dd class="num" id="stUnits">0</dd></div>
-        <div class="stat dark-ink" style="--c:var(--mus)"><dt>Units available</dt><dd class="num" id="stLeft">20</dd></div>
-      </dl>
+
+        <aside class="hero-card" aria-labelledby="dates-title">
+          <h2 id="dates-title">Key dates</h2>
+          <ul class="deadline-list">
+            <li><span class="deadline-date">Nov<br>3</span><span><strong>Registration opens</strong><br>Seniors and juniors first</span></li>
+            <li><span class="deadline-date">Jan<br>12</span><span><strong>Classes begin</strong><br>Spring 2027 term</span></li>
+            <li><span class="deadline-date">Jan<br>23</span><span><strong>Add/drop deadline</strong><br>Last day to change courses</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="glance-title">
+      <div class="container">
+        <h2 id="glance-title">This term at a glance</h2>
+        <ul class="stats" id="home-stats">
+          <li class="stat"><span class="stat-value" data-stat="courses">–</span><span class="stat-label">courses offered</span></li>
+          <li class="stat"><span class="stat-value" data-stat="departments">–</span><span class="stat-label">departments</span></li>
+          <li class="stat"><span class="stat-value" data-stat="seats">–</span><span class="stat-label">open seats</span></li>
+          <li class="stat"><span class="stat-value" data-stat="registered">–</span><span class="stat-label">courses you're registered for</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="dept-title">
+      <div class="container">
+        <h2 id="dept-title">Browse by department</h2>
+        <p class="section-intro">Jump straight to the courses offered by each academic department.</p>
+        <ul class="dept-grid" id="dept-list">
+          <noscript><li><a href="catalog.html">View all departments in the catalog</a></li></noscript>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title">Featured courses</h2>
+        <p class="section-intro">Popular picks this term. Add them to your registration list and complete sign-up on the registration page.</p>
+        <ul class="course-grid" id="featured-courses"></ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title">How registration works</h2>
+        <ol class="steps">
+          <li><h3>Explore the catalog</h3><p>Search by keyword and filter by department, level, credits or meeting day.</p></li>
+          <li><h3>Build your list</h3><p>Add courses to your registration list. We'll check for time conflicts and credit limits.</p></li>
+          <li><h3>Confirm and go</h3><p>Review your choices, confirm, and see your schedule on your profile page.</p></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Northfield University · Office of the Registrar</p>
+      <ul>
+        <li><a href="#">Accessibility statement</a></li>
+        <li><a href="#">Registrar help desk</a></li>
+        <li><a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a></li>
+      </ul>
     </div>
+  </footer>
 
-    <section class="view" style="gap:14px" aria-labelledby="regCoursesTitle">
-      <div class="section-title">
-        <h2 id="regCoursesTitle">Registered courses</h2>
-        <a href="#catalog" class="btn btn-primary">Add courses</a>
-      </div>
-      <div class="table-wrap" role="region" aria-labelledby="regCoursesTitle" tabindex="0">
-        <table>
-          <caption>Your Spring 2027 enrollment. Select a column heading to sort.</caption>
-          <thead>
-            <tr>
-              <th scope="col" aria-sort="none"><button class="sort-btn" type="button" data-sort="code">Course<span class="arrow" aria-hidden="true">↕</span></button></th>
-              <th scope="col" aria-sort="none"><button class="sort-btn" type="button" data-sort="title">Title<span class="arrow" aria-hidden="true">↕</span></button></th>
-              <th scope="col" aria-sort="none"><button class="sort-btn" type="button" data-sort="units">Units<span class="arrow" aria-hidden="true">↕</span></button></th>
-              <th scope="col" aria-sort="ascending"><button class="sort-btn" type="button" data-sort="time">Days and time<span class="arrow" aria-hidden="true">↕</span></button></th>
-              <th scope="col">Room</th>
-              <th scope="col" aria-sort="none"><button class="sort-btn" type="button" data-sort="instructor">Instructor<span class="arrow" aria-hidden="true">↕</span></button></th>
-              <th scope="col">Grading</th>
-              <th scope="col">Status</th>
-              <th scope="col"><span class="sr-only">Actions</span></th>
-            </tr>
-          </thead>
-          <tbody id="regBody"></tbody>
-          <tfoot><tr><th scope="row" colspan="2">Total units</th><td class="num" id="regTotal">0</td><td colspan="6"></td></tr></tfoot>
-        </table>
-      </div>
-    </section>
-
-    <section class="panel" aria-labelledby="weekTitle">
-      <div class="section-title" style="margin-bottom:12px"><h2 id="weekTitle">Weekly schedule</h2><p class="eyebrow">8 AM to 6 PM</p></div>
-      <div id="profileTimetable" style="--tt-h:420px"></div>
-    </section>
-  </section>
-</main>
-
-<footer class="site-foot">
-  <div class="wrap">
-    <p>Halden University · Office of the Registrar · Demo application</p>
-    <p>Need an accommodation? Contact Disability Services at <span class="mono">access@halden.edu</span>.</p>
-  </div>
-</footer>
-
-<div id="modalRoot"></div>
-<div id="toastRoot" role="status" aria-live="polite" aria-atomic="true"></div>
-
-<script src="script.js"></script>
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
 </body>
 </html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Profile – Northbridge University Course Registration</title>
+  <meta name="description" content="View your student profile, registered courses, and contact information.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>Northbridge University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"></span> Menu
+      </button>
+      <nav id="primary-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li class="has-dropdown">
+            <button type="button" class="dropdown-toggle is-current" aria-expanded="false" aria-controls="account-menu">
+              My Account <span class="visually-hidden">(current section)</span> <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul id="account-menu" class="dropdown" hidden>
+              <li><a href="profile.html" aria-current="page">Student Profile</a></li>
+              <li><a href="profile.html#registered-heading">My Registered Courses</a></li>
+              <li><a href="profile.html#contact-heading">Contact Information</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><span aria-current="page">Student Profile</span></li>
+          </ol>
+        </nav>
+        <h1>Student Profile</h1>
+        <p>Review your academic details, manage registered courses, and keep your contact information current.</p>
+      </div>
+    </div>
+
+    <div class="container section profile-layout">
+      <div>
+        <section class="panel panel-accent pink profile-card" aria-labelledby="profile-name">
+          <div class="avatar" id="avatar" aria-hidden="true">JR</div>
+          <h2 id="profile-name">Jordan Rivera</h2>
+          <p id="profile-major">Computer Science · Sophomore</p>
+          <dl class="profile-details">
+            <dt>Student ID</dt><dd id="pd-id">20241234</dd>
+            <dt>Email</dt><dd id="pd-email">jordan.rivera@northbridge.edu</dd>
+            <dt>Phone</dt><dd id="pd-phone">Not provided</dd>
+            <dt>Advisor</dt><dd id="pd-advisor">Dr. Grace Kim</dd>
+          </dl>
+        </section>
+
+        <section class="panel panel-accent teal" aria-labelledby="credits-heading">
+          <h2 id="credits-heading">Credit load by term</h2>
+          <p class="hint">Maximum of 18 credits per term.</p>
+          <ul class="credit-list" id="credit-list"></ul>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="register.html">Register for another course</a>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <section aria-labelledby="registered-heading">
+          <h2 id="registered-heading" tabindex="-1">Registered courses</h2>
+          <div id="registered-table"></div>
+        </section>
+
+        <section class="panel panel-accent orange mt-lg" aria-labelledby="contact-heading">
+          <h2 id="contact-heading" tabindex="-1">Contact information</h2>
+
+          <div id="profile-saved" class="alert alert-success" hidden>
+            <p><strong>Saved.</strong> Your contact information was updated.</p>
+          </div>
+
+          <div id="error-summary" class="error-summary" tabindex="-1" aria-labelledby="error-summary-heading" role="group" hidden>
+            <h3 id="error-summary-heading" class="error-summary-title">There is a problem</h3>
+            <ul></ul>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <p class="hint">Fields marked with an asterisk (<span aria-hidden="true">*</span>) are required.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" aria-describedby="name-error">
+                <p class="field-error" id="name-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+                <p class="field-error" id="email-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <p class="hint" id="phone-hint">For example, 555-123-4567</p>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-hint phone-error">
+                <p class="field-error" id="phone-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="major">Major <span class="req" aria-hidden="true">*</span></label>
+                <select id="major" name="major" required aria-required="true" aria-describedby="major-error">
+                  <option value="">Choose a major…</option>
+                  <option>Art &amp; Design</option>
+                  <option>Biology</option>
+                  <option>Computer Science</option>
+                  <option>English</option>
+                  <option>History</option>
+                  <option>Mathematics</option>
+                  <option>Psychology</option>
+                  <option>Undeclared</option>
+                </select>
+                <p class="field-error" id="major-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="year">Class year <span class="req" aria-hidden="true">*</span></label>
+                <select id="year" name="year" required aria-required="true" aria-describedby="year-error">
+                  <option value="">Choose a class year…</option>
+                  <option>Freshman</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                </select>
+                <p class="field-error" id="year-error" hidden></p>
+              </div>
+            </div>
+            <div class="btn-row">
+              <button type="submit" class="btn btn-primary">Save contact information</button>
+              <button type="button" id="contact-reset" class="btn btn-outline">Discard changes</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northbridge University Registrar's Office</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="profile.html">Student Profile</a></li>
+          <li><a href="mailto:access@northbridge.edu">Accessibility help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

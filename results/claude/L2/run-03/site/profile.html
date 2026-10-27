@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your Northbridge University student profile and registered courses.">
+  <title>My Profile - Northbridge University</title>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48"><path d="M24 8 3 18l21 10 21-10z"/><path d="M11 22v9c0 3 6 7 13 7s13-4 13-7v-9l-13 6z"/><path d="M42 19v12"/></svg>
+        <span class="brand__text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration <span class="nav-badge" data-cart-badge hidden></span></a></li>
+          <li><a href="profile.html" aria-current="page">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-banner page-banner--profile">
+      <div class="container">
+        <h1>My Profile</h1>
+        <p>Your student details and current course registrations.</p>
+      </div>
+    </div>
+
+    <div class="container section profile-layout">
+      <section class="profile-card" aria-labelledby="profile-name">
+        <div class="profile-card__top">
+          <div class="avatar" aria-hidden="true"><span id="profile-initials"></span></div>
+          <div>
+            <h2 id="profile-name" class="profile-card__name"></h2>
+            <p id="profile-role" class="profile-card__role">Undergraduate student</p>
+          </div>
+        </div>
+        <dl class="profile-details">
+          <div><dt>Student ID</dt><dd id="profile-id"></dd></div>
+          <div><dt>Email</dt><dd><a id="profile-email" href="#"></a></dd></div>
+          <div><dt>Major</dt><dd id="profile-major"></dd></div>
+          <div><dt>Year</dt><dd id="profile-year"></dd></div>
+          <div><dt>Advisor</dt><dd>Dr. Hannah Cho</dd></div>
+        </dl>
+        <button type="button" id="edit-profile" class="btn btn--outline btn--block" aria-expanded="false" aria-controls="profile-form">
+          Edit profile
+        </button>
+
+        <form id="profile-form" class="profile-form" hidden novalidate aria-labelledby="edit-heading">
+          <h3 id="edit-heading">Edit your details</h3>
+          <div id="profile-error-summary" class="error-summary" tabindex="-1" hidden aria-labelledby="profile-error-title">
+            <h4 id="profile-error-title">Please fix the following</h4>
+            <ul></ul>
+          </div>
+          <div class="field">
+            <label for="pf-first-name">First name <span class="req" aria-hidden="true">*</span></label>
+            <input id="pf-first-name" type="text" autocomplete="given-name" required aria-describedby="pf-first-name-error">
+            <p id="pf-first-name-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="pf-last-name">Last name <span class="req" aria-hidden="true">*</span></label>
+            <input id="pf-last-name" type="text" autocomplete="family-name" required aria-describedby="pf-last-name-error">
+            <p id="pf-last-name-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="pf-student-id">Student ID <span class="req" aria-hidden="true">*</span></label>
+            <input id="pf-student-id" type="text" required spellcheck="false" autocomplete="off" aria-describedby="pf-student-id-error">
+            <p id="pf-student-id-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="pf-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="pf-email" type="email" autocomplete="email" required spellcheck="false" aria-describedby="pf-email-error">
+            <p id="pf-email-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="pf-major">Major <span class="req" aria-hidden="true">*</span></label>
+            <select id="pf-major" required aria-describedby="pf-major-error"><option value="">Select your major</option></select>
+            <p id="pf-major-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="pf-year">Year of study <span class="req" aria-hidden="true">*</span></label>
+            <select id="pf-year" required aria-describedby="pf-year-error"><option value="">Select your year</option></select>
+            <p id="pf-year-error" class="field-error" hidden></p>
+          </div>
+          <div class="button-row">
+            <button type="submit" class="btn btn--primary">Save changes</button>
+            <button type="button" id="cancel-edit" class="btn btn--ghost">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="profile-main">
+        <section aria-labelledby="summary-heading">
+          <h2 id="summary-heading" class="sr-only">Enrollment summary</h2>
+          <ul class="stat-row" role="list">
+            <li class="stat-tile stat-tile--violet"><span class="stat-tile__num" id="stat-courses">0</span><span class="stat-tile__label">Registered courses</span></li>
+            <li class="stat-tile stat-tile--pink"><span class="stat-tile__num" id="stat-credits">0</span><span class="stat-tile__label">Total credits</span></li>
+            <li class="stat-tile stat-tile--teal"><span class="stat-tile__num stat-tile__num--text" id="stat-status">Part-time</span><span class="stat-tile__label">Spring 2027 status</span></li>
+          </ul>
+          <div class="credit-meter">
+            <div class="credit-meter__track" aria-hidden="true"><div id="credit-bar-fill" class="credit-meter__fill"></div></div>
+            <p id="credit-bar-text" class="credit-meter__text"></p>
+          </div>
+        </section>
+
+        <section class="table-section" aria-labelledby="courses-heading">
+          <div class="section__head">
+            <h2 id="courses-heading" class="section__title" tabindex="-1">Registered courses</h2>
+            <a href="catalog.html" class="btn btn--primary btn--small">Add courses</a>
+          </div>
+          <div class="table-scroll" role="region" aria-labelledby="courses-heading" tabindex="0">
+            <table class="data-table">
+              <caption class="sr-only">Registered courses, with schedule, instructor, term, credits and an option to drop each course</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Code</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">Schedule</th>
+                  <th scope="col">Instructor</th>
+                  <th scope="col">Term</th>
+                  <th scope="col" class="num">Credits</th>
+                  <th scope="col">Status</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody id="registered-body"></tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="5">Total credits</th>
+                  <td class="num" id="total-credits">0</td>
+                  <td colspan="2"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p class="hint table-hint">On small screens, scroll the table sideways to see every column.</p>
+        </section>
+
+        <p class="reset-row"><button type="button" id="reset-demo" class="btn btn--ghost btn--small">Reset demo data</button></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Northbridge University Office of the Registrar</p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:registrar@northbridge.edu">registrar@northbridge.edu</a></li>
+        <li><a href="tel:+15555550142">(555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

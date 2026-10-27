@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse courses and register for classes at Horizon University.">
+  <meta name="theme-color" content="#4338ca">
+  <title>Home | Horizon University Registration</title>
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="container nav-bar" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">🎓</span>
+        Horizon University
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        Menu
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">My Profile<span class="nav-badge" id="nav-reg-count" aria-hidden="true" hidden>0</span><span class="visually-hidden" id="nav-reg-count-label"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <span class="hero-eyebrow">Spring 2027 registration is open</span>
+        <h1 id="hero-title">Build a semester you'll love.</h1>
+        <p class="lead">Explore hundreds of seats across six departments, check your schedule for conflicts, and register in just a few clicks.</p>
+
+        <form class="hero-search" action="catalog.html" method="get" role="search">
+          <label for="hero-q" class="visually-hidden">Search courses by title, code, or instructor</label>
+          <input type="search" id="hero-q" name="q" placeholder="Try “Calculus” or “CS 340”" autocomplete="off">
+          <button type="submit" class="btn btn-secondary">Search courses</button>
+        </form>
+
+        <div class="hero-actions">
+          <a class="btn btn-light" href="catalog.html">Browse the catalog</a>
+          <a class="btn btn-ghost-light" href="register.html">Go to registration</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="stats-title">
+      <h2 id="stats-title" class="visually-hidden">Registration at a glance</h2>
+      <ul class="stats-grid" role="list" style="list-style:none;padding:0">
+        <li class="stat-card accent-purple"><span class="stat-value" id="stat-courses">–</span><span class="stat-label">Courses offered</span></li>
+        <li class="stat-card accent-pink"><span class="stat-value" id="stat-depts">–</span><span class="stat-label">Departments</span></li>
+        <li class="stat-card accent-green"><span class="stat-value" id="stat-open">–</span><span class="stat-label">Open seats</span></li>
+        <li class="stat-card accent-amber"><span class="stat-value" id="stat-mine">–</span><span class="stat-label">Your registrations</span></li>
+      </ul>
+    </section>
+
+    <section class="section container" aria-labelledby="dept-title">
+      <div class="section-header">
+        <div>
+          <h2 id="dept-title">Explore by department</h2>
+          <p>Jump straight to the subjects that interest you.</p>
+        </div>
+      </div>
+      <ul class="grid" id="dept-grid"></ul>
+    </section>
+
+    <section class="section container" aria-labelledby="featured-title">
+      <div class="section-header">
+        <div>
+          <h2 id="featured-title">Featured courses with open seats</h2>
+          <p>Popular picks that still have room.</p>
+        </div>
+        <a class="btn btn-outline" href="catalog.html">See all courses</a>
+      </div>
+      <ul class="grid" id="featured-courses"></ul>
+    </section>
+
+    <div class="section container layout-2col">
+      <section aria-labelledby="how-title">
+        <h2 id="how-title">How registration works</h2>
+        <ol class="steps grid" style="grid-template-columns:1fr">
+          <li class="card accent-purple"><h3>Find your courses</h3><p>Search and filter the catalog by department, level, and credits.</p></li>
+          <li class="card accent-pink"><h3>Fill in the registration form</h3><p>We check seat availability, credit limits, and schedule conflicts for you.</p></li>
+          <li class="card accent-teal"><h3>Confirm and you're enrolled</h3><p>Review your choices, confirm, and manage everything from your profile.</p></li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="dates-title">
+        <h2 id="dates-title">Important dates</h2>
+        <ul class="deadline-list">
+          <li class="accent-green"><time datetime="2026-11-02">Nov 2</time><span>Priority registration opens for seniors</span></li>
+          <li class="accent-blue"><time datetime="2026-11-09">Nov 9</time><span>Open registration for all students</span></li>
+          <li class="accent-amber"><time datetime="2027-01-18">Jan 18</time><span>Spring classes begin</span></li>
+          <li class="accent-pink"><time datetime="2027-01-29">Jan 29</time><span>Last day to add or drop without penalty</span></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Horizon University · Office of the Registrar</p>
+      <ul class="footer-links">
+        <li><a href="catalog.html">Course Catalog</a></li>
+        <li><a href="mailto:registrar@horizon.edu">registrar@horizon.edu</a></li>
+        <li><a href="tel:+15555550123">(555) 555-0123</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Shared confirmation modal -->
+  <dialog class="modal" id="confirm-modal" aria-labelledby="modal-title" aria-describedby="modal-body">
+    <div class="modal-header">
+      <h2 id="modal-title">Confirm</h2>
+      <button type="button" class="modal-close" data-modal-close aria-label="Close dialog">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline" id="modal-cancel" data-modal-close>Cancel</button>
+      <button type="button" class="btn btn-primary" id="modal-confirm">Confirm</button>
+    </div>
+  </dialog>
+
+  <!-- Polite live region for dynamic status announcements -->
+  <div id="live-region" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

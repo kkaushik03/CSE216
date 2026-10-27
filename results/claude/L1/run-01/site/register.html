@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register · Horizon University</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="register">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-header register-header">
+      <div class="container">
+        <h1>📝 Course Registration</h1>
+        <p>Fill in your details, choose your courses and confirm. Max <strong>18 credits</strong> per semester.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <form id="registration-form" class="register-layout" novalidate>
+        <div class="panel">
+          <h2><span class="num">1</span> Student information</h2>
+          <div id="student-fields" class="form-grid">
+            <div class="form-group">
+              <label for="name">Full name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="studentId">Student ID *</label>
+              <input id="studentId" name="studentId" type="text" placeholder="HU123456" required>
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@horizon.edu" required>
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567">
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="program">Program *</label>
+              <select id="program" name="program" required>
+                <option value="">Select your program…</option>
+                <option>Computer Science</option>
+                <option>Mathematics</option>
+                <option>Biology</option>
+                <option>Fine Arts</option>
+                <option>Business</option>
+                <option>Physics</option>
+                <option>English</option>
+              </select>
+              <small class="field-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="year">Year of study *</label>
+              <select id="year" name="year" required>
+                <option value="">Select year…</option>
+                <option>Freshman</option>
+                <option>Sophomore</option>
+                <option>Junior</option>
+                <option>Senior</option>
+                <option>Graduate</option>
+              </select>
+              <small class="field-error"></small>
+            </div>
+          </div>
+
+          <h2><span class="num">2</span> Choose courses</h2>
+          <div class="picker-tools">
+            <label class="sr-only" for="picker-search">Search courses</label>
+            <input id="picker-search" type="search" placeholder="🔍 Filter courses…">
+            <label class="sr-only" for="picker-dept">Department</label>
+            <select id="picker-dept"><option value="">All departments</option></select>
+          </div>
+          <div id="course-picker" class="course-picker"></div>
+          <small id="course-error" class="field-error" aria-live="polite"></small>
+        </div>
+
+        <aside class="panel summary-panel">
+          <div id="selection-summary"></div>
+          <label class="checkbox agree">
+            <input type="checkbox" id="agree">
+            I agree to the university registration and add/drop policy.
+          </label>
+          <small id="agree-error" class="field-error"></small>
+          <div class="summary-actions">
+            <button class="btn btn-primary btn-block" type="submit">Review &amp; submit</button>
+            <button class="btn btn-ghost btn-block" type="reset">Clear form</button>
+          </div>
+        </aside>
+      </form>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>📋 Your registered courses</h2>
+          <a href="profile.html" class="link-arrow">Go to profile →</a>
+        </div>
+        <div id="registered-table"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="footer-year"></span> Horizon University · Office of the Registrar</p>
+    <p class="footer-links"><a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="register.html">Register</a><a href="profile.html">Profile</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

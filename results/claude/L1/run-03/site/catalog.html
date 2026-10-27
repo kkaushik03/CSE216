@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Catalog — UniReg</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="catalog">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>📚 Course Catalog</h1>
+        <p>Search, filter and register for courses offered this semester.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <form class="toolbar" id="filters" role="search" onsubmit="return false">
+        <div class="field search-field">
+          <label for="search">Search</label>
+          <div class="search-wrap">
+            <input class="input" type="search" id="search" placeholder="Course name, code or instructor…">
+          </div>
+        </div>
+        <div class="field">
+          <label for="dept">Department</label>
+          <select id="dept">
+            <option value="">All departments</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="level">Level</label>
+          <select id="level">
+            <option value="">All levels</option>
+            <option value="100">100 – Introductory</option>
+            <option value="200">200 – Intermediate</option>
+            <option value="300">300 – Advanced</option>
+            <option value="400">400 – Senior</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="credits">Credits</label>
+          <select id="credits">
+            <option value="">Any credits</option>
+            <option value="2">2 credits</option>
+            <option value="3">3 credits</option>
+            <option value="4">4 credits</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="code">Course code</option>
+            <option value="title">Title (A–Z)</option>
+            <option value="seats">Most seats open</option>
+            <option value="credits">Credits (high–low)</option>
+          </select>
+        </div>
+        <div class="field reset-field">
+          <button type="button" class="btn btn-ghost" id="reset">↺ Reset</button>
+        </div>
+      </form>
+
+      <div class="results-bar">
+        <p id="result-count" aria-live="polite"></p>
+        <div class="chip-row" id="day-chips" aria-label="Filter by day"></div>
+      </div>
+
+      <div class="course-grid" id="course-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="rainbow"></div>
+    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

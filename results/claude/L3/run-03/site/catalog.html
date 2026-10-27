@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course catalog – Northfield University Course Registration</title>
+  <meta name="description" content="Search and filter the Northfield University course catalog.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="23" fill="#fde047"/>
+          <path d="M24 11 8 19l16 8 13-6.5V30h3V19L24 11z" fill="#312e81"/>
+          <path d="M14 25v7c0 3 4.5 5.5 10 5.5S34 35 34 32v-7l-10 5-10-5z" fill="#be185d"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Northfield University</span>
+          <span class="brand-sub">Course Registration</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html" aria-current="page">Course catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-intro">
+      <div class="container">
+        <h1>Course catalog</h1>
+        <p>Search all courses offered for 2027. Use the filters to narrow results; the list updates as you type.</p>
+      </div>
+    </div>
+
+    <div class="container section">
+      <form id="catalog-filters" class="filters" role="search" aria-label="Course filters">
+        <div class="filters-grid">
+          <div class="field field--search">
+            <label for="search">Search courses</label>
+            <input type="search" id="search" name="q" autocomplete="off" aria-describedby="search-hint">
+            <span id="search-hint" class="visually-hidden">Search by course code, title, instructor, or keyword. Results update automatically.</span>
+          </div>
+          <div class="field">
+            <label for="filter-dept">Department</label>
+            <select id="filter-dept" name="dept">
+              <option value="">All departments</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-level">Course level</label>
+            <select id="filter-level" name="level">
+              <option value="">All levels</option>
+              <option value="100">100-level (introductory)</option>
+              <option value="200">200-level (intermediate)</option>
+              <option value="300">300-level (advanced)</option>
+              <option value="400">400-level (seminar)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-credits">Credits</label>
+            <select id="filter-credits" name="credits">
+              <option value="">Any number of credits</option>
+              <option value="3">3 credits</option>
+              <option value="4">4 credits</option>
+            </select>
+          </div>
+        </div>
+        <div class="filters-footer">
+          <div class="check">
+            <input type="checkbox" id="filter-open" name="open">
+            <label for="filter-open">Only show courses with open seats</label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Search courses</button>
+            <button type="reset" class="btn btn-secondary">Clear all filters</button>
+          </div>
+        </div>
+      </form>
+
+      <section aria-labelledby="results-title">
+        <h2 id="results-title" class="visually-hidden">Search results</h2>
+        <p id="results-count" class="results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        <ul id="course-grid" class="course-grid" role="list"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>No courses match your search</h3>
+          <p>Try different keywords or remove some filters.</p>
+          <button type="button" id="empty-reset" class="btn btn-primary">Clear all filters</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northfield University, Office of the Registrar.</p>
+      <ul aria-label="Contact">
+        <li><a href="mailto:registrar@northfield.edu">Email the Registrar</a></li>
+        <li><a href="tel:+15555550142">Call (555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

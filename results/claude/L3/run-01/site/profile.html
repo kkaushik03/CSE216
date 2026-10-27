@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile – Northfield University Course Registration</title>
+  <meta name="description" content="View your student details and registered courses.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span>Northfield University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html" aria-current="page">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-hero profile-hero">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-2" aria-hidden="true"></span>
+      <div class="container">
+        <h1>My profile</h1>
+        <p>Your student details and the courses you’re registered for in <span class="term-name">Spring 2027</span>.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="profile-grid">
+        <section class="profile-card accent-indigo" aria-labelledby="student-heading">
+          <h2 id="student-heading">Student information</h2>
+          <div class="profile-head">
+            <span class="avatar" id="avatar" aria-hidden="true"></span>
+            <div>
+              <p class="m0"><strong id="profile-name-display"></strong></p>
+              <p class="m0" id="profile-program-display"></p>
+            </div>
+          </div>
+          <dl class="details-list">
+            <div><dt>Full name</dt><dd id="profile-name"></dd></div>
+            <div><dt>Student ID</dt><dd id="profile-id"></dd></div>
+            <div><dt>Email</dt><dd id="profile-email"></dd></div>
+            <div><dt>Year</dt><dd id="profile-year"></dd></div>
+            <div><dt>Program</dt><dd id="profile-program"></dd></div>
+            <div><dt>Advisor</dt><dd id="profile-advisor"></dd></div>
+          </dl>
+        </section>
+
+        <section class="profile-card accent-rose" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Term summary</h2>
+          <ul class="mini-stats">
+            <li class="accent-indigo"><span class="stat-value" id="sum-courses"></span><span class="stat-label">Courses</span></li>
+            <li class="accent-teal"><span class="stat-value" id="sum-credits"></span><span class="stat-label">Credits</span></li>
+            <li class="accent-rose"><span class="stat-value" id="sum-remaining"></span><span class="stat-label">Credits available</span></li>
+          </ul>
+          <div class="credit-meter">
+            <p id="sum-meter-text"></p>
+            <div class="meter-bar" aria-hidden="true"><span id="sum-meter-bar"></span></div>
+          </div>
+          <a class="btn btn-primary" href="catalog.html">Find more courses</a>
+        </section>
+      </div>
+
+      <section aria-labelledby="courses-heading">
+        <div class="table-section-header">
+          <h2 id="courses-heading" tabindex="-1">Registered courses</h2>
+          <a class="btn btn-secondary btn-small" href="register.html">Register for another course</a>
+        </div>
+
+        <div class="table-wrap" id="table-wrap" role="region" aria-labelledby="table-caption" tabindex="0">
+          <table class="data-table" id="courses-table">
+            <caption id="table-caption">
+              Spring 2027 registered courses
+              <span class="hint">Select a column heading button to sort. On small screens, scroll the table sideways.</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" data-sort-key="code"><button type="button" class="sort-btn">Course<span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col" data-sort-key="title"><button type="button" class="sort-btn">Title<span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Instructor</th>
+                <th scope="col" data-sort-key="credits" class="num"><button type="button" class="sort-btn">Credits<span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col">Grading</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="courses-body"></tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="4">Total credits</th>
+                <td class="num" id="total-credits"></td>
+                <td colspan="2"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="empty-state" id="no-courses" hidden>
+          <span class="icon" aria-hidden="true">📚</span>
+          <h3>You haven’t registered for any courses yet</h3>
+          <p>Browse the catalog to find courses for Spring 2027.</p>
+          <a class="btn btn-primary" href="catalog.html">Browse the course catalog</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Northfield University, Office of the Registrar</p>
+      <p>Need help? Email <a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a> or call <a href="tel:+15555550123">555-555-0123</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

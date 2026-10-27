@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View your student profile and registered courses.">
+  <meta name="theme-color" content="#4338ca">
+  <title>My Profile | Horizon University Registration</title>
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="container nav-bar" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">🎓</span>
+        Horizon University
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        Menu
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html" aria-current="page">My Profile<span class="nav-badge" id="nav-reg-count" aria-hidden="true" hidden>0</span><span class="visually-hidden" id="nav-reg-count-label"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-hero">
+      <div class="container">
+        <h1>My Profile</h1>
+        <p>Manage your personal details and review your schedule for the term.</p>
+      </div>
+    </div>
+
+    <div class="section container layout-2col layout-2col-flip">
+      <section class="card profile-card" aria-labelledby="profile-name">
+        <div class="avatar" id="profile-avatar" aria-hidden="true">?</div>
+        <h2 id="profile-name">Student</h2>
+        <p id="profile-major" class="hint"></p>
+        <dl class="profile-details">
+          <dt>Student ID</dt><dd id="pd-id"></dd>
+          <dt>Email</dt><dd id="pd-email"></dd>
+          <dt>Major</dt><dd id="pd-major"></dd>
+          <dt>Year</dt><dd id="pd-year"></dd>
+        </dl>
+        <div class="progress-wrap">
+          <label for="credit-progress">Credit load</label>
+          <progress class="progress" id="credit-progress" max="18" value="0" aria-describedby="credit-progress-text"></progress>
+          <p class="hint" id="credit-progress-text"></p>
+        </div>
+      </section>
+
+      <div>
+        <section aria-labelledby="summary-title">
+          <h2 id="summary-title" class="visually-hidden">Term summary</h2>
+          <ul class="stats-grid" style="margin-top:0;list-style:none;padding:0">
+            <li class="stat-card accent-purple"><span class="stat-value" id="ps-courses">0</span><span class="stat-label">Courses</span></li>
+            <li class="stat-card accent-pink"><span class="stat-value" id="ps-credits">0</span><span class="stat-label">Credits</span></li>
+            <li class="stat-card accent-teal"><span class="stat-value" id="ps-remaining">18</span><span class="stat-label">Credits available</span></li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:1.5rem" aria-labelledby="edit-title">
+          <h2 id="edit-title">Edit details</h2>
+          <div class="alert alert-success" id="profile-saved" hidden>
+            <span aria-hidden="true">✓</span><p>Your profile has been saved.</p>
+          </div>
+          <form id="profile-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="pf-name">Full name</label>
+                <input type="text" id="pf-name" autocomplete="name" required aria-describedby="pf-name-error">
+                <p class="error-message" id="pf-name-error"></p>
+              </div>
+              <div class="field">
+                <label for="pf-email">Email</label>
+                <input type="email" id="pf-email" autocomplete="email" required aria-describedby="pf-email-error">
+                <p class="error-message" id="pf-email-error"></p>
+              </div>
+              <div class="field">
+                <label for="pf-major">Major</label>
+                <input type="text" id="pf-major" required aria-describedby="pf-major-error">
+                <p class="error-message" id="pf-major-error"></p>
+              </div>
+              <div class="field">
+                <label for="pf-year">Year</label>
+                <select id="pf-year">
+                  <option>Freshman</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                  <option>Graduate</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <section class="container" aria-labelledby="registered-heading">
+      <div class="section-header">
+        <h2 id="registered-heading" tabindex="-1">My registered courses</h2>
+        <a class="btn btn-secondary" href="catalog.html">Add a course</a>
+      </div>
+      <div class="table-wrapper" role="region" aria-labelledby="registered-caption" tabindex="0">
+        <table class="data-table">
+          <caption id="registered-caption">Courses you are registered for</caption>
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Title</th>
+              <th scope="col" class="num">Credits</th>
+              <th scope="col">Schedule</th>
+              <th scope="col">Instructor</th>
+              <th scope="col">Term</th>
+              <th scope="col">Grading</th>
+              <th scope="col"><span class="visually-hidden">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="registered-tbody"></tbody>
+          <tfoot id="registered-tfoot"></tfoot>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Horizon University · Office of the Registrar</p>
+      <ul class="footer-links">
+        <li><a href="catalog.html">Course Catalog</a></li>
+        <li><a href="mailto:registrar@horizon.edu">registrar@horizon.edu</a></li>
+        <li><a href="tel:+15555550123">(555) 555-0123</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Shared confirmation modal -->
+  <dialog class="modal" id="confirm-modal" aria-labelledby="modal-title" aria-describedby="modal-body">
+    <div class="modal-header">
+      <h2 id="modal-title">Confirm</h2>
+      <button type="button" class="modal-close" data-modal-close aria-label="Close dialog">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline" id="modal-cancel" data-modal-close>Cancel</button>
+      <button type="button" class="btn btn-primary" id="modal-confirm">Confirm</button>
+    </div>
+  </dialog>
+
+  <!-- Polite live region for dynamic status announcements -->
+  <div id="live-region" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile · Northfield University Course Registration</title>
+  <meta name="description" content="Your student profile and registered courses.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">🎓</span>
+        <span>Northfield University<small>Course Registration</small></span>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Course Catalog</a></li>
+        <li><a href="register.html">Registration
+          <span class="count-badge" data-cart-count data-count="0"><span aria-hidden="true">0</span><span class="visually-hidden"></span></span></a></li>
+        <li><a href="profile.html" aria-current="page">My Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="page-header">
+      <div class="container">
+        <h1>My Profile</h1>
+        <p>Your student information and the courses you are registered for.</p>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="container profile-grid">
+        <section class="panel profile-card" aria-labelledby="profile-name">
+          <div class="avatar" id="avatar" aria-hidden="true">?</div>
+          <h2 id="profile-name" data-profile="fullName">Student</h2>
+          <p data-profile="program"></p>
+          <dl class="profile-details">
+            <div><dt>Student ID</dt><dd data-profile="studentId"></dd></div>
+            <div><dt>Email</dt><dd data-profile="email"></dd></div>
+            <div><dt>Year</dt><dd data-profile="year"></dd></div>
+            <div><dt>Academic advisor</dt><dd>Dr. Morgan Ellis</dd></div>
+          </dl>
+          <p class="hint" style="margin-top:1rem">To update your details, edit them on the <a href="register.html">registration form</a>.</p>
+        </section>
+
+        <div>
+          <section aria-labelledby="summary-title" class="panel">
+            <h2 id="summary-title">Term summary</h2>
+            <ul class="stats">
+              <li class="stat"><span class="stat-value" data-stat="courses">0</span><span class="stat-label">registered courses</span></li>
+              <li class="stat"><span class="stat-value" data-stat="credits">0</span><span class="stat-label">credits enrolled</span></li>
+              <li class="stat"><span class="stat-value" data-stat="remaining">18</span><span class="stat-label">credits remaining</span></li>
+              <li class="stat"><span class="stat-value" data-stat="selected">0</span><span class="stat-label">selected, not yet registered</span></li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="registered-heading" class="panel">
+            <h2 id="registered-heading" tabindex="-1">Registered courses</h2>
+            <div class="table-wrap" role="region" aria-labelledby="registered-caption" tabindex="0">
+              <table>
+                <caption id="registered-caption">Courses you are registered for, with schedule and drop option</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Title</th>
+                    <th scope="col" class="num">Credits</th>
+                    <th scope="col">Instructor</th>
+                    <th scope="col">Schedule</th>
+                    <th scope="col">Term</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="registered-body">
+                  <tr><td colspan="7">Loading…</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row" colspan="2">Total credits</th>
+                    <td class="num" id="total-credits">0</td>
+                    <td colspan="4"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <p style="margin-top:1rem"><a class="btn btn-primary" href="catalog.html">Add more courses</a></p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Northfield University · Office of the Registrar</p>
+      <ul>
+        <li><a href="#">Accessibility statement</a></li>
+        <li><a href="#">Registrar help desk</a></li>
+        <li><a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+  <dialog id="confirm-dialog" class="modal" aria-labelledby="dialog-title" aria-describedby="dialog-body">
+    <div class="modal-header">
+      <h2 id="dialog-title">Confirm</h2>
+      <button type="button" class="modal-close" aria-label="Close dialog"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="modal-body" id="dialog-body"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dialog-cancel>Cancel</button>
+      <button type="button" class="btn btn-primary" data-dialog-confirm>Confirm</button>
+    </div>
+  </dialog>
+</body>
+</html>

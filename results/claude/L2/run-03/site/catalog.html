@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search and filter the Northbridge University course catalog.">
+  <title>Course Catalog - Northbridge University</title>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48"><path d="M24 8 3 18l21 10 21-10z"/><path d="M11 22v9c0 3 6 7 13 7s13-4 13-7v-9l-13 6z"/><path d="M42 19v12"/></svg>
+        <span class="brand__text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html" aria-current="page">Course Catalog</a></li>
+          <li><a href="register.html">Registration <span class="nav-badge" data-cart-badge hidden></span></a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-banner page-banner--catalog">
+      <div class="container">
+        <h1>Course Catalog</h1>
+        <p>Spring 2027 &middot; Find courses by keyword, then narrow results with the filters.</p>
+      </div>
+    </div>
+
+    <div class="container section">
+      <form id="catalog-filters" class="filters" role="search" aria-label="Filter courses">
+        <div class="field field--search">
+          <label for="search">Search courses</label>
+          <input id="search" name="q" type="search" autocomplete="off"
+                 placeholder="Title, code, instructor or keyword" aria-describedby="search-hint">
+          <p id="search-hint" class="hint">Results update as you type.</p>
+        </div>
+
+        <div class="filters__row">
+          <div class="field">
+            <label for="filter-dept">Department</label>
+            <select id="filter-dept" name="dept">
+              <option value="">All departments</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-level">Level</label>
+            <select id="filter-level" name="level">
+              <option value="">All levels</option>
+              <option value="100">100 level (introductory)</option>
+              <option value="200">200 level</option>
+              <option value="300">300 level</option>
+              <option value="400">400 level (advanced)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-credits">Credits</label>
+            <select id="filter-credits" name="credits">
+              <option value="">Any credits</option>
+              <option value="3">3 credits</option>
+              <option value="4">4 credits</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-days">Meeting days</label>
+            <select id="filter-days" name="days">
+              <option value="">Any days</option>
+              <option value="MWF">Mon, Wed, Fri</option>
+              <option value="TTh">Tue, Thu</option>
+              <option value="Online">Online</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+              <option value="code">Course code</option>
+              <option value="title">Title (A to Z)</option>
+              <option value="credits-desc">Credits (high to low)</option>
+              <option value="seats">Most seats open</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filters__footer">
+          <div class="check">
+            <input id="filter-open" name="open" type="checkbox">
+            <label for="filter-open">Only show courses with open seats</label>
+          </div>
+          <button type="reset" class="btn btn--ghost">Clear filters</button>
+        </div>
+      </form>
+
+      <div class="results-head">
+        <h2 class="sr-only">Results</h2>
+        <p id="results-count" class="results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="selection-bar" class="selection-bar" hidden>
+          <p id="selection-text"></p>
+          <a href="register.html" class="btn btn--primary btn--small">Continue to registration</a>
+        </div>
+      </div>
+
+      <ul id="course-grid" class="card-grid" role="list"></ul>
+
+      <div id="no-results" class="empty-state" hidden>
+        <h3>No courses match your search</h3>
+        <p>Try a different keyword, or select <strong>Clear filters</strong> to see every course.</p>
+      </div>
+
+      <noscript><p class="notice">The course catalog needs JavaScript to display courses.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Northbridge University Office of the Registrar</p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:registrar@northbridge.edu">registrar@northbridge.edu</a></li>
+        <li><a href="tel:+15555550142">(555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Catalog – Northbrook University Course Registration</title>
+  <meta name="description" content="Search and filter Spring 2027 courses at Northbrook University.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbrook University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html" aria-current="page">Course Catalog</a></li>
+          <li><a href="register.html">Registration <span class="nav-badge" data-cart-count hidden></span></a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-banner banner-blue">
+      <div class="container">
+        <h1>Course Catalog</h1>
+        <p>Spring 2027 · Search, filter and add courses to your registration list.</p>
+      </div>
+    </div>
+
+    <div class="container catalog-layout">
+      <section class="filters-panel" aria-labelledby="filters-title">
+        <h2 id="filters-title">Find courses</h2>
+        <form id="filter-form" role="search" aria-label="Course catalog" novalidate>
+          <div class="field">
+            <label for="search">Search courses</label>
+            <p id="search-hint" class="hint">Search by course code, title, instructor or keyword.</p>
+            <input id="search" name="q" type="search" autocomplete="off" aria-describedby="search-hint">
+          </div>
+
+          <div class="filter-grid">
+            <div class="field">
+              <label for="filter-dept">Department</label>
+              <select id="filter-dept" name="dept">
+                <option value="">All departments</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-level">Course level</label>
+              <select id="filter-level" name="level">
+                <option value="">All levels</option>
+                <option value="100">100 – Introductory</option>
+                <option value="200">200 – Intermediate</option>
+                <option value="300">300 – Advanced</option>
+                <option value="400">400 – Senior</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-credits">Credits</label>
+              <select id="filter-credits" name="credits">
+                <option value="">Any number of credits</option>
+                <option value="3">3 credits</option>
+                <option value="4">4 credits</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-days">Meeting days</label>
+              <select id="filter-days" name="days">
+                <option value="">Any days</option>
+                <option value="Mon">Meets on Monday</option>
+                <option value="Tue">Meets on Tuesday</option>
+                <option value="Wed">Meets on Wednesday</option>
+                <option value="Thu">Meets on Thursday</option>
+                <option value="Fri">Meets on Friday</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-availability">Availability</label>
+              <select id="filter-availability" name="availability">
+                <option value="">All courses</option>
+                <option value="open">Only courses with open seats</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sort-by">Sort by</label>
+              <select id="sort-by" name="sort">
+                <option value="code">Course code</option>
+                <option value="title">Title (A to Z)</option>
+                <option value="seats">Most open seats</option>
+                <option value="credits">Credits (high to low)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="reset" class="btn btn-secondary" id="clear-filters">Clear search and filters</button>
+        </form>
+      </section>
+
+      <section class="results" aria-labelledby="results-title">
+        <div class="results-header">
+          <h2 id="results-title">Available courses</h2>
+          <p id="results-count" class="results-count" role="status" aria-atomic="true"></p>
+        </div>
+        <noscript><p class="notice notice-warning">JavaScript is required to display the course catalog.</p></noscript>
+        <ul id="course-list" class="course-grid"></ul>
+        <div id="no-results" class="empty-state" hidden>
+          <h3>No courses match your search</h3>
+          <p>Try a different keyword, or clear the filters to see every course.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northbrook University Office of the Registrar. This is a demonstration application.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

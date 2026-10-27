@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Catalog · Northfield University Course Registration</title>
+  <meta name="description" content="Search and filter all courses offered this term at Northfield University.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">🎓</span>
+        <span>Northfield University<small>Course Registration</small></span>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" aria-current="page">Course Catalog</a></li>
+        <li><a href="register.html">Registration
+          <span class="count-badge" data-cart-count data-count="0"><span aria-hidden="true">0</span><span class="visually-hidden"></span></span></a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="page-header">
+      <div class="container">
+        <h1>Course Catalog</h1>
+        <p>Search all Spring 2027 courses, narrow the list with filters, and add the ones you want to your registration list.</p>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="container">
+        <section class="panel" aria-labelledby="filter-title">
+          <h2 id="filter-title" class="visually-hidden">Search and filter courses</h2>
+          <form id="filter-form" role="search" aria-label="Courses">
+            <div class="filters">
+              <div class="field field-search">
+                <label for="q">Search courses</label>
+                <div class="search-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg>
+                  <input id="q" name="q" type="search" autocomplete="off" aria-describedby="q-hint">
+                </div>
+                <p class="hint" id="q-hint">Search by course title, code, instructor or topic. Results update as you type.</p>
+              </div>
+
+              <div class="field">
+                <label for="dept">Department</label>
+                <select id="dept" name="dept"><option value="">All departments</option></select>
+              </div>
+              <div class="field">
+                <label for="level">Level</label>
+                <select id="level" name="level">
+                  <option value="">All levels</option>
+                  <option value="100">100 – Introductory</option>
+                  <option value="200">200 – Intermediate</option>
+                  <option value="300">300 – Advanced</option>
+                  <option value="400">400 – Senior</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="credits">Credits</label>
+                <select id="credits" name="credits">
+                  <option value="">Any credits</option>
+                  <option value="3">3 credits</option>
+                  <option value="4">4 credits</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="day">Meets on</label>
+                <select id="day" name="day">
+                  <option value="">Any day</option>
+                  <option value="Mon">Monday</option>
+                  <option value="Tue">Tuesday</option>
+                  <option value="Wed">Wednesday</option>
+                  <option value="Thu">Thursday</option>
+                  <option value="Fri">Friday</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="sort">Sort by</label>
+                <select id="sort" name="sort">
+                  <option value="code">Course code</option>
+                  <option value="title">Title (A–Z)</option>
+                  <option value="seats">Most seats available</option>
+                  <option value="credits">Most credits</option>
+                </select>
+              </div>
+            </div>
+            <div class="filter-actions">
+              <label class="checkbox"><input type="checkbox" name="open" id="open"> Show only courses with open seats</label>
+              <button type="reset" class="btn btn-secondary btn-sm">Clear all filters</button>
+            </div>
+          </form>
+        </section>
+
+        <section aria-labelledby="results-title">
+          <h2 id="results-title" class="visually-hidden">Course results</h2>
+          <div class="results-bar">
+            <p class="results-count" id="results-count" role="status">Loading courses…</p>
+            <a class="btn btn-primary btn-sm" href="register.html">Continue to registration
+              <span class="count-badge" data-cart-count data-count="0"><span aria-hidden="true">0</span><span class="visually-hidden"></span></span></a>
+          </div>
+          <noscript><p class="alert alert-info">The course catalog requires JavaScript to search and display courses.</p></noscript>
+          <ul class="course-grid" id="course-results"></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; 2026 Northfield University · Office of the Registrar</p>
+      <ul>
+        <li><a href="#">Accessibility statement</a></li>
+        <li><a href="#">Registrar help desk</a></li>
+        <li><a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

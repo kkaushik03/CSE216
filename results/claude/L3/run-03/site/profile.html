@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile – Northfield University Course Registration</title>
+  <meta name="description" content="View your student profile and manage registered courses.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="23" fill="#fde047"/>
+          <path d="M24 11 8 19l16 8 13-6.5V30h3V19L24 11z" fill="#312e81"/>
+          <path d="M14 25v7c0 3 4.5 5.5 10 5.5S34 35 34 32v-7l-10 5-10-5z" fill="#be185d"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Northfield University</span>
+          <span class="brand-sub">Course Registration</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html" aria-current="page">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-intro">
+      <div class="container">
+        <h1>Student profile</h1>
+        <p>Update your details and manage the courses you are registered for.</p>
+      </div>
+    </div>
+
+    <div class="container section profile-layout">
+      <section class="profile-card" aria-labelledby="details-title">
+        <div class="avatar" id="avatar" aria-hidden="true"></div>
+        <p class="mt-0"><strong id="profile-display-name"></strong><br><span id="profile-display-meta"></span></p>
+        <h2 id="details-title">Personal details</h2>
+
+        <div id="profile-error-summary" class="error-summary" tabindex="-1" hidden aria-labelledby="profile-error-title">
+          <h3 id="profile-error-title">Please correct the following</h3>
+          <ul></ul>
+        </div>
+
+        <form id="profile-form" novalidate>
+          <p class="hint">All fields are required.</p>
+          <div class="field">
+            <label for="p-name">Full name</label>
+            <input type="text" id="p-name" name="name" autocomplete="name" required aria-required="true" aria-describedby="p-name-error">
+            <p class="error-msg" id="p-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="p-id">Student ID</label>
+            <span class="hint" id="p-id-hint">The letter S followed by 7 digits.</span>
+            <input type="text" id="p-id" name="studentId" required aria-required="true" spellcheck="false" aria-describedby="p-id-hint p-id-error">
+            <p class="error-msg" id="p-id-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="p-email">University email</label>
+            <input type="email" id="p-email" name="email" autocomplete="email" required aria-required="true" aria-describedby="p-email-error">
+            <p class="error-msg" id="p-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="p-major">Major</label>
+            <select id="p-major" name="major">
+              <option>Biology</option>
+              <option>Computer Science</option>
+              <option>English</option>
+              <option>History</option>
+              <option>Mathematics</option>
+              <option>Physics</option>
+              <option>Undeclared</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="p-year">Year of study</label>
+            <select id="p-year" name="year">
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Save profile</button>
+          <p id="profile-status" class="status-msg" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="registered-heading">
+        <div class="section-head">
+          <h2 id="registered-heading" tabindex="-1">Registered courses</h2>
+          <a class="btn btn-accent btn-small" href="catalog.html">Add more courses</a>
+        </div>
+
+        <ul class="profile-stats" role="list">
+          <li class="stat stat--blue"><span class="stat-value" id="stat-courses">0</span> <span class="stat-label">courses</span></li>
+          <li class="stat stat--purple"><span class="stat-value" id="stat-credits">0</span> <span class="stat-label">total credits</span></li>
+          <li class="stat stat--green"><span class="stat-value" id="stat-terms">0</span> <span class="stat-label">terms</span></li>
+        </ul>
+
+        <div id="table-wrap" class="table-wrap" role="region" aria-labelledby="reg-caption" tabindex="0">
+          <table>
+            <caption id="reg-caption">Your registered courses <span class="visually-hidden">(scroll horizontally to see all columns)</span></caption>
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Title</th>
+                <th scope="col">Department</th>
+                <th scope="col">Term</th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Instructor</th>
+                <th scope="col" class="num">Credits</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="reg-tbody"></tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="6">Total credits</th>
+                <td class="num" id="reg-total">0</td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div id="reg-empty" class="empty-state" hidden>
+          <h3>You are not registered for any courses</h3>
+          <p>Browse the catalog to find courses for your next term.</p>
+          <a class="btn btn-primary" href="catalog.html">Browse the course catalog</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northfield University, Office of the Registrar.</p>
+      <ul aria-label="Contact">
+        <li><a href="mailto:registrar@northfield.edu">Email the Registrar</a></li>
+        <li><a href="tel:+15555550142">Call (555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <dialog id="drop-dialog" class="modal" aria-labelledby="drop-title" aria-describedby="drop-text">
+    <div class="modal-inner">
+      <div class="modal-header modal-header--danger">
+        <h2 id="drop-title">Drop this course?</h2>
+        <button type="button" class="modal-close" data-close>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="visually-hidden">Close dialog</span>
+        </button>
+      </div>
+      <p id="drop-text"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" data-close data-initial-focus>Keep course</button>
+        <button type="button" class="btn btn-danger" id="drop-confirm">Yes, drop course</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

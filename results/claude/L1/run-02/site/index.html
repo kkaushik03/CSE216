@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniReg · Home</title>
+  <meta name="description" content="University course registration — browse courses, register, and manage your schedule.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <main>
+    <section class="hero">
+      <div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">🍂 Fall 2026 registration is open</p>
+        <h1>Welcome back, <span class="gradient-text" id="welcome-name">Student</span>!</h1>
+        <p class="hero-sub">Discover courses, build a conflict-free schedule, and register in just a few clicks.</p>
+        <form class="hero-search" id="hero-search" role="search">
+          <label for="hero-query" class="sr-only">Search courses</label>
+          <input id="hero-query" type="search" placeholder="Search by course code, title, or instructor…" autocomplete="off">
+          <button class="btn btn-primary" type="submit">🔍 Search</button>
+        </form>
+        <div class="hero-actions">
+          <a href="catalog.html" class="btn btn-light">📖 Browse Catalog</a>
+          <a href="register.html" class="btn btn-outline-light">📝 Start Registration</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container stats">
+      <div class="stat-card" style="--accent:#6c5ce7"><span class="stat-icon">📚</span><strong id="stat-courses">0</strong><span>Courses offered</span></div>
+      <div class="stat-card" style="--accent:#00b894"><span class="stat-icon">🏛️</span><strong id="stat-depts">0</strong><span>Departments</span></div>
+      <div class="stat-card" style="--accent:#e84393"><span class="stat-icon">💺</span><strong id="stat-seats">0</strong><span>Open seats</span></div>
+      <div class="stat-card" style="--accent:#fdcb6e"><span class="stat-icon">✅</span><strong id="stat-mine">0</strong><span>Your courses</span></div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>Explore by Department</h2>
+        <a href="catalog.html" class="link-arrow">View all →</a>
+      </div>
+      <div class="dept-grid" id="dept-grid"></div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>✨ Featured Courses</h2>
+        <a href="catalog.html" class="link-arrow">See catalog →</a>
+      </div>
+      <div class="course-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="center">How Registration Works</h2>
+      <div class="steps">
+        <div class="step" style="--accent:#6c5ce7"><span class="step-num">1</span><h3>Browse</h3><p>Search and filter the catalog to find courses that fit your goals.</p></div>
+        <div class="step" style="--accent:#0984e3"><span class="step-num">2</span><h3>Select</h3><p>Pick your courses — we'll flag time conflicts and credit limits automatically.</p></div>
+        <div class="step" style="--accent:#00b894"><span class="step-num">3</span><h3>Confirm</h3><p>Review your selection and confirm. Your seat is reserved instantly.</p></div>
+        <div class="step" style="--accent:#e84393"><span class="step-num">4</span><h3>Manage</h3><p>View your weekly schedule and drop courses from your profile.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

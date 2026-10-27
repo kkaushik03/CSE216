@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register for a course – Northfield University Course Registration</title>
+  <meta name="description" content="Register for a Spring 2027 course at Northfield University.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span>Northfield University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><a href="profile.html">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-hero register-hero">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-3" aria-hidden="true"></span>
+      <div class="container">
+        <h1>Register for a course</h1>
+        <p>Complete the form below. You’ll be able to review everything before your registration is confirmed.</p>
+      </div>
+    </div>
+
+    <div class="container register-layout">
+      <div>
+        <div class="error-summary" id="error-summary" tabindex="-1" hidden aria-labelledby="error-summary-title">
+          <h2 id="error-summary-title">There is a problem</h2>
+          <ul id="error-summary-list"></ul>
+        </div>
+
+        <div class="success-message" id="success-message" tabindex="-1" hidden aria-labelledby="success-title">
+          <h2 id="success-title">Registration confirmed</h2>
+          <p id="success-text"></p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="profile.html">View my registered courses</a>
+            <a class="btn btn-secondary" href="catalog.html">Browse more courses</a>
+          </div>
+        </div>
+
+        <form id="registration-form" novalidate aria-describedby="form-intro">
+          <p id="form-intro">All fields are required unless marked “optional”.</p>
+
+          <fieldset class="form-section accent-violet">
+            <legend>Student information</legend>
+            <div class="form-grid">
+              <div class="field" id="field-studentId">
+                <label for="studentId">Student ID</label>
+                <span class="hint" id="studentId-hint">The letter S followed by 7 digits, for example S2024581.</span>
+                <p class="field-error" id="studentId-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+                <input type="text" id="studentId" name="studentId" aria-describedby="studentId-hint"
+                       autocomplete="off" spellcheck="false" inputmode="text" maxlength="8" required>
+              </div>
+
+              <div class="field" id="field-fullName">
+                <label for="fullName">Full name</label>
+                <p class="field-error" id="fullName-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+                <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+              </div>
+
+              <div class="field" id="field-email">
+                <label for="email">University email address</label>
+                <span class="hint" id="email-hint">Must end in @northfield.edu</span>
+                <p class="field-error" id="email-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+                <input type="email" id="email" name="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false" required>
+              </div>
+
+              <div class="field" id="field-year">
+                <label for="year">Year of study</label>
+                <p class="field-error" id="year-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+                <select id="year" name="year" required>
+                  <option value="">Select your year</option>
+                  <option>Freshman</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                  <option>Graduate</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section accent-pink">
+            <legend>Course selection</legend>
+
+            <div class="field" id="field-course">
+              <label for="course">Course</label>
+              <span class="hint" id="course-hint">Courses are grouped by department. Full courses are marked “full”.</span>
+              <p class="field-error" id="course-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+              <select id="course" name="course" aria-describedby="course-hint" required>
+                <option value="">Select a course</option>
+              </select>
+            </div>
+
+            <div class="course-preview" id="course-preview" aria-live="polite"></div>
+
+            <fieldset class="choice-group" id="field-grading" aria-describedby="grading-hint">
+              <legend>Grading option</legend>
+              <span class="hint" id="grading-hint">Audited courses do not count toward your credit total.</span>
+              <p class="field-error" id="grading-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+              <div class="choice">
+                <input type="radio" id="grading-letter" name="grading" value="letter">
+                <label for="grading-letter">Letter grade (A to F)</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="grading-passfail" name="grading" value="passfail">
+                <label for="grading-passfail">Pass / Fail</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="grading-audit" name="grading" value="audit">
+                <label for="grading-audit">Audit (no credit)</label>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="form-section accent-teal-form">
+            <legend>Additional information</legend>
+
+            <div class="field">
+              <label for="notes">Accessibility or accommodation requests <span class="req">(optional)</span></label>
+              <span class="hint" id="notes-hint">Shared confidentially with Disability Resources and your instructor.</span>
+              <textarea id="notes" name="notes" aria-describedby="notes-hint" rows="4"></textarea>
+            </div>
+
+            <div class="field" id="field-policy">
+              <p class="field-error" id="policy-error" hidden><span aria-hidden="true">⚠</span><span class="msg"></span></p>
+              <div class="choice">
+                <input type="checkbox" id="policy" name="policy" value="agree" required>
+                <label for="policy">I have read and agree to the registration and tuition policy</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Review registration</button>
+            <a class="btn btn-secondary" href="catalog.html">Back to course catalog</a>
+          </div>
+        </form>
+      </div>
+
+      <aside class="register-aside" aria-labelledby="schedule-heading">
+        <div class="aside-card">
+          <h2 id="schedule-heading">Your current schedule</h2>
+          <div class="credit-meter">
+            <p id="credit-text"></p>
+            <div class="meter-bar" aria-hidden="true"><span id="credit-bar"></span></div>
+          </div>
+          <ul class="aside-list" id="schedule-list"></ul>
+          <a href="profile.html">Manage your courses in your profile</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Northfield University, Office of the Registrar</p>
+      <p>Need help? Email <a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a> or call <a href="tel:+15555550123">555-555-0123</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

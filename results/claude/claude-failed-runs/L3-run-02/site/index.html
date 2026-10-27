@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home – Northbrook University Course Registration</title>
+  <meta name="description" content="Browse courses, register for classes and manage your schedule at Northbrook University.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbrook University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration <span class="nav-badge" data-cart-count hidden></span></a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="eyebrow">Spring 2027 registration is open</p>
+        <h1 id="hero-title">Build your perfect semester</h1>
+        <p class="hero-lead">Explore more than a dozen courses across eight departments, check for schedule conflicts, and register in minutes.</p>
+
+        <form class="hero-search" action="catalog.html" method="get" role="search" aria-label="Quick course search">
+          <label for="home-search" class="hero-search-label">Search the course catalog</label>
+          <div class="search-row">
+            <input id="home-search" name="q" type="search" autocomplete="off" aria-describedby="home-search-hint">
+            <button type="submit" class="btn btn-sun">Search courses</button>
+          </div>
+          <p id="home-search-hint" class="hint hint-on-dark">Try a course code like “CS101”, a topic like “history”, or an instructor’s name.</p>
+        </form>
+
+        <div class="hero-actions">
+          <a class="btn btn-light" href="catalog.html">Browse all courses</a>
+          <a class="btn btn-outline-light" href="register.html">Go to registration</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title">How registration works</h2>
+        <ol class="steps">
+          <li class="step step-violet">
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Find courses</h3>
+            <p>Search and filter the catalog by department, level, credits and meeting days.</p>
+          </li>
+          <li class="step step-pink">
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Add to your list</h3>
+            <p>Select the courses you want. We’ll keep them ready on the registration page.</p>
+          </li>
+          <li class="step step-orange">
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Confirm registration</h3>
+            <p>Complete the form, review your choices and confirm. We’ll check for time conflicts.</p>
+          </li>
+          <li class="step step-teal">
+            <span class="step-number" aria-hidden="true">4</span>
+            <h3>Manage your schedule</h3>
+            <p>See all registered courses on your profile and drop a course if your plans change.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="dept-title">
+      <div class="container">
+        <h2 id="dept-title">Browse by department</h2>
+        <ul class="dept-grid" id="dept-links">
+          <li><a class="dept-link" style="--dept-color:#1d4ed8" href="catalog.html?dept=CS">Computer Science</a></li>
+          <li><a class="dept-link" style="--dept-color:#7e22ce" href="catalog.html?dept=MATH">Mathematics</a></li>
+          <li><a class="dept-link" style="--dept-color:#047857" href="catalog.html?dept=BIO">Biology</a></li>
+          <li><a class="dept-link" style="--dept-color:#b91c1c" href="catalog.html?dept=ENG">English</a></li>
+          <li><a class="dept-link" style="--dept-color:#be185d" href="catalog.html?dept=ART">Art &amp; Design</a></li>
+          <li><a class="dept-link" style="--dept-color:#0e7490" href="catalog.html?dept=PHYS">Physics</a></li>
+          <li><a class="dept-link" style="--dept-color:#92400e" href="catalog.html?dept=HIST">History</a></li>
+          <li><a class="dept-link" style="--dept-color:#6d28d9" href="catalog.html?dept=PSY">Psychology</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="dates-title">
+      <div class="container two-col">
+        <div>
+          <h2 id="dates-title">Important dates</h2>
+          <ul class="date-list">
+            <li><time datetime="2026-11-02">November 2, 2026</time> <span>Priority registration opens for seniors</span></li>
+            <li><time datetime="2026-11-09">November 9, 2026</time> <span>Registration opens for all students</span></li>
+            <li><time datetime="2027-01-19">January 19, 2027</time> <span>Spring classes begin</span></li>
+            <li><time datetime="2027-01-29">January 29, 2027</time> <span>Last day to add or drop without a fee</span></li>
+          </ul>
+        </div>
+        <aside class="callout" aria-labelledby="help-title">
+          <h2 id="help-title">Need help?</h2>
+          <p>Advisors are available Monday to Friday, 9 AM to 5 PM.</p>
+          <p>Email <a href="mailto:registrar@northbrook.example">registrar@northbrook.example</a> or call <a href="tel:+15555550123">555-555-0123</a>.</p>
+          <p>Each student may register for up to <strong>18 credits</strong> per term.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northbrook University Office of the Registrar. This is a demonstration application.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

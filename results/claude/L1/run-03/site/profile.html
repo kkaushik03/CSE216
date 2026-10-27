@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile — UniReg</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="profile">
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-header main">
+      <div class="container">
+        <h1>🎓 Student Profile</h1>
+        <p>Your personal details, registered courses and weekly schedule.</p>
+      </div>
+    </section>
+
+    <section class="container profile-layout">
+      <aside class="panel profile-card" id="profile-card"></aside>
+
+      <div>
+        <div class="mini-stats" id="mini-stats"></div>
+
+        <div class="panel">
+          <div class="table-toolbar">
+            <h2>📋 Registered Courses</h2>
+            <div class="search-wrap">
+              <input class="input" type="search" id="table-search" placeholder="Search registered courses…" aria-label="Search registered courses">
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="course-table">
+              <thead>
+                <tr>
+                  <th data-sort="code">Code</th>
+                  <th data-sort="title">Course</th>
+                  <th data-sort="instructor">Instructor</th>
+                  <th data-sort="schedule">Schedule</th>
+                  <th data-sort="credits">Credits</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+              <tfoot></tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:1.5rem">
+          <h2>🗓️ Weekly Schedule</h2>
+          <p>Your classes at a glance.</p>
+          <div class="week-grid" id="week-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="rainbow"></div>
+    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

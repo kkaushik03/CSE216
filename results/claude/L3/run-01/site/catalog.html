@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course catalog – Northfield University Course Registration</title>
+  <meta name="description" content="Search and filter Spring 2027 courses at Northfield University.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span>Northfield University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html" aria-current="page">Course catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-hero catalog-hero">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-2" aria-hidden="true"></span>
+      <div class="container">
+        <h1>Course catalog</h1>
+        <p>Find the right courses for Spring 2027. Results update as you type or change a filter.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <section class="filter-panel" aria-labelledby="filters-heading">
+        <h2 id="filters-heading" class="visually-hidden">Search and filter courses</h2>
+        <form id="filter-form" role="search" aria-label="Course catalog">
+          <div class="filter-grid">
+            <div class="field field-search">
+              <label for="search">Search courses</label>
+              <span class="hint" id="search-hint">Search by title, course code, instructor or keyword.</span>
+              <div class="search-row">
+                <input type="search" id="search" name="q" aria-describedby="search-hint" autocomplete="off">
+                <button type="submit" class="btn btn-primary">Show results</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="filter-dept">Department</label>
+              <select id="filter-dept" name="dept">
+                <option value="">All departments</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="filter-level">Course level</label>
+              <select id="filter-level" name="level">
+                <option value="">All levels</option>
+                <option value="100">100 level (introductory)</option>
+                <option value="200">200 level</option>
+                <option value="300">300 level</option>
+                <option value="400">400 level (advanced)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="filter-credits">Credits</label>
+              <select id="filter-credits" name="credits">
+                <option value="">Any credits</option>
+                <option value="3">3 credits</option>
+                <option value="4">4 credits</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="filter-mode">Format</label>
+              <select id="filter-mode" name="mode">
+                <option value="">All formats</option>
+                <option value="In person">In person</option>
+                <option value="Online">Online</option>
+                <option value="Hybrid">Hybrid</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="filter-sort">Sort by</label>
+              <select id="filter-sort" name="sort">
+                <option value="code">Course code</option>
+                <option value="title">Title (A to Z)</option>
+                <option value="seats">Most open seats</option>
+                <option value="credits">Credits (high to low)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-footer">
+            <div class="choice">
+              <input type="checkbox" id="filter-open" name="open" value="1">
+              <label for="filter-open">Only show courses with open seats</label>
+            </div>
+            <button type="reset" class="btn btn-secondary btn-small" id="clear-filters">Clear all filters</button>
+          </div>
+        </form>
+      </section>
+
+      <section aria-labelledby="results-heading">
+        <div class="results-header">
+          <h2 id="results-heading">Available courses</h2>
+          <p class="results-count" id="results-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <ul class="course-grid" id="course-list" aria-labelledby="results-heading"></ul>
+        <div class="empty-state" id="no-results" hidden>
+          <span class="icon" aria-hidden="true">🧭</span>
+          <h3>No courses match your search</h3>
+          <p>Try a different keyword or clear some filters.</p>
+          <button type="button" class="btn btn-primary" id="empty-clear">Clear all filters</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Northfield University, Office of the Registrar</p>
+      <p>Need help? Email <a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a> or call <a href="tel:+15555550123">555-555-0123</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

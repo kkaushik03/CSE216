@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home – Northfield University Course Registration</title>
+  <meta name="description" content="Register for Northfield University courses: browse the catalog, register, and manage your schedule.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="23" fill="#fde047"/>
+          <path d="M24 11 8 19l16 8 13-6.5V30h3V19L24 11z" fill="#312e81"/>
+          <path d="M14 25v7c0 3 4.5 5.5 10 5.5S34 35 34 32v-7l-10 5-10-5z" fill="#be185d"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Northfield University</span>
+          <span class="brand-sub">Course Registration</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu" role="list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="hero-eyebrow">Spring 2027 registration is open</p>
+        <h1 id="hero-title">Build your perfect semester</h1>
+        <p class="hero-lead">Explore courses across six departments, check seat availability in real time, and register in a few simple steps.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="catalog.html">Browse the course catalog</a>
+          <a class="btn btn-outline-light" href="register.html">Start your registration</a>
+        </div>
+        <form class="hero-search" role="search" action="catalog.html" method="get">
+          <label for="home-search">Search courses</label>
+          <div class="search-row">
+            <input type="search" id="home-search" name="q" autocomplete="off" aria-describedby="home-search-hint">
+            <button type="submit" class="btn btn-accent">Search</button>
+          </div>
+          <span id="home-search-hint" class="visually-hidden">Search by course code, title, instructor, or department.</span>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="glance-title">
+      <div class="container">
+        <h2 id="glance-title">Registration at a glance</h2>
+        <ul class="stats" role="list">
+          <li class="stat stat--blue"><span class="stat-value" id="home-course-count">18</span> <span class="stat-label">courses offered</span></li>
+          <li class="stat stat--purple"><span class="stat-value">6</span> <span class="stat-label">departments</span></li>
+          <li class="stat stat--green"><span class="stat-value">18</span> <span class="stat-label">maximum credits per term</span></li>
+          <li class="stat stat--orange"><span class="stat-value" id="home-reg-count">0</span> <span class="stat-label">courses you are registered for</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="dept-title">
+      <div class="container">
+        <h2 id="dept-title">Explore by department</h2>
+        <ul class="dept-tiles" id="dept-tiles" role="list">
+          <li><a class="dept-tile dept-cs" href="catalog.html">View all courses</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title">How to register</h2>
+        <ol class="steps">
+          <li style="--step-color: var(--c-cs)"><h3>Find courses</h3><p>Search and filter the catalog by department, level, and credits.</p></li>
+          <li style="--step-color: var(--c-math)"><h3>Choose your term</h3><p>Select courses and check your credit total stays within 18.</p></li>
+          <li style="--step-color: var(--c-engl)"><h3>Review and confirm</h3><p>Double-check your choices in the confirmation dialog.</p></li>
+          <li style="--step-color: var(--c-phys)"><h3>Manage your schedule</h3><p>View or drop courses at any time from your profile.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="dates-title">
+      <div class="container">
+        <h2 id="dates-title">Important dates</h2>
+        <div class="table-wrap dates-table-wrap" role="region" aria-labelledby="dates-caption" tabindex="0">
+          <table style="min-width: 0">
+            <caption id="dates-caption">Spring 2027 registration deadlines</caption>
+            <thead>
+              <tr><th scope="col">Milestone</th><th scope="col">Date</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Registration opens</th><td><time datetime="2026-11-02">Monday, November 2, 2026</time></td></tr>
+              <tr><th scope="row">Classes begin</th><td><time datetime="2027-01-19">Tuesday, January 19, 2027</time></td></tr>
+              <tr><th scope="row">Last day to add a course</th><td><time datetime="2027-01-29">Friday, January 29, 2027</time></td></tr>
+              <tr><th scope="row">Last day to drop without a grade</th><td><time datetime="2027-02-12">Friday, February 12, 2027</time></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northfield University, Office of the Registrar.</p>
+      <ul aria-label="Contact">
+        <li><a href="mailto:registrar@northfield.edu">Email the Registrar</a></li>
+        <li><a href="tel:+15555550142">Call (555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

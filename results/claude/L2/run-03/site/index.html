@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Northbridge University course registration: browse the catalog, register for classes and manage your schedule.">
+  <title>Home - Northbridge University Course Registration</title>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48"><path d="M24 8 3 18l21 10 21-10z"/><path d="M11 22v9c0 3 6 7 13 7s13-4 13-7v-9l-13 6z"/><path d="M42 19v12"/></svg>
+        <span class="brand__text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration <span class="nav-badge" data-cart-badge hidden></span></a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Spring 2027 registration is open</p>
+          <h1 id="hero-heading">Build a semester you&rsquo;ll love.</h1>
+          <p class="hero__lead">Explore courses across eight departments, check seat availability in real time and lock in your schedule in minutes.</p>
+
+          <form class="hero-search" action="catalog.html" method="get" role="search" aria-label="Course search">
+            <label for="hero-q" class="hero-search__label">Search courses</label>
+            <div class="hero-search__row">
+              <input id="hero-q" name="q" type="search" autocomplete="off"
+                     placeholder="e.g. Calculus, CS 101 or Dr. Cho" aria-describedby="hero-q-hint">
+              <button type="submit" class="btn btn--sun">Search</button>
+            </div>
+            <p id="hero-q-hint" class="hero-search__hint">Search by course title, code, instructor or keyword.</p>
+          </form>
+        </div>
+
+        <ul class="hero-stats" aria-label="Catalog at a glance">
+          <li class="stat stat--violet"><span class="stat__num" id="stat-courses">18</span> <span class="stat__label">courses offered</span></li>
+          <li class="stat stat--pink"><span class="stat__num" id="stat-depts">8</span> <span class="stat__label">departments</span></li>
+          <li class="stat stat--teal"><span class="stat__num" id="stat-open">16</span> <span class="stat__label">sections with open seats</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="steps-heading">
+      <div class="container">
+        <h2 id="steps-heading" class="section__title">Register in three steps</h2>
+        <ol class="steps">
+          <li class="step step--1">
+            <h3>Explore the catalog</h3>
+            <p>Search and filter by department, level, credits and meeting days.</p>
+            <a href="catalog.html" class="text-link">Browse courses</a>
+          </li>
+          <li class="step step--2">
+            <h3>Choose your courses</h3>
+            <p>Add courses to your registration. We&rsquo;ll flag time conflicts and credit limits.</p>
+            <a href="register.html" class="text-link">Review selections</a>
+          </li>
+          <li class="step step--3">
+            <h3>Confirm and track</h3>
+            <p>Submit your registration and manage your schedule from your profile.</p>
+            <a href="profile.html" class="text-link">View my profile</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="dept-heading">
+      <div class="container">
+        <h2 id="dept-heading" class="section__title">Browse by department</h2>
+        <ul id="dept-grid" class="dept-grid" role="list"></ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="featured-heading" class="section__title">Featured courses</h2>
+          <a href="catalog.html" class="btn btn--outline">View full catalog</a>
+        </div>
+        <ul id="featured-courses" class="card-grid" role="list"></ul>
+        <noscript><p class="notice">Turn on JavaScript to see featured courses, or <a href="catalog.html">open the catalog</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="dates-heading">
+      <div class="container">
+        <h2 id="dates-heading" class="section__title">Important dates</h2>
+        <ul class="dates" role="list">
+          <li class="date-card date-card--violet">
+            <p class="date-card__date"><time datetime="2026-11-02">Nov 2</time></p>
+            <p>Priority registration for seniors and graduate students</p>
+          </li>
+          <li class="date-card date-card--pink">
+            <p class="date-card__date"><time datetime="2026-11-09">Nov 9</time></p>
+            <p>Open registration for all students</p>
+          </li>
+          <li class="date-card date-card--teal">
+            <p class="date-card__date"><time datetime="2027-01-19">Jan 19</time></p>
+            <p>Spring 2027 classes begin</p>
+          </li>
+          <li class="date-card date-card--orange">
+            <p class="date-card__date"><time datetime="2027-01-30">Jan 30</time></p>
+            <p>Last day to add or drop without a fee</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Northbridge University Office of the Registrar</p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:registrar@northbridge.edu">registrar@northbridge.edu</a></li>
+        <li><a href="tel:+15555550142">(555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile – Northbrook University Course Registration</title>
+  <meta name="description" content="View your student profile and registered courses.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbrook University <span class="brand-sub">Course Registration</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration <span class="nav-badge" data-cart-count hidden></span></a></li>
+          <li><a href="profile.html" aria-current="page">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-banner banner-green">
+      <div class="container">
+        <h1>My Profile</h1>
+        <p>Your student details and Spring 2027 schedule.</p>
+      </div>
+    </div>
+
+    <div class="container profile-layout">
+      <section class="card profile-card" aria-labelledby="student-title">
+        <div class="profile-head">
+          <span class="avatar" id="avatar" aria-hidden="true"></span>
+          <div>
+            <h2 id="student-title">Student information</h2>
+            <p class="profile-name" id="profile-name"></p>
+          </div>
+        </div>
+        <dl class="summary-list" id="profile-details"></dl>
+        <p><a href="register.html">Update your details on the registration page</a></p>
+      </section>
+
+      <section aria-labelledby="stats-title" class="stats-section">
+        <h2 id="stats-title" class="visually-hidden">Term summary</h2>
+        <ul class="stats">
+          <li class="stat stat-violet"><span class="stat-value" id="stat-courses">0</span> <span class="stat-label">courses registered</span></li>
+          <li class="stat stat-pink"><span class="stat-value" id="stat-credits">0</span> <span class="stat-label">credits enrolled</span></li>
+          <li class="stat stat-teal"><span class="stat-value" id="stat-remaining">18</span> <span class="stat-label">credits remaining of 18</span></li>
+        </ul>
+      </section>
+
+      <section class="schedule-section" aria-labelledby="schedule-title">
+        <div class="section-head">
+          <h2 id="schedule-title">Registered courses</h2>
+          <a class="btn btn-secondary" href="catalog.html">Find more courses</a>
+        </div>
+
+        <div id="drop-status" class="notice notice-success" role="status"></div>
+
+        <div id="table-container" class="table-wrap" role="region" aria-labelledby="schedule-caption" tabindex="0">
+          <table class="data-table" id="schedule-table">
+            <caption id="schedule-caption">
+              Spring 2027 registered courses
+              <span class="caption-hint">Select a column heading button to sort. On small screens, scroll the table sideways.</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" data-sort-key="id" aria-sort="ascending"><button type="button" class="sort-btn">Course code <span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col" data-sort-key="title"><button type="button" class="sort-btn">Title <span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col" data-sort-key="dept"><button type="button" class="sort-btn">Department <span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col" data-sort-key="credits"><button type="button" class="sort-btn">Credits <span class="sort-icon" aria-hidden="true"></span></button></th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Instructor</th>
+                <th scope="col">Room</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body"></tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="3">Total credits</th>
+                <td id="total-credits">0</td>
+                <td colspan="4"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div id="empty-schedule" class="empty-state" hidden>
+          <h3>You haven’t registered for any courses yet</h3>
+          <p><a href="catalog.html">Browse the course catalog</a> to get started.</p>
+        </div>
+      </section>
+    </div>
+
+    <dialog id="drop-dialog" class="modal" aria-labelledby="drop-title" aria-describedby="drop-desc">
+      <div class="modal-inner">
+        <div class="modal-header">
+          <h2 id="drop-title">Drop this course?</h2>
+          <button type="button" class="icon-btn" data-close aria-label="Close dialog">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <p id="drop-desc"></p>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-danger" id="drop-confirm">Yes, drop course</button>
+          <button type="button" class="btn btn-secondary" data-close data-autofocus>Keep course</button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northbrook University Office of the Registrar. This is a demonstration application.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

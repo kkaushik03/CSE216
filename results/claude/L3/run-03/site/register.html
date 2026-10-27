@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register – Northfield University Course Registration</title>
+  <meta name="description" content="Register for Northfield University courses.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="register">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="23" fill="#fde047"/>
+          <path d="M24 11 8 19l16 8 13-6.5V30h3V19L24 11z" fill="#312e81"/>
+          <path d="M14 25v7c0 3 4.5 5.5 10 5.5S34 35 34 32v-7l-10 5-10-5z" fill="#be185d"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Northfield University</span>
+          <span class="brand-sub">Course Registration</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <ul id="primary-menu" class="nav-menu" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><a href="profile.html">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-intro">
+      <div class="container">
+        <h1>Course registration</h1>
+        <p>Complete the form below to register. Fields marked with an asterisk (<span aria-hidden="true">*</span><span class="visually-hidden">star</span>) are required.</p>
+      </div>
+    </div>
+
+    <div class="container section">
+      <div id="reg-success" class="alert alert--success" tabindex="-1" hidden aria-labelledby="reg-success-title">
+        <h2 id="reg-success-title"><span aria-hidden="true">🎉 </span>Registration complete</h2>
+        <p id="reg-success-text"></p>
+        <p><a href="profile.html">View your registered courses in your profile</a></p>
+      </div>
+
+      <div id="error-summary" class="error-summary" tabindex="-1" hidden aria-labelledby="error-summary-title">
+        <h2 id="error-summary-title">There is a problem with your registration</h2>
+        <ul></ul>
+      </div>
+
+      <div class="register-layout">
+        <form id="registration-form" novalidate aria-labelledby="form-title">
+          <h2 id="form-title" class="visually-hidden">Registration form</h2>
+
+          <fieldset>
+            <legend>Student information</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="student-id">Student ID <span class="req" aria-hidden="true">*</span></label>
+                <span class="hint" id="student-id-hint">The letter S followed by 7 digits, for example S1234567.</span>
+                <input type="text" id="student-id" name="studentId" required aria-required="true" spellcheck="false"
+                  aria-describedby="student-id-hint student-id-error">
+                <p class="error-msg" id="student-id-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="student-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="student-name" name="name" autocomplete="name" required aria-required="true"
+                  aria-describedby="student-name-error">
+                <p class="error-msg" id="student-name-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="student-email">University email <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="student-email" name="email" autocomplete="email" required aria-required="true"
+                  aria-describedby="student-email-error">
+                <p class="error-msg" id="student-email-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="term">Term <span class="req" aria-hidden="true">*</span></label>
+                <select id="term" name="term" required aria-required="true" aria-describedby="term-error">
+                  <option value="">Select a term</option>
+                </select>
+                <p class="error-msg" id="term-error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="courses" aria-describedby="courses-hint courses-error">
+            <legend>Choose your courses <span class="req" aria-hidden="true">*</span><span class="visually-hidden">(required)</span></legend>
+            <p class="hint" id="courses-hint">Select one or more courses. Full courses and courses you already take cannot be selected. Maximum 18 credits per term.</p>
+            <p class="error-msg" id="courses-error" hidden></p>
+            <div id="course-options"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Agreement</legend>
+            <div class="field">
+              <div class="check">
+                <input type="checkbox" id="agree" name="agree" required aria-required="true" aria-describedby="agree-error">
+                <label for="agree">I confirm that I have completed the prerequisites or have instructor approval for these courses. <span class="req" aria-hidden="true">*</span></label>
+              </div>
+              <p class="error-msg" id="agree-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" id="review-btn" class="btn btn-primary">Review registration</button>
+            <a class="btn btn-secondary" href="catalog.html">Back to the course catalog</a>
+          </div>
+        </form>
+
+        <aside class="register-aside" aria-labelledby="summary-title">
+          <div class="summary-card">
+            <h2 id="summary-title">Your selection</h2>
+            <div class="summary-body">
+              <div class="credit-meter" aria-hidden="true"><div class="credit-meter-fill" id="credit-meter-fill"></div></div>
+              <p id="credit-tally" role="status" aria-live="polite" aria-atomic="true"></p>
+              <h3>Selected courses</h3>
+              <ul class="selected-list" id="selected-list"></ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Northfield University, Office of the Registrar.</p>
+      <ul aria-label="Contact">
+        <li><a href="mailto:registrar@northfield.edu">Email the Registrar</a></li>
+        <li><a href="tel:+15555550142">Call (555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <dialog id="confirm-dialog" class="modal" aria-labelledby="confirm-title" aria-describedby="confirm-desc">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <h2 id="confirm-title">Confirm your registration</h2>
+        <button type="button" class="modal-close" data-close>
+          <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="visually-hidden">Close dialog</span>
+        </button>
+      </div>
+      <p id="confirm-desc">Please review your choices before submitting. You are registering <strong id="confirm-student"></strong> for <strong id="confirm-term"></strong>.</p>
+      <h3>Courses</h3>
+      <ul class="modal-list" id="confirm-list"></ul>
+      <p><strong>Total: <span id="confirm-credits"></span></strong></p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" data-close>Go back and edit</button>
+        <button type="button" class="btn btn-primary" id="confirm-submit" data-initial-focus>Confirm registration</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

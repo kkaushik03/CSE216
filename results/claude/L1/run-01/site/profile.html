@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile · Horizon University</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-header profile-header">
+      <div class="container">
+        <h1>👤 Student Profile</h1>
+        <p>Your details, schedule and registered courses at a glance.</p>
+      </div>
+    </section>
+
+    <section class="container profile-layout">
+      <div class="panel profile-card">
+        <div class="avatar" id="avatar" aria-hidden="true">GS</div>
+        <h2 id="profile-name">Guest Student</h2>
+        <p id="profile-program" class="muted"></p>
+        <dl id="profile-details" class="profile-details"></dl>
+        <button id="edit-profile" class="btn btn-primary btn-block" type="button">✏️ Edit profile</button>
+        <a class="btn btn-ghost btn-block" href="register.html">+ Add courses</a>
+      </div>
+
+      <div class="profile-main">
+        <div class="stats mini">
+          <div class="stat-card c1"><strong id="stat-reg-courses">0</strong><span>Courses</span></div>
+          <div class="stat-card c2"><strong id="stat-reg-credits">0</strong><span>Credits</span></div>
+          <div class="stat-card c3"><strong id="stat-remaining">0</strong><span>Credits left</span></div>
+          <div class="stat-card c4"><strong id="stat-hours">0</strong><span>Class hrs / week</span></div>
+        </div>
+        <div class="panel">
+          <div class="credit-label"><span>Credit load</span><span class="muted">max 18</span></div>
+          <div class="meter"><span id="credit-progress"></span></div>
+        </div>
+
+        <div class="panel">
+          <h2>🗓️ Weekly schedule</h2>
+          <div id="weekly-schedule" class="weekly-schedule"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="panel">
+        <div class="section-head wrap">
+          <h2>📋 Registered courses</h2>
+          <div class="table-tools">
+            <label class="sr-only" for="table-search">Search registered courses</label>
+            <input id="table-search" type="search" placeholder="🔍 Search…">
+            <label class="sr-only" for="table-dept">Filter by department</label>
+            <select id="table-dept"><option value="">All departments</option></select>
+          </div>
+        </div>
+        <div id="profile-table"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="footer-year"></span> Horizon University · Office of the Registrar</p>
+    <p class="footer-links"><a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="register.html">Register</a><a href="profile.html">Profile</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

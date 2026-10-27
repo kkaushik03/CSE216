@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for Northbridge University courses.">
+  <title>Register for Courses - Northbridge University</title>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="register">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48"><path d="M24 8 3 18l21 10 21-10z"/><path d="M11 22v9c0 3 6 7 13 7s13-4 13-7v-9l-13 6z"/><path d="M42 19v12"/></svg>
+        <span class="brand__text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html" aria-current="page">Registration <span class="nav-badge" data-cart-badge hidden></span></a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-banner page-banner--register">
+      <div class="container">
+        <h1 id="register-heading" tabindex="-1">Register for Courses</h1>
+        <p>Check your details, review your selected courses and submit. Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+      </div>
+    </div>
+
+    <div class="container section">
+      <section id="success-panel" class="success-panel" hidden aria-labelledby="success-heading">
+        <h2 id="success-heading" tabindex="-1">Registration complete</h2>
+        <p>You are now registered for the following courses in <strong id="success-term"></strong>:</p>
+        <ul id="success-list" class="success-list"></ul>
+        <p>A confirmation email is on its way. You can review or drop courses from your profile.</p>
+        <div class="button-row">
+          <a href="profile.html" class="btn btn--primary">View my courses</a>
+          <button type="button" id="register-more" class="btn btn--outline">Register for more courses</button>
+        </div>
+      </section>
+
+      <form id="registration-form" class="reg-form" novalidate>
+        <div id="error-summary" class="error-summary" tabindex="-1" hidden aria-labelledby="error-summary-title">
+          <h2 id="error-summary-title">There is a problem with your registration</h2>
+          <ul></ul>
+        </div>
+
+        <fieldset class="panel panel--violet">
+          <legend class="panel__legend"><span class="panel__num" aria-hidden="true">1</span>Student information</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="first-name">First name <span class="req" aria-hidden="true">*</span></label>
+              <input id="first-name" name="firstName" type="text" autocomplete="given-name" required aria-describedby="first-name-error">
+              <p id="first-name-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="last-name">Last name <span class="req" aria-hidden="true">*</span></label>
+              <input id="last-name" name="lastName" type="text" autocomplete="family-name" required aria-describedby="last-name-error">
+              <p id="last-name-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="student-id">Student ID <span class="req" aria-hidden="true">*</span></label>
+              <p id="student-id-hint" class="hint">The letter S followed by 8 digits, for example S20261234.</p>
+              <input id="student-id" name="studentId" type="text" required spellcheck="false" autocomplete="off"
+                     inputmode="text" aria-describedby="student-id-hint student-id-error">
+              <p id="student-id-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">University email <span class="req" aria-hidden="true">*</span></label>
+              <p id="email-hint" class="hint">We&rsquo;ll send your confirmation here.</p>
+              <input id="email" name="email" type="email" autocomplete="email" required spellcheck="false"
+                     aria-describedby="email-hint email-error">
+              <p id="email-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="major">Major <span class="req" aria-hidden="true">*</span></label>
+              <select id="major" name="major" required aria-describedby="major-error">
+                <option value="">Select your major</option>
+              </select>
+              <p id="major-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="year">Year of study <span class="req" aria-hidden="true">*</span></label>
+              <select id="year" name="year" required aria-describedby="year-error">
+                <option value="">Select your year</option>
+              </select>
+              <p id="year-error" class="field-error" hidden></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="panel panel--pink">
+          <legend class="panel__legend"><span class="panel__num" aria-hidden="true">2</span>Term</legend>
+          <div class="field field--narrow">
+            <label for="term">Registration term <span class="req" aria-hidden="true">*</span></label>
+            <select id="term" name="term" required aria-describedby="term-error"></select>
+            <p id="term-error" class="field-error" hidden></p>
+          </div>
+        </fieldset>
+
+        <fieldset id="courses-fieldset" class="panel panel--teal" aria-describedby="courses-hint courses-error">
+          <legend class="panel__legend"><span class="panel__num" aria-hidden="true">3</span>Courses</legend>
+          <p id="courses-hint" class="hint">Checked courses will be registered. You can take up to 18 credits per term.</p>
+          <p id="courses-error" class="field-error" hidden></p>
+
+          <ul id="selected-courses" class="pick-list" role="list"></ul>
+          <p id="selected-empty" class="empty-inline" hidden>
+            No courses selected yet. Add one below or <a href="catalog.html">browse the catalog</a>.
+          </p>
+
+          <div class="add-course">
+            <div class="field">
+              <label for="add-course">Add another course</label>
+              <select id="add-course"></select>
+            </div>
+            <button type="button" id="add-course-btn" class="btn btn--outline">Add course</button>
+          </div>
+
+          <div id="credit-totals" class="credit-totals" role="status" aria-live="polite" aria-atomic="true">
+            <p><span class="credit-totals__label">Selected now</span> <strong id="credits-selected">0</strong> credits</p>
+            <p><span class="credit-totals__label">Already registered this term</span> <strong id="credits-existing">0</strong> credits</p>
+            <p class="credit-totals__total"><span class="credit-totals__label">Term total</span> <strong id="credits-total">0</strong> of 18 credits</p>
+          </div>
+
+          <div id="conflict-warning" class="warning" hidden>
+            <h3>Schedule conflict</h3>
+            <ul></ul>
+          </div>
+        </fieldset>
+
+        <fieldset class="panel panel--orange">
+          <legend class="panel__legend"><span class="panel__num" aria-hidden="true">4</span>Review and submit</legend>
+          <div class="field">
+            <label for="notes">Notes for your advisor <span class="optional">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" maxlength="500" aria-describedby="notes-hint"></textarea>
+            <p id="notes-hint" class="hint">Up to 500 characters.</p>
+          </div>
+          <div class="check check--boxed">
+            <input id="agree" name="agree" type="checkbox" required aria-describedby="agree-error">
+            <label for="agree">I have read and agree to the registration and tuition policies. <span class="req" aria-hidden="true">*</span></label>
+          </div>
+          <p id="agree-error" class="field-error" hidden></p>
+        </fieldset>
+
+        <div class="button-row">
+          <button type="submit" class="btn btn--primary btn--large">Review and register</button>
+          <a href="catalog.html" class="btn btn--ghost">Back to catalog</a>
+        </div>
+      </form>
+
+      <noscript><p class="notice">Registration needs JavaScript. Please enable it or contact the registrar&rsquo;s office.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Northbridge University Office of the Registrar</p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:registrar@northbridge.edu">registrar@northbridge.edu</a></li>
+        <li><a href="tel:+15555550142">(555) 555-0142</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
