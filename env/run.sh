@@ -29,7 +29,7 @@ mounts=(-v "$input:/input:ro" -v "$out:/out")
 
 # Pass only the keys that are set. An empty key can block another login method.
 secrets=()
-for v in ANTHROPIC_API_KEY CLAUDE_CODE_OAUTH_TOKEN OPENAI_API_KEY GEMINI_API_KEY; do
+for v in ANTHROPIC_API_KEY CLAUDE_CODE_OAUTH_TOKEN OPENAI_API_KEY GEMINI_API_KEY OPENCODE_API_KEY; do
   if [[ -n "${!v:-}" ]]; then secrets+=(-e "$v"); fi
 done
 

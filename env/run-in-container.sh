@@ -27,14 +27,25 @@ case "$ASSISTANT" in
     mkdir -p ~/.config/opencode
     jq -n --arg m "opencode/$MODEL" '{autoupdate: false, share: "disabled", small_model: $m}' \
       > ~/.config/opencode/opencode.json
-    cmd=(opencode run "$prompt" --model "opencode/$MODEL" --auto --pure --format json) ;;
+    cmd=(opencode run "$prompt" --model "opencode/$MODEL" --auto --pure --format json --print-logs) ;;
   *) echo "Unknown assistant: $ASSISTANT" >&2; exit 2 ;;
 esac
 version="$("$ASSISTANT" --version | head -1)"
 
 start="$(date -u +%FT%TZ)"
 status=0
-(cd /work && "${cmd[@]}") > /out/transcript.jsonl 2> /out/stderr.log || status=$?
+cd /work
+"${cmd[@]}" > /out/transcript.jsonl 2> /out/stderr.log &
+pid=$!
+# The CLIs retry a rate limit (HTTP 429) silently, so the run stalls. Stop it at the first one.
+while kill -0 "$pid" 2>/dev/null; do
+  if grep -qiE 'usage limit|rate limit|status(code)?.?429' /out/stderr.log; then
+    echo "Rate limit reached. Run stopped. Delete the run folder and try again later." >&2
+    kill "$pid"; status=75; break
+  fi
+  sleep 10
+done
+if [[ $status -eq 0 ]]; then wait "$pid" || status=$?; else wait "$pid" || true; fi
 end="$(date -u +%FT%TZ)"
 
 # Keep only what the assistant made: no inputs, git data or installed packages.
