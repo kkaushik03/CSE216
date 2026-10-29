@@ -21,7 +21,7 @@ Each run makes one website in a new, clean Docker container. The container does 
    | `claude` | Khushi | Run `claude setup-token` on your computer. Put the token in `CLAUDE_CODE_OAUTH_TOKEN`. Or set `ANTHROPIC_API_KEY`. |
    | `codex` | Braxton | Run `codex login` on your computer. Set `CODEX_AUTH_FILE=~/.codex/auth.json`. Or set `OPENAI_API_KEY`. |
    | `gemini` | Rahat | Get a key at https://aistudio.google.com/apikey. Put it in `GEMINI_API_KEY`. |
-   | `copilot` | Liza | Make a fine-grained GitHub token with the "Copilot Requests" permission. Put it in `COPILOT_GITHUB_TOKEN`. |
+   | `opencode` | Liza | No login. The free model needs no key. |
 
 Do not commit `.env`. Git ignores it.
 
@@ -31,10 +31,10 @@ Do not commit `.env`. Git ignores it.
 env/run.sh <assistant> <level> <run number>
 ```
 
-Example: Copilot, Level 2, first run:
+Example: OpenCode, Level 2, first run:
 
 ```sh
-env/run.sh copilot 2 1
+env/run.sh opencode 2 1
 ```
 
 The first run builds the image. This takes some minutes.
@@ -52,7 +52,7 @@ The runner writes to `results/<assistant>/L<level>/run-<NN>/`:
 | `site/` | The generated website, without `.git` and `node_modules`. |
 | `transcript.jsonl` | Full log of the assistant session. |
 | `stderr.log` | Errors from the assistant CLI. |
-| `meta.json` | CLI version, model (and `resolved_model` if the model is `auto`), level, run, your name, CPU architecture, repo commit (it pins `env/` and `prompts/`), prompt hash, start and end time, exit code. |
+| `meta.json` | CLI version, model, level, run, your name, CPU architecture, repo commit (it pins `env/` and `prompts/`), prompt hash, start and end time, exit code. |
 
 ## Push your results
 

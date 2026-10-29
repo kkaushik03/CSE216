@@ -9,12 +9,12 @@ RUN apt-get update \
 ARG CLAUDE_CODE_VERSION=2.1.308
 ARG CODEX_VERSION=0.163.0
 ARG GEMINI_CLI_VERSION=0.65.0
-ARG COPILOT_CLI_VERSION=1.0.103
+ARG OPENCODE_VERSION=1.19.5
 RUN npm install -g \
       @anthropic-ai/claude-code@${CLAUDE_CODE_VERSION} \
       @openai/codex@${CODEX_VERSION} \
       @google/gemini-cli@${GEMINI_CLI_VERSION} \
-      @github/copilot@${COPILOT_CLI_VERSION} \
+      opencode-ai@${OPENCODE_VERSION} \
  && npm cache clean --force
 
 # Non-root user (Claude Code refuses to skip permissions as root).

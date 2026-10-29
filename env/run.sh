@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Generate one website in a new, clean container.
-# Usage: env/run.sh <claude|codex|gemini|copilot> <level 1-3> <run number>
+# Usage: env/run.sh <claude|codex|gemini|opencode> <level 1-3> <run number>
 set -euo pipefail
 
 assistant="${1:?assistant}"; level="${2:?level}"; run="$(printf '%02d' "${3:?run number}")"
@@ -31,7 +31,7 @@ mounts=(-v "$root/prompts/L$level.md:/input/prompt.md:ro" -v "$out:/out")
 
 # Pass only the keys that are set. An empty key can block another login method.
 secrets=()
-for v in ANTHROPIC_API_KEY CLAUDE_CODE_OAUTH_TOKEN OPENAI_API_KEY GEMINI_API_KEY COPILOT_GITHUB_TOKEN; do
+for v in ANTHROPIC_API_KEY CLAUDE_CODE_OAUTH_TOKEN OPENAI_API_KEY GEMINI_API_KEY; do
   if [[ -n "${!v:-}" ]]; then secrets+=(-e "$v"); fi
 done
 

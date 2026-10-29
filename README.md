@@ -11,7 +11,7 @@ We give the same website prompt to four AI coding assistants at three levels of 
 | Assistant | Owner |
 |---|---|
 | Codex | Braxton |
-| Copilot | Liza |
+| OpenCode (DeepSeek) | Liza |
 | Claude Code | Khushi |
 | Gemini | Rahat |
 
