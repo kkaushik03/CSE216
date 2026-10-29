@@ -18,7 +18,7 @@ We give the same website prompt to four AI coding assistants at three levels of 
 ## Repo structure
 
 ```
-prompts/   Prompt for each level (copy of the Google Doc)
+prompts/   One folder per level: prompt.md, plus ACCESSIBILITY.md at Level 3
 env/       Docker image and runner for the generation runs
 docs/      How-to documents
 results/   Output of each run: results/<assistant>/L<level>/run-<NN>/

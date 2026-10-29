@@ -39,9 +39,9 @@ env/run.sh opencode 2 1
 
 The first run builds the image. This takes some minutes.
 
-The runner stops if:
-- `prompts/` or `env/` has changes that are not committed.
-- The output folder already exists. Use a new run number.
+The runner stops if the output folder already exists. Use a new run number.
+
+The container gets only the files in `prompts/L<level>/`. It sends `prompt.md` to the assistant and puts every other file in that folder (for example `ACCESSIBILITY.md` at Level 3) into the empty workspace.
 
 ## Output
 
@@ -49,10 +49,11 @@ The runner writes to `results/<assistant>/L<level>/run-<NN>/`:
 
 | File | Content |
 |---|---|
-| `site/` | The generated website, without `.git` and `node_modules`. |
+| `input/` | A copy of `prompts/L<level>/`: the exact prompt and files of this run. |
+| `site/` | The generated website, without the input files, `.git` and `node_modules`. |
 | `transcript.jsonl` | Full log of the assistant session. |
 | `stderr.log` | Errors from the assistant CLI. |
-| `meta.json` | CLI version, model, level, run, your name, CPU architecture, repo commit (it pins `env/` and `prompts/`), prompt hash, start and end time, exit code. |
+| `meta.json` | CLI version, model, start and end time, exit code. |
 
 ## Push your results
 
