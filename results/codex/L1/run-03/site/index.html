@@ -1,36 +1,3 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#253b80">
-  <title>Campusly — Course Registration</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <a class="brand" href="#home" aria-label="Campusly home"><span class="brand-mark">C</span><span>campusly<span class="brand-dot">.</span></span></a>
-      <div class="term-card"><span class="term-icon">✳</span><div><small>ACADEMIC TERM</small><strong>Fall semester <span>⌄</span></strong></div></div>
-      <div class="nav-label">MENU</div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home" data-page="home" class="nav-link active"><span class="nav-icon">⌂</span> Overview</a>
-        <a href="#catalog" data-page="catalog" class="nav-link"><span class="nav-icon">▦</span> Course catalog <span class="nav-count">24</span></a>
-        <a href="#registration" data-page="registration" class="nav-link"><span class="nav-icon">▤</span> Registration</a>
-        <a href="#profile" data-page="profile" class="nav-link"><span class="nav-icon">♙</span> My profile</a>
-      </nav>
-      <div class="sidebar-bottom"><div class="help-card"><div class="help-bubble">✦</div><strong>Need a hand?</strong><p>Our advising team is here to help you plan your semester.</p><a href="mailto:advising@campusly.edu">Talk to an advisor <span>↗</span></a></div><div class="sidebar-foot">© 2025 Campusly University<br><a href="#help">Help center</a><span> · </span><a href="#privacy">Privacy</a></div></div>
-    </aside>
-    <div class="main-area">
-      <header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button><div class="breadcrumb">Student portal <span>/</span> <strong id="crumbPage">Overview</strong></div><div class="top-actions"><button class="icon-button notification" aria-label="Notifications">♧<i></i></button><div class="top-divider"></div><button class="user-chip" data-go="profile"><span class="avatar avatar-small">JD</span><span class="user-name">Jordan Davis<small>Student</small></span><span class="chevron">⌄</span></button></div></header>
-      <main id="mainContent" tabindex="-1"></main>
-    </div>
-  </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="modal-backdrop" id="modalBackdrop" role="presentation"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><div class="success-icon">✓</div><p class="eyebrow">YOU’RE ALL SET</p><h2 id="modalTitle">Registration confirmed!</h2><p class="modal-copy">Your course selections have been saved. You’re one step closer to a great semester.</p><div class="modal-summary" id="modalSummary"></div><button class="button button-primary button-full" id="modalDone">View my schedule <span>→</span></button><button class="text-button" id="modalKeepBrowsing">Keep browsing courses</button></section></div>
-  <script src="app.js"></script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#5b4bdb"><title>Campusly — Course registration</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="home"><div id="app"></div><script src="app.js"></script></body></html>

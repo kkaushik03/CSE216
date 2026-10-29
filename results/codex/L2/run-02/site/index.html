@@ -3,71 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f5ff">
-  <title>Campus — Course registration</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="description" content="Explore courses and plan your next semester at Northstar University.">
+  <title>Northstar University | Course Registration</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#home" aria-label="Campus home"><span class="brand-mark" aria-hidden="true">✳</span><span>campus<span class="brand-dot">.</span></span></a>
-      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-        <a href="#home" data-page="home" class="nav-link active" aria-current="page">Home</a>
-        <a href="#catalog" data-page="catalog" class="nav-link">Course catalog</a>
-        <a href="#registration" data-page="registration" class="nav-link">Registration <span class="nav-count" id="nav-count">0</span></a>
-        <a href="#profile" data-page="profile" class="nav-link">My profile</a>
-      </nav>
-      <button class="avatar-button" data-go="profile" aria-label="Open student profile">JD</button>
-    </div>
+    <a class="brand" href="#home" aria-label="Northstar University home"><span class="brand-mark" aria-hidden="true">N</span><span>northstar<span class="brand-sub">UNIVERSITY</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#home" data-route="home">Home</a><a href="#catalog" data-route="catalog">Course catalog</a><a href="#registration" data-route="registration">Registration</a><a href="#profile" data-route="profile">My profile</a>
+    </nav>
+    <a class="avatar-link" href="#profile" aria-label="View student profile">JD</a>
   </header>
-
-  <main id="main-content" tabindex="-1">
-    <section class="page active" id="page-home" aria-labelledby="home-title">
-      <div class="hero wrap">
-        <div class="hero-copy">
-          <span class="eyebrow"><span class="live-dot"></span> FALL 2025 REGISTRATION IS OPEN</span>
-          <h1 id="home-title">Make this<br>semester <span class="highlight">yours.</span></h1>
-          <p>Find your next favorite class, build a schedule that works for you, and get one step closer to what’s next.</p>
-          <div class="hero-actions"><a href="#catalog" class="button button-primary">Explore courses <span aria-hidden="true">→</span></a><a href="#registration" class="text-link">View my registration <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-note"><span class="note-icon" aria-hidden="true">✦</span><span><strong>Registration deadline</strong><br>Friday, August 22, 2025</span></div>
-        </div>
-        <div class="hero-art" aria-label="Illustration of a student planning their semester" role="img">
-          <div class="art-sun"></div><div class="art-card art-card-main"><span class="art-label">YOUR WEEK, AT A GLANCE</span><div class="week-row"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span></div><div class="schedule-grid"><i></i><i></i><i></i><i></i><i></i><b>DESIGN<br>STUDIO</b><i></i><i></i><i></i><i></i><i></i><i></i><em>DATA<br>SCIENCE</em><i></i><i></i><i></i><i></i><i></i></div></div>
-          <div class="art-sticker sticker-star" aria-hidden="true">✳</div><div class="art-sticker sticker-smile" aria-hidden="true">☺</div><div class="art-pill">good things<br>are in session <span>↗</span></div>
-          <div class="art-book" aria-hidden="true"><div></div><div></div><div></div></div><div class="art-plant" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
-        </div>
-      </div>
-      <div class="quick-stats wrap"><div><strong>240<span>+</span></strong><small>courses to explore</small></div><div><strong>18</strong><small>departments</small></div><div><strong>4.8<span>/5</span></strong><small>student satisfaction</small></div><div class="stats-quote">“The best semester<br>starts with one click.” <span>— your future self</span></div></div>
-      <section class="featured wrap" aria-labelledby="featured-heading"><div class="section-heading"><div><span class="eyebrow">A GOOD PLACE TO START</span><h2 id="featured-heading">Popular this semester</h2></div><a href="#catalog" class="text-link">See all courses <span aria-hidden="true">→</span></a></div><div class="course-grid" id="featured-courses"></div></section>
-    </section>
-
-    <section class="page wrap" id="page-catalog" aria-labelledby="catalog-title" hidden>
-      <div class="page-heading"><div><span class="eyebrow">YOUR NEXT BIG THING</span><h1 id="catalog-title">Course catalog<span class="highlight">.</span></h1><p>Explore classes, find your people, and make room for something new.</p></div><div class="term-chip"><span aria-hidden="true">◷</span> Fall 2025</div></div>
-      <div class="catalog-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search courses</span><input id="course-search" type="search" placeholder="Search by course, topic, or instructor…"></label><label class="select-wrap"><span class="sr-only">Filter by department</span><select id="department-filter"><option value="all">All departments</option></select></label><label class="select-wrap"><span class="sr-only">Filter by credits</span><select id="credit-filter"><option value="all">Any credits</option><option value="3">3 credits</option><option value="4">4 credits</option></select></label></div>
-      <div class="results-line"><span id="results-count" aria-live="polite"></span><button id="clear-filters" class="clear-button">Clear filters</button></div><div class="course-grid" id="catalog-courses"></div><div id="empty-state" class="empty-state" hidden><span aria-hidden="true">✿</span><h2>No courses found</h2><p>Try another search or clear your filters to see all courses.</p><button class="button button-secondary" id="empty-clear">Clear filters</button></div>
-    </section>
-
-    <section class="page wrap" id="page-registration" aria-labelledby="registration-title" hidden>
-      <div class="page-heading"><div><span class="eyebrow">YOU’RE BUILDING SOMETHING GOOD</span><h1 id="registration-title">Your registration<span class="highlight">.</span></h1><p>Review your course picks and make this semester official.</p></div><div class="term-chip"><span aria-hidden="true">◷</span> Fall 2025</div></div>
-      <div class="registration-layout"><section class="registered-panel" aria-labelledby="registered-heading"><div class="panel-heading"><div><h2 id="registered-heading">Selected courses <span class="small-count" id="selected-count">0</span></h2><p>Your schedule is taking shape.</p></div><a href="#catalog" class="text-link">Add a course <span aria-hidden="true">+</span></a></div><div class="table-scroll"><table class="registered-table"><caption class="sr-only">Courses selected for Fall 2025 registration</caption><thead><tr><th scope="col">Course</th><th scope="col">Schedule</th><th scope="col">Credits</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="registered-rows"></tbody></table></div><div class="registration-empty" id="registration-empty"><div class="empty-illustration" aria-hidden="true">✳</div><h3>Your semester is a blank canvas.</h3><p>Start exploring and add a course that sparks your curiosity.</p><a href="#catalog" class="button button-secondary">Browse the catalog <span aria-hidden="true">→</span></a></div></section>
-        <aside class="summary-card" aria-labelledby="summary-heading"><span class="summary-icon" aria-hidden="true">✦</span><h2 id="summary-heading">Your semester,<br>at a glance.</h2><p>A little progress looks good on you.</p><div class="summary-metric"><span>Courses selected</span><strong id="summary-courses">0</strong></div><div class="summary-metric"><span>Total credits</span><strong><span id="summary-credits">0</span> <small>/ 18 max</small></strong></div><div class="credit-track" role="progressbar" aria-label="Selected credits" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0" id="credit-progress"><span id="credit-bar"></span></div><div class="summary-divider"></div><div class="student-mini"><span class="avatar">JD</span><span><strong>Jordan Davis</strong><small>Student ID · 2048196</small></span></div><button class="button button-primary button-full" id="register-button" disabled>Complete registration <span aria-hidden="true">→</span></button><p class="secure-note"><span aria-hidden="true">♧</span> Your information is safe and secure</p></aside></div>
-    </section>
-
-    <section class="page wrap" id="page-profile" aria-labelledby="profile-title" hidden>
-      <div class="profile-banner"><div class="profile-avatar">JD</div><div><span class="eyebrow">A LITTLE ABOUT YOU</span><h1 id="profile-title">Hey, Jordan<span class="highlight">.</span></h1><p>Here’s your student snapshot. You’re doing great.</p></div><span class="year-badge">✦ &nbsp;Sophomore</span></div>
-      <div class="profile-grid"><section class="profile-card details-card"><div class="panel-heading"><div><span class="eyebrow">THE BASICS</span><h2>Your details</h2></div><span class="edit-icon" aria-hidden="true">↗</span></div><dl class="details-list"><div><dt>Full name</dt><dd>Jordan Davis</dd></div><div><dt>Student ID</dt><dd>2048196</dd></div><div><dt>Email address</dt><dd>jordan.davis@campus.edu</dd></div><div><dt>Major</dt><dd>Interaction Design</dd></div><div><dt>Academic year</dt><dd>Sophomore · Year 2</dd></div><div><dt>Advisor</dt><dd>Prof. Maya Chen</dd></div></dl></section><section class="profile-card progress-card"><span class="eyebrow">LOOK AT YOU GO</span><h2>Your academic journey</h2><p>You’re making wonderful progress toward your degree.</p><div class="progress-number">42<span>%</span></div><div class="degree-track" role="progressbar" aria-label="Degree progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="42"><span></span></div><div class="progress-labels"><span>36 credits earned</span><span>of 120 total</span></div><div class="milestone"><span aria-hidden="true">✿</span><span><strong>Little by little, a lot gets done.</strong><small>Keep showing up. It adds up.</small></span></div></section></div>
-      <section class="profile-card profile-courses"><div class="panel-heading"><div><span class="eyebrow">THIS SEMESTER</span><h2>Your registered courses</h2></div><a href="#registration" class="text-link">Manage registration <span aria-hidden="true">→</span></a></div><div class="table-scroll"><table class="registered-table"><caption class="sr-only">Your registered courses for Fall 2025</caption><thead><tr><th scope="col">Course</th><th scope="col">Schedule</th><th scope="col">Credits</th></tr></thead><tbody id="profile-rows"></tbody></table></div><div class="profile-table-empty" id="profile-table-empty"><span aria-hidden="true">◌</span><p>No courses yet. Your semester story is waiting to begin.</p><a href="#catalog" class="text-link">Explore the catalog →</a></div></section>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">✳</span><span>campus<span class="brand-dot">.</span></span></a><span>Made for your next chapter <span aria-hidden="true">✦</span></span><span>© 2025 Campus University</span></div></footer>
-
-  <dialog id="confirm-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"><div class="dialog-art" aria-hidden="true">✦</div><button class="dialog-close" type="button" aria-label="Close confirmation">×</button><span class="eyebrow">IT’S OFFICIAL</span><h2 id="dialog-title">You’re all set,<br>Jordan<span class="highlight">!</span></h2><p id="dialog-description">Your Fall 2025 registration is confirmed. We can’t wait to see what you make of this semester.</p><div class="dialog-summary" id="dialog-summary"></div><button class="button button-primary button-full" id="dialog-done">Back to my courses <span aria-hidden="true">→</span></button></dialog>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer"><span>© 2026 Northstar University</span><span>Learn boldly. Go anywhere. <span aria-hidden="true">✳</span></span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="confirm-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <div class="dialog-top"><span class="dialog-icon" aria-hidden="true">✓</span><button class="icon-button" type="button" data-close-dialog aria-label="Close confirmation">×</button></div>
+    <h2 id="dialog-title">You're on the list!</h2><p id="dialog-description">Your course registration has been saved to your student profile.</p>
+    <div id="dialog-course" class="dialog-course"></div><button class="button button-primary" type="button" data-close-dialog>View my schedule</button>
+  </dialog>
 </body>
 </html>

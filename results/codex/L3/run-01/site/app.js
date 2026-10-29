@@ -1,95 +1,82 @@
 const courses = [
-  {id:'ENV-210',title:'The Living City',subject:'Environmental Studies',instructor:'Dr. Avery Chen',schedule:'Mon · Wed, 10:00–11:15',format:'In person',credits:3,description:'Explore how nature and communities shape the places we call home.',symbol:'✿'},
-  {id:'ART-145',title:'Color, Culture & Us',subject:'Art & Design',instructor:'Prof. Maya Brooks',schedule:'Tue · Thu, 13:00–14:15',format:'Hybrid',credits:3,description:'See how color tells stories across art, identity, and everyday life.',symbol:'✳'},
-  {id:'BIO-220',title:'Ocean Futures',subject:'Biology',instructor:'Dr. Luis Ramirez',schedule:'Mon · Wed · Fri, 09:00–09:50',format:'In person',credits:4,description:'Dive into marine ecosystems and the science of a changing ocean.',symbol:'≈'},
-  {id:'HIS-118',title:'Stories That Changed Us',subject:'History',instructor:'Dr. Nia Patel',schedule:'Tue · Thu, 11:00–12:15',format:'Online',credits:3,description:'Meet the bold ideas and ordinary people behind turning points in history.',symbol:'✦'},
-  {id:'CS-175',title:'Creative Coding',subject:'Computer Science',instructor:'Prof. Theo Park',schedule:'Mon · Wed, 14:00–15:15',format:'Hybrid',credits:3,description:'Make playful, interactive projects while learning the language of code.',symbol:'⌘'},
-  {id:'PSY-201',title:'The Science of Belonging',subject:'Psychology',instructor:'Dr. Lena Okafor',schedule:'Tue · Thu, 09:30–10:45',format:'In person',credits:3,description:'Understand the connections that help people and communities thrive.',symbol:'♡'}
+  {code:'ART 210',title:'Color, Form & Feeling',subject:'Art & Design',schedule:'Morning',credits:3,seats:8,description:'Explore how color and shape tell stories, shift moods, and change the way we see.'},
+  {code:'BIO 145',title:'The Secret Life of Plants',subject:'Biology',schedule:'Afternoon',credits:4,seats:3,description:'Get to know the ingenious organisms that keep our planet breathing.'},
+  {code:'BUS 230',title:'Small Business, Big Ideas',subject:'Business',schedule:'Evening',credits:3,seats:12,description:'Turn a promising idea into a practical plan with a community of makers.'},
+  {code:'COM 218',title:'Stories That Stick',subject:'Communication',schedule:'Morning',credits:3,seats:6,description:'Practice writing and speaking with clarity, warmth, and purpose.'},
+  {code:'CSE 216',title:'Code for Everyone',subject:'Computer Science',schedule:'Afternoon',credits:4,seats:0,description:'Build a friendly foundation in programming through creative projects.'},
+  {code:'DES 305',title:'Design for a Better World',subject:'Art & Design',schedule:'Afternoon',credits:3,seats:5,description:'Use human-centered design to imagine more thoughtful everyday systems.'},
+  {code:'ECO 202',title:'Economics of Everyday Life',subject:'Economics',schedule:'Evening',credits:3,seats:9,description:'Understand the choices, tradeoffs, and forces shaping daily life.'},
+  {code:'ENG 240',title:'The Art of the Essay',subject:'English',schedule:'Morning',credits:3,seats:4,description:'Read bold essays and find your own voice on the page.'},
+  {code:'ENV 115',title:'Climate & Community',subject:'Environmental Studies',schedule:'Afternoon',credits:4,seats:11,description:'Connect climate science with local action and resilient communities.'},
+  {code:'HIS 180',title:'A World in Motion',subject:'History',schedule:'Morning',credits:3,seats:7,description:'Trace the connections that have shaped our shared modern world.'},
+  {code:'MTH 125',title:'Math for Curious Minds',subject:'Mathematics',schedule:'Morning',credits:4,seats:2,description:'Find patterns and surprising ideas in the mathematics around us.'},
+  {code:'MUS 260',title:'Sound, Song & Society',subject:'Music',schedule:'Evening',credits:3,seats:10,description:'Listen closely to how music carries identity, memory, and change.'},
+  {code:'PSY 205',title:'How We Become Us',subject:'Psychology',schedule:'Afternoon',credits:3,seats:0,description:'Explore the science of personality, relationships, and human growth.'},
+  {code:'SOC 150',title:'The City as Classroom',subject:'Sociology',schedule:'Evening',credits:3,seats:13,description:'Study neighborhoods and public spaces as living social stories.'}
 ];
-const registered = [];
+
 const $ = (selector, root=document) => root.querySelector(selector);
 const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
-const htmlEscape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+let registered = [];
+try {
+  const stored = JSON.parse(localStorage.getItem('campus-compass-registration') || '[]');
+  if (Array.isArray(stored)) registered = stored.filter(code => courses.some(course => course.code === code));
+} catch { /* Start with an empty schedule if saved browser data is unreadable. */ }
+let lastAction = null;
+const status = $('#status');
 
-function cardMarkup(course){
-  const index=courses.indexOf(course);
-  const already=registered.some(item=>item.id===course.id);
-  return `<article class="course-card"><div class="course-color tone-${index%6}"><span>${course.subject.toUpperCase()}</span><span class="course-symbol" aria-hidden="true">${course.symbol}</span></div><div class="course-body"><h3>${course.title}</h3><p class="course-code">${course.id} · ${course.instructor}</p><p class="course-description">${course.description}</p><div class="course-meta"><span>◷ ${course.schedule}</span><span>◉ ${course.format}</span></div><div class="course-bottom"><span class="credits">${course.credits} credits</span><button class="small-button" type="button" data-register="${course.id}" ${already?'disabled':''}>${already?'Added to schedule':'Register for course'}</button></div></div></article>`;
+function announce(message){ status.textContent=''; window.setTimeout(()=>{status.textContent=message;},20); }
+function saveRegistration(){ localStorage.setItem('campus-compass-registration',JSON.stringify(registered)); }
+function courseCard(course, compact=false){
+  const isAdded=registered.includes(course.code), full=course.seats===0;
+  if(compact) return `<article class="quick-card"><div class="course-meta"><span class="subject-tag">${course.subject}</span><span class="course-code">${course.code}</span></div><h3><a class="course-title" href="#catalog">${course.title}</a></h3><p>${course.description}</p><div class="quick-bottom"><span>${course.credits} credits · ${course.schedule}</span><a href="#catalog" aria-label="View ${course.code} in course catalog">Explore course →</a></div></article>`;
+  return `<article class="course-card"><div class="course-meta"><span class="subject-tag">${course.subject}</span><span class="course-code">${course.code}</span></div><h2>${course.title}</h2><p class="description">${course.description}</p><div class="course-card-footer"><div class="course-facts">${course.credits} credits · ${course.schedule}<span class="seat-note ${full?'full':''}">${full?'Full · Join waitlist soon':`${course.seats} seats available`}</span></div><button class="button card-action ${isAdded?'added':''}" type="button" data-course="${course.code}" ${full&&!isAdded?'disabled':''} aria-label="${isAdded?'Remove':'Add'} ${course.code} ${isAdded?'from':'to'} your registration">${isAdded?'✓ Added':full?'Full':'Add course'}</button></div></article>`;
 }
+function renderFeatured(){ $('#featured-courses').innerHTML=courses.slice(0,3).map(course=>courseCard(course,true)).join(''); }
 function renderCatalog(){
-  const term=$('#course-search').value.trim().toLowerCase(), subject=$('#subject-filter').value, format=$('#format-filter').value;
-  const matches=courses.filter(c=>(subject==='all'||c.subject===subject)&&(format==='all'||c.format===format)&&[c.title,c.id,c.subject,c.instructor,c.description].some(value=>value.toLowerCase().includes(term)));
-  $('#catalog-courses').innerHTML=matches.map(cardMarkup).join('');
-  $('#result-count').textContent=`${matches.length} ${matches.length===1?'course':'courses'}${term||subject!=='all'||format!=='all'?' found':''}`;
-  $('#empty-state').hidden=matches.length!==0;
-  $('#clear-search').hidden=!$('#course-search').value;
+  const query=$('#search-input').value.trim().toLowerCase(), subject=$('#subject-filter').value, schedule=$('#schedule-filter').value, sort=$('#sort-filter').value;
+  let filtered=courses.filter(c=>(subject==='all'||c.subject===subject)&&(schedule==='all'||c.schedule===schedule)&&(!query||`${c.code} ${c.title} ${c.subject} ${c.description}`.toLowerCase().includes(query)));
+  if(sort==='code') filtered.sort((a,b)=>a.code.localeCompare(b.code));
+  if(sort==='seats') filtered.sort((a,b)=>b.seats-a.seats);
+  $('#course-grid').innerHTML=filtered.map(c=>courseCard(c)).join('');
+  $('#empty-state').hidden=filtered.length>0;
+  $('#result-count').textContent=`Showing ${filtered.length} ${filtered.length===1?'course':'courses'}`;
+  announce(`${filtered.length} ${filtered.length===1?'course':'courses'} found`);
 }
-function renderFeatured(){ $('#featured-courses').innerHTML=courses.slice(0,3).map(cardMarkup).join(''); }
-function renderRegistered(){
-  const body=$('#registered-courses');
-  body.innerHTML=registered.map(c=>`<tr><td>${c.title}<small>${c.id}</small></td><td>${c.schedule}</td><td><button type="button" class="remove-course" data-remove="${c.id}" aria-label="Remove ${c.title} from registered courses">Remove</button></td></tr>`).join('');
-  const count=registered.length;
-  $('#table-empty').hidden=count>0;
-  $('#schedule-count').textContent=`${count} ${count===1?'course':'courses'}`;
-  $('#profile-course-count').textContent=`${count} ${count===1?'course':'courses'}`;
-  renderCatalog();renderFeatured();
+function renderRegistration(){
+  const selected=registered.map(code=>courses.find(c=>c.code===code)).filter(Boolean), credits=selected.reduce((sum,c)=>sum+c.credits,0);
+  $('#nav-count').textContent=selected.length;
+  $('#summary-count').textContent=selected.length; $('#summary-credits').textContent=credits;
+  $('#credit-total').textContent=`${credits} ${credits===1?'credit':'credits'}`;
+  $('#progress-label').textContent=`${Math.min(credits,15)} / 15`;
+  const progress=$('#credit-progress'); progress.setAttribute('aria-valuenow',Math.min(credits,15)); progress.querySelector('span').style.width=`${Math.min(credits/15*100,100)}%`;
+  $('#review-registration').disabled=selected.length===0;
+  $('#registration-empty').hidden=selected.length>0;
+  $('#registered-table-body').innerHTML=selected.map(c=>`<tr><th scope="row"><span class="table-course-name">${c.title}</span><span class="table-course-code">${c.code} · ${c.subject}</span></th><td>${c.schedule}</td><td>${c.credits}</td><td>Registered</td><td><button class="drop-button" type="button" data-drop="${c.code}" aria-label="Drop ${c.code}">Drop</button></td></tr>`).join('');
 }
-function goTo(route){
-  const valid=['home','catalog','registration','profile'].includes(route)?route:'home';
-  $$('.page').forEach(page=>{const active=page.id===`page-${valid}`;page.hidden=!active;page.classList.toggle('active',active)});
-  $$('#primary-nav a').forEach(link=>{if(link.dataset.route===valid)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});
-  $('#primary-nav').classList.remove('open');$('.menu-toggle').setAttribute('aria-expanded','false');$('.menu-toggle .sr-only').textContent='Open navigation menu';
-  if(valid==='catalog')$('#course-search').focus({preventScroll:true});
-  window.scrollTo(0,0);
+function navigate(view,moveFocus=true){
+  if(!['home','catalog','registration','profile'].includes(view)) view='home';
+  $$('.view').forEach(section=>section.hidden=section.dataset.page!==view);
+  $$('[data-view]').forEach(link=>{if(link.dataset.view===view) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');});
+  document.title=`${view==='home'?'Home':view==='catalog'?'Course catalog':view==='registration'?'My registration':'My profile'} | Campus Compass`;
+  $('#primary-menu').classList.remove('open'); $('#menu-toggle').setAttribute('aria-expanded','false');
+  if(view==='catalog') renderCatalog();
+  if(view==='registration') renderRegistration();
+  if(moveFocus) $(`#${view}-title`).focus();
 }
-function clearErrors(){
-  $$('.error-message').forEach(el=>{el.hidden=true;el.textContent=''});
-  $$('#registration-form [aria-invalid="true"]').forEach(el=>el.removeAttribute('aria-invalid'));
-}
-function showError(field,message){field.setAttribute('aria-invalid','true');const error=$(`#${field.getAttribute('aria-describedby').split(' ').find(id=>id.endsWith('-error'))}`);error.textContent=message;error.hidden=false;}
-function validateForm(){
-  clearErrors();const course=$('#registration-course'),name=$('#student-name'),email=$('#student-email'),id=$('#student-id'),terms=$('#terms');let firstInvalid=null;
-  const check=(field,message)=>{if(!field.checkValidity()){showError(field,message);if(!firstInvalid)firstInvalid=field}};
-  check(course,'Choose a course to continue.');check(name,'Enter your full name.');
-  if(!email.value.trim())showError(email,'Enter your university email address.');else if(!email.validity.valid)showError(email,'Enter a valid email address, such as you@northstar.edu.');
-  if(email.hasAttribute('aria-invalid')&&!firstInvalid)firstInvalid=email;
-  if(!id.value.trim())showError(id,'Enter your 8-digit student ID.');else if(!/^\d{8}$/.test(id.value.trim()))showError(id,'Student ID must contain exactly 8 digits.');
-  if(id.hasAttribute('aria-invalid')&&!firstInvalid)firstInvalid=id;
-  if(!terms.checked)showError(terms,'Confirm that your information is accurate and you meet the prerequisites.');
-  if(terms.hasAttribute('aria-invalid')&&!firstInvalid)firstInvalid=terms;
-  if(firstInvalid){firstInvalid.focus();return false}return true;
-}
-function openConfirmation(){
-  const course=courses.find(c=>c.id===$('#registration-course').value);if(!course)return;
-  $('#confirmation-details').innerHTML=`<div><dt>Course</dt><dd>${course.title} (${course.id})</dd></div><div><dt>Schedule</dt><dd>${course.schedule}</dd></div><div><dt>Student</dt><dd>${htmlEscape($('#student-name').value.trim())}</dd></div><div><dt>Email</dt><dd>${htmlEscape($('#student-email').value.trim())}</dd></div>`;
-  $('#confirmation-dialog').showModal();$('#confirm-registration').focus();
-}
-function registerSelected(){
-  const course=courses.find(c=>c.id===$('#registration-course').value);if(!course)return;
-  if(!registered.some(c=>c.id===course.id)){registered.push(course);renderRegistered();$('#status-message').textContent=`${course.title} has been added to your registered courses.`}
-  $('#confirmation-dialog').close();$('#registration-form').reset();clearErrors();
-}
-function populateForm(courseId=''){
-  const select=$('#registration-course');select.innerHTML='<option value="">Select a course</option>'+courses.map(c=>`<option value="${c.id}" ${registered.some(item=>item.id===c.id)?'disabled':''}>${c.id} — ${c.title}${registered.some(item=>item.id===c.id)?' (already registered)':''}</option>`).join('');
-  if(courseId&&!registered.some(c=>c.id===courseId))select.value=courseId;
-}
+function fillSubjects(){[...new Set(courses.map(c=>c.subject))].sort().forEach(subject=>$('#subject-filter').insertAdjacentHTML('beforeend',`<option value="${subject}">${subject}</option>`));}
 
-const subjectSelect=$('#subject-filter');[...new Set(courses.map(c=>c.subject))].sort().forEach(subject=>{const option=document.createElement('option');option.value=subject;option.textContent=subject;subjectSelect.append(option)});
-populateForm();renderCatalog();renderFeatured();renderRegistered();
-function handleRoute(){goTo(location.hash.slice(1)||'home')}
-window.addEventListener('hashchange',handleRoute);handleRoute();
-$('#course-search').addEventListener('input',renderCatalog);$('#subject-filter').addEventListener('change',renderCatalog);$('#format-filter').addEventListener('change',renderCatalog);
-$('#clear-search').addEventListener('click',()=>{$('#course-search').value='';renderCatalog();$('#course-search').focus()});
-document.addEventListener('click',event=>{
-  const register=event.target.closest('[data-register]');
-  if(register){populateForm(register.dataset.register);location.hash='registration';return}
-  const remove=event.target.closest('[data-remove]');
-  if(remove){const course=registered.find(c=>c.id===remove.dataset.remove);registered.splice(registered.findIndex(c=>c.id===remove.dataset.remove),1);renderRegistered();populateForm();$('#status-message').textContent=`${course.title} was removed from your registered courses.`}
-});
-$('#registration-form').addEventListener('submit',event=>{event.preventDefault();if(validateForm())openConfirmation()});
-$('#confirm-registration').addEventListener('click',registerSelected);
-$('#edit-registration').addEventListener('click',()=>$('#confirmation-dialog').close());
-$('.dialog-close').addEventListener('click',()=>$('#confirmation-dialog').close());
-$('#confirmation-dialog').addEventListener('click',event=>{if(event.target===$('#confirmation-dialog'))$('#confirmation-dialog').close()});
-$('#student-id').addEventListener('input',event=>{event.target.value=event.target.value.replace(/\D/g,'').slice(0,8)});
-const menu=$('.menu-toggle');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.querySelector('.sr-only').textContent=open?'Close navigation menu':'Open navigation menu';$('#primary-nav').classList.toggle('open',open)});
+fillSubjects(); renderFeatured(); renderRegistration();
+if(location.hash) navigate(location.hash.slice(1),false); else navigate('home',false);
+window.addEventListener('hashchange',()=>navigate(location.hash.slice(1)));
+$('#menu-toggle').addEventListener('click',()=>{const open=$('#menu-toggle').getAttribute('aria-expanded')==='true';$('#menu-toggle').setAttribute('aria-expanded',String(!open));$('#primary-menu').classList.toggle('open',!open);});
+$('#menu-toggle').addEventListener('keydown',event=>{if(event.key==='Escape'&&$('#menu-toggle').getAttribute('aria-expanded')==='true'){event.preventDefault();$('#menu-toggle').setAttribute('aria-expanded','false');$('#primary-menu').classList.remove('open');$('#menu-toggle').focus();}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&$('#menu-toggle').getAttribute('aria-expanded')==='true'){event.preventDefault();$('#menu-toggle').setAttribute('aria-expanded','false');$('#primary-menu').classList.remove('open');$('#menu-toggle').focus();}});
+$('#course-search').addEventListener('submit',event=>{event.preventDefault();renderCatalog();});
+$('#search-input').addEventListener('input',renderCatalog); $('#subject-filter').addEventListener('change',renderCatalog); $('#schedule-filter').addEventListener('change',renderCatalog); $('#sort-filter').addEventListener('change',renderCatalog);
+$('#course-grid').addEventListener('click',event=>{const button=event.target.closest('[data-course]');if(!button)return;const code=button.dataset.course;if(registered.includes(code)){registered=registered.filter(item=>item!==code);announce(`${code} removed from your registration`);}else{registered.push(code);announce(`${code} added to your registration`);}saveRegistration();renderCatalog();renderRegistration();});
+$('#registered-table-body').addEventListener('click',event=>{const button=event.target.closest('[data-drop]');if(!button)return;registered=registered.filter(code=>code!==button.dataset.drop);saveRegistration();renderRegistration();announce(`${button.dataset.drop} dropped from your registration`);});
+$('#review-registration').addEventListener('click',event=>{lastAction=event.currentTarget;const count=registered.length,credits=registered.reduce((sum,code)=>sum+courses.find(c=>c.code===code).credits,0);$('#dialog-course-count').textContent=`${count} ${count===1?'course':'courses'}`;$('#dialog-credit-count').textContent=`${credits} ${credits===1?'credit':'credits'}`;$('#confirm-dialog').showModal();$('#cancel-registration').focus();});
+$('#cancel-registration').addEventListener('click',()=>$('#confirm-dialog').close());
+$('#confirm-registration').addEventListener('click',()=>{$('#confirm-dialog').close();announce('Registration saved. Your Fall 2026 courses are confirmed.');navigate('registration',false);$('#registration-title').focus();});
+$('#confirm-dialog').addEventListener('close',()=>{if(lastAction?.isConnected)lastAction.focus();else $('#registration-title').focus();});

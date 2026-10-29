@@ -1,110 +1,40 @@
-const courses = [
-  {code:"ENV 240",title:"Climate, Culture & Change",department:"Environmental Studies",credits:3,day:"Mon · Wed",time:"10:00–11:15 AM",slot:"morning",instructor:"Dr. Maya Chen",color:"mint"},
-  {code:"ART 210",title:"The Art of Looking",department:"Visual Arts",credits:3,day:"Tue · Thu",time:"1:00–2:15 PM",slot:"afternoon",instructor:"Prof. Elena Ruiz",color:"peach"},
-  {code:"CS 150",title:"Creative Coding Studio",department:"Computer Science",credits:4,day:"Mon · Wed · Fri",time:"11:00–11:50 AM",slot:"morning",instructor:"Dr. Sam Okafor",color:"lilac"},
-  {code:"PSY 220",title:"The Science of Happiness",department:"Psychology",credits:3,day:"Tue · Thu",time:"2:30–3:45 PM",slot:"afternoon",instructor:"Dr. Nina Patel",color:"yellow"},
-  {code:"ENG 315",title:"Stories of Belonging",department:"English",credits:3,day:"Mon · Wed",time:"4:00–5:15 PM",slot:"afternoon",instructor:"Prof. Theo Brooks",color:"peach"},
-  {code:"BIO 110",title:"Living Systems",department:"Biology",credits:4,day:"Tue · Thu",time:"9:00–10:50 AM",slot:"morning",instructor:"Dr. Amara Davis",color:"mint"},
-  {code:"MUS 180",title:"Sound & Society",department:"Music",credits:2,day:"Wed",time:"6:00–8:30 PM",slot:"evening",instructor:"Prof. Luca Moretti",color:"lilac"},
-  {code:"BUS 205",title:"Ideas into Action",department:"Business",credits:3,day:"Mon · Wed",time:"1:00–2:15 PM",slot:"afternoon",instructor:"Dr. Aisha Morgan",color:"yellow"},
-  {code:"HIS 260",title:"Cities Through Time",department:"History",credits:3,day:"Tue · Thu",time:"10:00–11:15 AM",slot:"morning",instructor:"Prof. Daniel Kim",color:"peach"}
+'use strict';
+const courses=[
+{code:'BIO 112',title:'Living Systems',dept:'Biology',level:'100',credits:4,days:'Mon · Wed',time:'9:00 AM',seats:8,color:'teal',description:'Explore the foundations of cell biology, genetics and ecology through hands-on lab work.'},
+{code:'BUS 240',title:'Ideas into Enterprise',dept:'Business',level:'200',credits:3,days:'Tue · Thu',time:'10:30 AM',seats:5,color:'gold',description:'Build practical skills in entrepreneurship, customer discovery and responsible business.'},
+{code:'CHEM 105',title:'Chemistry in Context',dept:'Chemistry',level:'100',credits:4,days:'Mon · Wed · Fri',time:'11:00 AM',seats:3,color:'coral',description:'Connect chemical principles to the materials and processes that shape everyday life.'},
+{code:'COM 215',title:'Stories Across Media',dept:'Communications',level:'200',credits:3,days:'Tue · Thu',time:'1:00 PM',seats:12,color:'teal',description:'Study how stories travel across formats, audiences and cultures.'},
+{code:'CSE 216',title:'Programming Studio',dept:'Computer Science',level:'200',credits:4,days:'Mon · Wed',time:'2:00 PM',seats:6,color:'blue',description:'Design, build and test software through collaborative, project-based practice.'},
+{code:'ECO 202',title:'Markets and Society',dept:'Economics',level:'200',credits:3,days:'Tue · Thu',time:'9:00 AM',seats:0,color:'coral',description:'Examine how markets work and how economic choices affect communities.'},
+{code:'ENG 110',title:'Writing with Purpose',dept:'English',level:'100',credits:3,days:'Mon · Wed · Fri',time:'10:00 AM',seats:10,color:'gold',description:'Practice clear, persuasive writing for academic, public and professional settings.'},
+{code:'ENV 310',title:'Climate and Community',dept:'Environmental Studies',level:'300',credits:3,days:'Wed · Fri',time:'1:30 PM',seats:4,color:'teal',description:'Explore local responses to climate change through data, policy and community voices.'},
+{code:'HIS 225',title:'Worlds in Motion',dept:'History',level:'200',credits:3,days:'Tue · Thu',time:'2:30 PM',seats:7,color:'coral',description:'Trace the movement of people, ideas and goods across the modern world.'},
+{code:'MAT 151',title:'Calculus and Change',dept:'Mathematics',level:'100',credits:4,days:'Mon · Wed · Fri',time:'8:30 AM',seats:2,color:'blue',description:'Develop calculus tools for describing change in science and society.'},
+{code:'MUS 130',title:'Music in Everyday Life',dept:'Music',level:'100',credits:3,days:'Tue · Thu',time:'12:00 PM',seats:9,color:'gold',description:'Listen closely and discover the roles music plays in communities around the world.'},
+{code:'PSY 205',title:'Mind and Behavior',dept:'Psychology',level:'200',credits:3,days:'Mon · Wed',time:'3:00 PM',seats:0,color:'coral',description:'Investigate how people think, feel and act using evidence from psychological science.'},
+{code:'SOC 101',title:'People and Patterns',dept:'Sociology',level:'100',credits:3,days:'Tue · Thu',time:'11:00 AM',seats:11,color:'teal',description:'Use sociological perspectives to understand institutions, identity and social change.'},
+{code:'STA 210',title:'Data, Decisions, Discovery',dept:'Statistics',level:'200',credits:4,days:'Mon · Wed',time:'12:30 PM',seats:5,color:'blue',description:'Learn to summarize data and reason carefully about uncertainty.'}
 ];
-const defaultCodes = ["ENV 240", "ART 210"];
-let registered = JSON.parse(localStorage.getItem("campuslyCourses") || "null") || defaultCodes;
-const byId = id => document.getElementById(id);
-const safeRegistered = () => registered.filter(code => courses.some(course => course.code === code));
-registered = safeRegistered();
-
-function courseCard(course) {
-  const added = registered.includes(course.code);
-  return `<article class="course-card"><div class="course-top"><span class="course-dept">${course.department}</span><span class="course-credits">${course.credits} credits</span></div><h3>${course.title}</h3><span class="course-code">${course.code}</span><div class="course-meta"><span><span aria-hidden="true">◷</span>${course.day}, ${course.time}</span></div><div class="course-bottom"><span class="course-instructor">${course.instructor}</span><button class="add-course" type="button" data-add="${course.code}" ${added ? "disabled" : ""}>${added ? "✓ Added" : "+ Add course"}</button></div></article>`;
-}
-function renderCatalog() {
-  const term = byId("course-search").value.trim().toLowerCase();
-  const department = byId("department-filter").value;
-  const time = byId("time-filter").value;
-  const matches = courses.filter(course => (department === "all" || course.department === department) && (time === "all" || course.slot === time) && (!term || `${course.code} ${course.title} ${course.department} ${course.instructor}`.toLowerCase().includes(term)));
-  byId("course-results").innerHTML = matches.map(courseCard).join("");
-  byId("results-count").textContent = `${matches.length} ${matches.length === 1 ? "course" : "courses"} to explore`;
-  byId("no-results").hidden = matches.length !== 0;
-  byId("clear-search").hidden = !term;
-}
-function persist() { localStorage.setItem("campuslyCourses", JSON.stringify(registered)); }
-function updateSchedule() {
-  registered = safeRegistered();
-  const selected = registered.map(code => courses.find(course => course.code === code));
-  const credits = selected.reduce((sum, course) => sum + course.credits, 0);
-  byId("registered-count").textContent = `${selected.length} ${selected.length === 1 ? "course" : "courses"}`;
-  byId("registered-subtitle").textContent = selected.length ? "Your schedule at a glance" : "Your schedule is ready when you are";
-  byId("registered-table").innerHTML = selected.map(course => `<tr><td class="table-course"><b>${course.title}</b><span>${course.code} · ${course.department}</span></td><td class="table-time">${course.day}<br>${course.time}</td><td>${course.credits}</td><td><button type="button" class="remove-course" data-remove="${course.code}" aria-label="Remove ${course.code} ${course.title} from your schedule">Remove</button></td></tr>`).join("");
-  byId("empty-registered").hidden = selected.length > 0;
-  byId("credit-total").innerHTML = `${credits} <small>${credits === 1 ? "credit" : "credits"}</small>`;
-  const meter = document.querySelector(".credit-meter");
-  meter.setAttribute("aria-valuenow", String(Math.min(18, credits)));
-  byId("credit-meter-fill").style.width = `${Math.min(100, credits / 18 * 100)}%`;
-  byId("credit-message").textContent = credits >= 18 ? "You’ve reached the 18 credit maximum." : `${18 - credits} credits available in your 18 credit maximum.`;
-  byId("profile-credits").textContent = credits;
-  byId("profile-course-count").textContent = selected.length;
-  renderCatalog();
-  byId("popular-courses").innerHTML = courses.slice(0, 3).map(courseCard).join("");
-}
-function addCourse(code) {
-  if (!courses.some(course => course.code === code) || registered.includes(code)) return;
-  const course = courses.find(item => item.code === code);
-  const currentCredits = registered.reduce((sum, current) => sum + courses.find(item => item.code === current).credits, 0);
-  if (currentCredits + course.credits > 18) {
-    byId("status-message").textContent = `Cannot add ${course.code}. The 18 credit maximum would be exceeded.`;
-    return;
-  }
-  registered.push(code); persist(); updateSchedule();
-  byId("dialog-course").innerHTML = `<b>${course.code} · ${course.title}</b><span>${course.day} · ${course.time} · ${course.credits} credits</span>`;
-  byId("confirmation-dialog").showModal();
-  byId("status-message").textContent = `${course.title} added to your schedule.`;
-}
-function removeCourse(code) {
-  const course = courses.find(item => item.code === code);
-  registered = registered.filter(item => item !== code); persist(); updateSchedule();
-  byId("status-message").textContent = `${course.title} removed from your schedule.`;
-}
-function navigate() {
-  const route = location.hash.slice(1) || "home";
-  const page = document.querySelector(`[data-page="${route}"]`) ? route : "home";
-  document.querySelectorAll("[data-page]").forEach(el => { const active = el.dataset.page === page; el.hidden = !active; el.classList.toggle("active", active); });
-  document.querySelectorAll("[data-route]").forEach(link => { if (link.dataset.route === page) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current"); });
-  byId("primary-nav").classList.remove("open"); byId("nav-toggle").setAttribute("aria-expanded", "false");
-  window.scrollTo(0, 0);
-}
-function setError(input, message, errorId) {
-  input.setAttribute("aria-invalid", message ? "true" : "false");
-  byId(errorId).textContent = message;
-}
-document.addEventListener("click", event => {
-  const add = event.target.closest("[data-add]"); if (add) addCourse(add.dataset.add);
-  const remove = event.target.closest("[data-remove]"); if (remove) removeCourse(remove.dataset.remove);
-});
-window.addEventListener("hashchange", navigate);
-byId("nav-toggle").addEventListener("click", () => { const open = byId("primary-nav").classList.toggle("open"); byId("nav-toggle").setAttribute("aria-expanded", String(open)); });
-byId("course-search").addEventListener("input", renderCatalog);
-byId("department-filter").addEventListener("change", renderCatalog);
-byId("time-filter").addEventListener("change", renderCatalog);
-byId("clear-search").addEventListener("click", () => { byId("course-search").value = ""; renderCatalog(); byId("course-search").focus(); });
-byId("registration-form").addEventListener("submit", event => {
-  event.preventDefault();
-  const name = byId("student-name"), email = byId("student-email"), code = byId("course-code");
-  const courseCode = code.value.trim().toUpperCase().replace(/\s+/g, " ");
-  let valid = true;
-  if (!name.value.trim()) { setError(name, "Enter your name.", "student-name-error"); valid = false; } else setError(name, "", "student-name-error");
-  if (!email.validity.valid || !email.value.trim()) { setError(email, "Enter a valid university email address.", "student-email-error"); valid = false; } else setError(email, "", "student-email-error");
-  const course = courses.find(item => item.code === courseCode);
-  if (!course) { setError(code, "Enter a course code from the catalog, such as ART 210.", "course-code-error"); valid = false; }
-  else if (registered.includes(course.code)) { setError(code, "You’re already registered for this course.", "course-code-error"); valid = false; }
-  else setError(code, "", "course-code-error");
-  if (valid) { code.value = ""; addCourse(course.code); }
-  else document.querySelector("[aria-invalid=true]")?.focus();
-});
-document.querySelectorAll("#registration-form input").forEach(input => input.addEventListener("input", () => { if (input.getAttribute("aria-invalid") === "true") setError(input, "", `${input.id}-error`); }));
-byId("dialog-done").addEventListener("click", () => byId("confirmation-dialog").close());
-byId("confirmation-dialog").addEventListener("click", event => { if (event.target === byId("confirmation-dialog")) byId("confirmation-dialog").close(); });
-const departments = [...new Set(courses.map(course => course.department))].sort();
-departments.forEach(department => { const option = document.createElement("option"); option.value = department; option.textContent = department; byId("department-filter").append(option); });
-updateSchedule(); navigate();
+const initialCodes=['ENG 110','CSE 216'];
+let registered=new Set(JSON.parse(localStorage.getItem('northstar-registered')||'null')||initialCodes);
+let pendingCode=null,opener=null;
+const view=document.getElementById('view'),status=document.getElementById('live-status'),dialog=document.getElementById('confirm-dialog');
+const titles={home:'Home',catalog:'Course catalog',registration:'Registration',profile:'Student profile'};
+function announce(message){status.textContent='';window.setTimeout(()=>status.textContent=message,20)}
+function page(){return location.hash.replace('#','')||'home'}
+function shellPage(title,sub,body){return `<div class="page-intro"><span class="eyebrow">NORTHSTAR UNIVERSITY · REGISTRAR</span><h1 id="view-title" tabindex="-1">${title}</h1><p>${sub}</p></div>${body}`}
+function home(){return `<section class="hero"><div class="hero-copy"><span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span><h1 id="view-title" tabindex="-1">Make room for what moves you.</h1><p>Find the classes that spark your curiosity, meet your goals and shape your time at Northstar.</p><a href="#catalog">Explore the course catalog</a></div></section><section aria-labelledby="welcome-heading"><div class="section-heading"><h2 id="welcome-heading">Your semester, at a glance</h2><a href="#registration">Review your schedule</a></div><div class="stats-grid"><div class="stat"><strong>${registered.size}</strong><span>courses registered</span></div><div class="stat"><strong>${[...registered].reduce((n,c)=>n+(courses.find(x=>x.code===c)?.credits||0),0)}</strong><span>registered credits</span></div><div class="stat"><strong>Fall 2026</strong><span>registration term</span></div></div></section><section aria-labelledby="discover-heading"><div class="section-heading"><h2 id="discover-heading">A campus full of possibilities</h2><a href="#catalog">Browse all courses</a></div><div class="feature-grid"><article class="feature"><span class="eyebrow">01 · EXPLORE</span><h3>Follow your questions</h3><p>Browse 14 courses spanning science, arts, business and more.</p></article><article class="feature"><span class="eyebrow">02 · PLAN</span><h3>Build your schedule</h3><p>Keep an eye on seats, credits and the classes already on your list.</p></article><article class="feature"><span class="eyebrow">03 · GROW</span><h3>Find your next step</h3><p>Shape a semester around the things you want to learn.</p></article></div></section>`}
+function card(course){const isIn=registered.has(course.code),isFull=course.seats===0;return `<li><article class="course-card"><span class="course-code">${course.code} · ${course.dept}</span><h2>${course.title}</h2><p>${course.description}</p><div class="course-meta"><span class="badge">${course.credits} credits</span><span class="badge">${course.days}</span><span class="badge">${course.time}</span><span class="badge ${isFull?'full':''}">${isFull?'Full':`${course.seats} seats open`}</span></div><div class="card-action">${isIn?'<button class="button button-secondary" type="button" disabled>Registered</button>':`<button class="button button-primary register-trigger" type="button" data-code="${course.code}" ${isFull?'disabled':''} aria-label="Register for ${course.code}, ${course.title}">${isFull?'Course full':'Register'}</button>`}</div></article></li>`}
+function catalog(){const depts=[...new Set(courses.map(c=>c.dept))].sort();return shellPage('Course catalog','Explore courses, compare schedules and find a class that fits your goals.',`<div class="filters"><form role="search" id="course-search" class="field"><label for="search-courses">Search courses</label><input type="search" id="search-courses" placeholder="Try a title, code or subject" autocomplete="off"></form><div class="field"><label for="filter-dept">Department</label><select id="filter-dept"><option value="">All departments</option>${depts.map(d=>`<option>${d}</option>`).join('')}</select></div><div class="field"><label for="filter-level">Course level</label><select id="filter-level"><option value="">All levels</option><option value="100">100 level</option><option value="200">200 level</option><option value="300">300 level</option></select></div></div><p id="course-count" class="sr-only" aria-live="off"></p><ul class="course-grid" id="course-list"></ul>`)}
+function registration(){const rows=[...registered].map(code=>courses.find(c=>c.code===code)).filter(Boolean);return shellPage('Registration','Your Fall 2026 schedule, all in one place.',`<div class="registration-layout"><section class="panel" aria-labelledby="schedule-heading"><h2 id="schedule-heading">Registered courses</h2>${rows.length?`<div class="table-scroll" tabindex="0" role="region" aria-label="Registered courses table; scroll horizontally on small screens"><table><caption>Your registered courses for Fall 2026</caption><thead><tr><th scope="col">Course</th><th scope="col">Credits</th><th scope="col">Meeting time</th><th scope="col">Action</th></tr></thead><tbody>${rows.map(c=>`<tr><th scope="row">${c.code}<br>${c.title}</th><td>${c.credits}</td><td>${c.days}<br>${c.time}</td><td><button type="button" class="drop-button" data-drop="${c.code}" aria-label="Drop ${c.code}, ${c.title}">Drop</button></td></tr>`).join('')}</tbody></table></div>`:`<div class="empty-state"><h2>No courses registered yet</h2><p>Browse the catalog to find your first class.</p><a class="button button-primary" href="#catalog">Explore courses</a></div>`}</section><aside class="panel"><h2>Registration summary</h2><p><strong>${rows.length} ${rows.length===1?'course':'courses'}</strong><br>${rows.reduce((n,c)=>n+c.credits,0)} total credits</p><p class="registration-note">Registration is open for Fall 2026. Course changes are saved in this browser.</p><form id="registration-form" class="form-stack" novalidate><div class="field"><label for="registration-course">Choose a course <span>(required)</span></label><select id="registration-course" required aria-describedby="registration-course-error"><option value="">Select a course</option>${courses.filter(c=>!registered.has(c.code)&&c.seats>0).map(c=>`<option value="${c.code}">${c.code} — ${c.title}</option>`).join('')}</select><p class="error-text" id="registration-course-error" hidden>Select a course to continue.</p></div><button class="button button-primary" type="submit">Continue to confirmation</button></form></aside></div>`)}
+function profile(){const rows=[...registered].map(code=>courses.find(c=>c.code===code)).filter(Boolean);return shellPage('Student profile','Your student information and current academic snapshot.',`<div class="profile-layout"><section class="profile-card"><div class="avatar" aria-hidden="true">JD</div><span class="eyebrow">NORTHSTAR STUDENT</span><h2>Jordan Davis</h2><dl><dt>Student ID</dt><dd>24681357</dd><dt>Email</dt><dd>jordan.davis@northstar.example</dd><dt>Program</dt><dd>Exploratory Studies</dd><dt>Academic year</dt><dd>Second year</dd></dl></section><section class="panel"><h2>Academic snapshot</h2><p><strong>Fall 2026</strong><br>${rows.length} registered ${rows.length===1?'course':'courses'} · ${rows.reduce((n,c)=>n+c.credits,0)} credits</p><p>Keep exploring interests across Northstar while you plan your next academic steps.</p><a class="button button-primary" href="#registration">View my registration</a></section></div>`)}
+function render(moveFocus=true){const p=titles[page()]?page():'home';if(!titles[page()])history.replaceState(null,'','#home');document.title=`${titles[p]} | Northstar University`;document.querySelectorAll('.main-nav a').forEach(a=>{if(a.hash===`#${p}`) a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});view.innerHTML=p==='home'?home():p==='catalog'?catalog():p==='registration'?registration():profile();bindView();if(moveFocus){const h=view.querySelector('h1');if(h)h.focus()} }
+function updateCourses(){const query=(document.getElementById('search-courses')?.value||'').trim().toLowerCase(),dept=document.getElementById('filter-dept')?.value||'',level=document.getElementById('filter-level')?.value||'';const list=courses.filter(c=>(!query||`${c.code} ${c.title} ${c.dept} ${c.description}`.toLowerCase().includes(query))&&(!dept||c.dept===dept)&&(!level||c.level===level));document.getElementById('course-list').innerHTML=list.length?list.map(card).join(''):`<li class="empty-state"><h2>No courses found</h2><p>Try another search or change your filters.</p></li>`;announce(`${list.length} ${list.length===1?'course':'courses'} found`);document.querySelectorAll('.register-trigger').forEach(b=>b.addEventListener('click',()=>openConfirmation(b.dataset.code,b)))}
+function save(){localStorage.setItem('northstar-registered',JSON.stringify([...registered]))}
+function openConfirmation(code,button){pendingCode=code;opener=button;const c=courses.find(x=>x.code===code);document.getElementById('dialog-copy').textContent=`Add ${c.code}: ${c.title} (${c.credits} credits) to your Fall 2026 schedule?`;dialog.showModal();document.getElementById('cancel-register').focus()}
+function bindView(){if(page()==='catalog'){const form=document.getElementById('course-search');form.addEventListener('submit',e=>e.preventDefault());form.querySelector('input').addEventListener('input',updateCourses);document.getElementById('filter-dept').addEventListener('change',updateCourses);document.getElementById('filter-level').addEventListener('change',updateCourses);updateCourses()}document.querySelectorAll('[data-drop]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.drop;registered.delete(c);save();render(false);announce(`${c} dropped from your schedule`);document.getElementById('view-title')?.focus()}));const registrationForm=document.getElementById('registration-form');if(registrationForm)registrationForm.addEventListener('submit',e=>{e.preventDefault();const select=document.getElementById('registration-course'),error=document.getElementById('registration-course-error');if(!select.value){error.hidden=false;select.setAttribute('aria-invalid','true');select.focus();return}error.hidden=true;select.removeAttribute('aria-invalid');openConfirmation(select.value,select)});const selection=document.getElementById('registration-course');if(selection)selection.addEventListener('change',()=>{if(selection.value){document.getElementById('registration-course-error').hidden=true;selection.removeAttribute('aria-invalid')}})}
+document.getElementById('confirm-register').addEventListener('click',()=>{if(pendingCode){registered.add(pendingCode);save();const code=pendingCode;dialog.close();pendingCode=null;render(false);announce(`${code} added to your schedule`);const target=document.querySelector(`[data-code="${CSS.escape(code)}"]`);if(target)target.focus();else document.getElementById('view-title')?.focus()}});
+document.getElementById('cancel-register').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{pendingCode=null;if(opener?.isConnected)opener.focus();opener=null});
+dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav'),menu=document.getElementById('main-menu');toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){toggle.setAttribute('aria-expanded','false');nav.classList.remove('open');toggle.focus()}});menu.addEventListener('click',e=>{if(e.target.closest('a')&&window.matchMedia('(max-width: 620px)').matches){toggle.setAttribute('aria-expanded','false');nav.classList.remove('open')}});
+window.addEventListener('hashchange',()=>render(true));render(false);
