@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the CampusFlow course catalog. Search and filter 18 courses by department, level and availability.">
+  <title>Course Catalog | CampusFlow</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="catalog">
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="CampusFlow home">
+        <span class="brand-mark">CF</span>
+        <span class="brand-text">Campus<span>Flow</span></span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="catalog.html" data-nav="catalog">Course catalog</a>
+        <a href="register.html" data-nav="register">Registration</a>
+        <a href="profile.html" data-nav="profile">My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero catalog-hero">
+      <div class="container">
+        <span class="eyebrow light">Fall 2026 · 18 courses</span>
+        <h1>Course catalog</h1>
+        <p>Find the classes that fit your curiosity. Search by course, code or instructor, then filter by department, level and availability.</p>
+      </div>
+    </section>
+
+    <section class="section-overlap">
+      <div class="container">
+        <div class="catalog-toolbar">
+          <div class="search-field">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+            <label class="sr-only" for="courseSearch">Search courses</label>
+            <input id="courseSearch" type="search" data-search placeholder="Search courses, codes or instructors..." autocomplete="off">
+          </div>
+
+          <div class="filter-row">
+            <label class="select-wrap" for="deptFilter">
+              Department
+              <select id="deptFilter" data-filter-dept>
+                <option value="all">All departments</option>
+              </select>
+            </label>
+            <label class="select-wrap" for="levelFilter">
+              Level
+              <select id="levelFilter" data-filter-level>
+                <option value="all">All levels</option>
+                <option value="100">100 level</option>
+                <option value="200">200 level</option>
+                <option value="300">300 level</option>
+                <option value="400">400 level</option>
+              </select>
+            </label>
+            <label class="select-wrap" for="availabilityFilter">
+              Availability
+              <select id="availabilityFilter" data-filter-availability>
+                <option value="all">All courses</option>
+                <option value="open">Seats available</option>
+                <option value="full">Full courses</option>
+              </select>
+            </label>
+            <button class="btn btn-ghost" type="button" data-clear-filters>Reset filters</button>
+          </div>
+
+          <div class="results-line">
+            <span data-result-count>Showing all courses</span>
+            <label class="sort-wrap" for="sortFilter">
+              Sort by
+              <select id="sortFilter" data-sort>
+                <option value="featured">Featured</option>
+                <option value="rating">Highest rated</option>
+                <option value="credits-desc">Most credits</option>
+                <option value="credits-asc">Fewest credits</option>
+                <option value="title">Course title</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="course-grid" data-course-grid></div>
+
+        <div class="empty-state" data-empty hidden>
+          <div class="empty-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+          </div>
+          <h3>No courses match those filters</h3>
+          <p>Try a different keyword, broaden the department or reset the filters to see all 18 courses.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-clear-filters>Reset filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span class="brand-text">Campus<span>Flow</span></span>
+        </a>
+        <p>Course registration made bright and simple. Built for students who want to spend less time enrolling and more time learning.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Course catalog</a>
+        <a href="register.html">Registration</a>
+        <a href="profile.html">My profile</a>
+      </nav>
+      <p class="footer-copy">© <span data-year>2026</span> CampusFlow University. A demo project with sample data and no backend.</p>
+    </div>
+  </footer>
+</body>
+</html>

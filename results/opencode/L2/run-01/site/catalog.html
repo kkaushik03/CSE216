@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and filter 18 university courses by department, level, format, and meeting day.">
+  <title>Course catalog · CampusFlow Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='26' font-weight='bold' fill='white' text-anchor='middle'%3ECF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CampusFlow home">
+        <span class="brand-mark" aria-hidden="true">CF</span>
+        <span class="brand-text">CampusFlow <small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="catalog.html" data-nav="catalog">Course catalog</a></li>
+          <li><a href="registration.html" data-nav="registration">Registration</a></li>
+          <li><a href="profile.html" data-nav="profile">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="catalogHeading">
+      <div class="page-hero__panel">
+        <p class="kicker">Course catalog</p>
+        <h1 id="catalogHeading">Choose a course that fits your curiosity.</h1>
+        <p>Browse every class available this year. Search by keyword, then narrow the results by department, level, format, or meeting day.</p>
+      </div>
+    </section>
+
+    <section class="catalog-section" aria-labelledby="filtersHeading">
+      <h2 id="filtersHeading" class="sr-only">Search and filter courses</h2>
+      <div class="filters-card">
+        <form class="filters-form" id="catalogFilters" role="search" aria-label="Search and filter courses">
+          <div class="field field--search">
+            <label for="catalogSearch">Search courses</label>
+            <div class="search-control">
+              <input id="catalogSearch" name="q" type="search" placeholder="Search by course title, code, instructor, or keyword" autocomplete="off">
+              <button class="btn btn--primary" type="submit">Apply filters</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="deptFilter">Department</label>
+            <select id="deptFilter" name="dept">
+              <option value="">All departments</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="levelFilter">Level</label>
+            <select id="levelFilter" name="level">
+              <option value="">All levels</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="modalityFilter">Format</label>
+            <select id="modalityFilter" name="modality">
+              <option value="">All formats</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="dayFilter">Meeting day</label>
+            <select id="dayFilter" name="day">
+              <option value="">Any day</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sortFilter">Sort by</label>
+            <select id="sortFilter" name="sort">
+              <option value="recommended">Recommended</option>
+              <option value="code">Course code (A–Z)</option>
+              <option value="title">Title (A–Z)</option>
+              <option value="credits">Credits (high to low)</option>
+              <option value="seats">Seats available</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="results-bar">
+        <p class="results-count" id="resultsCount" role="status" aria-live="polite"></p>
+        <button class="btn btn--ghost btn--small" type="button" id="clearFilters">Clear all filters</button>
+      </div>
+
+      <div class="course-grid" id="courseGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <span class="empty-state__icon" aria-hidden="true">?</span>
+        <h2>No courses match those filters</h2>
+        <p>Try a broader search, choose a different department, or clear the filters to see every course again.</p>
+        <button class="btn btn--primary" type="button" id="emptyReset">Clear all filters</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="CampusFlow home">
+          <span class="brand-mark" aria-hidden="true">CF</span>
+          <span class="brand-text">CampusFlow <small>Course registration</small></span>
+        </a>
+        <p>A friendly, accessible place to plan your semester and register for the courses you love.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Student tools">
+        <h2>Student tools</h2>
+        <ul class="footer-links">
+          <li><a href="profile.html">Student profile</a></li>
+          <li><a href="registration.html#registered">My registered courses</a></li>
+          <li><a href="catalog.html?dept=Computer%20Science">Computer science courses</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CampusFlow University</span>
+      <span>Built for curious minds.</span>
+    </div>
+  </footer>
+</body>
+</html>

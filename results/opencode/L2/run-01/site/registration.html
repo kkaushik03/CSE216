@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for university courses with a short, accessible form and review your registered courses.">
+  <title>Registration · CampusFlow Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='26' font-weight='bold' fill='white' text-anchor='middle'%3ECF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/registration.js" defer></script>
+</head>
+<body data-page="registration">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CampusFlow home">
+        <span class="brand-mark" aria-hidden="true">CF</span>
+        <span class="brand-text">CampusFlow <small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="catalog.html" data-nav="catalog">Course catalog</a></li>
+          <li><a href="registration.html" data-nav="registration">Registration</a></li>
+          <li><a href="profile.html" data-nav="profile">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="registrationHeading">
+      <div class="page-hero__panel">
+        <p class="kicker">Registration</p>
+        <h1 id="registrationHeading">Reserve your seat in a few simple steps.</h1>
+        <p>Confirm your student details, choose a course and term, then submit the form. You will see a confirmation before anything is final.</p>
+      </div>
+    </section>
+
+    <section class="registration-section" aria-labelledby="formHeading">
+      <div class="registration-layout">
+        <div class="panel">
+          <h2 id="formHeading">Course registration form</h2>
+          <p class="panel__intro">Fields marked with an asterisk are required. Your details are saved on this device only.</p>
+
+          <form class="registration-form" id="registrationForm" novalidate>
+            <div class="error-summary" id="formErrors" role="alert" tabindex="-1" hidden>
+              <h2>Please fix the following before continuing</h2>
+              <ul id="formErrorList"></ul>
+            </div>
+
+            <fieldset>
+              <legend>Student details</legend>
+              <p class="form-section__intro">Use the same information that appears on your student record.</p>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name" required aria-describedby="fullName-hint fullName-error">
+                  <p class="hint" id="fullName-hint">As it appears on your student record.</p>
+                  <p class="field-error" id="fullName-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="studentId">Student ID <span class="req" aria-hidden="true">*</span></label>
+                  <input id="studentId" name="studentId" type="text" autocomplete="off" required aria-describedby="studentId-hint studentId-error">
+                  <p class="hint" id="studentId-hint">For example, U20260418.</p>
+                  <p class="field-error" id="studentId-error" hidden></p>
+                </div>
+                <div class="field field--full">
+                  <label for="email">University email <span class="req" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error">
+                  <p class="hint" id="email-hint">We will send your confirmation here.</p>
+                  <p class="field-error" id="email-error" hidden></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Course selection</legend>
+              <p class="form-section__intro">Only courses with open seats can be selected.</p>
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label for="courseSelect">Course <span class="req" aria-hidden="true">*</span></label>
+                  <select id="courseSelect" name="course" required aria-describedby="course-hint course-error">
+                    <option value="">Choose a course</option>
+                  </select>
+                  <p class="hint" id="course-hint">Courses you are already registered for are marked in the list.</p>
+                  <p class="field-error" id="course-error" hidden></p>
+                  <div class="course-preview" id="coursePreview" aria-live="polite" hidden>
+                    <h3 id="coursePreviewTitle">Course details</h3>
+                    <p class="course-preview__code" id="coursePreviewCode"></p>
+                    <dl class="course-preview__grid">
+                      <div><dt>Instructor</dt><dd id="coursePreviewInstructor"></dd></div>
+                      <div><dt>Schedule</dt><dd id="coursePreviewSchedule"></dd></div>
+                      <div><dt>Format</dt><dd id="coursePreviewFormat"></dd></div>
+                      <div><dt>Seats</dt><dd id="coursePreviewSeats"></dd></div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="field field--full">
+                  <label for="termSelect">Term <span class="req" aria-hidden="true">*</span></label>
+                  <select id="termSelect" name="term" required aria-describedby="term-hint term-error">
+                    <option value="">Choose a term</option>
+                  </select>
+                  <p class="hint" id="term-hint">Choose the term you want to join.</p>
+                  <p class="field-error" id="term-error" hidden></p>
+                </div>
+                <div class="field field--full">
+                  <label for="notes">Notes for the registrar (optional)</label>
+                  <textarea id="notes" name="notes" rows="3" aria-describedby="notes-hint"></textarea>
+                  <p class="hint" id="notes-hint">Share any accessibility, scheduling, or advising notes. Do not include sensitive personal information.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Confirmation</legend>
+              <div class="checkbox-field">
+                <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error">
+                <label for="consent">I confirm that the details above are correct and I want to register for this course. <span class="req" aria-hidden="true">*</span></label>
+              </div>
+              <p class="field-error" id="consent-error" hidden></p>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Confirm registration</button>
+              <a class="btn btn--ghost" href="catalog.html">Back to catalog</a>
+            </div>
+            <p class="form-note">Need help? Contact the registrar's office at registrar@campusflow.edu.</p>
+          </form>
+        </div>
+
+        <aside aria-labelledby="planHeading">
+          <div class="plan-card">
+            <h2 id="planHeading">Your plan at a glance</h2>
+            <p>This summary updates whenever you add or remove a course.</p>
+            <div class="plan-card__stats">
+              <div class="plan-stat">
+                <strong data-stat="courses">0</strong>
+                <span>Courses registered</span>
+              </div>
+              <div class="plan-stat">
+                <strong data-stat="credits">0</strong>
+                <span>Total credits</span>
+              </div>
+              <div class="plan-stat">
+                <strong data-stat="next">None yet</strong>
+                <span>Next class</span>
+              </div>
+            </div>
+            <ul class="checklist">
+              <li>Check the meeting time against your weekly schedule.</li>
+              <li>Review the format: in person, hybrid, or online.</li>
+              <li>Keep your student email up to date.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="registered-section" id="registered" aria-labelledby="registeredHeading">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Your schedule</p>
+          <h2 id="registeredHeading" tabindex="-1">Your registered courses</h2>
+          <p>Review your current registrations or remove a course if your plans change.</p>
+        </div>
+        <a class="text-link" href="catalog.html">Add another course</a>
+      </div>
+
+      <div class="table-card">
+        <section class="table-scroll" aria-label="Registered courses table, scroll horizontally if needed" tabindex="0">
+          <table class="data-table">
+            <caption>Courses currently in your registration plan</caption>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Term</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Format</th>
+                <th scope="col" class="cell-action">Action</th>
+              </tr>
+            </thead>
+            <tbody id="registrationTableBody"></tbody>
+          </table>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="CampusFlow home">
+          <span class="brand-mark" aria-hidden="true">CF</span>
+          <span class="brand-text">CampusFlow <small>Course registration</small></span>
+        </a>
+        <p>A friendly, accessible place to plan your semester and register for the courses you love.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Student tools">
+        <h2>Student tools</h2>
+        <ul class="footer-links">
+          <li><a href="profile.html">Student profile</a></li>
+          <li><a href="registration.html#registered">My registered courses</a></li>
+          <li><a href="catalog.html?dept=Computer%20Science">Computer science courses</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CampusFlow University</span>
+      <span>Built for curious minds.</span>
+    </div>
+  </footer>
+</body>
+</html>

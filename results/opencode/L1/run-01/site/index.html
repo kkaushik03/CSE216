@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusFlow makes university course registration bright, fast and simple. Explore courses, build your schedule and register in minutes.">
+  <title>CampusFlow | Course Registration</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="CampusFlow home">
+        <span class="brand-mark">CF</span>
+        <span class="brand-text">Campus<span>Flow</span></span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="catalog.html" data-nav="catalog">Course catalog</a>
+        <a href="register.html" data-nav="register">Registration</a>
+        <a href="profile.html" data-nav="profile">My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="live-dot"></span> Fall 2026 registration is open</span>
+          <h1>Find your next <span class="grad-text">big idea.</span></h1>
+          <p class="lead">Explore 18 hand-picked courses across 10 departments. Build a schedule that feels like you — in just a few clicks.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="catalog.html">Browse the catalog
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="register.html">Start registration</a>
+          </div>
+          <ul class="hero-points">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>
+              Instant confirmation
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>
+              Live seat availability
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>
+              No paperwork
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-blob blob-a"></div>
+          <div class="hero-blob blob-b"></div>
+          <div class="hero-panel">
+            <div class="panel-head">
+              <div>
+                <span class="panel-kicker">Your week</span>
+                <strong>Fall 2026</strong>
+              </div>
+              <span class="panel-badge">12 credits</span>
+            </div>
+            <div class="sched-card" style="--ca:#6366f1;--cb:#a855f7;">
+              <span class="sched-time">Mon · 09:00</span>
+              <strong>Data Structures</strong>
+              <span class="sched-meta">CS 201 · Lab 204</span>
+            </div>
+            <div class="sched-card" style="--ca:#ec4899;--cb:#f43f5e;">
+              <span class="sched-time">Thu · 09:00</span>
+              <strong>UX Research Methods</strong>
+              <span class="sched-meta">DES 260 · Studio 6</span>
+            </div>
+            <div class="sched-card" style="--ca:#14b8a6;--cb:#0ea5e9;">
+              <span class="sched-time">Tue · 18:00</span>
+              <strong>Astronomy: The Cosmos</strong>
+              <span class="sched-meta">PHYS 150 · Planetarium</span>
+            </div>
+            <div class="panel-foot">
+              <span>3 courses planned</span>
+              <span class="panel-dots"><i></i><i></i><i></i></span>
+            </div>
+          </div>
+          <div class="float-badge">
+            <span class="float-star">4.7</span>
+            <span>average course rating from students</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-label="CampusFlow at a glance">
+      <div class="container stats-grid">
+        <div><strong>18</strong><span>courses this term</span></div>
+        <div><strong>10</strong><span>departments</span></div>
+        <div><strong>2.4k</strong><span>students enrolled</span></div>
+        <div><strong>4.7</strong><span>average rating</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Featured this term</span>
+            <h2>Courses students love</h2>
+            <p>Small classes, big ideas and instructors who make every session count. These are the highest-rated courses with seats still open.</p>
+          </div>
+          <a class="text-link" href="catalog.html">View all courses
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="course-grid" data-featured></div>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Browse by interest</span>
+            <h2>Ten departments, endless directions</h2>
+            <p>From code and cognition to design and economics — find the subject that sparks something.</p>
+          </div>
+        </div>
+        <div class="dept-grid" data-dept-tiles></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">How it works</span>
+          <h2>From curious to enrolled in three steps</h2>
+          <p>No queues, no forms lost in an inbox. Just a clear path to your best semester yet.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Explore the catalog</h3>
+            <p>Search by keyword or filter by department, level and availability to narrow down your options.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Build your schedule</h3>
+            <p>Pick the classes that fit your goals and check live seat counts before you commit.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Confirm in a click</h3>
+            <p>Submit your student details, get instant confirmation and manage everything from your profile.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <span class="eyebrow light">Ready when you are</span>
+            <h2>Your best semester starts here.</h2>
+            <p>Registration for Fall 2026 is live. Explore the catalog, save your spot and make it official in minutes.</p>
+          </div>
+          <a class="btn btn-light" href="register.html">Start your registration</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span class="brand-text">Campus<span>Flow</span></span>
+        </a>
+        <p>Course registration made bright and simple. Built for students who want to spend less time enrolling and more time learning.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Course catalog</a>
+        <a href="register.html">Registration</a>
+        <a href="profile.html">My profile</a>
+      </nav>
+      <p class="footer-copy">© <span data-year>2026</span> CampusFlow University. A demo project with sample data and no backend.</p>
+    </div>
+  </footer>
+</body>
+</html>

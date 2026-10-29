@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CampusFlow is a colorful, accessible university course registration experience. Browse courses, build a schedule, and register in minutes.">
+  <title>Home · CampusFlow Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='26' font-weight='bold' fill='white' text-anchor='middle'%3ECF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CampusFlow home">
+        <span class="brand-mark" aria-hidden="true">CF</span>
+        <span class="brand-text">CampusFlow <small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="catalog.html" data-nav="catalog">Course catalog</a></li>
+          <li><a href="registration.html" data-nav="registration">Registration</a></li>
+          <li><a href="profile.html" data-nav="profile">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="heroHeading">
+      <div class="hero__panel">
+        <div class="hero__content">
+          <p class="eyebrow">Fall 2026 registration is open</p>
+          <h1 id="heroHeading">Find your next <em>favorite</em> course.</h1>
+          <p class="hero__lead">Explore 18 vibrant courses across 10 departments, build a schedule that fits your life, and register in just a few clicks.</p>
+          <form class="hero-search" action="catalog.html" method="get" role="search">
+            <label class="sr-only" for="heroSearch">Search the course catalog</label>
+            <input id="heroSearch" name="q" type="search" placeholder="Try “web development” or “biology”" autocomplete="off">
+            <button class="btn btn--primary" type="submit">Search courses</button>
+          </form>
+          <ul class="hero__notes">
+            <li>No application fee</li>
+            <li>Flexible formats</li>
+            <li>Accessible by design</li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orbit"></div>
+          <div class="hero-stack">
+            <div class="mini-course mini-course--violet">
+              <span class="mini-course__mark">CS</span>
+              <div>
+                <strong>CS 315 · Web Development</strong>
+                <span>Mon, Wed, Fri · 09:00</span>
+              </div>
+              <span class="mini-course__seats">9 left</span>
+            </div>
+            <div class="mini-course mini-course--orange">
+              <span class="mini-course__mark">ART</span>
+              <div>
+                <strong>ART 115 · Digital Design</strong>
+                <span>Self-paced · Online</span>
+              </div>
+              <span class="mini-course__seats">13 left</span>
+            </div>
+            <div class="mini-course mini-course--green">
+              <span class="mini-course__mark">BIO</span>
+              <div>
+                <strong>BIO 150 · Principles of Biology</strong>
+                <span>Mon, Wed · 13:00</span>
+              </div>
+              <span class="mini-course__seats">8 left</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-labelledby="statsHeading">
+      <h2 id="statsHeading" class="sr-only">Campus at a glance</h2>
+      <div class="stat-card">
+        <span class="stat-card__dot" aria-hidden="true">C</span>
+        <div><strong>18</strong><span>Courses this term</span></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__dot" aria-hidden="true">D</span>
+        <div><strong>10</strong><span>Departments to explore</span></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__dot" aria-hidden="true">T</span>
+        <div><strong>3</strong><span>Terms open for planning</span></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__dot" aria-hidden="true">S</span>
+        <div><strong>2,400+</strong><span>Students registered</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featuredHeading">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Student favorites</p>
+          <h2 id="featuredHeading">Courses worth talking about</h2>
+          <p>A handpicked mix of creative, technical, and world-changing classes. Your next big idea could start here.</p>
+        </div>
+        <a class="text-link" href="catalog.html">View all courses</a>
+      </div>
+      <div class="course-grid" id="featuredCourses"></div>
+    </section>
+
+    <section class="section" aria-labelledby="howHeading">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Simple by design</p>
+          <h2 id="howHeading">From curious to registered in three steps</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <article class="step-card">
+          <span class="step-number" aria-hidden="true">1</span>
+          <h3>Explore the catalog</h3>
+          <p>Search by keyword or narrow the list with department, level, format, and day filters.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number" aria-hidden="true">2</span>
+          <h3>Build your plan</h3>
+          <p>Check seats, meeting times, and credits before you choose the courses that fit your week.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number" aria-hidden="true">3</span>
+          <h3>Confirm registration</h3>
+          <p>Complete the short registration form, review the confirmation, and you are all set.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="ctaHeading">
+      <div class="cta__panel">
+        <div>
+          <h2 id="ctaHeading">Your best semester starts with one click.</h2>
+          <p>Registration is open now. Browse the catalog and reserve your seat before classes fill up.</p>
+        </div>
+        <a class="btn btn--light" href="catalog.html">Browse the catalog</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="CampusFlow home">
+          <span class="brand-mark" aria-hidden="true">CF</span>
+          <span class="brand-text">CampusFlow <small>Course registration</small></span>
+        </a>
+        <p>A friendly, accessible place to plan your semester and register for the courses you love.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Student tools">
+        <h2>Student tools</h2>
+        <ul class="footer-links">
+          <li><a href="profile.html">Student profile</a></li>
+          <li><a href="registration.html#registered">My registered courses</a></li>
+          <li><a href="catalog.html?dept=Computer%20Science">Computer science courses</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CampusFlow University</span>
+      <span>Built for curious minds.</span>
+    </div>
+  </footer>
+</body>
+</html>
