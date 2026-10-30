@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your student profile, semester progress, and registered courses at Prism University.">
+  <title>Student Profile | Prism University</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="topbar__message"><span class="topbar__dot"></span>Spring 2027 priority registration is open</span>
+      <a class="topbar__link" href="registration.html">Complete your registration
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Prism University home">
+        <span class="brand__mark" aria-hidden="true"><span>P</span></span>
+        <span class="brand__copy">
+          <span class="brand__name">Prism</span>
+          <span class="brand__sub">University</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <div class="site-nav__links">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="catalog.html" data-nav="catalog">Courses</a>
+          <a href="registration.html" data-nav="registration">Register</a>
+          <a href="profile.html" data-nav="profile">Profile</a>
+          <a class="nav-cta" href="registration.html">My plan <span class="plan-count" data-plan-count hidden>0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section section--tight" aria-labelledby="profile-name">
+      <div class="container">
+        <div class="profile-banner">
+          <div class="profile-banner__main">
+            <div class="profile-avatar" id="profile-initials" aria-hidden="true">JA</div>
+            <div>
+              <span class="eyebrow"><span class="eyebrow-dot"></span>Student profile</span>
+              <h1 id="profile-name">Jordan Avery</h1>
+              <p class="profile-banner__program" id="profile-program">B.Des. Interaction Design</p>
+              <div class="profile-banner__chips">
+                <span class="profile-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                  <span id="profile-student-id">PU-2027-0482</span>
+                </span>
+                <span class="profile-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+                  Spring 2027
+                </span>
+                <span class="profile-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>
+                  Good standing
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="profile-banner__actions">
+            <button class="btn btn--glass" id="print-schedule" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7" rx="1"/></svg>
+              Print schedule
+            </button>
+            <a class="btn btn--white" href="registration.html">Register for courses
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <section class="panel profile-details" aria-labelledby="details-heading">
+            <h2 id="details-heading">Student details</h2>
+            <dl class="details-list">
+              <div>
+                <dt>University email</dt>
+                <dd id="profile-email">jordan.avery@prism.edu</dd>
+              </div>
+              <div>
+                <dt>Student ID</dt>
+                <dd id="profile-student-id-detail">PU-2027-0482</dd>
+              </div>
+              <div>
+                <dt>Academic year</dt>
+                <dd id="profile-year">Sophomore</dd>
+              </div>
+              <div>
+                <dt>Academic advisor</dt>
+                <dd id="profile-advisor">Prof. Noa Bennett</dd>
+              </div>
+              <div>
+                <dt>Program</dt>
+                <dd id="profile-program-detail">B.Des. Interaction Design</dd>
+              </div>
+              <div>
+                <dt>Registration window</dt>
+                <dd>Oct 12 – Nov 14</dd>
+              </div>
+            </dl>
+          </section>
+
+          <aside class="panel progress-card" aria-labelledby="progress-heading">
+            <div class="progress-card__head">
+              <h2 id="progress-heading">Semester load</h2>
+              <p>Spring 2027 registration progress</p>
+            </div>
+            <div class="progress-card__body">
+              <div class="progress-ring" id="progress-ring">
+                <span id="progress-value">0%</span>
+              </div>
+              <div class="progress-card__copy">
+                <strong id="semester-credit-label">0 / 18 credits</strong>
+                <span>12–18 credits is a full-time load. You can still add courses below the limit.</span>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div class="profile-stat">
+                <strong id="stat-credits">0</strong>
+                <span>Credits</span>
+              </div>
+              <div class="profile-stat">
+                <strong id="stat-courses">0</strong>
+                <span>Courses</span>
+              </div>
+              <div class="profile-stat">
+                <strong id="stat-status">Getting started</strong>
+                <span>Status</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="schedule-section panel" aria-labelledby="schedule-heading">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow"><span class="eyebrow-dot"></span>Confirmed enrollment</span>
+              <h2 id="schedule-heading">Your Spring 2027 schedule</h2>
+              <p>Everything you are registered for this semester, all in one place.</p>
+            </div>
+            <span class="count-chip" id="registered-count" role="status" aria-label="Registered courses">0</span>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table data-table--profile">
+              <caption class="visually-hidden">Your registered courses for Spring 2027</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">Schedule</th>
+                  <th scope="col">Instructor</th>
+                  <th scope="col">Credits</th>
+                  <th scope="col">Status</th>
+                  <th scope="col"><span class="visually-hidden">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody id="profile-course-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Prism University home">
+            <span class="brand__mark" aria-hidden="true"><span>P</span></span>
+            <span class="brand__copy">
+              <span class="brand__name">Prism</span>
+              <span class="brand__sub">University</span>
+            </span>
+          </a>
+          <p class="footer-about">A university for people who see the world a little differently. Small classes, big questions, and room to make something original.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Explore</p>
+          <div class="footer-links">
+            <a href="catalog.html">Course catalog</a>
+            <a href="registration.html">Registration</a>
+            <a href="profile.html">Student profile</a>
+            <a href="index.html">Home</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-heading">Visit us</p>
+          <div class="footer-contact">
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>48 Spectrum Way<br>Portland, OR 97205</span>
+            </div>
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-4.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+              <span>registrar@prism.edu<br>(503) 555-0148</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Prism University. All rights reserved.</span>
+        <span>Built for curious minds.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

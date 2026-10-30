@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the UniFlow course catalog, search by keyword, and filter courses by department, level, and credits.">
+  <title>Course Catalog · UniFlow</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%236d5efc'/%3E%3Cstop offset='1' stop-color='%23b44df0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='34' font-weight='bold' fill='white' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="catalog">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="UniFlow home">
+        <span class="brand-mark" aria-hidden="true">U</span>
+        <span class="brand-text">Uni<span>Flow</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="catalog.html" data-nav="catalog">Courses</a>
+        <a href="register.html" data-nav="register">Register <span class="nav-badge js-reg-count" hidden>0</span></a>
+        <a href="profile.html" data-nav="profile">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Course catalog</span>
+        <h1>Discover your <span class="gradient-text">perfect schedule</span></h1>
+        <p>Search, filter, and compare every course offered this term. Each card shows the schedule, instructor, and how many seats are still open.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="filter-panel">
+          <div class="filter-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <label class="sr-only" for="course-search">Search courses</label>
+            <input id="course-search" type="search" placeholder="Search by course name, code, instructor, or keyword…" autocomplete="off">
+          </div>
+          <div class="filter-selects">
+            <label class="select-field">
+              <span>Department</span>
+              <select id="filter-dept">
+                <option value="all">All departments</option>
+              </select>
+            </label>
+            <label class="select-field">
+              <span>Level</span>
+              <select id="filter-level">
+                <option value="all">All levels</option>
+                <option value="100">100 · Introductory</option>
+                <option value="200">200 · Intermediate</option>
+                <option value="300">300 · Advanced</option>
+              </select>
+            </label>
+            <label class="select-field">
+              <span>Credits</span>
+              <select id="filter-credits">
+                <option value="all">Any credits</option>
+                <option value="3">3 credits</option>
+                <option value="4">4 credits</option>
+              </select>
+            </label>
+            <label class="select-field">
+              <span>Sort by</span>
+              <select id="filter-sort">
+                <option value="recommended">Recommended</option>
+                <option value="title">Course name (A–Z)</option>
+                <option value="credits">Credits (low to high)</option>
+                <option value="seats">Most seats left</option>
+              </select>
+            </label>
+          </div>
+          <div class="filter-footer">
+            <p id="results-count" aria-live="polite">Loading courses…</p>
+            <button class="btn btn-small btn-ghost" id="clear-filters" type="button">Clear filters</button>
+          </div>
+        </div>
+
+        <div class="course-grid" id="course-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-state-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </div>
+          <h2>No courses match those filters</h2>
+          <p>Try a different keyword or reset the filters to see the full catalog again.</p>
+          <button class="btn btn-primary" id="reset-filters" type="button">Reset filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="UniFlow home">
+          <span class="brand-mark" aria-hidden="true">U</span>
+          <span class="brand-text">Uni<span>Flow</span></span>
+        </a>
+        <p>A friendlier way to find classes, plan a semester, and register with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Course catalog</a>
+        <a href="register.html">Registration</a>
+        <a href="profile.html">Student profile</a>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <a href="catalog.html?dept=Computer%20Science">Computer Science</a>
+        <a href="catalog.html?dept=Design">Design studio</a>
+        <a href="catalog.html?dept=Business">Business school</a>
+        <a href="catalog.html?dept=Psychology">Psychology</a>
+      </div>
+      <div class="footer-col">
+        <h3>Fall 2026</h3>
+        <p>Registration is open through November 20. Classes begin December 2.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span class="js-year">2026</span> UniFlow University. A demo registration experience.</p>
+      <p>Built with plain HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="app.js"></script>
+  <script src="catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your UniFlow student profile, totals, and all registered courses. Edit your details or remove a course.">
+  <title>Student Profile · UniFlow</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%236d5efc'/%3E%3Cstop offset='1' stop-color='%23b44df0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='34' font-weight='bold' fill='white' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="profile">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="UniFlow home">
+        <span class="brand-mark" aria-hidden="true">U</span>
+        <span class="brand-text">Uni<span>Flow</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="catalog.html" data-nav="catalog">Courses</a>
+        <a href="register.html" data-nav="register">Register <span class="nav-badge js-reg-count" hidden>0</span></a>
+        <a href="profile.html" data-nav="profile">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero profile-hero">
+      <div class="container">
+        <div class="profile-card">
+          <div class="profile-avatar" id="profile-avatar" aria-hidden="true">GS</div>
+          <div class="profile-info">
+            <span class="eyebrow">Student profile</span>
+            <h1 id="profile-name">Guest Student</h1>
+            <p class="profile-email" id="profile-email">Register for a course to set up your profile.</p>
+            <div class="profile-tags">
+              <span class="pill" id="profile-program">Undeclared</span>
+              <span class="pill" id="profile-year">First year</span>
+              <span class="pill" id="profile-id">No student ID</span>
+            </div>
+            <button class="btn btn-small btn-white" id="edit-profile-btn" type="button">Edit profile</button>
+          </div>
+          <div class="profile-stats">
+            <div class="profile-stat">
+              <strong id="stat-my-courses">0</strong>
+              <span>Courses</span>
+            </div>
+            <div class="profile-stat">
+              <strong id="stat-my-credits">0</strong>
+              <span>Credits</span>
+            </div>
+            <div class="profile-stat">
+              <strong id="stat-my-semesters">0</strong>
+              <span>Semesters</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="card profile-form" id="profile-form" hidden novalidate>
+          <h2>Edit your profile</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="profileName">Full name</label>
+              <input id="profileName" name="profileName" type="text" placeholder="Alex Morgan" autocomplete="name" required>
+              <p class="field-error" data-error-for="profileName"></p>
+            </div>
+            <div class="field">
+              <label for="profileStudentId">Student ID</label>
+              <input id="profileStudentId" name="profileStudentId" type="text" placeholder="e.g. 20261234" autocomplete="off" required>
+              <p class="field-error" data-error-for="profileStudentId"></p>
+            </div>
+            <div class="field field-full">
+              <label for="profileEmail">University email</label>
+              <input id="profileEmail" name="profileEmail" type="email" placeholder="alex.morgan@university.edu" autocomplete="email" required>
+              <p class="field-error" data-error-for="profileEmail"></p>
+            </div>
+            <div class="field">
+              <label for="profileProgram">Program</label>
+              <select id="profileProgram" name="profileProgram">
+                <option value="Undeclared">Undeclared</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Design">Design</option>
+                <option value="Psychology">Psychology</option>
+                <option value="Biology">Biology</option>
+                <option value="English">English</option>
+                <option value="Physics">Physics</option>
+                <option value="Art">Art</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="profileYear">Year</label>
+              <select id="profileYear" name="profileYear">
+                <option value="First year">First year</option>
+                <option value="Second year">Second year</option>
+                <option value="Third year">Third year</option>
+                <option value="Fourth year">Fourth year</option>
+                <option value="Graduate">Graduate</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Save profile</button>
+            <button class="btn btn-ghost" id="cancel-profile-btn" type="button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-tight table-section">
+      <div class="container">
+        <div class="table-card">
+          <div class="table-head">
+            <div>
+              <h2>My registered courses</h2>
+              <p id="profile-table-summary">No courses registered yet</p>
+            </div>
+            <a class="btn btn-small btn-gradient" href="register.html">Register a course</a>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">Instructor</th>
+                  <th scope="col">Schedule</th>
+                  <th scope="col">Credits</th>
+                  <th scope="col">Semester</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody id="profile-registrations-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="UniFlow home">
+          <span class="brand-mark" aria-hidden="true">U</span>
+          <span class="brand-text">Uni<span>Flow</span></span>
+        </a>
+        <p>A friendlier way to find classes, plan a semester, and register with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Course catalog</a>
+        <a href="register.html">Registration</a>
+        <a href="profile.html">Student profile</a>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <a href="catalog.html?dept=Computer%20Science">Computer Science</a>
+        <a href="catalog.html?dept=Design">Design studio</a>
+        <a href="catalog.html?dept=Business">Business school</a>
+        <a href="catalog.html?dept=Psychology">Psychology</a>
+      </div>
+      <div class="footer-col">
+        <h3>Fall 2026</h3>
+        <p>Registration is open through November 20. Classes begin December 2.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span class="js-year">2026</span> UniFlow University. A demo registration experience.</p>
+      <p>Built with plain HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="app.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
