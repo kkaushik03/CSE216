@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter the Campus Course Hub catalog by department, course level, and learning format.">
+  <meta name="theme-color" content="#211c3a">
+  <title>Course Catalog | Campus Course Hub</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="index.html" aria-label="Campus Course Hub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.5 7.4 12 3.5l8.5 3.9L12 11.3 3.5 7.4Z" fill="currentColor"/>
+            <path d="M6.4 10.5v4.2c0 1.6 2.5 3.1 5.6 3.1s5.6-1.5 5.6-3.1v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M20.5 7.4v5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Campus<span>Course Hub</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html" aria-current="page">Courses</a></li>
+          <li><a href="registration.html">Register</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <a class="nav-cta" href="registration.html">View my plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page-hero page-hero--catalog" aria-labelledby="catalog-title">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Courses</li>
+          </ol>
+        </nav>
+        <div class="page-hero-content">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Spring 2027 · <span data-course-count>16</span> courses</p>
+            <h1 id="catalog-title">Find the class that<br> <span class="text-gradient">changes your mind.</span></h1>
+            <p class="lede">From climate science to documentary film, there is room in your semester for something surprising.</p>
+          </div>
+          <div class="catalog-doodle" aria-hidden="true">
+            <span class="doodle-pill doodle-pill--one">Create</span>
+            <span class="doodle-pill doodle-pill--two">Question</span>
+            <span class="doodle-pill doodle-pill--three">Build</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--catalog" aria-labelledby="filter-heading">
+      <div class="shell">
+        <div class="filter-panel">
+          <h2 class="sr-only" id="filter-heading">Search and filter courses</h2>
+          <form id="catalog-filters" role="search">
+            <div class="filter-search">
+              <label for="catalog-search">Search courses</label>
+              <div class="search-input-wrap">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/>
+                  <path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input id="catalog-search" name="q" type="search" placeholder="Search by course, code, department, or instructor" autocomplete="off">
+                <button class="btn btn-primary search-submit" type="submit">Search</button>
+              </div>
+            </div>
+
+            <div class="filter-grid">
+              <div class="filter-field">
+                <label for="department-filter">Department</label>
+                <select id="department-filter" name="department">
+                  <option value="all">All departments</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="level-filter">Course level</label>
+                <select id="level-filter" name="level">
+                  <option value="all">All levels</option>
+                  <option value="100">100 level</option>
+                  <option value="200">200 level</option>
+                  <option value="300">300 level</option>
+                  <option value="400">400 level</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="format-filter">Format</label>
+                <select id="format-filter" name="format">
+                  <option value="all">All formats</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="sort-filter">Sort by</label>
+                <select id="sort-filter" name="sort">
+                  <option value="featured">Featured first</option>
+                  <option value="code">Course code (A–Z)</option>
+                  <option value="seats">Most seats available</option>
+                  <option value="credits">Fewest credits</option>
+                </select>
+              </div>
+              <button class="btn btn-ghost filter-reset" id="reset-filters" type="button">Reset filters</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="results-bar">
+          <p class="results-count" id="results-count" role="status" aria-live="polite">Showing all 16 courses</p>
+          <p class="results-hint">Use the filters to narrow your search.</p>
+        </div>
+
+        <ul class="course-grid" id="course-list" aria-label="Course results"></ul>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/>
+              <path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2>No courses match just yet</h2>
+          <p>Try a broader search, choose a different department, or clear the filters to see everything.</p>
+          <button class="btn btn-primary" id="empty-reset" type="button">Clear all filters</button>
+        </div>
+
+        <noscript>
+          <p class="notice">JavaScript is needed to view and filter the course catalog. Please enable it in your browser.</p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="index.html" aria-label="Campus Course Hub home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3.5 7.4 12 3.5l8.5 3.9L12 11.3 3.5 7.4Z" fill="currentColor"/>
+              <path d="M6.4 10.5v4.2c0 1.6 2.5 3.1 5.6 3.1s5.6-1.5 5.6-3.1v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Campus<span>Course Hub</span></span>
+        </a>
+        <p>A friendlier way to find, plan, and register for the classes that shape your semester.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="profile.html">Student profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-help">
+        <h2>Need a hand?</h2>
+        <p>Our registrar team is here Monday–Friday, 9 am–5 pm.</p>
+        <a href="mailto:registrar@campushub.edu">registrar@campushub.edu</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p>&copy; <span data-year>2026</span> Campus Course Hub. A demonstration course registration experience.</p>
+      <p>Made for curious minds.</p>
+    </div>
+  </footer>
+</body>
+</html>

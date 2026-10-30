@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse and filter Spring 2027 courses at Aurora University.">
+    <meta name="theme-color" content="#5b3fd6">
+    <title>Course Catalog · Aurora University</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="common.js" defer></script>
+    <script src="courses.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" >
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              <circle cx="25.5" cy="6.5" r="2.5" fill="currentColor" opacity=".65"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html" aria-current="page">Courses</a></li>
+            <li>
+              <a href="registration.html">Registration <span class="nav-badge" data-registration-count>2</span><span class="sr-only" data-registration-label>courses registered</span></a>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero page-hero--catalog" aria-labelledby="catalog-title">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><span aria-current="page">Course catalog</span></li>
+            </ol>
+          </nav>
+          <div class="page-hero-content">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Spring 2027</p>
+              <h1 id="catalog-title">Course catalog</h1>
+              <p>Find the classes that fit your curiosity, your goals, and your week. Filter by department, level, or format to narrow the field.</p>
+            </div>
+            <div class="catalog-stamp" aria-hidden="true">
+              <span class="catalog-stamp-number">16</span>
+              <span class="catalog-stamp-label">courses<br>to explore</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section catalog-section" aria-labelledby="filter-heading">
+        <div class="container">
+          <h2 class="sr-only" id="filter-heading">Search and filter courses</h2>
+          <div class="filter-panel">
+            <form id="course-filters" role="search" aria-label="Filter the course catalog">
+              <div class="filter-search">
+                <label for="course-search">Search courses</label>
+                <div class="search-box search-box--light">
+                  <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <input id="course-search" name="q" type="search" placeholder="Course name, code, instructor, or topic" autocomplete="off">
+                  <button class="btn btn-small filter-submit" type="submit">Search</button>
+                </div>
+              </div>
+
+              <div class="filter-grid">
+                <div class="field">
+                  <label for="department-filter">Department</label>
+                  <select id="department-filter" name="department">
+                    <option value="">All departments</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="level-filter">Course level</label>
+                  <select id="level-filter" name="level">
+                    <option value="">All levels</option>
+                    <option value="100">100 level</option>
+                    <option value="200">200 level</option>
+                    <option value="300">300 level</option>
+                    <option value="400">400 level</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="format-filter">Format</label>
+                  <select id="format-filter" name="format">
+                    <option value="">All formats</option>
+                    <option value="In person">In person</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Online">Online</option>
+                  </select>
+                </div>
+                <div class="filter-reset-wrap">
+                  <button class="btn btn-quiet" id="clear-filters" type="button">Clear filters</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="results-bar">
+            <p id="results-summary" role="status" aria-live="polite" aria-atomic="true">Showing 16 courses</p>
+            <div class="field field--inline">
+              <label for="sort-courses">Sort by</label>
+              <select id="sort-courses">
+                <option value="recommended">Recommended</option>
+                <option value="title">Course title</option>
+                <option value="seats">Most seats open</option>
+                <option value="level">Course level</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="course-grid" id="course-grid"></div>
+
+          <div class="empty-state empty-state--wide" id="no-results" hidden>
+            <span class="empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <circle cx="21" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <path d="m30 30 9 9M16 18h10M16 24h6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3>No courses match those filters</h3>
+            <p>Try a broader search or clear your filters to see the full catalog.</p>
+            <button class="btn" id="empty-reset" type="button">Clear all filters</button>
+          </div>
+
+          <noscript>
+            <p class="notice">JavaScript is needed to filter the catalog. You can still browse all course details in the source data.</p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--light" href="index.html" >
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+          </a>
+          <p>Learning that lights the way.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course catalog</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="profile.html">Student profile</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Need a hand?</h2>
+          <p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>
+          <a href="mailto:registrar@aurora.edu">registrar@aurora.edu</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span data-current-year>2026</span> Aurora University · Sample course registration system</p>
+        <p>Spring 2027 · Registration open</p>
+      </div>
+    </footer>
+  </body>
+</html>

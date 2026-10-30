@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View your student profile, academic snapshot, and registered courses at Aurora University.">
+    <meta name="theme-color" content="#5b3fd6">
+    <title>Student Profile · Aurora University</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="common.js" defer></script>
+    <script src="profile.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" >
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              <circle cx="25.5" cy="6.5" r="2.5" fill="currentColor" opacity=".65"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li>
+              <a href="registration.html">Registration <span class="nav-badge" data-registration-count>2</span><span class="sr-only" data-registration-label>courses registered</span></a>
+            </li>
+            <li><a href="profile.html" aria-current="page">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero page-hero--profile" aria-labelledby="profile-title">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><span aria-current="page">Profile</span></li>
+            </ol>
+          </nav>
+          <div class="page-hero-content">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Student portal</p>
+              <h1 id="profile-title">Your student profile</h1>
+              <p>Your academic details, schedule, and progress—all in one place.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section profile-section" aria-label="Profile overview">
+        <div class="container">
+          <div class="profile-banner">
+            <div class="profile-identity">
+              <div class="profile-avatar" id="profile-avatar" aria-hidden="true">MT</div>
+              <div>
+                <h2 id="profile-name">Maya Thompson</h2>
+                <p class="profile-program"><span id="profile-program">Computer Science</span> · <span id="profile-year">Second year</span></p>
+                <ul class="profile-tags" role="list">
+                  <li><span class="profile-tag-label">Student ID</span> <strong id="profile-student-id">AUR-20481</strong></li>
+                  <li><span class="profile-tag-label">Email</span> <span id="profile-email">maya.thompson@aurora.edu</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="profile-actions">
+              <a class="btn" href="registration.html">Register for a course</a>
+              <button class="btn btn-secondary" id="print-schedule" type="button">
+                <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5.5 7V3.5h9V7M4 7h12a1.5 1.5 0 0 1 1.5 1.5v5H15v3H5v-3H2.5v-5A1.5 1.5 0 0 1 4 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+                Print schedule
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-layout">
+            <section class="panel" aria-labelledby="details-heading">
+              <div class="panel-heading">
+                <span class="panel-kicker">Personal information</span>
+                <h2 id="details-heading">Profile details</h2>
+                <p>Keep your contact and program information up to date.</p>
+              </div>
+
+              <div class="form-error-summary" id="profile-error-summary" role="alert" tabindex="-1" hidden>
+                <h3>Please check your details</h3>
+                <ul id="profile-error-list"></ul>
+              </div>
+
+              <form id="profile-form" novalidate>
+                <div class="form-grid">
+                  <div class="field field--full">
+                    <label for="profile-full-name">Full name</label>
+                    <input id="profile-full-name" name="fullName" type="text" autocomplete="name" required aria-describedby="profile-full-name-error">
+                    <p class="field-error" id="profile-full-name-error"></p>
+                  </div>
+                  <div class="field field--full">
+                    <label for="profile-email-input">University email</label>
+                    <input id="profile-email-input" name="email" type="email" autocomplete="email" required aria-describedby="profile-email-input-error">
+                    <p class="field-error" id="profile-email-input-error"></p>
+                  </div>
+                  <div class="field">
+                    <label for="profile-program-input">Program</label>
+                    <select id="profile-program-input" name="program" required aria-describedby="profile-program-input-error">
+                      <option value="Computer Science">Computer Science</option>
+                      <option value="Design">Design</option>
+                      <option value="Environmental Science">Environmental Science</option>
+                      <option value="Business">Business</option>
+                      <option value="Psychology">Psychology</option>
+                      <option value="Mathematics">Mathematics</option>
+                      <option value="Communication">Communication</option>
+                      <option value="Health Sciences">Health Sciences</option>
+                    </select>
+                    <p class="field-error" id="profile-program-input-error"></p>
+                  </div>
+                  <div class="field">
+                    <label for="profile-year-input">Year of study</label>
+                    <select id="profile-year-input" name="year" required aria-describedby="profile-year-input-error">
+                      <option value="First year">First year</option>
+                      <option value="Second year">Second year</option>
+                      <option value="Third year">Third year</option>
+                      <option value="Fourth year">Fourth year</option>
+                    </select>
+                    <p class="field-error" id="profile-year-input-error"></p>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn" type="submit">Save changes</button>
+                  <p class="status-inline" id="profile-status" role="status" aria-live="polite"></p>
+                </div>
+              </form>
+            </section>
+
+            <section class="panel academic-panel" aria-labelledby="academic-heading">
+              <div class="panel-heading">
+                <span class="panel-kicker">At a glance</span>
+                <h2 id="academic-heading">Academic snapshot</h2>
+                <p>Spring 2027 · Current standing</p>
+              </div>
+              <dl class="academic-stats">
+                <div class="stat-card stat-card--violet">
+                  <dt>Current GPA</dt>
+                  <dd id="stat-gpa">3.78</dd>
+                </div>
+                <div class="stat-card stat-card--coral">
+                  <dt>Credits completed</dt>
+                  <dd id="stat-completed">64</dd>
+                </div>
+                <div class="stat-card stat-card--teal">
+                  <dt>Credits in progress</dt>
+                  <dd data-credits-count>0</dd>
+                </div>
+                <div class="stat-card stat-card--gold">
+                  <dt>Expected graduation</dt>
+                  <dd id="stat-graduation">May 2029</dd>
+                </div>
+              </dl>
+              <div class="degree-progress">
+                <div class="degree-progress-heading">
+                  <h3>Degree progress</h3>
+                  <span id="degree-progress-text">64 of 120 credits</span>
+                </div>
+                <div class="progress-track" id="degree-progress" role="progressbar" aria-labelledby="degree-progress-heading" aria-valuemin="0" aria-valuemax="120" aria-valuenow="64">
+                  <span id="degree-progress-bar" style="width: 53.3%"></span>
+                </div>
+                <p class="sr-only" id="degree-progress-heading">Degree progress: 64 of 120 credits completed</p>
+              </div>
+              <dl class="advisor-list">
+                <div><dt>Academic advisor</dt><dd id="stat-advisor">Dr. Elena Rossi</dd></div>
+                <div><dt>Program</dt><dd id="stat-program">Computer Science</dd></div>
+              </dl>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section schedule-section" aria-labelledby="courses-heading">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow--ink">Spring 2027</p>
+              <h2 id="courses-heading">My registered courses</h2>
+              <p>Review your current schedule or make a change.</p>
+            </div>
+            <a class="text-link text-link--arrow" href="courses.html">Find another course
+              <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="status-banner" id="profile-schedule-status" role="status" aria-live="polite" hidden></div>
+
+          <div class="table-wrap panel-table" role="region" aria-label="Your registered courses" tabindex="0" id="profile-table-wrap" hidden>
+            <table id="profile-table">
+              <caption class="sr-only">Your registered courses for Spring 2027</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Instructor</th>
+                  <th scope="col">Schedule</th>
+                  <th scope="col">Credits</th>
+                </tr>
+              </thead>
+              <tbody id="profile-schedule-body"></tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="4">Total credits</th>
+                  <td data-credits-count>0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div id="profile-schedule-empty"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--light" href="index.html" >
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+          </a>
+          <p>Learning that lights the way.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course catalog</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="profile.html">Student profile</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Need a hand?</h2>
+          <p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>
+          <a href="mailto:registrar@aurora.edu">registrar@aurora.edu</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span data-current-year>2026</span> Aurora University · Sample course registration system</p>
+        <p>Spring 2027 · Registration open</p>
+      </div>
+    </footer>
+  </body>
+</html>

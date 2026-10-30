@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Register for Spring 2027 courses and review your schedule at Aurora University.">
+    <meta name="theme-color" content="#5b3fd6">
+    <title>Course Registration · Aurora University</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="common.js" defer></script>
+    <script src="registration.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" >
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              <circle cx="25.5" cy="6.5" r="2.5" fill="currentColor" opacity=".65"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li>
+              <a href="registration.html" aria-current="page">Registration <span class="nav-badge" data-registration-count>2</span><span class="sr-only" data-registration-label>courses registered</span></a>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero page-hero--registration" aria-labelledby="registration-title">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><span aria-current="page">Registration</span></li>
+            </ol>
+          </nav>
+          <div class="page-hero-content">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Spring 2027 · Registration closes December 12</p>
+              <h1 id="registration-title">Course registration</h1>
+              <p>Choose a course, review the details, and make it official. Your schedule updates instantly.</p>
+            </div>
+            <div class="hero-mini-stack" aria-hidden="true">
+              <span class="mini-course mini-course--violet">CS</span>
+              <span class="mini-course mini-course--coral">DES</span>
+              <span class="mini-course mini-course--teal">ENV</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section registration-section" aria-label="Course registration and schedule">
+        <div class="container registration-layout">
+          <div class="panel form-panel">
+            <div class="panel-heading">
+              <span class="panel-kicker">Step 1</span>
+              <h2>Register for a course</h2>
+              <p>Fields marked <span class="required-key" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+            </div>
+
+            <div class="form-error-summary" id="form-error-summary" role="alert" tabindex="-1" hidden>
+              <h3>Please check the form</h3>
+              <p>There are a few details we need before you can continue.</p>
+              <ul id="form-error-list"></ul>
+            </div>
+
+            <form id="registration-form" novalidate>
+              <fieldset class="form-fieldset">
+                <legend>Your details</legend>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="reg-name">Full name <span class="required-key" aria-hidden="true">*</span></label>
+                    <input id="reg-name" name="fullName" type="text" autocomplete="name" required aria-describedby="reg-name-error">
+                    <p class="field-error" id="reg-name-error"></p>
+                  </div>
+                  <div class="field">
+                    <label for="reg-student-id">Student ID <span class="required-key" aria-hidden="true">*</span></label>
+                    <input id="reg-student-id" name="studentId" type="text" autocomplete="off" spellcheck="false" required aria-describedby="reg-student-id-hint reg-student-id-error">
+                    <p class="field-hint" id="reg-student-id-hint">For example: AUR-20481</p>
+                    <p class="field-error" id="reg-student-id-error"></p>
+                  </div>
+                  <div class="field field--full">
+                    <label for="reg-email">University email <span class="required-key" aria-hidden="true">*</span></label>
+                    <input id="reg-email" name="email" type="email" autocomplete="email" required aria-describedby="reg-email-error">
+                    <p class="field-error" id="reg-email-error"></p>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset">
+                <legend>Course selection</legend>
+                <div class="field">
+                  <label for="course-select">Choose a course <span class="required-key" aria-hidden="true">*</span></label>
+                  <select id="course-select" name="course" required aria-describedby="course-select-hint course-select-error">
+                    <option value="">Select an available course</option>
+                  </select>
+                  <p class="field-hint" id="course-select-hint">Courses already in your schedule are not listed.</p>
+                  <p class="field-error" id="course-select-error"></p>
+                </div>
+                <div class="course-preview" id="course-preview" aria-live="polite">
+                  <span class="course-preview__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false"><path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v16H7.5A2.5 2.5 0 0 0 5 20.5v-16Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M5 20.5V4.5M20 18H7.5A2.5 2.5 0 0 0 5 20.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+                  </span>
+                  <p>Select a course to preview its schedule, instructor, and credits.</p>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset">
+                <legend>Support and notes</legend>
+                <div class="field">
+                  <label for="reg-accommodations">Accessibility accommodations <span class="optional-label">(optional)</span></label>
+                  <textarea id="reg-accommodations" name="accommodations" rows="3" aria-describedby="reg-accommodations-hint"></textarea>
+                  <p class="field-hint" id="reg-accommodations-hint">Share anything that would help you participate fully. Our accessibility team will follow up.</p>
+                </div>
+              </fieldset>
+
+              <div class="checkbox-field">
+                <input id="reg-agreement" name="agreement" type="checkbox" required aria-describedby="reg-agreement-error">
+                <div>
+                  <label for="reg-agreement">I understand that registration is subject to course availability and the academic calendar. <span class="required-key" aria-hidden="true">*</span></label>
+                  <p class="field-error" id="reg-agreement-error"></p>
+                </div>
+              </div>
+
+              <button class="btn btn-wide" type="submit" aria-haspopup="dialog">Review registration
+                <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="form-note">Your information is used only for course administration. You can drop a course from your schedule at any time.</p>
+            </form>
+          </div>
+
+          <div class="panel schedule-panel">
+            <div class="panel-heading schedule-heading">
+              <div>
+                <span class="panel-kicker">Step 2</span>
+                <h2 id="schedule-heading" tabindex="-1">Your Spring 2027 schedule</h2>
+              </div>
+              <span class="term-pill term-pill--light">Spring 2027</span>
+            </div>
+
+            <div class="status-banner" id="registration-status" role="status" aria-live="polite" hidden></div>
+
+            <div class="schedule-summary" id="schedule-summary">
+              <div><span class="summary-value" data-schedule-count>0</span><span class="summary-label" data-schedule-label>courses</span></div>
+              <div><span class="summary-value" data-credits-count>0</span><span class="summary-label">total credits</span></div>
+            </div>
+
+            <div class="table-wrap" role="region" aria-label="Registered courses" tabindex="0" id="schedule-table-wrap" hidden>
+              <table id="schedule-table">
+                <caption class="sr-only">Your registered courses for Spring 2027</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Schedule</th>
+                    <th scope="col">Credits</th>
+                    <th scope="col"><span class="sr-only">Action</span></th>
+                  </tr>
+                </thead>
+                <tbody id="schedule-body"></tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row" colspan="2">Total credits</th>
+                    <td data-credits-count>0</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <div id="schedule-empty"></div>
+
+            <div class="schedule-tip">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 10.5v5M12 7.5h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <p><strong>Good to know:</strong> Adding a course here reserves your place instantly. You can review your full schedule on your profile page.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--light" href="index.html" >
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+          </a>
+          <p>Learning that lights the way.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course catalog</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="profile.html">Student profile</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Need a hand?</h2>
+          <p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>
+          <a href="mailto:registrar@aurora.edu">registrar@aurora.edu</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span data-current-year>2026</span> Aurora University · Sample course registration system</p>
+        <p>Spring 2027 · Registration open</p>
+      </div>
+    </footer>
+
+    <dialog class="modal" id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-description">
+      <div class="modal-inner">
+        <button class="modal-close" type="button" data-close-dialog aria-label="Close dialog">
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 5 10 10M15 5 5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="modal-icon" id="confirm-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false"><path d="M6 17.5 12.5 24 26 8.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h2 id="confirm-title">Confirm your registration</h2>
+        <p id="confirm-description">Please review the details below before making it official.</p>
+        <div class="modal-details" id="confirm-details"></div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" type="button" data-close-dialog>Go back</button>
+          <button class="btn" type="button" id="confirm-action">Confirm registration</button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

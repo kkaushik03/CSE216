@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and update your Campus Course Hub student profile, registered courses, and semester plan.">
+  <meta name="theme-color" content="#211c3a">
+  <title>Student Profile | Campus Course Hub</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="index.html" aria-label="Campus Course Hub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.5 7.4 12 3.5l8.5 3.9L12 11.3 3.5 7.4Z" fill="currentColor"/>
+            <path d="M6.4 10.5v4.2c0 1.6 2.5 3.1 5.6 3.1s5.6-1.5 5.6-3.1v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M20.5 7.4v5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Campus<span>Course Hub</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Courses</a></li>
+          <li><a href="registration.html">Register</a></li>
+          <li><a href="profile.html" aria-current="page">Profile</a></li>
+        </ul>
+        <a class="nav-cta" href="registration.html">Register for a course</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page-hero page-hero--profile" aria-labelledby="profile-title">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Profile</li>
+          </ol>
+        </nav>
+        <div class="page-hero-content">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Student profile · Spring 2027</p>
+            <h1 id="profile-title">Hi, <span id="profile-hero-name">Alex</span>.<br> <span class="text-gradient">Your semester, at a glance.</span></h1>
+            <p class="lede">Keep your details current, review your registered courses, and make space for what comes next.</p>
+          </div>
+          <div class="profile-hero-badge" aria-hidden="true">
+            <span class="badge-spark badge-spark--one"></span>
+            <span class="badge-spark badge-spark--two"></span>
+            <span class="badge-spark badge-spark--three"></span>
+            <strong data-registration-count>0 courses</strong>
+            <span data-registration-credits>0 credits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--profile">
+      <div class="shell profile-layout">
+        <section class="panel profile-panel" aria-labelledby="profile-display-name">
+          <div class="profile-header">
+            <div class="profile-avatar" id="profile-avatar" aria-hidden="true">AM</div>
+            <div class="profile-identity">
+              <p class="kicker">Student details</p>
+              <h2 id="profile-display-name">Alex Morgan</h2>
+              <p id="profile-display-program">B.A. Interaction Design · 2nd year</p>
+            </div>
+            <button class="btn btn-ghost btn-small" id="edit-profile-btn" type="button" aria-expanded="false" aria-controls="profile-edit-form">Edit profile</button>
+          </div>
+
+          <div id="profile-view">
+            <h3 class="sr-only">Student information</h3>
+            <dl class="profile-details">
+              <div>
+                <dt>Full name</dt>
+                <dd id="profile-detail-name">Alex Morgan</dd>
+              </div>
+              <div>
+                <dt>University email</dt>
+                <dd id="profile-detail-email">alex.morgan@university.edu</dd>
+              </div>
+              <div>
+                <dt>Student ID</dt>
+                <dd id="profile-detail-id">20481736</dd>
+              </div>
+              <div>
+                <dt>Program</dt>
+                <dd id="profile-detail-program">B.A. Interaction Design</dd>
+              </div>
+              <div>
+                <dt>Year</dt>
+                <dd id="profile-detail-year">2nd year</dd>
+              </div>
+              <div>
+                <dt>Academic advisor</dt>
+                <dd id="profile-detail-advisor">Dr. Maya Chen</dd>
+              </div>
+            </dl>
+          </div>
+
+          <form class="profile-form" id="profile-edit-form" novalidate hidden>
+            <h3>Edit your details</h3>
+            <div class="error-summary error-summary--small" id="profile-errors" role="alert" tabindex="-1" hidden>
+              <p>Please check the highlighted fields.</p>
+              <ul id="profile-errors-list"></ul>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="profile-name-input">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="profile-name-input" name="name" type="text" autocomplete="name" required aria-describedby="profile-name-error">
+                <p class="field-error" id="profile-name-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="profile-email-input">University email <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="profile-email-input" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="profile-email-error">
+                <p class="field-error" id="profile-email-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="profile-id-input">Student ID <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="profile-id-input" name="studentId" type="text" required pattern="[A-Za-z0-9-]{6,12}" aria-describedby="profile-id-hint profile-id-error">
+                <p class="field-hint" id="profile-id-hint">6–12 letters, numbers, or hyphens.</p>
+                <p class="field-error" id="profile-id-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="profile-year-input">Year <span class="required-mark" aria-hidden="true">*</span></label>
+                <select id="profile-year-input" name="year" required aria-describedby="profile-year-error">
+                  <option value="1st year">1st year</option>
+                  <option value="2nd year">2nd year</option>
+                  <option value="3rd year">3rd year</option>
+                  <option value="4th year">4th year</option>
+                  <option value="Graduate">Graduate</option>
+                </select>
+                <p class="field-error" id="profile-year-error" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="profile-program-input">Program <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="profile-program-input" name="program" type="text" required aria-describedby="profile-program-error">
+                <p class="field-error" id="profile-program-error" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="profile-advisor-input">Academic advisor</label>
+                <input id="profile-advisor-input" name="advisor" type="text" autocomplete="off">
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Save changes</button>
+              <button class="btn btn-ghost" id="cancel-profile-btn" type="button">Cancel</button>
+            </div>
+          </form>
+
+          <p class="sr-only" id="profile-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <aside class="panel snapshot-panel" aria-labelledby="snapshot-heading">
+          <p class="kicker">At a glance</p>
+          <h2 id="snapshot-heading">Your academic snapshot</h2>
+          <dl class="stat-list">
+            <div class="stat-card stat-card--violet">
+              <dt>Courses enrolled</dt>
+              <dd data-stat-courses>0</dd>
+            </div>
+            <div class="stat-card stat-card--teal">
+              <dt>Total credits</dt>
+              <dd data-stat-credits>0</dd>
+            </div>
+            <div class="stat-card stat-card--amber">
+              <dt>Departments</dt>
+              <dd data-stat-departments>0</dd>
+            </div>
+            <div class="stat-card stat-card--pink">
+              <dt>Next term</dt>
+              <dd data-stat-term>—</dd>
+            </div>
+          </dl>
+          <div class="snapshot-actions">
+            <a class="btn btn-primary btn-wide" href="registration.html">Register for a course</a>
+            <a class="text-link" href="catalog.html">Explore the catalog <span aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--schedule" aria-labelledby="profile-schedule-heading">
+      <div class="shell">
+        <div class="panel schedule-panel">
+          <div class="panel-heading schedule-heading-row">
+            <div>
+              <p class="kicker">Course plan</p>
+              <h2 id="profile-schedule-heading" tabindex="-1" data-registration-heading>Registered courses</h2>
+            </div>
+            <p class="schedule-totals"><span data-registration-count>0 courses</span><span aria-hidden="true">·</span><span data-registration-credits>0 credits</span></p>
+          </div>
+
+          <section class="table-scroll" aria-label="Registered courses table" tabindex="0">
+            <table>
+              <caption class="sr-only">Courses you are registered for</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Credits</th>
+                  <th scope="col">Schedule</th>
+                  <th scope="col">Semester</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody id="registered-courses-body">
+                <tr>
+                  <td colspan="6" class="table-loading">Loading your schedule…</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <p class="table-note">Course changes are saved in this browser for this demo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="index.html" aria-label="Campus Course Hub home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3.5 7.4 12 3.5l8.5 3.9L12 11.3 3.5 7.4Z" fill="currentColor"/>
+              <path d="M6.4 10.5v4.2c0 1.6 2.5 3.1 5.6 3.1s5.6-1.5 5.6-3.1v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Campus<span>Course Hub</span></span>
+        </a>
+        <p>A friendlier way to find, plan, and register for the classes that shape your semester.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="profile.html">Student profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-help">
+        <h2>Need a hand?</h2>
+        <p>Our registrar team is here Monday–Friday, 9 am–5 pm.</p>
+        <a href="mailto:registrar@campushub.edu">registrar@campushub.edu</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p>&copy; <span data-year>2026</span> Campus Course Hub. A demonstration course registration experience.</p>
+      <p>Made for curious minds.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for Spring 2027 courses at Campus Course Hub and keep your schedule organized.">
+  <meta name="theme-color" content="#211c3a">
+  <title>Register for Courses | Campus Course Hub</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="index.html" aria-label="Campus Course Hub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.5 7.4 12 3.5l8.5 3.9L12 11.3 3.5 7.4Z" fill="currentColor"/>
+            <path d="M6.4 10.5v4.2c0 1.6 2.5 3.1 5.6 3.1s5.6-1.5 5.6-3.1v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M20.5 7.4v5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Campus<span>Course Hub</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Courses</a></li>
+          <li><a href="registration.html" aria-current="page">Register</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <a class="nav-cta" href="profile.html">View my schedule</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page-hero page-hero--registration" aria-labelledby="registration-title">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Register</li>
+          </ol>
+        </nav>
+        <div class="page-hero-content">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Spring 2027 · Priority window open</p>
+            <h1 id="registration-title">Make room for<br> <span class="text-gradient">something new.</span></h1>
+            <p class="lede">Choose a course, confirm your details, and we will keep your schedule in one tidy place.</p>
+          </div>
+          <div class="page-stamp" aria-hidden="true">
+            <span>Spring</span>
+            <strong>2027</strong>
+            <span>Registration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--registration">
+      <div class="shell registration-layout">
+        <section class="panel form-panel" aria-labelledby="form-section-heading">
+          <div class="panel-heading">
+            <div>
+              <p class="kicker">Registration form</p>
+              <h2 id="form-section-heading">Tell us about you</h2>
+            </div>
+            <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+          </div>
+
+          <div class="error-summary" id="registration-errors" role="alert" tabindex="-1" hidden>
+            <h3>Please fix these details</h3>
+            <ul id="registration-errors-list"></ul>
+          </div>
+
+          <form id="registration-form" novalidate>
+            <fieldset class="form-section">
+              <legend>Student details</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fullName">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name" required aria-describedby="fullName-error">
+                  <p class="field-error" id="fullName-error" hidden></p>
+                </div>
+
+                <div class="field">
+                  <label for="email">University email <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+                  <p class="field-error" id="email-error" hidden></p>
+                </div>
+
+                <div class="field">
+                  <label for="studentId">Student ID <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input id="studentId" name="studentId" type="text" autocomplete="off" required pattern="[A-Za-z0-9-]{6,12}" aria-describedby="studentId-hint studentId-error">
+                  <p class="field-hint" id="studentId-hint">6–12 letters, numbers, or hyphens.</p>
+                  <p class="field-error" id="studentId-error" hidden></p>
+                </div>
+
+                <div class="field">
+                  <label for="semester">Semester <span class="required-mark" aria-hidden="true">*</span></label>
+                  <select id="semester" name="semester" required aria-describedby="semester-error">
+                    <option value="">Select a semester</option>
+                    <option value="Spring 2027" selected>Spring 2027</option>
+                    <option value="Summer 2027">Summer 2027</option>
+                    <option value="Fall 2027">Fall 2027</option>
+                  </select>
+                  <p class="field-error" id="semester-error" hidden></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend>Course selection</legend>
+              <div class="field">
+                <label for="course-select">Course <span class="required-mark" aria-hidden="true">*</span></label>
+                <select id="course-select" name="courseId" required aria-describedby="courseId-hint courseId-error">
+                  <option value="">Select a course to register</option>
+                </select>
+                <p class="field-hint" id="courseId-hint">You can register for more than one course, one at a time.</p>
+                <p class="field-error" id="courseId-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-wide" type="submit">Confirm registration</button>
+              <a class="btn btn-ghost" href="catalog.html">Back to catalog</a>
+            </div>
+          </form>
+        </section>
+
+        <aside class="registration-summary" aria-labelledby="summary-heading">
+          <div class="summary-sticky">
+            <div class="panel summary-panel">
+              <p class="kicker">Your selection</p>
+              <h2 id="summary-heading">Course snapshot</h2>
+              <div class="course-summary course-summary--empty" id="course-summary">
+                <p>Pick a course from the form to see the schedule, instructor, and credit details here.</p>
+              </div>
+              <div class="summary-tip">
+                <strong>Good to know</strong>
+                <p>Most courses can be dropped from your schedule at any time. Your registration is saved in this browser for this demo.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--schedule" aria-labelledby="schedule-heading">
+      <div class="shell">
+        <div class="panel schedule-panel">
+          <div class="panel-heading schedule-heading-row">
+            <div>
+              <p class="kicker">Already registered</p>
+              <h2 id="schedule-heading" tabindex="-1" data-registration-heading>Your schedule</h2>
+            </div>
+            <p class="schedule-totals"><span data-registration-count>0 courses</span><span aria-hidden="true">·</span><span data-registration-credits>0 credits</span></p>
+          </div>
+
+          <section class="table-scroll" aria-label="Registered courses table" tabindex="0">
+            <table>
+              <caption class="sr-only">Courses you are registered for</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Credits</th>
+                  <th scope="col">Schedule</th>
+                  <th scope="col">Semester</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody id="registered-courses-body">
+                <tr>
+                  <td colspan="6" class="table-loading">Loading your schedule…</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <p class="table-note">Need to explore more options? <a href="catalog.html">Browse the catalog</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="confirmation-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-describedby="confirmation-message" tabindex="-1">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close confirmation dialog">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="kicker">You are in</p>
+      <h2 id="confirmation-title">Registration confirmed</h2>
+      <p id="confirmation-message">Your spot is saved. Here is a quick look at what you registered for.</p>
+      <dl class="confirmation-details">
+        <div><dt>Student</dt><dd id="confirmation-student">—</dd></div>
+        <div><dt>Course</dt><dd id="confirmation-course">—</dd></div>
+        <div><dt>Semester</dt><dd id="confirmation-term">—</dd></div>
+        <div><dt>Schedule</dt><dd id="confirmation-schedule">—</dd></div>
+      </dl>
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="profile.html">View my schedule</a>
+        <button class="btn btn-ghost" id="register-another" type="button">Register another course</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="index.html" aria-label="Campus Course Hub home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3.5 7.4 12 3.5l8.5 3.9L12 11.3 3.5 7.4Z" fill="currentColor"/>
+              <path d="M6.4 10.5v4.2c0 1.6 2.5 3.1 5.6 3.1s5.6-1.5 5.6-3.1v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Campus<span>Course Hub</span></span>
+        </a>
+        <p>A friendlier way to find, plan, and register for the classes that shape your semester.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Course catalog</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="profile.html">Student profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-help">
+        <h2>Need a hand?</h2>
+        <p>Our registrar team is here Monday–Friday, 9 am–5 pm.</p>
+        <a href="mailto:registrar@campushub.edu">registrar@campushub.edu</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p>&copy; <span data-year>2026</span> Campus Course Hub. A demonstration course registration experience.</p>
+      <p>Made for curious minds.</p>
+    </div>
+  </footer>
+</body>
+</html>

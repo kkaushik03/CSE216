@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore Spring 2027 courses and register for classes at Aurora University.">
+    <meta name="theme-color" content="#5b3fd6">
+    <title>Aurora University · Course Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="common.js" defer></script>
+    <script src="home.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              <circle cx="25.5" cy="6.5" r="2.5" fill="currentColor" opacity=".65"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul role="list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li>
+              <a href="registration.html">Registration <span class="nav-badge" data-registration-count>2</span><span class="sr-only" data-registration-label>courses registered</span></a>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-shape hero-shape--one" aria-hidden="true"></div>
+        <div class="hero-shape hero-shape--two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Spring 2027 registration is open</p>
+            <h1 id="hero-title">Find your next <span class="text-gradient">great idea.</span></h1>
+            <p class="hero-lead">From artificial intelligence to urban ecology, discover courses designed to stretch your thinking and shape what comes next.</p>
+
+            <form class="hero-search" action="courses.html" method="get" role="search">
+              <label for="home-search">Search courses by name, code, or topic</label>
+              <div class="search-box">
+                <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input id="home-search" name="q" type="search" placeholder="Try “climate” or “CS 205”" autocomplete="off">
+                <button class="btn" type="submit">Search</button>
+              </div>
+            </form>
+
+            <div class="hero-links">
+              <a class="btn btn-secondary" href="courses.html">Browse all courses
+                <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="text-link" href="registration.html">Plan my schedule</a>
+            </div>
+          </div>
+
+          <aside class="term-card" aria-labelledby="term-card-title">
+            <div class="term-card-top">
+              <span class="term-pill">Spring 2027</span>
+              <span class="term-spark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.5 14.3 9l6.7 2.3-6.7 2.3L12 20.5l-2.3-6.9L3 11.3 9.7 9 12 2.5Z" fill="currentColor"/></svg></span>
+            </div>
+            <h2 id="term-card-title">Make room for something new.</h2>
+            <p>Registration is open to all continuing students. Build a schedule that feels right for you.</p>
+            <dl class="term-dates">
+              <div><dt>Classes begin</dt><dd>January 19</dd></div>
+              <div><dt>Add/drop deadline</dt><dd>January 26</dd></div>
+              <div><dt>Registration closes</dt><dd>December 12</dd></div>
+            </dl>
+            <div class="term-footer">
+              <span class="term-footer-dot" aria-hidden="true"></span>
+              <span><strong>16 courses</strong> across 8 departments</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="stats-section" aria-label="Spring term highlights">
+        <div class="container">
+          <dl class="stats-strip">
+            <div><dt>Courses offered</dt><dd>16</dd></div>
+            <div><dt>Departments</dt><dd>8</dd></div>
+            <div><dt>Average class size</dt><dd>35</dd></div>
+            <div><dt>Ways to learn</dt><dd>3</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="featured-heading">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow--ink">A little inspiration</p>
+              <h2 id="featured-heading">Featured this term</h2>
+              <p>Three courses students are talking about right now.</p>
+            </div>
+            <a class="text-link text-link--arrow" href="courses.html">View all courses
+              <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="course-grid" id="featured-courses"></div>
+        </div>
+      </section>
+
+      <section class="section how-section" aria-labelledby="how-heading">
+        <div class="container">
+          <div class="section-heading section-heading--center">
+            <div>
+              <p class="eyebrow eyebrow--ink">Simple by design</p>
+              <h2 id="how-heading">From curious to registered in three steps</h2>
+              <p>No forms lost in a maze. Just a clear path to your next semester.</p>
+            </div>
+          </div>
+          <ol class="steps" role="list">
+            <li class="step-card step-card--violet">
+              <span class="step-number" aria-hidden="true">01</span>
+              <h3>Explore the catalog</h3>
+              <p>Search by topic, department, level, or format to find courses that fit your goals.</p>
+              <a class="text-link" href="courses.html">Browse the catalog</a>
+            </li>
+            <li class="step-card step-card--coral">
+              <span class="step-number" aria-hidden="true">02</span>
+              <h3>Build your schedule</h3>
+              <p>Pick your course, review the details, and make sure the time works for you.</p>
+              <a class="text-link" href="registration.html">Register for a course</a>
+            </li>
+            <li class="step-card step-card--teal">
+              <span class="step-number" aria-hidden="true">03</span>
+              <h3>Make it official</h3>
+              <p>Confirm your registration and see your schedule update instantly in your profile.</p>
+              <a class="text-link" href="profile.html">View my profile</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--light" href="index.html">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M16 2.5l3.7 9.3 9.8 3.7-9.8 3.7L16 29.5l-3.7-10.3-9.8-3.7 9.8-3.7L16 2.5Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-text"><span>Aurora</span> <small>University</small></span>
+          </a>
+          <p>Learning that lights the way.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course catalog</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="profile.html">Student profile</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Need a hand?</h2>
+          <p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>
+          <a href="mailto:registrar@aurora.edu">registrar@aurora.edu</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span data-current-year>2026</span> Aurora University · Sample course registration system</p>
+        <p>Spring 2027 · Registration open</p>
+      </div>
+    </footer>
+  </body>
+</html>
