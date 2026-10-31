@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse courses and register for the Spring 2027 semester at Northbridge University.">
+  <title>Northbridge University | Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="focus-target" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Spring 2027 registration is open</p>
+          <h1 id="hero-heading">Build a semester that fits your curiosity.</h1>
+          <p class="lede">Explore more than a dozen courses across eight departments, check seat availability, and save your spot in a schedule that feels like you.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="courses.html">Browse courses</a>
+            <a class="btn btn-secondary" href="registration.html">Start registration</a>
+          </div>
+          <ul class="hero-points">
+            <li>Search by subject, course code or instructor</li>
+            <li>See open seats before you register</li>
+            <li>Manage your schedule in one place</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-card">
+            <div class="art-card-head">
+              <span class="art-dot"></span>
+              <span class="art-dot"></span>
+              <span class="art-dot"></span>
+            </div>
+            <p class="art-kicker">Spring 2027</p>
+            <p class="art-title">Your semester at a glance</p>
+            <ul class="art-list">
+              <li><span class="art-swatch art-purple"></span><span><strong>CSE 340</strong>Web Application Design</span></li>
+              <li><span class="art-swatch art-teal"></span><span><strong>BIO 310</strong>Ecology and Conservation</span></li>
+              <li><span class="art-swatch art-pink"></span><span><strong>PSY 260</strong>Cognitive Psychology</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Featured this term</p>
+            <h2 id="featured-heading">Courses students are loving</h2>
+          </div>
+          <a class="text-link" href="courses.html">See all <span id="course-count">16</span> courses</a>
+        </div>
+        <ul class="course-grid" id="featured-courses"></ul>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="steps-heading">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Simple from start to finish</p>
+            <h2 id="steps-heading">Registration in three easy steps</h2>
+          </div>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Find your course</h3>
+            <p>Search the catalog, filter by department or level, and check how many seats are left.</p>
+          </li>
+          <li>
+            <h3>Review your details</h3>
+            <p>We fill in your profile information so you only need to choose a course and confirm.</p>
+          </li>
+          <li>
+            <h3>Save your spot</h3>
+            <p>Confirm in the dialog and your registered courses appear in your schedule right away.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ready-heading">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <p class="eyebrow">Ready when you are</p>
+            <h2 id="ready-heading">Your next semester starts here.</h2>
+            <p>Registration takes only a few minutes. Your student profile is already set up with sample details you can update at any time.</p>
+          </div>
+          <a class="btn btn-light" href="registration.html">Go to registration</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Northbridge University</p>
+        <p>Office of the Registrar · 100 College Way, Northbridge</p>
+        <p>Spring 2027 registration is open until January 12.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Need help?</h2>
+        <p><a href="mailto:registrar@northbridge.edu">Contact student support</a></p>
+        <p><a href="tel:+15550100100">Call&nbsp;+1&nbsp;(555)&nbsp;010&#8209;0100</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Northbridge University. Built as an accessible course registration demo.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View and update your student profile at Northbridge University.">
+  <title>Student Profile | Northbridge University</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="profile.html" aria-current="page">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="focus-target" tabindex="-1">
+    <section class="page-intro" aria-labelledby="profile-heading">
+      <div class="container">
+        <p class="eyebrow">Student profile</p>
+        <h1 id="profile-heading">Your details, in one place.</h1>
+        <p class="lede">Keep your contact information current. The registration form uses these details so you never need to type them twice.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="details-heading">
+      <div class="container split-layout">
+        <div class="form-card">
+          <h2 id="details-heading">Student details</h2>
+          <p class="form-intro">Fields marked <span class="req">(required)</span> are needed to save your profile.</p>
+          <p class="status-line" id="profile-status" role="status"></p>
+
+          <form id="profile-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="profile-name">Full name <span class="req">(required)</span></label>
+                <input type="text" id="profile-name" name="name" autocomplete="name" required aria-describedby="profile-name-error">
+                <p class="field-error" id="profile-name-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="profile-student-id">Student ID <span class="req">(required)</span></label>
+                <input type="text" id="profile-student-id" name="studentId" inputmode="numeric" autocomplete="off" pattern="[0-9]{8}" required aria-describedby="profile-student-id-hint profile-student-id-error">
+                <p class="hint" id="profile-student-id-hint">8 digits, for example 20458731.</p>
+                <p class="field-error" id="profile-student-id-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="profile-email">Email address <span class="req">(required)</span></label>
+                <input type="email" id="profile-email" name="email" autocomplete="email" required aria-describedby="profile-email-error">
+                <p class="field-error" id="profile-email-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="profile-phone">Phone number <span class="req">(optional)</span></label>
+                <input type="tel" id="profile-phone" name="phone" autocomplete="tel" aria-describedby="profile-phone-hint">
+                <p class="hint" id="profile-phone-hint">Used only for registration updates.</p>
+              </div>
+
+              <div class="field">
+                <label for="profile-program">Program <span class="req">(required)</span></label>
+                <select id="profile-program" name="program" required aria-describedby="profile-program-error">
+                  <option value="">Select your program</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Business">Business</option>
+                  <option value="Psychology">Psychology</option>
+                  <option value="Art &amp; Design">Art &amp; Design</option>
+                  <option value="English">English</option>
+                </select>
+                <p class="field-error" id="profile-program-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="profile-year">Year of study <span class="req">(required)</span></label>
+                <select id="profile-year" name="year" required aria-describedby="profile-year-error">
+                  <option value="">Select your year</option>
+                  <option value="1">1st year</option>
+                  <option value="2">2nd year</option>
+                  <option value="3">3rd year</option>
+                  <option value="4">4th year</option>
+                  <option value="Graduate">Graduate</option>
+                </select>
+                <p class="field-error" id="profile-year-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save profile</button>
+              <a class="text-link" href="registration.html">Go to registration</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="summary-card" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">At a glance</h2>
+          <dl class="summary-list">
+            <div>
+              <dt>Registered courses</dt>
+              <dd id="summary-courses">2</dd>
+            </div>
+            <div>
+              <dt>Total credits</dt>
+              <dd id="summary-credits">7</dd>
+            </div>
+            <div>
+              <dt>Enrollment status</dt>
+              <dd>Good standing</dd>
+            </div>
+          </dl>
+          <a class="btn btn-primary" href="registration.html">Manage registration</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="profile-info-heading">
+      <div class="container">
+        <div class="info-card">
+          <h2 id="profile-info-heading">How your profile is used</h2>
+          <ul class="check-list">
+            <li>Your name, student ID and email fill in the registration form automatically.</li>
+            <li>Your program and year help the registrar review your course load.</li>
+            <li>Your phone number is optional and used only for registration updates.</li>
+            <li>You can update these details at any time; saved changes apply to future registrations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Northbridge University</p>
+        <p>Office of the Registrar · 100 College Way, Northbridge</p>
+        <p>Spring 2027 registration is open until January 12.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Need help?</h2>
+        <p><a href="mailto:registrar@northbridge.edu">Contact student support</a></p>
+        <p><a href="tel:+15550100100">Call&nbsp;+1&nbsp;(555)&nbsp;010&#8209;0100</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Northbridge University. Built as an accessible course registration demo.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for Spring 2027 courses and manage your schedule at Northbridge University.">
+  <title>Course Registration | Northbridge University</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="registration.html" aria-current="page">Registration</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="focus-target" tabindex="-1">
+    <section class="page-intro" aria-labelledby="registration-heading">
+      <div class="container">
+        <p class="eyebrow">Spring 2027</p>
+        <h1 id="registration-heading">Register for your next course.</h1>
+        <p class="lede">Your profile details are filled in for you. Choose a course, review the confirmation, and your schedule updates immediately.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="register-form-heading">
+      <div class="container split-layout">
+        <div class="form-card">
+          <h2 id="register-form-heading">Registration form</h2>
+          <p class="form-intro">Fields marked <span class="req">(required)</span> are needed to save your registration.</p>
+          <p class="status-line" id="registration-status" role="status"></p>
+
+          <div class="error-summary" id="form-errors" role="alert" tabindex="-1" hidden>
+            <h3>Please fix the following errors</h3>
+            <ul id="form-error-list"></ul>
+          </div>
+
+          <form id="registration-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="student-name">Full name <span class="req">(required)</span></label>
+                <input type="text" id="student-name" name="name" autocomplete="name" required aria-describedby="name-error">
+                <p class="field-error" id="name-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="student-id">Student ID <span class="req">(required)</span></label>
+                <input type="text" id="student-id" name="studentId" inputmode="numeric" autocomplete="off" pattern="[0-9]{8}" required aria-describedby="student-id-hint student-id-error">
+                <p class="hint" id="student-id-hint">8 digits, for example 20458731.</p>
+                <p class="field-error" id="student-id-error" hidden></p>
+              </div>
+
+              <div class="field field-full">
+                <label for="student-email">Email address <span class="req">(required)</span></label>
+                <input type="email" id="student-email" name="email" autocomplete="email" required aria-describedby="email-hint email-error">
+                <p class="hint" id="email-hint">We use this address for registration updates.</p>
+                <p class="field-error" id="email-error" hidden></p>
+              </div>
+
+              <div class="field field-full">
+                <label for="course-select">Course <span class="req">(required)</span></label>
+                <select id="course-select" name="course" required aria-describedby="course-hint course-error">
+                  <option value="">Select a course</option>
+                </select>
+                <p class="hint" id="course-hint">Courses you already registered for, or that are full, are disabled.</p>
+                <p class="field-error" id="course-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Review registration</button>
+              <a class="text-link" href="courses.html">Browse the course catalog</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="info-card" aria-labelledby="before-heading">
+          <h2 id="before-heading">Before you register</h2>
+          <ul class="check-list">
+            <li>Confirm the course schedule does not overlap with your other classes.</li>
+            <li>Check the credit total for the term and any financial aid requirements.</li>
+            <li>Your saved profile details fill in this form automatically.</li>
+            <li>You can drop a course from your schedule at any time.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="registered-heading">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Your schedule</p>
+            <h2 id="registered-heading" class="focus-target" tabindex="-1">Your registered courses</h2>
+          </div>
+          <p id="registration-summary">2 courses · 7 credits</p>
+        </div>
+
+        <div class="empty-state" id="registered-empty" hidden>
+          <h3>No courses registered yet</h3>
+          <p>Choose a course in the form above, or browse the catalog to find one that fits your semester.</p>
+          <a class="btn btn-primary" href="courses.html">Browse courses</a>
+        </div>
+
+        <div class="table-wrap" id="table-wrap" tabindex="0" role="region" aria-label="Registered courses table, scroll horizontally to see all columns">
+          <table id="registered-table">
+            <caption id="registered-caption">Registered courses for Spring 2027: 2 courses, 7 credits</caption>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Department</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Term</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="registered-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="modal" id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-description">
+      <div class="modal-card">
+        <div class="modal-icon" aria-hidden="true">?</div>
+        <h2 id="confirm-title">Confirm your registration</h2>
+        <p id="confirm-description">Please review the details below before saving.</p>
+        <dl class="modal-details" id="confirm-details"></dl>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="confirm-cancel">Cancel</button>
+          <button type="button" class="btn btn-primary" id="confirm-submit">Confirm registration</button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Northbridge University</p>
+        <p>Office of the Registrar · 100 College Way, Northbridge</p>
+        <p>Spring 2027 registration is open until January 12.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Need help?</h2>
+        <p><a href="mailto:registrar@northbridge.edu">Contact student support</a></p>
+        <p><a href="tel:+15550100100">Call&nbsp;+1&nbsp;(555)&nbsp;010&#8209;0100</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Northbridge University. Built as an accessible course registration demo.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse courses, register for classes and manage your schedule at Northgate University.">
+  <title>Home | Northgate University Course Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="visually-hidden" id="app-status" role="status" aria-live="polite"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-text">
+          <span class="brand-name">Northgate University</span>
+          <span class="brand-sub">Course Registration</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-icon" aria-hidden="true">&#9776;</span>
+        <span>Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#/home" data-route="#/home">Home</a></li>
+          <li><a href="#/catalog" data-route="#/catalog">Course catalog</a></li>
+          <li><a href="#/register" data-route="#/register">Registration</a></li>
+          <li><a href="#/profile" data-route="#/profile">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <noscript>
+      <div class="page-shell">
+        <h1>JavaScript is required</h1>
+        <p>This course registration application needs JavaScript to show courses and manage your registrations. Turn on JavaScript in your browser and reload the page.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-help">
+        <h2 class="footer-heading">Need help?</h2>
+        <p>Contact the registrar's office at <a href="mailto:registrar@northgate.edu">registrar@northgate.edu</a> or call <a href="tel:+15550142200">+1&nbsp;(555)&nbsp;014&#8209;2200</a>, Monday to Friday, 9:00 to 17:00.</p>
+      </div>
+      <p class="footer-copy">Northgate University &middot; Course Registration &middot; Sample student application</p>
+    </div>
+  </footer>
+
+  <dialog class="confirm-dialog" id="confirm-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <div class="dialog-accent" aria-hidden="true"></div>
+    <h2 id="dialog-title">Confirm action</h2>
+    <div id="dialog-description" class="dialog-description"></div>
+    <div class="dialog-actions">
+      <button class="btn btn-secondary" type="button" id="dialog-cancel">Cancel</button>
+      <button class="btn btn-primary" type="button" id="dialog-confirm">Confirm</button>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search and filter the Northbridge University course catalog for Spring 2027.">
+  <title>Course Catalog | Northbridge University</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-text">Northbridge <span>University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html" aria-current="page">Courses</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="focus-target" tabindex="-1">
+    <section class="page-intro" aria-labelledby="catalog-heading">
+      <div class="container">
+        <p class="eyebrow">Course catalog</p>
+        <h1 id="catalog-heading">Find the right course for you.</h1>
+        <p class="lede">Search the full Spring 2027 catalog, narrow the list with filters, and register when you find a course with an open seat.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="search-heading">
+      <div class="container">
+        <h2 id="search-heading">Search and filter</h2>
+        <form class="filter-bar" id="catalog-search" role="search">
+          <div class="field field-search">
+            <label for="course-search">Search courses</label>
+            <input type="search" id="course-search" name="q" placeholder="Try “data”, “biology”, or an instructor" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="filter-department">Department</label>
+            <select id="filter-department" name="department">
+              <option value="all">All departments</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-level">Course level</label>
+            <select id="filter-level" name="level">
+              <option value="all">All levels</option>
+              <option value="100">100-level</option>
+              <option value="200">200-level</option>
+              <option value="300">300-level</option>
+              <option value="400">400-level</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filter-availability">Availability</label>
+            <select id="filter-availability" name="availability">
+              <option value="all">All availability</option>
+              <option value="open">Open seats</option>
+              <option value="almost">Almost full</option>
+              <option value="full">Full</option>
+            </select>
+          </div>
+          <div class="filter-actions">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-secondary" id="clear-filters">Clear filters</button>
+          </div>
+        </form>
+        <p class="status-line" id="catalog-status" role="status">Showing 16 of 16 courses.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="results-heading">
+      <div class="container">
+        <h2 id="results-heading">Available courses</h2>
+        <ul class="course-grid" id="course-list"></ul>
+        <div class="empty-state" id="empty-state" hidden>
+          <h3>No courses match your search</h3>
+          <p>Try a different keyword, choose another department, or clear the filters to see every course.</p>
+          <button type="button" class="btn btn-primary" id="empty-clear">Clear all filters</button>
+        </div>
+        <noscript>
+          <p class="empty-state">JavaScript is needed to search and display the course catalog. Please enable JavaScript in your browser.</p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Northbridge University</p>
+        <p>Office of the Registrar · 100 College Way, Northbridge</p>
+        <p>Spring 2027 registration is open until January 12.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Need help?</h2>
+        <p><a href="mailto:registrar@northbridge.edu">Contact student support</a></p>
+        <p><a href="tel:+15550100100">Call&nbsp;+1&nbsp;(555)&nbsp;010&#8209;0100</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Northbridge University. Built as an accessible course registration demo.</p>
+  </footer>
+</body>
+</html>
