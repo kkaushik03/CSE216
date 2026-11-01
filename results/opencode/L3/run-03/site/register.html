@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register for a Course | Northbridge University</title>
+  <meta name="description" content="Register for a Spring 2027 course at Northbridge University and review your confirmation before saving.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="register">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-name">Northbridge University<small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="courses.html">Course catalog</a></li>
+          <li><a class="nav-link" href="register.html" aria-current="page">Register</a></li>
+          <li><a class="nav-link" href="profile.html">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro page-intro-register" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Register for a course</h1>
+        <p>Complete your student details and choose a course. You will review everything in a confirmation window before your seat is saved.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="registration-heading">
+      <div class="container register-layout">
+        <div class="form-card">
+          <h2 id="registration-heading">Your registration</h2>
+          <p>Fields marked <span class="required-text">(required)</span> must be completed.</p>
+          <p id="reg-status" class="status-message" role="status"></p>
+
+          <div id="error-summary" class="error-summary" tabindex="-1" role="alert" aria-labelledby="error-summary-title" hidden>
+            <h2 id="error-summary-title">There is a problem with your registration</h2>
+            <ul id="error-summary-list"></ul>
+          </div>
+
+          <form id="registration-form" novalidate>
+            <fieldset>
+              <legend>Student details</legend>
+              <div class="form-grid">
+                <div class="field field-full">
+                  <label for="reg-name">Full name <span class="required-text">(required)</span></label>
+                  <input id="reg-name" name="name" type="text" autocomplete="name" required aria-describedby="reg-name-error">
+                  <p id="reg-name-error" class="field-error" hidden></p>
+                </div>
+                <div class="field field-full">
+                  <label for="reg-email">Email address <span class="required-text">(required)</span></label>
+                  <input id="reg-email" name="email" type="email" autocomplete="email" required aria-describedby="reg-email-error">
+                  <p id="reg-email-error" class="field-error" hidden></p>
+                </div>
+                <div class="field field-full">
+                  <label for="reg-student-id">Student ID <span class="required-text">(required)</span></label>
+                  <input id="reg-student-id" name="studentId" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]{8}" maxlength="8" required aria-describedby="reg-student-id-hint reg-student-id-error">
+                  <p id="reg-student-id-hint" class="field-hint">Enter your 8-digit student ID, for example 20261408.</p>
+                  <p id="reg-student-id-error" class="field-error" hidden></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Course selection</legend>
+              <div class="field">
+                <label for="reg-course">Course <span class="required-text">(required)</span></label>
+                <select id="reg-course" name="course" required aria-describedby="reg-course-hint reg-course-error">
+                  <option value="">Choose a course</option>
+                </select>
+                <p id="reg-course-hint" class="field-hint">Full courses cannot be selected. Check the catalog for current seat counts.</p>
+                <p id="reg-course-error" class="field-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Review registration</button>
+              <a class="button button-secondary" href="courses.html">Back to catalog</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="side-panel" aria-labelledby="before-title">
+          <h2 id="before-title">Before you register</h2>
+          <ul>
+            <li>Check that the course schedule does not overlap with your other classes.</li>
+            <li>Confirm you meet any prerequisites listed with your academic advisor.</li>
+            <li>Keep your student ID handy. You will need it to confirm your seat.</li>
+          </ul>
+          <a class="button button-secondary" href="courses.html">Compare courses</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-description">
+    <div class="dialog-content">
+      <h2 id="confirm-title">Confirm your registration</h2>
+      <p id="confirm-description">Review the details below. Nothing is saved until you choose Confirm registration.</p>
+      <dl id="confirm-summary" class="dialog-summary"></dl>
+      <div class="dialog-actions">
+        <button id="confirm-cancel" class="button button-secondary" type="button">Cancel</button>
+        <button id="confirm-submit" class="button button-primary" type="button">Confirm registration</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Northbridge University · Spring 2027 course registration</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html#help">Registration help</a></li>
+          <li><a href="mailto:registrar@northbridge.edu">Contact the registrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northbridge University | Course Registration</title>
+  <meta name="description" content="Explore courses and register for the Spring 2027 semester at Northbridge University.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-name">Northbridge University<small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="courses.html">Course catalog</a></li>
+          <li><a class="nav-link" href="register.html">Register</a></li>
+          <li><a class="nav-link" href="profile.html">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Spring 2027 registration is open</p>
+          <h1 id="hero-title">Build a semester that fits you.</h1>
+          <p class="hero-copy">Explore 18 courses across eight departments, compare schedules and reserve your seat in a few friendly steps.</p>
+          <div class="button-row hero-actions">
+            <a class="button button-primary" href="courses.html">Browse courses</a>
+            <a class="button button-on-dark" href="register.html">Register now</a>
+          </div>
+        </div>
+        <div class="hero-search">
+          <h2>Search the catalog</h2>
+          <form id="home-search-form" role="search">
+            <div class="field">
+              <label for="home-search">Course name, code or instructor</label>
+              <input id="home-search" name="q" type="search" autocomplete="off" placeholder="e.g. CSE 216 or Maya Chen">
+            </div>
+            <button class="button button-primary" type="submit">Search courses</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stat-strip">
+        <div class="stat-card">
+          <span class="stat-number">18</span>
+          <p class="stat-label">courses ready to explore</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">8</span>
+          <p class="stat-label">departments across campus</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <p class="stat-label">steps from search to saved seat</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="featured-title">Featured this semester</h2>
+            <p>A few popular courses with seats still available.</p>
+          </div>
+          <a class="button button-secondary" href="courses.html">View full catalog</a>
+        </div>
+        <ul id="featured-courses" class="course-grid"></ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="how-title">How registration works</h2>
+            <p>Plan carefully, then confirm when you are ready.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <article class="step-card">
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Explore the catalog</h3>
+            <p>Search by keyword and narrow the list by department, level or seat availability.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Review your choice</h3>
+            <p>Select a course, check the schedule and confirm your student details in the form.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Confirm and track</h3>
+            <p>Save your registration, then manage every course from your student profile.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="help" aria-labelledby="help-title">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <h2 id="help-title">Need help registering?</h2>
+            <p>Priority registration closes December 12, 2026. Our registrar team can help with holds, prerequisites and schedule changes.</p>
+          </div>
+          <a class="button button-secondary" href="mailto:registrar@northbridge.edu">Contact the registrar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Northbridge University · Spring 2027 course registration</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html#help">Registration help</a></li>
+          <li><a href="mailto:registrar@northbridge.edu">Contact the registrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

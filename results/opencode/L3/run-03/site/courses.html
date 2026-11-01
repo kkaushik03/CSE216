@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Catalog | Northbridge University</title>
+  <meta name="description" content="Search and filter the Spring 2027 course catalog at Northbridge University.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-name">Northbridge University<small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="courses.html" aria-current="page">Course catalog</a></li>
+          <li><a class="nav-link" href="register.html">Register</a></li>
+          <li><a class="nav-link" href="profile.html">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro page-intro-catalog" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Course catalog</h1>
+        <p>Find the right course for your plan. Search the full catalog, compare schedules and check seat availability before you register.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catalog-title">
+      <div class="container">
+        <h2 id="catalog-title">Search and filter courses</h2>
+
+        <div class="catalog-controls">
+          <form id="catalog-search-form" class="search-form" role="search">
+            <div class="search-row">
+              <div class="field">
+                <label for="course-search">Search courses</label>
+                <input id="course-search" name="q" type="search" autocomplete="off" placeholder="Course name, code or instructor">
+              </div>
+              <button class="button button-primary" type="submit">Search</button>
+            </div>
+          </form>
+
+          <div class="filter-grid">
+            <div class="field">
+              <label for="filter-department">Department</label>
+              <select id="filter-department" name="department">
+                <option value="all">All departments</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-level">Course level</label>
+              <select id="filter-level" name="level">
+                <option value="all">All levels</option>
+                <option value="100">100 level</option>
+                <option value="200">200 level</option>
+                <option value="300">300 level</option>
+                <option value="400">400 level</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filter-availability">Seat availability</label>
+              <select id="filter-availability" name="availability">
+                <option value="all">Any availability</option>
+                <option value="open">Seats available</option>
+                <option value="full">Full courses</option>
+              </select>
+            </div>
+            <div class="field filter-reset">
+              <button id="reset-filters" class="button button-secondary" type="button">Clear filters</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-bar">
+          <h2 id="results-heading" class="sr-only">Course results</h2>
+          <p id="results-status" class="results-status" role="status">Showing all 18 courses.</p>
+        </div>
+
+        <ul id="course-grid" class="course-grid"></ul>
+
+        <div id="catalog-empty" class="empty-state" hidden>
+          <h2>No matching courses</h2>
+          <p>Try a different keyword, choose a different department or clear the filters to see the full catalog again.</p>
+          <a class="button button-secondary" href="courses.html">Show all courses</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Northbridge University · Spring 2027 course registration</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html#help">Registration help</a></li>
+          <li><a href="mailto:registrar@northbridge.edu">Contact the registrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Profile | Northbridge University</title>
+  <meta name="description" content="View and update your student profile and manage your registered Spring 2027 courses at Northbridge University.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-name">Northbridge University<small>Course registration</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="courses.html">Course catalog</a></li>
+          <li><a class="nav-link" href="register.html">Register</a></li>
+          <li><a class="nav-link" href="profile.html" aria-current="page">Student profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro page-intro-profile" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Student profile</h1>
+        <p>Keep your contact details current and review every course on your Spring 2027 schedule.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="profile-heading">
+      <div class="container profile-layout">
+        <article class="profile-card" aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Your details</h2>
+          <div class="profile-head">
+            <div class="profile-avatar" id="profile-initials" aria-hidden="true">JR</div>
+            <div>
+              <strong id="profile-name">Jordan Rivera</strong>
+              <p id="profile-email">jordan.rivera@northbridge.edu</p>
+            </div>
+          </div>
+          <dl class="profile-details">
+            <div>
+              <dt>Student ID</dt>
+              <dd id="profile-id">20261408</dd>
+            </div>
+            <div>
+              <dt>Program</dt>
+              <dd id="profile-program">Computer Science</dd>
+            </div>
+            <div>
+              <dt>Year</dt>
+              <dd id="profile-year">Year 2</dd>
+            </div>
+          </dl>
+        </article>
+
+        <div class="form-card profile-form">
+          <h2 id="edit-profile-title">Edit your details</h2>
+          <p>Changes here are saved on this device and used to pre-fill your next registration.</p>
+          <p id="profile-status" class="status-message" role="status"></p>
+
+          <form id="profile-form" novalidate aria-labelledby="edit-profile-title">
+            <div class="form-grid">
+              <div class="field field-full">
+                <label for="profile-name-input">Full name <span class="required-text">(required)</span></label>
+                <input id="profile-name-input" name="name" type="text" autocomplete="name" required aria-describedby="profile-name-error">
+                <p id="profile-name-error" class="field-error" hidden></p>
+              </div>
+              <div class="field field-full">
+                <label for="profile-email-input">Email address <span class="required-text">(required)</span></label>
+                <input id="profile-email-input" name="email" type="email" autocomplete="email" required aria-describedby="profile-email-error">
+                <p id="profile-email-error" class="field-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="profile-program-input">Program <span class="required-text">(required)</span></label>
+                <select id="profile-program-input" name="program" required>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Psychology">Psychology</option>
+                  <option value="Business">Business</option>
+                  <option value="English">English</option>
+                  <option value="Art &amp; Design">Art &amp; Design</option>
+                  <option value="Environmental Studies">Environmental Studies</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="profile-year-input">Year <span class="required-text">(required)</span></label>
+                <select id="profile-year-input" name="year" required>
+                  <option value="1">Year 1</option>
+                  <option value="2">Year 2</option>
+                  <option value="3">Year 3</option>
+                  <option value="4">Year 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Save profile</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="registered-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="registered-heading" tabindex="-1">Registered courses</h2>
+            <p>Your confirmed Spring 2027 schedule. Drop a course only if you plan to replace it.</p>
+          </div>
+          <a class="button button-secondary" href="courses.html">Add another course</a>
+        </div>
+
+        <p id="registered-status" class="status-message" role="status"></p>
+
+        <section id="registered-table-wrap" class="table-wrap" aria-label="Registered courses table. Scroll horizontally to see all columns." tabindex="0">
+          <table>
+            <caption id="registered-caption">Registered courses (2)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Title</th>
+                <th scope="col">Instructor</th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="registered-tbody"></tbody>
+          </table>
+        </section>
+
+        <div id="registered-empty" class="table-empty" hidden>
+          <p>You have no registered courses yet. <a href="courses.html">Browse the course catalog</a> to find your next class.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="drop-dialog" aria-labelledby="drop-title" aria-describedby="drop-description">
+    <div class="dialog-content">
+      <h2 id="drop-title">Drop this course?</h2>
+      <p id="drop-description">This will remove the course from your schedule.</p>
+      <div class="dialog-actions">
+        <button id="drop-cancel" class="button button-secondary" type="button">Cancel</button>
+        <button id="drop-confirm" class="button button-danger" type="button">Drop course</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Northbridge University · Spring 2027 course registration</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html#help">Registration help</a></li>
+          <li><a href="mailto:registrar@northbridge.edu">Contact the registrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
