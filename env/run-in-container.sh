@@ -39,7 +39,7 @@ cd /work
 pid=$!
 # The CLIs retry a rate limit (HTTP 429) silently, so the run stalls. Stop it at the first one.
 while kill -0 "$pid" 2>/dev/null; do
-  if grep -qiE 'usage limit|rate limit|status(code)?.?429' /out/stderr.log; then
+  if grep -sqiE 'usage limit|rate limit|status(code)?.?429' /out/stderr.log; then
     echo "Rate limit reached. Run stopped. Delete the run folder and try again later." >&2
     kill "$pid"; status=75; break
   fi
