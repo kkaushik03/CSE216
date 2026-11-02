@@ -20,10 +20,11 @@ We give the same website prompt to four AI coding assistants at three levels of 
 ```
 prompts/   One folder per level: prompt.md, plus ACCESSIBILITY.md at Level 3
 env/       Docker image and runner for the generation runs
+checks/    Docker image and script for the automated accessibility checks
 docs/      How-to documents
 results/   Output of each run: results/<assistant>/L<level>/run-<NN>/
 ```
 
 ## Start here
 
-Read [docs/running.md](docs/running.md).
+Read [docs/running.md](docs/running.md). To check the sites, read [docs/checks.md](docs/checks.md).
