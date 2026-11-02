@@ -1,0 +1,140 @@
+{
+  "checked": "2026-11-02T20:12:13.815Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.73",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "count": 3
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "count": 2
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 8
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 93,
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "count": 3
+          },
+          {
+            "rule": "color-contrast",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "📖 Catalog",
+      "url": "/catalog.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "count": 18
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 32
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 95,
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "count": 18
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "📝 Register",
+      "url": "/register.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "count": 3
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 15
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 96,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "👤 Profile",
+      "url": "/profile.html",
+      "axe": {
+        "issues": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 98,
+        "issues": [
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

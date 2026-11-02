@@ -1,0 +1,173 @@
+{
+  "checked": "2026-11-02T20:13:41.771Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.73",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "count": 3
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "count": 7
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 15
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+            "impact": "error",
+            "count": 1
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 90,
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "count": 3
+          },
+          {
+            "rule": "color-contrast",
+            "count": 7
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "📚 Catalog",
+      "url": "/catalog.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "count": 16
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "count": 6
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+            "impact": "error",
+            "count": 1
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 32
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+            "impact": "error",
+            "count": 6
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 91,
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "count": 16
+          },
+          {
+            "rule": "color-contrast",
+            "count": 6
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "📝 Register",
+      "url": "/register.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "count": 11
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_5.H98",
+            "impact": "error",
+            "count": 2
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 18
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 96,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "🎓 My Profile",
+      "url": "/profile.html",
+      "axe": {
+        "issues": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 98,
+        "issues": [
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}
