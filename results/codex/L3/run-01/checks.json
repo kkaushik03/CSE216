@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:25:44.328Z",
+  "checked": "2026-11-04T00:33:42.532Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -15,29 +15,141 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 4
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"><span class=\"brand-mark\" aria-hidden=\"true\">✦</span><span>campus<span class=\"brand-accent\">compass</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"View ART 210 in course catalog\"]",
+                "html": "<a href=\"#catalog\" aria-label=\"View ART 210 in course catalog\">Explore course →</a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"View BIO 145 in course catalog\"]",
+                "html": "<a href=\"#catalog\" aria-label=\"View BIO 145 in course catalog\">Explore course →</a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"View BUS 230 in course catalog\"]",
+                "html": "<a href=\"#catalog\" aria-label=\"View BUS 230 in course catalog\">Explore course →</a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"] > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".hero-actions > .button-primary.button[href$=\"#catalog\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".note-icon",
+                "html": "<span class=\"note-icon\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".art-chip",
+                "html": "<span class=\"art-chip\">YOUR NEXT CHAPTER</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined because it is overlapped by another element",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".sticker-two",
+                "html": "<div class=\"art-sticker sticker-two\">✦</div>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".doodle-two",
+                "html": "<div class=\"art-doodle doodle-two\">✺</div>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".text-link[href$=\"#catalog\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".promo-icon",
+                "html": "<div class=\"promo-icon\" aria-hidden=\"true\">✷</div>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".button-light > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".footer-brand > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
           }
         ]
       },
       "pa11y": {
         "issues": [
           {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 17
-          },
-          {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.7:1. Recommendation:  change text colour to #0c0100.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#home-view > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > span:nth-child(1)",
+                "html": "<span class=\"note-icon\" aria-hidden=\"true\">✦</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.7:1. Recommendation:  change text colour to #0c0100."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.91:1. Recommendation:  change text colour to #ef6c5a.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#home-view > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"art-spark\">✳</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.91:1. Recommendation:  change text colour to #ef6c5a."
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "ignored_route_links": 17
       },
       "lighthouse": {
         "score": 100,
@@ -57,19 +169,129 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 15
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 15,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"><span class=\"brand-mark\" aria-hidden=\"true\">✦</span><span>campus<span class=\"brand-accent\">compass</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"ART 210\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ART 210\" aria-label=\"Add ART 210 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"BIO 145\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"BIO 145\" aria-label=\"Add BIO 145 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"BUS 230\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"BUS 230\" aria-label=\"Add BUS 230 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"COM 218\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"COM 218\" aria-label=\"Add COM 218 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"CSE 216\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"CSE 216\" disabled=\"\" aria-label=\"Add CSE 216 to your registration\">Full</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"DES 305\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"DES 305\" aria-label=\"Add DES 305 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"ECO 202\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ECO 202\" aria-label=\"Add ECO 202 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"ENG 240\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ENG 240\" aria-label=\"Add ENG 240 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"ENV 115\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ENV 115\" aria-label=\"Add ENV 115 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"HIS 180\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"HIS 180\" aria-label=\"Add HIS 180 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"MTH 125\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"MTH 125\" aria-label=\"Add MTH 125 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"MUS 260\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"MUS 260\" aria-label=\"Add MUS 260 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"PSY 205\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"PSY 205\" disabled=\"\" aria-label=\"Add PSY 205 to your registration\">Full</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-course=\"SOC 150\"]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"SOC 150\" aria-label=\"Add SOC 150 to your registration\">Add course</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"] > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".banner-coral > .banner-inner.content-wrap > .banner-art[aria-hidden=\"true\"]",
+                "html": "<div class=\"banner-art\" aria-hidden=\"true\">✦</div>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".search-control > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">⌕</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".footer-brand > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
           }
         ]
       },
       "pa11y": {
-        "issues": [
-          {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 17
-          }
-        ],
-        "ignored_route_links": 0
+        "issues": [],
+        "ignored_route_links": 17
       },
       "lighthouse": {
         "score": 100,
@@ -89,24 +311,98 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"><span class=\"brand-mark\" aria-hidden=\"true\">✦</span><span>campus<span class=\"brand-accent\">compass</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"] > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".empty-icon",
+                "html": "<span class=\"empty-icon\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "#registration-empty > .button-primary.button[href$=\"#catalog\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".aside-tip > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">✷</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".footer-brand > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
+          },
+          {
+            "rule": "th-has-data-cells",
+            "impact": "serious",
+            "wcag": [
+              "1.3.1"
+            ],
+            "help": "Table headers in a data table must refer to data cells",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "table",
+                "html": "<table>",
+                "summary": "Fix all of the following: Table data cells are missing or empty"
+              }
+            ]
           }
         ]
       },
       "pa11y": {
         "issues": [
           {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 17
-          },
-          {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.91:1. Recommendation:  change text colour to #ef6c5a.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#registration-empty > span",
+                "html": "<span class=\"empty-icon\" aria-hidden=\"true\">✦</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.91:1. Recommendation:  change text colour to #ef6c5a."
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "ignored_route_links": 17
       },
       "lighthouse": {
         "score": 100,
@@ -126,24 +422,91 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"><span class=\"brand-mark\" aria-hidden=\"true\">✦</span><span>campus<span class=\"brand-accent\">compass</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 7,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus Compass home\"] > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".banner-yellow > .banner-inner.content-wrap > .banner-art[aria-hidden=\"true\"]",
+                "html": "<div class=\"banner-art\" aria-hidden=\"true\">✿</div>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".profile-status > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "a[href$=\"#registration\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".profile-help > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">✷</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".profile-help > a[href=\"mailto:advising@example.edu\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".footer-brand > .brand-mark[aria-hidden=\"true\"]",
+                "html": "<span class=\"brand-mark\" aria-hidden=\"true\">✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
           }
         ]
       },
       "pa11y": {
         "issues": [
           {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 17
-          },
-          {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.91:1. Recommendation:  change text colour to #ef6c5a.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-view > div:nth-child(2) > div > aside > div:nth-child(2) > span",
+                "html": "<span aria-hidden=\"true\">✷</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.91:1. Recommendation:  change text colour to #ef6c5a."
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "ignored_route_links": 17
       },
       "lighthouse": {
         "score": 100,

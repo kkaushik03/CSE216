@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:24:49.481Z",
+  "checked": "2026-11-04T00:32:51.818Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -15,12 +15,178 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 6
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": ".feature-purple > .feature-tag",
+                "html": "<span class=\"feature-tag\">01 / CREATE</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.45 (foreground color: #6d5d9e, background color: #e8e0ff, font size: 7.4pt (9.92px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6d5d9e",
+                  "bg": "#e8e0ff",
+                  "ratio": 4.45,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".feature-orange > .feature-tag",
+                "html": "<span class=\"feature-tag\">02 / DISCOVER</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.87 (foreground color: #946c50, background color: #ffe7c6, font size: 7.4pt (9.92px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#946c50",
+                  "bg": "#ffe7c6",
+                  "ratio": 3.87,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".feature-mint > .feature-tag",
+                "html": "<span class=\"feature-tag\">03 / EXPLORE</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.43 (foreground color: #588776, background color: #d9f1e3, font size: 7.4pt (9.92px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#588776",
+                  "bg": "#d9f1e3",
+                  "ratio": 3.43,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".quote-attribution",
+                "html": "<span class=\"quote-attribution\">A LITTLE CAMPUS WISDOM <span>✳</span></span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.56 (foreground color: #80799a, background color: #f1edfc, font size: 7.0pt (9.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#80799a",
+                  "bg": "#f1edfc",
+                  "ratio": 3.56,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus home\"]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"Campus home\"><span class=\"brand-mark\" aria-hidden=\"true\">C</span><span>campus<span class=\"brand-dot\">.</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Elements must only use permitted ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".hero-art",
+                "html": "<div class=\"hero-art\" aria-label=\"Colorful illustration of a student studying\">",
+                "summary": "Fix all of the following: aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": ".button-light > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".spark-two",
+                "html": "<div class=\"art-spark spark-two\">✦</div>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".art-label > span",
+                "html": "<span>✦</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".inline-link > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".feature-purple > .feature-decoration[aria-hidden=\"true\"]",
+                "html": "<span class=\"feature-decoration\" aria-hidden=\"true\">✿</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".feature-orange > .feature-icon[aria-hidden=\"true\"]",
+                "html": "<span class=\"feature-icon\" aria-hidden=\"true\">⌘</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".feature-orange > .feature-decoration[aria-hidden=\"true\"]",
+                "html": "<span class=\"feature-decoration\" aria-hidden=\"true\">⌘</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".feature-mint > .feature-icon[aria-hidden=\"true\"]",
+                "html": "<span class=\"feature-icon\" aria-hidden=\"true\">◉</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".feature-mint > .feature-decoration[aria-hidden=\"true\"]",
+                "html": "<span class=\"feature-decoration\" aria-hidden=\"true\">◎</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".button-primary > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
           }
         ]
       },
@@ -29,12 +195,59 @@
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "html > body > header > a:nth-child(1) > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > span:nth-child(1)",
+                "html": "<span class=\"quote-mark\" aria-hidden=\"true\">“</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1.8:1. Recommendation:  change text colour to #080300."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 5
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.57:1. Recommendation:  change text colour to #010005.",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "#main > section:nth-child(3) > span:nth-child(3)",
+                "html": "<span class=\"quote-attribution\">A LITTLE CAMPUS WISDOM <span>✳<...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.57:1. Recommendation:  change text colour to #010005."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > span:nth-child(3) > span",
+                "html": "<span>✳</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.88:1. Recommendation:  change text colour to #080300."
+              },
+              {
+                "selector": "html > body > footer > a > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              },
+              {
+                "selector": "html > body > footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "html > body > footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -61,12 +274,1013 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 52
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 52,
+            "nodes": [
+              {
+                "selector": ".catalog-count > span:nth-child(2)",
+                "html": "<span>courses to explore</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.01 (foreground color: #817c89, background color: #fffefa, font size: 9.1pt (12.16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817c89",
+                  "bg": "#fffefa",
+                  "ratio": 4.01,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "kbd",
+                "html": "<kbd aria-hidden=\"true\">⌘ K</kbd>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.26 (foreground color: #918c9b, background color: #ffffff, font size: 7.2pt (9.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#918c9b",
+                  "bg": "#ffffff",
+                  "ratio": 3.26,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(1) > .art-lilac.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">ART-110</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.04 (foreground color: #8975cc, background color: #e9e1ff, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#8975cc",
+                  "bg": "#e9e1ff",
+                  "ratio": 3.04,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(1) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(1) > .course-card-body > p",
+                "html": "<p>Build a daily sketch practice and learn to see the world differently.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(2) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">BIO-204</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.59 (foreground color: #5c9f85, background color: #d7f1df, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#5c9f85",
+                  "bg": "#d7f1df",
+                  "ratio": 2.59,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(2) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(2) > .course-card-body > p",
+                "html": "<p>A hands-on journey into the tiny systems that make life possible.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(3) > .art-peach.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">CS-150</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.65 (foreground color: #ca7968, background color: #ffe2d6, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ca7968",
+                  "bg": "#ffe2d6",
+                  "ratio": 2.65,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(3) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(3) > .course-card-body > p",
+                "html": "<p>Learn programming fundamentals by making a game worth playing.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(4) > .art-yellow.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">BUS-218</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #c19b4d, background color: #fff0c5, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#c19b4d",
+                  "bg": "#fff0c5",
+                  "ratio": 2.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(4) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(4) > .course-card-body > p",
+                "html": "<p>Turn a good idea into a thoughtful, practical business plan.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .art-blue.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">HUM-132</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.91 (foreground color: #7086ba, background color: #dce7ff, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#7086ba",
+                  "bg": "#dce7ff",
+                  "ratio": 2.91,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > p",
+                "html": "<p>Explore the stories and myths that continue to shape culture.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">SCI-240</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.59 (foreground color: #5c9f85, background color: #d7f1df, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#5c9f85",
+                  "bg": "#d7f1df",
+                  "ratio": 2.59,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > p",
+                "html": "<p>Use real city data to imagine more resilient urban futures.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .art-lilac.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">ART-225</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.04 (foreground color: #8975cc, background color: #e9e1ff, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#8975cc",
+                  "bg": "#e9e1ff",
+                  "ratio": 3.04,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > p",
+                "html": "<p>Use design research and visual thinking to solve human problems.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(8) > .art-peach.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">CS-220</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.65 (foreground color: #ca7968, background color: #ffe2d6, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ca7968",
+                  "bg": "#ffe2d6",
+                  "ratio": 2.65,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(8) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(8) > .course-card-body > p",
+                "html": "<p>Understand the systems that connect the world, one layer at a time.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(9) > .art-yellow.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">BUS-105</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #c19b4d, background color: #fff0c5, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#c19b4d",
+                  "bg": "#fff0c5",
+                  "ratio": 2.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(9) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(9) > .course-card-body > p",
+                "html": "<p>A friendly, practical introduction to personal finance.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(10) > .art-blue.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">HUM-245</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.91 (foreground color: #7086ba, background color: #dce7ff, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#7086ba",
+                  "bg": "#dce7ff",
+                  "ratio": 2.91,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(10) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(10) > .course-card-body > p",
+                "html": "<p>Bring timeless questions into conversation with modern life.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(11) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">BIO-118</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.59 (foreground color: #5c9f85, background color: #d7f1df, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#5c9f85",
+                  "bg": "#d7f1df",
+                  "ratio": 2.59,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(11) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(11) > .course-card-body > p",
+                "html": "<p>Meet the clever, responsive organisms growing all around us.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(12) > .art-lilac.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">ART-305</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.04 (foreground color: #8975cc, background color: #e9e1ff, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#8975cc",
+                  "bg": "#e9e1ff",
+                  "ratio": 3.04,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(12) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(12) > .course-card-body > p",
+                "html": "<p>Practice documentary photography through fieldwork and critique.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(13) > .art-peach.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">CS-310</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.65 (foreground color: #ca7968, background color: #ffe2d6, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ca7968",
+                  "bg": "#ffe2d6",
+                  "ratio": 2.65,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(13) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(13) > .course-card-body > p",
+                "html": "<p>Prototype playful, useful projects with emerging AI tools.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(14) > .art-yellow.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">BUS-230</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #c19b4d, background color: #fff0c5, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#c19b4d",
+                  "bg": "#fff0c5",
+                  "ratio": 2.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(14) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(14) > .course-card-body > p",
+                "html": "<p>Practice listening, collaboration, and finding common ground.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(15) > .art-blue.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">HUM-110</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.91 (foreground color: #7086ba, background color: #dce7ff, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#7086ba",
+                  "bg": "#dce7ff",
+                  "ratio": 2.91,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(15) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(15) > .course-card-body > p",
+                "html": "<p>Notice how the words we choose can open doors and change minds.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(16) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-code",
+                "html": "<span class=\"course-art-code\">SCI-160</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.59 (foreground color: #5c9f85, background color: #d7f1df, font size: 6.8pt (9.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#5c9f85",
+                  "bg": "#d7f1df",
+                  "ratio": 2.59,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(16) > .course-card-body > .course-meta > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.73 (foreground color: #878290, background color: #ffffff, font size: 7.1pt (9.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#878290",
+                  "bg": "#ffffff",
+                  "ratio": 3.73,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(16) > .course-card-body > p",
+                "html": "<p>Dive into ocean science, from coral reefs to the deep sea.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 8.2pt (10.88px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 17
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 17,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus home\"]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"Campus home\"><span class=\"brand-mark\" aria-hidden=\"true\">C</span><span>campus<span class=\"brand-dot\">.</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(1) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Drawing Outside the Lines\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(2) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for The Secret Life of Cells\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(3) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Code Your First Game\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"Register for Ideas Into Action\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Ideas Into Action\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Stories That Shape Us\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Climate, City, Future\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"Register for Design for Good\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Design for Good\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(8) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for The Internet, Explained\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"Register for Money Moves\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Money Moves\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(10) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Philosophy for Real Life\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(11) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Plants Are People Too\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(12) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Photography in the Wild\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"Register for Creative AI Lab\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Creative AI Lab\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "article:nth-child(14) > .course-card-body > .course-action[href$=\"registration.html\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for The Art of Negotiation\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"Register for Language & Power\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Language &amp; Power\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "a[aria-label=\"Register for Ocean Worlds\"]",
+                "html": "<a class=\"course-action\" href=\"registration.html\" aria-label=\"Register for Ocean Worlds\">Explore course <span aria-hidden=\"true\">→</span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 44,
+            "nodes": [
+              {
+                "selector": ".search-box > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">⌕</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(1) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(1) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(2) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">◉</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(2) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(2) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(3) > .art-peach.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">⌘</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(3) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(3) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(4) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[aria-label=\"Register for Ideas Into Action\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(5) > .art-blue.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">❝</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(6) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">♧</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(7) > .art-lilac.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">✿</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[aria-label=\"Register for Design for Good\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(8) > .art-peach.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">◎</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(8) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(8) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(9) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[aria-label=\"Register for Money Moves\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(10) > .art-blue.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">◇</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(10) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(10) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(11) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">♧</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(11) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(11) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(12) > .art-lilac.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">◉</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(12) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(12) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(13) > .art-peach.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">✧</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(13) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[aria-label=\"Register for Creative AI Lab\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(14) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(14) > .course-card-body > .course-action[href$=\"registration.html\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(15) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[aria-label=\"Register for Language & Power\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(16) > .art-mint.course-art[aria-hidden=\"true\"] > .course-art-icon",
+                "html": "<span class=\"course-art-icon\">≈</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article:nth-child(16) > .course-card-body > .course-details > .detail-dot[aria-hidden=\"true\"]",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#b2aabe",
+                  "bg": "#ffffff",
+                  "ratio": 2.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[aria-label=\"Register for Ocean Worlds\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
           }
         ]
       },
@@ -75,12 +1289,294 @@
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "html > body > header > a:nth-child(1) > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 53
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482.",
+            "count": 53,
+            "nodes": [
+              {
+                "selector": "#course-grid > article:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(1) > div:nth-child(2) > p",
+                "html": "<p>Build a daily sketch practice a...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(2) > div:nth-child(2) > p",
+                "html": "<p>A hands-on journey into the tin...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(3) > div:nth-child(2) > p",
+                "html": "<p>Learn programming fundamentals ...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(4) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(4) > div:nth-child(2) > p",
+                "html": "<p>Turn a good idea into a thought...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(5) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(5) > div:nth-child(2) > p",
+                "html": "<p>Explore the stories and myths t...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(6) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(6) > div:nth-child(2) > p",
+                "html": "<p>Use real city data to imagine m...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(7) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(7) > div:nth-child(2) > p",
+                "html": "<p>Use design research and visual ...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(8) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(8) > div:nth-child(2) > p",
+                "html": "<p>Understand the systems that con...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(9) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(9) > div:nth-child(2) > p",
+                "html": "<p>A friendly, practical introduct...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(10) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(10) > div:nth-child(2) > p",
+                "html": "<p>Bring timeless questions into c...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(11) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(11) > div:nth-child(2) > p",
+                "html": "<p>Meet the clever, responsive org...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(12) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(12) > div:nth-child(2) > p",
+                "html": "<p>Practice documentary photograph...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(13) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Advanced</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(13) > div:nth-child(2) > p",
+                "html": "<p>Prototype playful, useful proje...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(14) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Intermediate</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(14) > div:nth-child(2) > p",
+                "html": "<p>Practice listening, collaborati...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(15) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(15) > div:nth-child(2) > p",
+                "html": "<p>Notice how the words we choose ...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(16) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span>Beginner</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.73:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(16) > div:nth-child(2) > p",
+                "html": "<p>Dive into ocean science, from c...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "html > body > footer > a > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              },
+              {
+                "selector": "html > body > footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "html > body > footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > span",
+                "html": "<span aria-hidden=\"true\">⌕</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.83:1. Recommendation:  change text colour to #7a7197."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > kbd",
+                "html": "<kbd aria-hidden=\"true\">⌘ K</kbd>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.27:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(1) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(2) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(3) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(4) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(5) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(6) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(7) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(8) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(9) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(10) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(11) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(12) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(13) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(14) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(15) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              },
+              {
+                "selector": "#course-grid > article:nth-child(16) > div:nth-child(2) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"detail-dot\" aria-hidden=\"true\">·</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.24:1. Recommendation:  change text colour to #7b7387."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -107,12 +1603,375 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 28
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 28,
+            "nodes": [
+              {
+                "selector": ".step:nth-child(3)",
+                "html": "<span class=\"step\"><b>02</b> Your courses</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.92 (foreground color: #9994a1, background color: #fffefa, font size: 7.9pt (10.56px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#9994a1",
+                  "bg": "#fffefa",
+                  "ratio": 2.92,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step:nth-child(3) > b",
+                "html": "<b>02</b>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.54 (foreground color: #9994a1, background color: #efedf2, font size: 7.3pt (9.76px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#9994a1",
+                  "bg": "#efedf2",
+                  "ratio": 2.54,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step:nth-child(5)",
+                "html": "<span class=\"step\"><b>03</b> All set</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.92 (foreground color: #9994a1, background color: #fffefa, font size: 7.9pt (10.56px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#9994a1",
+                  "bg": "#fffefa",
+                  "ratio": 2.92,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step:nth-child(5) > b",
+                "html": "<b>03</b>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.54 (foreground color: #9994a1, background color: #efedf2, font size: 7.3pt (9.76px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#9994a1",
+                  "bg": "#efedf2",
+                  "ratio": 2.54,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".form-section:nth-child(1) > .form-section-heading > div > p",
+                "html": "<p>Let’s make sure we have the right person.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.68 (foreground color: #888391, background color: #ffffff, font size: 8.8pt (11.68px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#ffffff",
+                  "ratio": 3.68,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".form-section:nth-child(2) > .form-section-heading > div > p",
+                "html": "<p>Select courses from the list. You can register for up to 18 credits.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.68 (foreground color: #888391, background color: #ffffff, font size: 8.8pt (11.68px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#ffffff",
+                  "ratio": 3.68,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(1) > .registration-course-info > small",
+                "html": "<small>ART-110 · Arts · Mon · Wed, 10:00 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(2) > .registration-course-info > small",
+                "html": "<small>BIO-204 · Science · Tue · Thu, 9:30 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(3) > .registration-course-info > small",
+                "html": "<small>CS-150 · Technology · Mon · Wed, 1:00 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(4) > .registration-course-info > small",
+                "html": "<small>BUS-218 · Business · Tue · Thu, 11:00 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(5) > .registration-course-info > small",
+                "html": "<small>HUM-132 · Humanities · Mon · Wed, 2:30 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(6) > .registration-course-info > small",
+                "html": "<small>SCI-240 · Science · Wed · Fri, 9:00 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(7) > .registration-course-info > small",
+                "html": "<small>ART-225 · Arts · Tue · Thu, 1:30 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(8) > .registration-course-info > small",
+                "html": "<small>CS-220 · Technology · Mon · Wed, 11:00 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(9) > .registration-course-info > small",
+                "html": "<small>BUS-105 · Business · Tue · Thu, 3:00 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(10) > .registration-course-info > small",
+                "html": "<small>HUM-245 · Humanities · Mon · Wed, 9:30 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(11) > .registration-course-info > small",
+                "html": "<small>BIO-118 · Science · Tue · Thu, 10:00 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(12) > .registration-course-info > small",
+                "html": "<small>ART-305 · Arts · Fri, 12:00 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(13) > .registration-course-info > small",
+                "html": "<small>CS-310 · Technology · Tue · Thu, 2:00 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(14) > .registration-course-info > small",
+                "html": "<small>BUS-230 · Business · Mon · Wed, 3:30 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(15) > .registration-course-info > small",
+                "html": "<small>HUM-110 · Humanities · Tue · Thu, 9:00 AM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-course:nth-child(16) > .registration-course-info > small",
+                "html": "<small>SCI-160 · Science · Mon · Wed, 12:30 PM</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #827d8c, background color: #ffffff, font size: 7.6pt (10.08px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#827d8c",
+                  "bg": "#ffffff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".form-footer > p",
+                "html": "<p><span aria-hidden=\"true\">✳</span> You can make changes before the add/drop deadline.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.05 (foreground color: #817c89, background color: #ffffff, font size: 7.7pt (10.24px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817c89",
+                  "bg": "#ffffff",
+                  "ratio": 4.05,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".summary-copy",
+                "html": "<p class=\"summary-copy\">Your courses will show up here as you choose.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #7a718f, background color: #f2edff, font size: 8.5pt (11.36px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#7a718f",
+                  "bg": "#f2edff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".summary-empty",
+                "html": "<p class=\"summary-empty\">No courses selected yet.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #8c849b, background color: #f2edff, font size: 8.3pt (11.04px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#8c849b",
+                  "bg": "#f2edff",
+                  "ratio": 3.11,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#total-credits > small",
+                "html": "<small>/ 18</small>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.84 (foreground color: #938aa7, background color: #f2edff, font size: 7.8pt (10.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#938aa7",
+                  "bg": "#f2edff",
+                  "ratio": 2.84,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus home\"]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"Campus home\"><span class=\"brand-mark\" aria-hidden=\"true\">C</span><span>campus<span class=\"brand-dot\">.</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Elements must only use permitted ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".stepper",
+                "html": "<div class=\"stepper\" aria-label=\"Registration steps\"><span class=\"step active\"><b>01</b> Your details</span><span class=\"step-line\"></span><span class=\"step\"><b>02</b> Your courses</span><span class=\"step-line\"></span><span class=\"step\"><b>03</b> All set</span></div>",
+                "summary": "Fix all of the following: aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "button[type=\"submit\"] > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
           }
         ]
       },
@@ -121,17 +1980,215 @@
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "html > body > header > a:nth-child(1) > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 34
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.93:1. Recommendation:  change text colour to #080310.",
+            "count": 34,
+            "nodes": [
+              {
+                "selector": "#main > section:nth-child(1) > div > span:nth-child(3)",
+                "html": "<span class=\"step\"><b>02</b> Your courses</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.93:1. Recommendation:  change text colour to #080310."
+              },
+              {
+                "selector": "#main > section:nth-child(1) > div > span:nth-child(3) > b",
+                "html": "<b>02</b>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #07020f."
+              },
+              {
+                "selector": "#main > section:nth-child(1) > div > span:nth-child(5)",
+                "html": "<span class=\"step\"><b>03</b> All set</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.93:1. Recommendation:  change text colour to #080310."
+              },
+              {
+                "selector": "#main > section:nth-child(1) > div > span:nth-child(5) > b",
+                "html": "<b>03</b>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #07020f."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(1) > div:nth-child(1) > div > p",
+                "html": "<p>Let’s make sure we have the rig...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.68:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(2) > div:nth-child(1) > div > p",
+                "html": "<p>Select courses from the list. Y...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.68:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(1) > span:nth-child(3) > small",
+                "html": "<small>ART-110 · Arts · Mon · Wed, 10:...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(2) > span:nth-child(3) > small",
+                "html": "<small>BIO-204 · Science · Tue · Thu, ...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(3) > span:nth-child(3) > small",
+                "html": "<small>CS-150 · Technology · Mon · Wed...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(4) > span:nth-child(3) > small",
+                "html": "<small>BUS-218 · Business · Tue · Thu,...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(5) > span:nth-child(3) > small",
+                "html": "<small>HUM-132 · Humanities · Mon · We...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(6) > span:nth-child(3) > small",
+                "html": "<small>SCI-240 · Science · Wed · Fri, ...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(7) > span:nth-child(3) > small",
+                "html": "<small>ART-225 · Arts · Tue · Thu, 1:3...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(8) > span:nth-child(3) > small",
+                "html": "<small>CS-220 · Technology · Mon · Wed...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(9) > span:nth-child(3) > small",
+                "html": "<small>BUS-105 · Business · Tue · Thu,...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(10) > span:nth-child(3) > small",
+                "html": "<small>HUM-245 · Humanities · Mon · We...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(11) > span:nth-child(3) > small",
+                "html": "<small>BIO-118 · Science · Tue · Thu, ...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(12) > span:nth-child(3) > small",
+                "html": "<small>ART-305 · Arts · Fri, 12:00 PM</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(13) > span:nth-child(3) > small",
+                "html": "<small>CS-310 · Technology · Tue · Thu...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(14) > span:nth-child(3) > small",
+                "html": "<small>BUS-230 · Business · Mon · Wed,...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(15) > span:nth-child(3) > small",
+                "html": "<small>HUM-110 · Humanities · Tue · Th...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-course-list > label:nth-child(16) > span:nth-child(3) > small",
+                "html": "<small>SCI-160 · Science · Mon · Wed, ...</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(3) > p",
+                "html": "<p><span aria-hidden=\"true\">✳</spa...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.06:1. Recommendation:  change text colour to #797481."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > aside > p",
+                "html": "<p class=\"summary-copy\">Your courses will show up here ...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4:1. Recommendation:  change background to #fdfdff."
+              },
+              {
+                "selector": "#selected-courses > p",
+                "html": "<p class=\"summary-empty\">No courses selected yet.</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.11:1. Recommendation:  change text colour to #010004."
+              },
+              {
+                "selector": "#total-credits > small",
+                "html": "<small>/ 18</small>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.85:1. Recommendation:  change text colour to #010005."
+              },
+              {
+                "selector": "html > body > footer > a > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              },
+              {
+                "selector": "html > body > footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "html > body > footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > aside > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"summary-icon\" aria-hidden=\"true\">✳</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change text colour to #b95c23."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(3) > p > span",
+                "html": "<span aria-hidden=\"true\">✳</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.07:1. Recommendation:  change text colour to #bd5923."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > label > span",
+                "html": "<span aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.03:1. Recommendation:  change text colour to #cf4646."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > label > span",
+                "html": "<span aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.03:1. Recommendation:  change text colour to #cf4646."
+              },
+              {
+                "selector": "#registration-form > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > label > span",
+                "html": "<span aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.03:1. Recommendation:  change text colour to #cf4646."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_5.H98",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.3.5"
+            ],
+            "message": "Invalid autocomplete value: name. Element does not belong to Text control group.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#student-name",
+                "html": "<input id=\"student-name\" name=\"studentName\" autocomplete=\"name\" aria-describedby=\"student-name-error\" required=\"\" placeholder=\"e.g. Jordan Lee\">",
+                "message": "Invalid autocomplete value: name. Element does not belong to Text control group."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -158,12 +2215,242 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 15
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 15,
+            "nodes": [
+              {
+                "selector": ".stat-card:nth-child(1) > .stat-label",
+                "html": "<span class=\"stat-label\">TERM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.68 (foreground color: #888391, background color: #ffffff, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#ffffff",
+                  "ratio": 3.68,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(1) > .stat-caption",
+                "html": "<span class=\"stat-caption\">Your next semester</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.62 (foreground color: #898493, background color: #ffffff, font size: 8.0pt (10.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#898493",
+                  "bg": "#ffffff",
+                  "ratio": 3.62,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(2) > .stat-label",
+                "html": "<span class=\"stat-label\">REGISTERED COURSES</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.68 (foreground color: #888391, background color: #ffffff, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#ffffff",
+                  "ratio": 3.68,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(2) > .stat-caption",
+                "html": "<span class=\"stat-caption\">Courses on your schedule</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.62 (foreground color: #898493, background color: #ffffff, font size: 8.0pt (10.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#898493",
+                  "bg": "#ffffff",
+                  "ratio": 3.62,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(3) > .stat-label",
+                "html": "<span class=\"stat-label\">CREDIT HOURS</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.68 (foreground color: #888391, background color: #ffffff, font size: 7.2pt (9.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#ffffff",
+                  "ratio": 3.68,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(3) > .stat-caption",
+                "html": "<span class=\"stat-caption\">A balanced semester</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.62 (foreground color: #898493, background color: #ffffff, font size: 8.0pt (10.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#898493",
+                  "bg": "#ffffff",
+                  "ratio": 3.62,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(1)",
+                "html": "<th scope=\"col\">COURSE</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #817b8d, background color: #f7f5fb, font size: 7.0pt (9.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817b8d",
+                  "bg": "#f7f5fb",
+                  "ratio": 3.76,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(2)",
+                "html": "<th scope=\"col\">CATEGORY</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #817b8d, background color: #f7f5fb, font size: 7.0pt (9.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817b8d",
+                  "bg": "#f7f5fb",
+                  "ratio": 3.76,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(3)",
+                "html": "<th scope=\"col\">INSTRUCTOR</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #817b8d, background color: #f7f5fb, font size: 7.0pt (9.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817b8d",
+                  "bg": "#f7f5fb",
+                  "ratio": 3.76,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(4)",
+                "html": "<th scope=\"col\">SCHEDULE</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #817b8d, background color: #f7f5fb, font size: 7.0pt (9.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817b8d",
+                  "bg": "#f7f5fb",
+                  "ratio": 3.76,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(5)",
+                "html": "<th scope=\"col\">CREDITS</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #817b8d, background color: #f7f5fb, font size: 7.0pt (9.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817b8d",
+                  "bg": "#f7f5fb",
+                  "ratio": 3.76,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-empty > p",
+                "html": "<p>Pick a few courses and your schedule will take shape here.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.07 (foreground color: #817b8d, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#817b8d",
+                  "bg": "#ffffff",
+                  "ratio": 4.07,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-note > div > p",
+                "html": "<p>You can update your course selection until the add/drop deadline.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.85 (foreground color: #7c748f, background color: #f2edff, font size: 8.0pt (10.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#7c748f",
+                  "bg": "#f2edff",
+                  "ratio": 3.85,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.64 (foreground color: #888391, background color: #fffefa, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#888391",
+                  "bg": "#fffefa",
+                  "ratio": 3.64,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "a[aria-label=\"Campus home\"]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"Campus home\"><span class=\"brand-mark\" aria-hidden=\"true\">C</span><span>campus<span class=\"brand-dot\">.</span></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": ".button-light > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".inline-link > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".button-primary > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
+          },
+          {
+            "rule": "th-has-data-cells",
+            "impact": "serious",
+            "wcag": [
+              "1.3.1"
+            ],
+            "help": "Table headers in a data table must refer to data cells",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "table",
+                "html": "<table class=\"courses-table\">",
+                "summary": "Fix all of the following: Table data cells are missing or empty"
+              }
+            ]
           }
         ]
       },
@@ -172,12 +2459,119 @@
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "html > body > header > a:nth-child(1) > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              },
+              {
+                "selector": "#profile-empty > span",
+                "html": "<span aria-hidden=\"true\">✳</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.19:1. Recommendation:  change text colour to #d38046."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 17
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.68:1. Recommendation:  change text colour to #797482.",
+            "count": 17,
+            "nodes": [
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"stat-label\">TERM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.68:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "html": "<span class=\"stat-caption\">Your next semester</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(2) > span:nth-child(1)",
+                "html": "<span class=\"stat-label\">REGISTERED COURSES</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.68:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(2) > span:nth-child(3)",
+                "html": "<span class=\"stat-caption\">Courses on your schedule</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(3) > span:nth-child(1)",
+                "html": "<span class=\"stat-label\">CREDIT HOURS</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.68:1. Recommendation:  change text colour to #797482."
+              },
+              {
+                "selector": "#main > section:nth-child(2) > div:nth-child(3) > span:nth-child(3)",
+                "html": "<span class=\"stat-caption\">A balanced semester</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #797483."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > div:nth-child(2) > table > thead > tr > th:nth-child(1)",
+                "html": "<th scope=\"col\">COURSE</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.77:1. Recommendation:  change text colour to #04000c."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > div:nth-child(2) > table > thead > tr > th:nth-child(2)",
+                "html": "<th scope=\"col\">CATEGORY</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.77:1. Recommendation:  change text colour to #04000c."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > div:nth-child(2) > table > thead > tr > th:nth-child(3)",
+                "html": "<th scope=\"col\">INSTRUCTOR</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.77:1. Recommendation:  change text colour to #04000c."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > div:nth-child(2) > table > thead > tr > th:nth-child(4)",
+                "html": "<th scope=\"col\">SCHEDULE</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.77:1. Recommendation:  change text colour to #04000c."
+              },
+              {
+                "selector": "#main > section:nth-child(3) > div:nth-child(2) > table > thead > tr > th:nth-child(5)",
+                "html": "<th scope=\"col\">CREDITS</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.77:1. Recommendation:  change text colour to #04000c."
+              },
+              {
+                "selector": "#profile-empty > p",
+                "html": "<p>Pick a few courses and your sch...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.08:1. Recommendation:  change text colour to #797385."
+              },
+              {
+                "selector": "#main > section:nth-child(4) > div > p",
+                "html": "<p>You can update your course sele...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.86:1. Recommendation:  change text colour to #010004."
+              },
+              {
+                "selector": "html > body > footer > a > span:nth-child(2) > span",
+                "html": "<span class=\"brand-dot\">.</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.45:1. Recommendation:  change text colour to #190600."
+              },
+              {
+                "selector": "html > body > footer > p",
+                "html": "<p>Your future has good taste.</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "html > body > footer > span",
+                "html": "<span>© 2026 Campus University</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.65:1. Recommendation:  change text colour to #05000e."
+              },
+              {
+                "selector": "#main > section:nth-child(4) > span",
+                "html": "<span aria-hidden=\"true\">✳</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.93:1. Recommendation:  change text colour to #070300."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0

@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:26:59.851Z",
+  "checked": "2026-11-04T00:34:50.372Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -15,19 +15,26 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
-          }
-        ]
-      },
-      "pa11y": {
-        "issues": [
-          {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 8
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".brand",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Northstar University home\"><span class=\"brand-mark\" aria-hidden=\"true\">N</span><span>Northstar <small>UNIVERSITY</small></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "needs_review": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 8
       },
       "lighthouse": {
         "score": 100,
@@ -47,24 +54,53 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 3
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": ".brand",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Northstar University home\"><span class=\"brand-mark\" aria-hidden=\"true\">N</span><span>Northstar <small>UNIVERSITY</small></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-code=\"ECO 202\"]",
+                "html": "<button class=\"button button-primary register-trigger\" type=\"button\" data-code=\"ECO 202\" disabled=\"\" aria-label=\"Register for ECO 202, Markets and Society\">Course full</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              },
+              {
+                "selector": "button[data-code=\"PSY 205\"]",
+                "html": "<button class=\"button button-primary register-trigger\" type=\"button\" data-code=\"PSY 205\" disabled=\"\" aria-label=\"Register for PSY 205, Mind and Behavior\">Course full</button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 5
-          },
-          {
             "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search",
+                "html": "<form role=\"search\" id=\"course-search\" class=\"field\"><label for=\"search-courses\">Sea...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "ignored_route_links": 5
       },
       "lighthouse": {
         "score": 100,
@@ -84,19 +120,26 @@
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
-          }
-        ]
-      },
-      "pa11y": {
-        "issues": [
-          {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 5
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".brand",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Northstar University home\"><span class=\"brand-mark\" aria-hidden=\"true\">N</span><span>Northstar <small>UNIVERSITY</small></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "needs_review": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 5
       },
       "lighthouse": {
         "score": 100,
@@ -116,29 +159,66 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".profile-card > .eyebrow",
+                "html": "<span class=\"eyebrow\">NORTHSTAR STUDENT</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.27 (foreground color: #087e83, background color: #173b70, font size: 9.1pt (12.16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#087e83",
+                  "bg": "#173b70",
+                  "ratio": 2.27,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "label-content-name-mismatch",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".brand",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Northstar University home\"><span class=\"brand-mark\" aria-hidden=\"true\">N</span><span>Northstar <small>UNIVERSITY</small></span></a>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
-            "rule": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
-            "impact": "error",
-            "count": 6
-          },
-          {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change text colour to #feffff.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#view > div:nth-child(2) > section:nth-child(1) > span",
+                "html": "<span class=\"eyebrow\">NORTHSTAR STUDENT</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change text colour to #feffff."
+              }
+            ]
           }
         ],
-        "ignored_route_links": 0
+        "ignored_route_links": 6
       },
       "lighthouse": {
         "score": 96,

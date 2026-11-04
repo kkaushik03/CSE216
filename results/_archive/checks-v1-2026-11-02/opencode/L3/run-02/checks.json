@@ -1,0 +1,77 @@
+{
+  "checked": "2026-11-02T20:36:55.624Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.73",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html#/home",
+      "axe": {
+        "issues": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 7
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": []
+      }
+    },
+    {
+      "name": "Course catalog",
+      "url": "/index.html#/catalog",
+      "axe": {
+        "issues": []
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+            "impact": "error",
+            "count": 1
+          }
+        ],
+        "ignored_route_links": 5
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": []
+      }
+    },
+    {
+      "name": "Registration",
+      "url": "/index.html#/register",
+      "axe": {
+        "issues": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 6
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": []
+      }
+    },
+    {
+      "name": "Student profile",
+      "url": "/index.html#/profile",
+      "axe": {
+        "issues": []
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 6
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": []
+      }
+    }
+  ]
+}

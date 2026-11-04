@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:28:05.656Z",
+  "checked": "2026-11-04T00:35:48.765Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -11,7 +11,8 @@
       "name": "home",
       "url": "/index.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [],
@@ -26,7 +27,8 @@
       "name": "Course Catalog",
       "url": "/index.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [],
@@ -41,7 +43,8 @@
       "name": "Registration",
       "url": "/index.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [],
@@ -60,16 +63,62 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".enrolled",
+                "html": "<span class=\"status enrolled\">Enrolled</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.81 (foreground color: #2e7d32, background color: #c8e6c9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#2e7d32",
+                  "bg": "#c8e6c9",
+                  "ratio": 3.81,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".waitlisted",
+                "html": "<span class=\"status waitlisted\">Waitlisted</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.25 (foreground color: #f57f17, background color: #ffecb3, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f57f17",
+                  "bg": "#ffecb3",
+                  "ratio": 2.25,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.81:1. Recommendation:  change text colour to #227126.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#profile > div:nth-child(4) > table > tbody > tr:nth-child(1) > td:nth-child(4) > span",
+                "html": "<span class=\"status enrolled\">Enrolled</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.81:1. Recommendation:  change text colour to #227126."
+              },
+              {
+                "selector": "#profile > div:nth-child(4) > table > tbody > tr:nth-child(2) > td:nth-child(4) > span",
+                "html": "<span class=\"status waitlisted\">Waitlisted</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.26:1. Recommendation:  change text colour to #020100."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0

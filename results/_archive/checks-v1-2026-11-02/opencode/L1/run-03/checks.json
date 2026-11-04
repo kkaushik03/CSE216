@@ -1,0 +1,131 @@
+{
+  "checked": "2026-11-02T20:32:19.185Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.73",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "impact": "serious",
+            "count": 2
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 10
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Courses",
+      "url": "/catalog.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "impact": "serious",
+            "count": 2
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "count": 28
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 98,
+        "issues": [
+          {
+            "rule": "heading-order",
+            "count": 1
+          },
+          {
+            "rule": "label-content-name-mismatch",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Register 0",
+      "url": "/register.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "impact": "serious",
+            "count": 2
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Profile",
+      "url": "/profile.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "impact": "serious",
+            "count": 2
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ]
+}

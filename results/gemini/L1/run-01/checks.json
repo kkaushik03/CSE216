@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:27:36.826Z",
+  "checked": "2026-11-04T00:35:23.722Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -15,31 +15,129 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "header > p",
+                "html": "<p>Find, register, and manage your classes all in one colorful place!</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.87 (foreground color: #ffffff, background color: #0984e3, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#0984e3",
+                  "ratio": 3.87,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.87:1. Recommendation:  change background to #0078d5.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#home > header > p",
+                "html": "<p>Find, register, and manage your...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.87:1. Recommendation:  change background to #0078d5."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
             "impact": "error",
-            "count": 3
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
             "impact": "error",
-            "count": 5
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -66,41 +164,317 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 11
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": "a[onclick=\"showPage('catalog')\"]",
+                "html": "<a href=\"#\" onclick=\"showPage('catalog')\">Course Catalog</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.22 (foreground color: #fdcb6e, background color: #d63031, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#fdcb6e",
+                  "bg": "#d63031",
+                  "ratio": 3.22,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[onclick=\"filterCourses()\"]",
+                "html": "<button onclick=\"filterCourses()\">Filter</button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #ffffff, background color: #00b894, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#00b894",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(1) > h3",
+                "html": "<h3>Intro to Programming</h3>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(1) > p:nth-child(2)",
+                "html": "<p>Department: Computer Science</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(1) > p:nth-child(3)",
+                "html": "<p>Credits: 3</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(2) > h3",
+                "html": "<h3>Calculus I</h3>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(2) > p:nth-child(2)",
+                "html": "<p>Department: Mathematics</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(2) > p:nth-child(3)",
+                "html": "<p>Credits: 4</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(3) > h3",
+                "html": "<h3>Modern Art History</h3>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(3) > p:nth-child(2)",
+                "html": "<p>Department: Art</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(3) > p:nth-child(3)",
+                "html": "<p>Credits: 3</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.47 (foreground color: #ffffff, background color: #fd79a8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#fd79a8",
+                  "ratio": 2.47,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "select-name",
             "impact": "critical",
-            "count": 1
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Select element must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/select-name?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 8
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.22:1. Recommendation:  change background to #303030.",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "html > body > nav > ul > li:nth-child(2) > a",
+                "html": "<a href=\"#\" onclick=\"showPage('catalog')\">Course Catalog</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.22:1. Recommendation:  change background to #303030."
+              },
+              {
+                "selector": "#catalog > div:nth-child(2) > button",
+                "html": "<button onclick=\"filterCourses()\">Filter</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change background to #00866c."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(1) > p:nth-child(2)",
+                "html": "<p>Department: Computer Science</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #767676."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(1) > p:nth-child(3)",
+                "html": "<p>Credits: 3</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #767676."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(2) > p:nth-child(2)",
+                "html": "<p>Department: Mathematics</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #767676."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(2) > p:nth-child(3)",
+                "html": "<p>Credits: 4</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #767676."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(3) > p:nth-child(2)",
+                "html": "<p>Department: Art</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #767676."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(3) > p:nth-child(3)",
+                "html": "<p>Credits: 3</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #767676."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
             "impact": "error",
-            "count": 3
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
             "impact": "error",
-            "count": 5
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
             "impact": "error",
-            "count": 3
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #797979.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(1) > h3",
+                "html": "<h3>Intro to Programming</h3>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #797979."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(2) > h3",
+                "html": "<h3>Calculus I</h3>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #797979."
+              },
+              {
+                "selector": "#catalog > div:nth-child(3) > div:nth-child(3) > h3",
+                "html": "<h3>Modern Art History</h3>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.48:1. Recommendation:  change background to #797979."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -131,41 +505,216 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 4
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "a[onclick=\"showPage('registration')\"]",
+                "html": "<a href=\"#\" onclick=\"showPage('registration')\">Registration</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.22 (foreground color: #fdcb6e, background color: #d63031, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#fdcb6e",
+                  "bg": "#d63031",
+                  "ratio": 3.22,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".input-group:nth-child(1) > label",
+                "html": "<label>Student Name</label>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #ffffff, background color: #a29bfe, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#a29bfe",
+                  "ratio": 2.42,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".input-group:nth-child(2) > label",
+                "html": "<label>Student ID</label>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #ffffff, background color: #a29bfe, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#a29bfe",
+                  "ratio": 2.42,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".input-group:nth-child(3) > label",
+                "html": "<label>Select Course</label>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #ffffff, background color: #a29bfe, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#a29bfe",
+                  "ratio": 2.42,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           },
           {
             "rule": "label",
             "impact": "critical",
-            "count": 2
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Form elements must have labels",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".input-group:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              },
+              {
+                "selector": ".input-group:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              }
+            ]
           },
           {
             "rule": "select-name",
             "impact": "critical",
-            "count": 1
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Select element must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/select-name?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".input-group:nth-child(3) > select",
+                "html": "<select required=\"\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 4
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.22:1. Recommendation:  change background to #303030.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "html > body > nav > ul > li:nth-child(3) > a",
+                "html": "<a href=\"#\" onclick=\"showPage('registration')\">Registration</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.22:1. Recommendation:  change background to #303030."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > label",
+                "html": "<label>Student Name</label>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.43:1. Recommendation:  change background to #716acd."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > label",
+                "html": "<label>Student ID</label>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.43:1. Recommendation:  change background to #716acd."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > label",
+                "html": "<label>Select Course</label>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.43:1. Recommendation:  change background to #716acd."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
             "impact": "error",
-            "count": 3
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
             "impact": "error",
-            "count": 5
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -200,31 +749,209 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 6
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "a[onclick=\"showPage('profile')\"]",
+                "html": "<a href=\"#\" onclick=\"showPage('profile')\">Student Profile</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.22 (foreground color: #fdcb6e, background color: #d63031, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#fdcb6e",
+                  "bg": "#d63031",
+                  "ratio": 3.22,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(1)",
+                "html": "<th>Course ID</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.87 (foreground color: #ffffff, background color: #0984e3, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#0984e3",
+                  "ratio": 3.87,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(2)",
+                "html": "<th>Course Name</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.87 (foreground color: #ffffff, background color: #0984e3, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#0984e3",
+                  "ratio": 3.87,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(3)",
+                "html": "<th>Credits</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.87 (foreground color: #ffffff, background color: #0984e3, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#0984e3",
+                  "ratio": 3.87,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "th:nth-child(4)",
+                "html": "<th>Status</th>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.87 (foreground color: #ffffff, background color: #0984e3, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#0984e3",
+                  "ratio": 3.87,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".status-enrolled",
+                "html": "<td class=\"status-enrolled\">Enrolled</td>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #00b894, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#00b894",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 6
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.22:1. Recommendation:  change background to #303030.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "html > body > nav > ul > li:nth-child(4) > a",
+                "html": "<a href=\"#\" onclick=\"showPage('profile')\">Student Profile</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.22:1. Recommendation:  change background to #303030."
+              },
+              {
+                "selector": "#profile > div:nth-child(4) > table > thead > tr > th:nth-child(1)",
+                "html": "<th>Course ID</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.87:1. Recommendation:  change background to #0078d5."
+              },
+              {
+                "selector": "#profile > div:nth-child(4) > table > thead > tr > th:nth-child(2)",
+                "html": "<th>Course Name</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.87:1. Recommendation:  change background to #0078d5."
+              },
+              {
+                "selector": "#profile > div:nth-child(4) > table > thead > tr > th:nth-child(3)",
+                "html": "<th>Credits</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.87:1. Recommendation:  change background to #0078d5."
+              },
+              {
+                "selector": "#profile > div:nth-child(4) > table > thead > tr > th:nth-child(4)",
+                "html": "<th>Status</th>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.87:1. Recommendation:  change background to #0078d5."
+              },
+              {
+                "selector": "#profile > div:nth-child(4) > table > tbody > tr:nth-child(1) > td:nth-child(4)",
+                "html": "<td class=\"status-enrolled\">Enrolled</td>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00866c."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
             "impact": "error",
-            "count": 3
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
             "impact": "error",
-            "count": 5
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "#searchInput",
+                "html": "<input type=\"text\" id=\"searchInput\" placeholder=\"Search for courses...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(1) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(2) > input",
+                "html": "<input type=\"text\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
             "impact": "error",
-            "count": 2
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#departmentFilter",
+                "html": "<select id=\"departmentFilter\"> <option va...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#regForm > div:nth-child(3) > select",
+                "html": "<select required=\"\"> <o...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0

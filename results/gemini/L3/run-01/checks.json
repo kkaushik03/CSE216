@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:29:21.477Z",
+  "checked": "2026-11-04T00:37:00.949Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -15,21 +15,73 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".skip-link",
+                "html": "<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"#home\"]",
+                "html": "<a href=\"#home\" class=\"nav-link\" aria-current=\"page\" data-target=\"home\">Home</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "html > body > header > nav > ul > li:nth-child(1) > a",
+                "html": "<a href=\"#home\" class=\"nav-link\" aria-current=\"page\" data-target=\"home\">Home</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#catalog > form",
+                "html": "<form class=\"search-filter-bar\" role=\"search\" aria-label=\"Course search and filter\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -52,21 +104,73 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".skip-link",
+                "html": "<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"#catalog\"]",
+                "html": "<a href=\"#catalog\" class=\"nav-link\" data-target=\"catalog\" aria-current=\"page\">Course Catalog</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "html > body > header > nav > ul > li:nth-child(2) > a",
+                "html": "<a href=\"#catalog\" class=\"nav-link\" data-target=\"catalog\" aria-current=\"page\">Course Catalog</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#catalog > form",
+                "html": "<form class=\"search-filter-bar\" role=\"search\" aria-label=\"Course search and filter\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -89,21 +193,73 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".skip-link",
+                "html": "<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"#registration\"]",
+                "html": "<a href=\"#registration\" class=\"nav-link\" data-target=\"registration\" aria-current=\"page\">Registration</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "html > body > header > nav > ul > li:nth-child(3) > a",
+                "html": "<a href=\"#registration\" class=\"nav-link\" data-target=\"registration\" aria-current=\"page\">Registration</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#catalog > form",
+                "html": "<form class=\"search-filter-bar\" role=\"search\" aria-label=\"Course search and filter\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -126,21 +282,73 @@
           {
             "rule": "color-contrast",
             "impact": "serious",
-            "count": 2
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".skip-link",
+                "html": "<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"#profile\"]",
+                "html": "<a href=\"#profile\" class=\"nav-link\" data-target=\"profile\" aria-current=\"page\">Student Profile</a>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #ffffff, background color: #d9480f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#d9480f",
+                  "ratio": 4.29,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "needs_review": []
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "html > body > header > nav > ul > li:nth-child(4) > a",
+                "html": "<a href=\"#profile\" class=\"nav-link\" data-target=\"profile\" aria-current=\"page\">Student Profile</a>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change background to #d5440b."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#catalog > form",
+                "html": "<form class=\"search-filter-bar\" role=\"search\" aria-label=\"Course search and filter\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0

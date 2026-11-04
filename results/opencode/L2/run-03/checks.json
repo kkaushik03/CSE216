@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:35:03.577Z",
+  "checked": "2026-11-04T02:32:04.184Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -11,7 +11,686 @@
       "name": "home",
       "url": "/index.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 93,
+            "nodes": [
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "a[aria-current=\"page\"]",
+                "html": "<a href=\"index.html\" aria-current=\"page\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Courses</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration <span class=\"nav-badge\" data-registration-count=\"\">2</span><span class=\"sr-only\" data-registration-label=\"\">courses registered</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".nav-badge",
+                "html": "<span class=\"nav-badge\" data-registration-count=\"\">2</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-content > .eyebrow",
+                "html": "<p class=\"eyebrow\"><span class=\"eyebrow-dot\" aria-hidden=\"true\"></span>Spring 2027 registration is open</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#hero-title",
+                "html": "<h1 id=\"hero-title\">Find your next <span class=\"text-gradient\">great idea.</span></h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".text-gradient",
+                "html": "<span class=\"text-gradient\">great idea.</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".hero-lead",
+                "html": "<p class=\"hero-lead\">From artificial intelligence to urban ecology, discover courses designed to stretch your thinking and shape what comes next.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "label",
+                "html": "<label for=\"home-search\">Search courses by name, code, or topic</label>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button",
+                "html": "<button class=\"btn\" type=\"submit\">Search</button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".hero-links > .text-link[href$=\"registration.html\"]",
+                "html": "<a class=\"text-link\" href=\"registration.html\">Plan my schedule</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#term-card-title",
+                "html": "<h2 id=\"term-card-title\">Make room for something new.</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "aside > p",
+                "html": "<p>Registration is open to all continuing students. Build a schedule that feels right for you.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-dates > div:nth-child(1) > dt",
+                "html": "<dt>Classes begin</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-dates > div:nth-child(1) > dd",
+                "html": "<dd>January 19</dd>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-dates > div:nth-child(2) > dt",
+                "html": "<dt>Add/drop deadline</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-dates > div:nth-child(2) > dd",
+                "html": "<dd>January 26</dd>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-dates > div:nth-child(3) > dt",
+                "html": "<dt>Registration closes</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-dates > div:nth-child(3) > dd",
+                "html": "<dd>December 12</dd>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-footer > span:nth-child(2)",
+                "html": "<span><strong>16 courses</strong> across 8 departments</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(2) > strong",
+                "html": "<strong>16 courses</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stats-strip > div:nth-child(1) > dt",
+                "html": "<dt>Courses offered</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stats-strip > div:nth-child(2) > dt",
+                "html": "<dt>Departments</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stats-strip > div:nth-child(3) > dt",
+                "html": "<dt>Average class size</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(4) > dt",
+                "html": "<dt>Ways to learn</dt>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Computer Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">CS 330</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cs-330-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=cs-330\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Design AI systems that are useful, fair, and understandable. Work with real community partners on a semester-long project.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Wed · 15:00–17:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Innovation Hall 118</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 300</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>12</strong> of 28 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>12</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. Elena Rossi</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=cs-330\">Choose course<span class=\"sr-only\"> — CS 330 Human-Centered AI</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Environmental Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">ENV 150</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-env-150-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=env-150\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Examine the science of climate change alongside the social, economic, and ethical questions that shape our response.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon, Wed &amp; Fri · 11:00–11:50</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Online · Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>18</strong> of 60 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>18</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Sofia Alvarez</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=env-150\">Choose course<span class=\"sr-only\"> — ENV 150 Climate &amp; Society</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Design</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">DES 110</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-des-110-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=des-110\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Learn how images, type, color, and composition create meaning. Build a portfolio of visual stories across print and screen.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 09:00–10:15</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Atelier 12</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>5</strong> of 24 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>5</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. James Park</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-registered",
+                "html": "<a class=\"btn btn-small btn-registered\" href=\"registration.html\">View schedule<span class=\"sr-only\"> for DES 110</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".section-heading--center > div > .eyebrow--ink.eyebrow",
+                "html": "<p class=\"eyebrow eyebrow--ink\">Simple by design</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#how-heading",
+                "html": "<h2 id=\"how-heading\">From curious to registered in three steps</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".section-heading--center > div > p:nth-child(3)",
+                "html": "<p>No forms lost in a maze. Just a clear path to your next semester.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step-card--violet > .step-number[aria-hidden=\"true\"]",
+                "html": "<span class=\"step-number\" aria-hidden=\"true\">01</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card--violet > h3",
+                "html": "<h3>Explore the catalog</h3>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card--violet > p",
+                "html": "<p>Search by topic, department, level, or format to find courses that fit your goals.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step-card--violet > .text-link[href$=\"courses.html\"]",
+                "html": "<a class=\"text-link\" href=\"courses.html\">Browse the catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step-card--coral > .step-number[aria-hidden=\"true\"]",
+                "html": "<span class=\"step-number\" aria-hidden=\"true\">02</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card--coral > h3",
+                "html": "<h3>Build your schedule</h3>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card--coral > p",
+                "html": "<p>Pick your course, review the details, and make sure the time works for you.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step-card--coral > .text-link[href$=\"registration.html\"]",
+                "html": "<a class=\"text-link\" href=\"registration.html\">Register for a course</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step-card--teal > .step-number[aria-hidden=\"true\"]",
+                "html": "<span class=\"step-number\" aria-hidden=\"true\">03</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card--teal > h3",
+                "html": "<h3>Make it official</h3>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card--teal > p",
+                "html": "<p>Confirm your registration and see your schedule update instantly in your profile.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".text-link[href$=\"profile.html\"]",
+                "html": "<a class=\"text-link\" href=\"profile.html\">View my profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-brand > p",
+                "html": "<p>Learning that lights the way.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > h2",
+                "html": "<h2>Explore</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Student profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > h2",
+                "html": "<h2>Need a hand?</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > p",
+                "html": "<p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href=\"mailto:registrar@aurora.edu\"]",
+                "html": "<a href=\"mailto:registrar@aurora.edu\">registrar@aurora.edu</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(1)",
+                "html": "<p>© <span data-current-year=\"\">2026</span> Aurora University · Sample course registration system</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[data-current-year=\"\"]",
+                "html": "<span data-current-year=\"\">2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(2)",
+                "html": "<p>Spring 2027 · Registration open</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [],
@@ -26,7 +705,1250 @@
       "name": "Courses",
       "url": "/courses.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 225,
+            "nodes": [
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "a[href$=\"courses.html\"][aria-current=\"page\"]",
+                "html": "<a href=\"courses.html\" aria-current=\"page\">Courses</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration <span class=\"nav-badge\" data-registration-count=\"\">2</span><span class=\"sr-only\" data-registration-label=\"\">courses registered</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".nav-badge",
+                "html": "<span class=\"nav-badge\" data-registration-count=\"\">2</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "ol > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[aria-current=\"page\"]",
+                "html": "<span aria-current=\"page\">Course catalog</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".eyebrow",
+                "html": "<p class=\"eyebrow\"><span class=\"eyebrow-dot\" aria-hidden=\"true\"></span>Spring 2027</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#catalog-title",
+                "html": "<h1 id=\"catalog-title\">Course catalog</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(1) > p:nth-child(3)",
+                "html": "<p>Find the classes that fit your curiosity, your goals, and your week. Filter by department, level, or format to narrow the field.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".catalog-stamp-number",
+                "html": "<span class=\"catalog-stamp-number\">16</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".catalog-stamp-label",
+                "html": "<span class=\"catalog-stamp-label\">courses<br>to explore</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".filter-submit",
+                "html": "<button class=\"btn btn-small filter-submit\" type=\"submit\">Search</button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#department-filter",
+                "html": "<select id=\"department-filter\" name=\"department\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#level-filter",
+                "html": "<select id=\"level-filter\" name=\"level\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#format-filter",
+                "html": "<select id=\"format-filter\" name=\"format\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#sort-courses",
+                "html": "<select id=\"sort-courses\"> <option value=\"recommended\">Recommended</option> <option value=\"title\">Course title</option> <option value=\"seats\">Most seats open</option> <option value=\"level\">Course level</option> </select>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Computer Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">CS 330</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cs-330-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=cs-330\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Design AI systems that are useful, fair, and understandable. Work with real community partners on a semester-long project.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Wed · 15:00–17:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Innovation Hall 118</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 300</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>12</strong> of 28 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>12</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. Elena Rossi</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-330-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=cs-330\">Choose course<span class=\"sr-only\"> — CS 330 Human-Centered AI</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Design</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">DES 110</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-des-110-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=des-110\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Learn how images, type, color, and composition create meaning. Build a portfolio of visual stories across print and screen.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 09:00–10:15</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Atelier 12</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>5</strong> of 24 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>5</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. James Park</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-110-title\"] > .course-card__footer > .btn-registered.btn-small[href$=\"registration.html\"]",
+                "html": "<a class=\"btn btn-small btn-registered\" href=\"registration.html\">View schedule<span class=\"sr-only\"> for DES 110</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Environmental Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">ENV 150</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-env-150-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=env-150\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Examine the science of climate change alongside the social, economic, and ethical questions that shape our response.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon, Wed &amp; Fri · 11:00–11:50</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Online · Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>18</strong> of 60 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>18</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Sofia Alvarez</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-150-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=env-150\">Choose course<span class=\"sr-only\"> — ENV 150 Climate &amp; Society</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Computer Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">CS 101</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cs-101-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=cs-101\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Build a strong foundation in computational thinking while creating small programs in Python. No prior coding experience needed.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon &amp; Wed · 10:00–11:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Innovation Hall 204</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>4 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>8</strong> of 40 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>8</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Maya Chen</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-101-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=cs-101\">Choose course<span class=\"sr-only\"> — CS 101 Introduction to Programming</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Computer Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">CS 205</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cs-205-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=cs-205\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Explore lists, trees, graphs, and hash tables while learning to reason about efficiency and write elegant, reliable code.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 13:00–14:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Hybrid · Innovation Hall 310</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>4 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>3</strong> of 35 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>3</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Omar Rahman</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-cs-205-title\"] > .course-card__footer > .btn-registered.btn-small[href$=\"registration.html\"]",
+                "html": "<a class=\"btn btn-small btn-registered\" href=\"registration.html\">View schedule<span class=\"sr-only\"> for CS 205</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Design</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">DES 240</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-des-240-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=des-240\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Bring stories to life through animation, sound, and rhythm. Experiment with motion principles in a collaborative studio.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon &amp; Wed · 13:00–14:15</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Hybrid · Atelier 8</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>2</strong> of 20 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>2</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. Aisha Bell</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-des-240-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=des-240\">Choose course<span class=\"sr-only\"> — DES 240 Motion Design</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Environmental Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">ENV 310</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-env-310-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=env-310\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Study the ecosystems hidden in cities and help design greener, more resilient neighborhoods through fieldwork.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 14:00–15:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Field Station 2</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>4 credits · Level 300</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>6</strong> of 22 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>6</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Noah Williams</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-env-310-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=env-310\">Choose course<span class=\"sr-only\"> — ENV 310 Urban Ecology</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Business</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">BUS 210</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-bus-210-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=bus-210\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Turn an idea into a viable venture. Validate customer needs, prototype solutions, and pitch to local founders.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon · 18:00–20:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Hybrid · Summit Hall 105</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>14</strong> of 30 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>14</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. Grace Kim</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-210-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=bus-210\">Choose course<span class=\"sr-only\"> — BUS 210 Entrepreneurship</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Business</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">BUS 325</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-bus-325-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=bus-325\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Use data to understand audiences and measure campaigns. Practice with real dashboards, experiments, and market stories.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 10:00–11:15</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Online · Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 300</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>9</strong> of 25 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>9</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Lucas Meyer</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-bus-325-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=bus-325\">Choose course<span class=\"sr-only\"> — BUS 325 Marketing Analytics</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Psychology</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">PSY 101</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-psy-101-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=psy-101\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Discover how people think, feel, and connect. Survey the science of memory, emotion, development, and social behavior.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon, Wed &amp; Fri · 09:00–09:50</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Online · Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>30</strong> of 80 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>30</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Priya Nair</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-101-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=psy-101\">Choose course<span class=\"sr-only\"> — PSY 101 Foundations of Psychology</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Psychology</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">PSY 265</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-psy-265-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=psy-265\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Investigate attention, language, and consciousness through an interdisciplinary lens spanning psychology, AI, and philosophy.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 11:00–12:15</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Mind &amp; Brain Lab 3</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>4</strong> of 28 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>4</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Henry Adams</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-psy-265-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=psy-265\">Choose course<span class=\"sr-only\"> — PSY 265 Cognitive Science</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Mathematics</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">MTH 180</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-mth-180-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=mth-180\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Explore limits, derivatives, and integrals with an emphasis on modeling change in the natural and social world.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Mon–Thu · 08:00–08:50</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Science Center 210</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>4 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>10</strong> of 35 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>10</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Lena Fischer</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-180-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=mth-180\">Choose course<span class=\"sr-only\"> — MTH 180 Calculus I</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Mathematics</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">MTH 240</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-mth-240-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=mth-240\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Master vectors, matrices, and transformations and see how linear algebra powers graphics, data science, and physics.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 13:00–14:15</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Hybrid · Science Center 115</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>7</strong> of 30 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>7</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. Daniel Okafor</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-mth-240-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=mth-240\">Choose course<span class=\"sr-only\"> — MTH 240 Linear Algebra</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Communication</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">COM 130</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-com-130-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=com-130\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Find confidence and clarity as a speaker. Practice persuasive talks, storytelling, and giving thoughtful feedback.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Tue &amp; Thu · 15:30–16:45</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>In person · Story Hall 140</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 100</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>1</strong> of 24 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>1</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">In person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Prof. Nia Thompson</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-130-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=com-130\">Choose course<span class=\"sr-only\"> — COM 130 Public Speaking</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Communication</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">COM 275</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-com-275-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=com-275\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Navigate privacy, misinformation, and algorithmic influence. Build an ethical framework for making and sharing media.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Wed · 10:00–12:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Online · Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>16</strong> of 40 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>16</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Ethan Brooks</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-com-275-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=com-275\">Choose course<span class=\"sr-only\"> — COM 275 Digital Media Ethics</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-card__top > .dept-badge",
+                "html": "<span class=\"dept-badge\">Health Sciences</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-card__top > .course-code",
+                "html": "<span class=\"course-code\">HLT 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-hlt-200-title > .course-title-link",
+                "html": "<a class=\"course-title-link\" href=\"registration.html?course=hlt-200\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-description",
+                "html": "<p class=\"course-description\">Explore the science of food and how nutrition shapes energy, mood, and long-term health across diverse communities.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-facts > li:nth-child(1) > span",
+                "html": "<span>Fri · 12:00–14:30</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-facts > li:nth-child(2) > span",
+                "html": "<span>Hybrid · Wellness Center 4</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-facts > li:nth-child(3) > span",
+                "html": "<span>3 credits · Level 200</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .seat-block > .seat-row > .seat-label",
+                "html": "<span class=\"seat-label\"><strong>11</strong> of 32 seats open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .seat-block > .seat-row > .seat-label > strong",
+                "html": "<strong>11</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .seat-block > .seat-row > .format-badge",
+                "html": "<span class=\"format-badge\">Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-card__footer > .instructor",
+                "html": "<span class=\"instructor\">Dr. Camila Torres</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-hlt-200-title\"] > .course-card__footer > .btn-small.btn",
+                "html": "<a class=\"btn btn-small\" href=\"registration.html?course=hlt-200\">Choose course<span class=\"sr-only\"> — HLT 200 Nutrition &amp; Wellbeing</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".brand--light > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-brand > p",
+                "html": "<p>Learning that lights the way.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > h2",
+                "html": "<h2>Explore</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Student profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > h2",
+                "html": "<h2>Need a hand?</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > p",
+                "html": "<p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href=\"mailto:registrar@aurora.edu\"]",
+                "html": "<a href=\"mailto:registrar@aurora.edu\">registrar@aurora.edu</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(1)",
+                "html": "<p>© <span data-current-year=\"\">2026</span> Aurora University · Sample course registration system</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[data-current-year=\"\"]",
+                "html": "<span data-current-year=\"\">2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(2)",
+                "html": "<p>Spring 2027 · Registration open</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [],
@@ -41,19 +1963,367 @@
       "name": "Registration 2courses registered",
       "url": "/registration.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 35,
+            "nodes": [
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Courses</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "a[href$=\"registration.html\"][aria-current=\"page\"]",
+                "html": "<a href=\"registration.html\" aria-current=\"page\">Registration <span class=\"nav-badge\" data-registration-count=\"\">2</span><span class=\"sr-only\" data-registration-label=\"\">courses registered</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".nav-badge",
+                "html": "<span class=\"nav-badge\" data-registration-count=\"\">2</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "ol > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[aria-current=\"page\"]",
+                "html": "<span aria-current=\"page\">Registration</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".eyebrow",
+                "html": "<p class=\"eyebrow\"><span class=\"eyebrow-dot\" aria-hidden=\"true\"></span>Spring 2027 · Registration closes December 12</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#registration-title",
+                "html": "<h1 id=\"registration-title\">Course registration</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".page-hero-content > div:nth-child(1) > p:nth-child(3)",
+                "html": "<p>Choose a course, review the details, and make it official. Your schedule updates instantly.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-course--violet",
+                "html": "<span class=\"mini-course mini-course--violet\">CS</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-course--coral",
+                "html": "<span class=\"mini-course mini-course--coral\">DES</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-course--teal",
+                "html": "<span class=\"mini-course mini-course--teal\">ENV</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#course-select",
+                "html": "<select id=\"course-select\" name=\"course\" required=\"\" aria-describedby=\"course-select-hint course-select-error\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-wide",
+                "html": "<button class=\"btn btn-wide\" type=\"submit\" aria-haspopup=\"dialog\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[data-schedule-count=\"\"]",
+                "html": "<span class=\"summary-value\" data-schedule-count=\"\">2</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "span[data-schedule-label=\"\"]",
+                "html": "<span class=\"summary-label\" data-schedule-label=\"\">courses</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".summary-value[data-credits-count=\"\"]",
+                "html": "<span class=\"summary-value\" data-credits-count=\"\">7</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(2) > .summary-label",
+                "html": "<span class=\"summary-label\">total credits</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-brand > p",
+                "html": "<p>Learning that lights the way.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > h2",
+                "html": "<h2>Explore</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Student profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > h2",
+                "html": "<h2>Need a hand?</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > p",
+                "html": "<p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href=\"mailto:registrar@aurora.edu\"]",
+                "html": "<a href=\"mailto:registrar@aurora.edu\">registrar@aurora.edu</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(1)",
+                "html": "<p>© <span data-current-year=\"\">2026</span> Aurora University · Sample course registration system</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[data-current-year=\"\"]",
+                "html": "<span data-current-year=\"\">2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(2)",
+                "html": "<p>Spring 2027 · Registration open</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#schedule-table",
+                "html": "<table id=\"schedule-table\"> <caption class...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
           },
           {
             "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
             "impact": "error",
-            "count": 6
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "#main-content > section:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > p > span:nth-child(1)",
+                "html": "<span class=\"required-key\" aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555."
+              },
+              {
+                "selector": "#registration-form > fieldset:nth-child(2) > div:nth-child(2) > label > span",
+                "html": "<span class=\"required-key\" aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555."
+              },
+              {
+                "selector": "#registration-form > div > div > label > span",
+                "html": "<span class=\"required-key\" aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555."
+              },
+              {
+                "selector": "#registration-form > fieldset:nth-child(1) > div > div:nth-child(1) > label > span",
+                "html": "<span class=\"required-key\" aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555."
+              },
+              {
+                "selector": "#registration-form > fieldset:nth-child(1) > div > div:nth-child(2) > label > span",
+                "html": "<span class=\"required-key\" aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555."
+              },
+              {
+                "selector": "#registration-form > fieldset:nth-child(1) > div > div:nth-child(3) > label > span",
+                "html": "<span class=\"required-key\" aria-hidden=\"true\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.52:1. Recommendation:  change text colour to #555."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
@@ -67,14 +2337,398 @@
       "name": "Profile",
       "url": "/profile.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 43,
+            "nodes": [
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".header-inner > .brand[href=\"index.html\"] > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Courses</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".main-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration <span class=\"nav-badge\" data-registration-count=\"\">2</span><span class=\"sr-only\" data-registration-label=\"\">courses registered</span></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".nav-badge",
+                "html": "<span class=\"nav-badge\" data-registration-count=\"\">2</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "a[href$=\"profile.html\"][aria-current=\"page\"]",
+                "html": "<a href=\"profile.html\" aria-current=\"page\">Profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "ol > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[aria-current=\"page\"]",
+                "html": "<span aria-current=\"page\">Profile</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".page-hero-content > div > .eyebrow",
+                "html": "<p class=\"eyebrow\"><span class=\"eyebrow-dot\" aria-hidden=\"true\"></span>Student portal</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-title",
+                "html": "<h1 id=\"profile-title\">Your student profile</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".page-hero-content > div > p:nth-child(3)",
+                "html": "<p>Your academic details, schedule, and progress—all in one place.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-avatar",
+                "html": "<div class=\"profile-avatar\" id=\"profile-avatar\" aria-hidden=\"true\">MT</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "#profile-name",
+                "html": "<h2 id=\"profile-name\">Maya Thompson</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".profile-program",
+                "html": "<p class=\"profile-program\"><span id=\"profile-program\">Computer Science</span> · <span id=\"profile-year\">Second year</span></p>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-program",
+                "html": "<span id=\"profile-program\">Computer Science</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-year",
+                "html": "<span id=\"profile-year\">Second year</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(1) > .profile-tag-label",
+                "html": "<span class=\"profile-tag-label\">Student ID</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-student-id",
+                "html": "<strong id=\"profile-student-id\">AUR-20481</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(2) > .profile-tag-label",
+                "html": "<span class=\"profile-tag-label\">Email</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-email",
+                "html": "<span id=\"profile-email\">maya.thompson@aurora.edu</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#print-schedule",
+                "html": "<button class=\"btn btn-secondary\" id=\"print-schedule\" type=\"button\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-program-input",
+                "html": "<select id=\"profile-program-input\" name=\"program\" required=\"\" aria-describedby=\"profile-program-input-error\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-year-input",
+                "html": "<select id=\"profile-year-input\" name=\"year\" required=\"\" aria-describedby=\"profile-year-input-error\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[type=\"submit\"]",
+                "html": "<button class=\"btn\" type=\"submit\">Save changes</button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".eyebrow--ink",
+                "html": "<p class=\"eyebrow eyebrow--ink\">Spring 2027</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#courses-heading",
+                "html": "<h2 id=\"courses-heading\">My registered courses</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".section-heading > div > p:nth-child(3)",
+                "html": "<p>Review your current schedule or make a change.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".text-link",
+                "html": "<a class=\"text-link text-link--arrow\" href=\"courses.html\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > span",
+                "html": "<span>Aurora</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand--light > .brand-text > small",
+                "html": "<small>University</small>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-brand > p",
+                "html": "<p>Learning that lights the way.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > h2",
+                "html": "<h2>Explore</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(2) > a[href$=\"courses.html\"]",
+                "html": "<a href=\"courses.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(3) > a[href$=\"registration.html\"]",
+                "html": "<a href=\"registration.html\">Registration</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-nav > ul > li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">Student profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > h2",
+                "html": "<h2>Need a hand?</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-contact > p",
+                "html": "<p>Registrar’s Office<br>Mon–Fri · 9:00–17:00</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href=\"mailto:registrar@aurora.edu\"]",
+                "html": "<a href=\"mailto:registrar@aurora.edu\">registrar@aurora.edu</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(1)",
+                "html": "<p>© <span data-current-year=\"\">2026</span> Aurora University · Sample course registration system</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span[data-current-year=\"\"]",
+                "html": "<span data-current-year=\"\">2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-bottom > p:nth-child(2)",
+                "html": "<p>Spring 2027 · Registration open</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-table",
+                "html": "<table id=\"profile-table\"> <caption class=\"...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0

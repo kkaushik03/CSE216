@@ -1,7 +1,7 @@
 {
-  "checked": "2026-11-02T20:19:27.319Z",
+  "checked": "2026-11-04T00:27:53.274Z",
   "tools": {
-    "chromium": "Chrome/156.0.8078.73",
+    "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
     "lighthouse": "13.6.0"
@@ -11,7 +11,116 @@
       "name": "home",
       "url": "/index.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 15,
+            "nodes": [
+              {
+                "selector": ".brand-name",
+                "html": "<span class=\"brand-name\">Northfield University</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Course Registration</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(2) > a[href$=\"catalog.html\"]",
+                "html": "<a href=\"catalog.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(3) > a[href$=\"register.html\"]",
+                "html": "<a href=\"register.html\">Register</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">My profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".hero-eyebrow",
+                "html": "<p class=\"hero-eyebrow\">Spring 2027 registration is open</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#hero-title",
+                "html": "<h1 id=\"hero-title\">Build your perfect semester</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-lead",
+                "html": "<p class=\"hero-lead\">Explore courses across six departments, check seat availability in real time, and register in a few simple steps.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-light",
+                "html": "<a class=\"btn btn-light\" href=\"catalog.html\">Browse the course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-outline-light",
+                "html": "<a class=\"btn btn-outline-light\" href=\"register.html\">Start your registration</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "label",
+                "html": "<label for=\"home-search\">Search courses</label>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#home-search",
+                "html": "<input type=\"search\" id=\"home-search\" name=\"q\" autocomplete=\"off\" aria-describedby=\"home-search-hint\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-accent",
+                "html": "<button type=\"submit\" class=\"btn btn-accent\">Search</button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "li:nth-child(1) > h3",
+                "html": "<h3>Find courses</h3>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "li:nth-child(2) > h3",
+                "html": "<h3>Choose your term</h3>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [],
@@ -26,7 +135,186 @@
       "name": "Course catalog",
       "url": "/catalog.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 25,
+            "nodes": [
+              {
+                "selector": ".brand-name",
+                "html": "<span class=\"brand-name\">Northfield University</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Course Registration</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"register.html\"]",
+                "html": "<a href=\"register.html\">Register</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">My profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "h1",
+                "html": "<h1>Course catalog</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".page-intro > .container > p",
+                "html": "<p>Search all courses offered for 2027. Use the filters to narrow results; the list updates as you type.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#filter-dept",
+                "html": "<select id=\"filter-dept\" name=\"dept\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#filter-level",
+                "html": "<select id=\"filter-level\" name=\"level\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#filter-credits",
+                "html": "<select id=\"filter-credits\" name=\"credits\"> <option value=\"\">Any number of credits</option> <option value=\"3\">3 credits</option> <option value=\"4\">4 credits</option> </select>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-CS101-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-CS201-title\"] > .card-body > .card-footer > .badge--full.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">✕</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-CS310-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".badge--registered > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">✓</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-MATH220-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-BIO110-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-BIO240-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-BIO350-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-HIST105-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-HIST230-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-HIST410-title\"] > .card-body > .card-footer > .badge--full.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">✕</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-ENGL101-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-ENGL340-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-PHYS150-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "article[aria-labelledby=\"course-PHYS250-title\"] > .card-body > .card-footer > .badge--open.badge > span[aria-hidden=\"true\"]",
+                "html": "<span aria-hidden=\"true\">●</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [],
@@ -41,7 +329,102 @@
       "name": "Register",
       "url": "/register.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 9,
+            "nodes": [
+              {
+                "selector": ".brand-name",
+                "html": "<span class=\"brand-name\">Northfield University</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Course Registration</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(2) > a[href$=\"catalog.html\"]",
+                "html": "<a href=\"catalog.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(4) > a[href$=\"profile.html\"]",
+                "html": "<a href=\"profile.html\">My profile</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "h1",
+                "html": "<h1>Course registration</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".page-intro > .container > p",
+                "html": "<p>Complete the form below to register. Fields marked with an asterisk (<span aria-hidden=\"true\">*</span><span class=\"visually-hidden\">star</span>) are required.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#term",
+                "html": "<select id=\"term\" name=\"term\" required=\"\" aria-required=\"true\" aria-describedby=\"term-error\"> <option value=\"\">Select a term</option> <option value=\"Spring 2027\">Spring 2027</option><option value=\"Summer 2027\">Summer 2027</option></select>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#summary-title",
+                "html": "<h2 id=\"summary-title\">Your selection</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [],
@@ -56,14 +439,129 @@
       "name": "My profile",
       "url": "/profile.html",
       "axe": {
-        "issues": []
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": ".brand-name",
+                "html": "<span class=\"brand-name\">Northfield University</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Course Registration</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(1) > a[href=\"index.html\"]",
+                "html": "<a href=\"index.html\">Home</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(2) > a[href$=\"catalog.html\"]",
+                "html": "<a href=\"catalog.html\">Course catalog</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "a[href$=\"register.html\"]",
+                "html": "<a href=\"register.html\">Register</a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "h1",
+                "html": "<h1>Student profile</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".page-intro > .container > p",
+                "html": "<p>Update your details and manage the courses you are registered for.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#avatar",
+                "html": "<div class=\"avatar\" id=\"avatar\" aria-hidden=\"true\">JR</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "#p-major",
+                "html": "<select id=\"p-major\" name=\"major\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#p-year",
+                "html": "<select id=\"p-year\" name=\"year\"> <option>Freshman</option> <option>Sophomore</option> <option>Junior</option> <option>Senior</option> </select>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background image",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
       },
       "pa11y": {
         "issues": [
           {
             "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
             "impact": "error",
-            "count": 1
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#table-wrap > table",
+                "html": "<table> <caption id=\"reg-c...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
           }
         ],
         "ignored_route_links": 0
