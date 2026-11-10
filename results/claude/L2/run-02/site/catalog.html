@@ -1,126 +1,137 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search and filter all courses offered at Horizon University.">
-  <meta name="theme-color" content="#4338ca">
-  <title>Course Catalog | Horizon University Registration</title>
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <title>Course catalog · Northbridge University Course Registration</title>
+  <meta name="description" content="Search and filter all courses offered at Northbridge University.">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="catalog.js" defer></script>
 </head>
-<body data-page="catalog">
+<body>
   <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
-    <nav class="container nav-bar" aria-label="Main">
+    <nav class="container nav" aria-label="Main">
       <a class="brand" href="index.html">
-        <span class="brand-logo" aria-hidden="true">🎓</span>
-        Horizon University
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span>Northbridge University<span class="brand__sub">Course Registration</span></span>
       </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
         Menu
       </button>
-      <div class="nav-menu" id="primary-menu">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="catalog.html" aria-current="page">Course Catalog</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="profile.html">My Profile<span class="nav-badge" id="nav-reg-count" aria-hidden="true" hidden>0</span><span class="visually-hidden" id="nav-reg-count-label"></span></a></li>
+      <div class="nav__menu" id="primary-menu">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html"><span aria-hidden="true">🏠</span> Home</a></li>
+          <li><a class="nav__link" href="catalog.html" aria-current="page"><span aria-hidden="true">📚</span> Course catalog</a></li>
+          <li><a class="nav__link" href="register.html"><span aria-hidden="true">📝</span> Registration <span class="nav__badge" id="nav-selected-count" hidden></span></a></li>
+          <li><a class="nav__link" href="profile.html"><span aria-hidden="true">🎓</span> My profile</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main id="main" tabindex="-1">
-    <div class="page-hero">
-      <div class="container">
-        <h1>Course Catalog</h1>
-        <p>Search by keyword, then narrow results by department, level, and credit hours.</p>
+    <div class="container">
+      <div class="page-head">
+        <p class="eyebrow">Spring 2027</p>
+        <h1>Course catalog</h1>
+        <p>Search by keyword or narrow the list with the filters. Add courses to your selection, then continue to registration.</p>
       </div>
-    </div>
 
-    <div class="section container">
-      <form class="filters" id="filter-form" role="search" aria-label="Filter courses">
-        <div class="field field-search">
-          <label for="search">Search courses</label>
-          <input type="search" id="search" name="q" placeholder="Title, code, instructor…" autocomplete="off" aria-describedby="search-hint">
-          <span class="hint" id="search-hint">Results update as you type.</span>
-        </div>
-        <div class="field">
-          <label for="filter-dept">Department</label>
-          <select id="filter-dept" name="dept">
-            <option value="">All departments</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="filter-level">Course level</label>
-          <select id="filter-level" name="level">
-            <option value="">All levels</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="filter-credits">Credits</label>
-          <select id="filter-credits" name="credits">
-            <option value="">Any credits</option>
-          </select>
-        </div>
-        <div class="filters-footer">
-          <label class="checkbox" for="filter-open">
-            <input type="checkbox" id="filter-open" name="open" value="1">
-            Show only courses with open seats
-          </label>
-          <div class="form-actions" style="margin:0">
-            <button type="submit" class="btn btn-primary btn-sm">Apply filters</button>
-            <button type="reset" class="btn btn-outline btn-sm">Reset filters</button>
+      <form class="filters" id="filters" role="search" aria-label="Filter courses" novalidate>
+        <div class="filters__grid">
+          <div class="field filters__search">
+            <label for="q">Search courses</label>
+            <input type="search" id="q" name="q" autocomplete="off" aria-describedby="q-hint">
+            <p class="hint" id="q-hint">Matches course code, title, instructor or description. Results update as you type.</p>
           </div>
+          <div class="field">
+            <label for="dept">Department</label>
+            <select id="dept" name="dept">
+              <option value="">All departments</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="level">Level</label>
+            <select id="level" name="level">
+              <option value="">All levels</option>
+              <option value="100">100 – Introductory</option>
+              <option value="200">200 – Intermediate</option>
+              <option value="300">300 – Advanced</option>
+              <option value="400">400 – Senior</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="credits">Credits</label>
+            <select id="credits" name="credits">
+              <option value="">Any credits</option>
+              <option value="3">3 credits</option>
+              <option value="4">4 credits</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="day">Meets on</label>
+            <select id="day" name="day">
+              <option value="">Any day</option>
+              <option value="Mon">Monday</option>
+              <option value="Tue">Tuesday</option>
+              <option value="Wed">Wednesday</option>
+              <option value="Thu">Thursday</option>
+              <option value="Fri">Friday</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+              <option value="code">Course code</option>
+              <option value="title">Title (A–Z)</option>
+              <option value="seats">Most open seats</option>
+              <option value="credits">Credits (high to low)</option>
+            </select>
+          </div>
+        </div>
+        <div class="filters__actions">
+          <label class="check" for="open">
+            <input type="checkbox" id="open" name="open">
+            <span>Only show courses with open seats</span>
+          </label>
+          <button type="reset" class="btn btn--ghost btn--small" id="clear-filters">Clear all filters</button>
         </div>
       </form>
 
-      <section aria-labelledby="results-title">
-        <h2 id="results-title" class="visually-hidden">Search results</h2>
-        <p class="results-count" id="results-count">Loading courses…</p>
-        <ul class="grid" id="course-list"></ul>
-        <div class="empty-state" id="no-results" hidden>
-          <p class="empty-state-icon" aria-hidden="true">🔍</p>
-          <h3>No courses match your search</h3>
-          <p>Try a different keyword or remove some filters.</p>
-          <button type="button" class="btn btn-primary" id="clear-filters">Clear all filters</button>
+      <div class="results-bar">
+        <p id="results-count" role="status" aria-live="polite" aria-atomic="true">Loading courses…</p>
+        <div class="selection-bar" id="selection-bar" hidden>
+          <p id="selection-text"></p>
+          <a class="btn btn--primary btn--small" href="register.html">Continue to registration</a>
         </div>
-      </section>
+      </div>
+
+      <h2 class="visually-hidden" id="results-title">Results</h2>
+      <ul class="card-grid" id="course-list" aria-labelledby="results-title"></ul>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <p><strong>No courses match your search.</strong></p>
+        <p>Try a different keyword or clear the filters.</p>
+        <button type="button" class="btn btn--primary" id="empty-clear">Clear all filters</button>
+      </div>
+
+      <noscript>
+        <p class="alert alert--warning">The course catalog needs JavaScript to display courses.</p>
+      </noscript>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Horizon University · Office of the Registrar</p>
-      <ul class="footer-links">
-        <li><a href="catalog.html">Course Catalog</a></li>
-        <li><a href="mailto:registrar@horizon.edu">registrar@horizon.edu</a></li>
-        <li><a href="tel:+15555550123">(555) 555-0123</a></li>
-      </ul>
+    <div class="container footer__inner">
+      <p>&copy; <span id="footer-year">2026</span> Northbridge University · Demo app with sample data</p>
+      <p><a href="index.html">Home</a> · <a href="catalog.html">Catalog</a> · <a href="register.html">Registration</a> · <a href="profile.html">Profile</a></p>
     </div>
   </footer>
-
-  <!-- Shared confirmation modal -->
-  <dialog class="modal" id="confirm-modal" aria-labelledby="modal-title" aria-describedby="modal-body">
-    <div class="modal-header">
-      <h2 id="modal-title">Confirm</h2>
-      <button type="button" class="modal-close" data-modal-close aria-label="Close dialog">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body" id="modal-body"></div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline" id="modal-cancel" data-modal-close>Cancel</button>
-      <button type="button" class="btn btn-primary" id="modal-confirm">Confirm</button>
-    </div>
-  </dialog>
-
-  <!-- Polite live region for dynamic status announcements -->
-  <div id="live-region" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>

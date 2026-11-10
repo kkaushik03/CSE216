@@ -3,74 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UniReg · Student Profile</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>My Profile · PrismU Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="profile">
-  <main>
-    <section class="page-header" style="--from:#e84393; --to:#fdcb6e">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">🎓</span><span>Prism<strong>U</strong></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="catalog.html" data-page="catalog">Course Catalog</a></li>
+        <li><a href="register.html" data-page="register">Register</a></li>
+        <li><a href="profile.html" data-page="profile">My Profile <span class="nav-badge" id="nav-badge" hidden>0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-banner banner-profile">
       <div class="container">
-        <h1>👤 Student Profile</h1>
-        <p>Your personal details, enrollment summary, and weekly schedule.</p>
+        <h1>Student Profile</h1>
+        <p>Your details and registered courses.</p>
       </div>
     </section>
 
     <section class="container profile-layout">
-      <aside class="card profile-card" id="profile-card"></aside>
+      <aside class="card profile-card">
+        <div class="avatar" id="avatar" aria-hidden="true"></div>
+        <h2 id="profile-name"></h2>
+        <p class="muted" id="profile-sub"></p>
+        <dl class="detail-list" id="profile-details"></dl>
+
+        <form id="edit-form" class="edit-form" hidden>
+          <div class="field"><label for="edit-first">First name</label><input id="edit-first" type="text" required></div>
+          <div class="field"><label for="edit-last">Last name</label><input id="edit-last" type="text" required></div>
+          <div class="field"><label for="edit-email">Email</label><input id="edit-email" type="email" required></div>
+          <div class="field"><label for="edit-major">Major</label><input id="edit-major" type="text"></div>
+          <div class="field">
+            <label for="edit-year">Year</label>
+            <select id="edit-year">
+              <option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="edit-cancel">Cancel</button>
+            <button class="btn btn-primary btn-sm" type="submit">Save</button>
+          </div>
+        </form>
+        <button class="btn btn-secondary btn-block" id="edit-btn" type="button">✏️ Edit profile</button>
+      </aside>
 
       <div class="profile-main">
-        <div class="stats mini">
-          <div class="stat-card" style="--accent:#6c5ce7"><span class="stat-icon">📚</span><strong id="p-courses">0</strong><span>Courses</span></div>
-          <div class="stat-card" style="--accent:#00b894"><span class="stat-icon">🎯</span><strong id="p-credits">0</strong><span>Credits</span></div>
-          <div class="stat-card" style="--accent:#0984e3"><span class="stat-icon">➕</span><strong id="p-remaining">0</strong><span>Credits available</span></div>
-          <div class="stat-card" style="--accent:#e84393"><span class="stat-icon">🏷️</span><strong id="p-status" class="text-stat">—</strong><span>Status</span></div>
+        <div class="stats-grid" id="profile-stats"></div>
+
+        <div class="card table-card">
+          <div class="section-head">
+            <h2>Registered courses</h2>
+            <div class="table-actions">
+              <a class="btn btn-primary btn-sm" href="catalog.html">+ Add courses</a>
+              <button class="btn btn-ghost btn-sm" id="drop-all" type="button">Drop all</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="reg-table">
+              <caption class="sr-only">Registered courses. Select a column header to sort.</caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="id" tabindex="0">Code</th>
+                  <th scope="col" data-sort="title" tabindex="0">Title</th>
+                  <th scope="col" data-sort="instructor" tabindex="0">Instructor</th>
+                  <th scope="col" data-sort="days" tabindex="0">Schedule</th>
+                  <th scope="col" data-sort="room" tabindex="0">Room</th>
+                  <th scope="col" data-sort="credits" tabindex="0">Credits</th>
+                  <th scope="col">Grading</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+              <tfoot>
+                <tr><td colspan="5">Total credits</td><td id="table-total">0</td><td colspan="2"></td></tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="empty-state" id="table-empty" hidden>
+            <span aria-hidden="true">📭</span>
+            <h3>No registered courses yet</h3>
+            <p>Head to the catalog to find courses you love.</p>
+            <a class="btn btn-primary" href="catalog.html">Browse catalog</a>
+          </div>
         </div>
-
-        <div class="card">
-          <h3>🗓️ Weekly Schedule</h3>
-          <div class="weekly-schedule" id="weekly-schedule"></div>
-        </div>
-
-        <details class="card edit-card">
-          <summary><h3>✏️ Edit Profile</h3></summary>
-          <form id="profile-form" class="form-grid" novalidate>
-            <div class="field"><label for="p-name">Full name</label><input id="p-name" name="name" type="text" required></div>
-            <div class="field"><label for="p-id">Student ID</label><input id="p-id" name="studentId" type="text"></div>
-            <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required></div>
-            <div class="field"><label for="p-phone">Phone</label><input id="p-phone" name="phone" type="tel" placeholder="(555) 123-4567"></div>
-            <div class="field">
-              <label for="p-major">Major</label>
-              <select id="p-major" name="major">
-                <option>Computer Science</option><option>Mathematics</option><option>Biology</option><option>Fine Arts</option>
-                <option>Business</option><option>Physics</option><option>English</option><option>Undeclared</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="p-year">Academic year</label>
-              <select id="p-year" name="year">
-                <option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate</option>
-              </select>
-            </div>
-            <div class="field"><label for="p-advisor">Advisor</label><input id="p-advisor" name="advisor" type="text"></div>
-            <div class="form-actions full">
-              <button type="reset" class="btn btn-ghost">Revert</button>
-              <button type="submit" class="btn btn-primary">Save Changes</button>
-            </div>
-          </form>
-        </details>
       </div>
-    </section>
-
-    <section class="container section">
-      <div class="section-head">
-        <h2>📋 Registered Courses</h2>
-        <a href="register.html" class="link-arrow">Add courses →</a>
-      </div>
-      <div id="profile-table" class="card table-card"></div>
     </section>
   </main>
 
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> PrismU Course Registration · Demo application with sample data</p>
+  </footer>
+
+  <div class="modal-overlay" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon" id="modal-icon" aria-hidden="true">✓</div>
+      <h2 id="modal-title">Confirm</h2>
+      <div id="modal-body"></div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="modal-cancel" type="button">Cancel</button>
+        <button class="btn btn-primary" id="modal-confirm" type="button">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

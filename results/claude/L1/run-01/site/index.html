@@ -3,77 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home · Horizon University</title>
+  <title>UniReg · Home</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="home">
-  <a class="skip-link" href="#main">Skip to content</a>
   <header id="site-header"></header>
 
-  <main id="main">
+  <main>
     <section class="hero">
-      <div class="hero-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="container hero-inner">
-        <p class="eyebrow">Fall 2026 registration is open 🎉</p>
-        <h1>Build your <span class="gradient-text">perfect semester</span></h1>
-        <p class="lead">Explore courses across every department, check schedules and seats in real time, and register in just a few clicks.</p>
-
-        <form id="hero-search" class="hero-search" role="search">
-          <label class="sr-only" for="hero-query">Search courses</label>
-          <input id="hero-query" type="search" placeholder="Search by course, code or instructor…">
-          <label class="sr-only" for="hero-dept">Department</label>
-          <select id="hero-dept">
-            <option value="">All departments</option>
-          </select>
-          <button class="btn btn-primary" type="submit">🔍 Search</button>
-        </form>
-
-        <div class="hero-actions">
-          <a class="btn btn-light" href="catalog.html">Browse catalog</a>
-          <a class="btn btn-outline-light" href="register.html">Register now →</a>
+        <div class="hero-text">
+          <p class="eyebrow">Spring 2027 registration is open</p>
+          <h1>Build your perfect <span class="gradient-text">semester</span></h1>
+          <p class="lead">Browse courses across every department, compare schedules, and register in a few clicks.</p>
+          <form class="hero-search" action="catalog.html" method="get" role="search">
+            <label for="hero-q" class="sr-only">Search courses</label>
+            <input id="hero-q" name="q" type="search" placeholder="Search by course, code or instructor…">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="catalog.html">Browse catalog</a>
+            <a class="btn btn-outline-light" href="register.html">Register now</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bubble b1">📚</div>
+          <div class="bubble b2">🧪</div>
+          <div class="bubble b3">🎨</div>
+          <div class="bubble b4">💻</div>
+          <div class="bubble b5">📐</div>
         </div>
       </div>
     </section>
 
-    <section class="container stats">
-      <div class="stat-card c1"><span class="stat-icon">📚</span><strong id="stat-courses">0</strong><span>Courses offered</span></div>
-      <div class="stat-card c2"><span class="stat-icon">🏛️</span><strong id="stat-depts">0</strong><span>Departments</span></div>
-      <div class="stat-card c3"><span class="stat-icon">💺</span><strong id="stat-seats">0</strong><span>Open seats</span></div>
-      <div class="stat-card c4"><span class="stat-icon">📅</span><strong>Nov 15</strong><span>Registration deadline</span></div>
+    <section class="container stats-row" aria-label="Quick stats">
+      <div class="stat-card c1"><span class="stat-num" id="stat-courses">0</span><span>Courses offered</span></div>
+      <div class="stat-card c2"><span class="stat-num" id="stat-depts">0</span><span>Departments</span></div>
+      <div class="stat-card c3"><span class="stat-num" id="stat-open">0</span><span>Open courses</span></div>
+      <div class="stat-card c4"><span class="stat-num" id="stat-mine">0</span><span>My registrations</span></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">Explore by department</h2>
+      <div class="dept-grid" id="dept-grid"></div>
     </section>
 
     <section class="container section">
       <div class="section-head">
-        <h2>Explore departments</h2>
+        <h2 class="section-title">Featured open courses</h2>
         <a href="catalog.html" class="link-arrow">View all courses →</a>
       </div>
-      <div id="dept-grid" class="dept-grid"></div>
+      <div class="course-grid" id="featured-grid"></div>
     </section>
 
     <section class="container section">
-      <div class="section-head">
-        <h2>🔥 Popular this semester</h2>
-        <a href="catalog.html" class="link-arrow">See more →</a>
-      </div>
-      <div id="featured-grid" class="course-grid"></div>
-    </section>
-
-    <section class="container section">
-      <h2>How registration works</h2>
+      <h2 class="section-title">How it works</h2>
       <ol class="steps">
         <li class="step s1"><span class="step-num">1</span><h3>Browse</h3><p>Search and filter the catalog to find courses that fit your goals.</p></li>
-        <li class="step s2"><span class="step-num">2</span><h3>Select</h3><p>Pick your courses — we check credit limits and time conflicts for you.</p></li>
-        <li class="step s3"><span class="step-num">3</span><h3>Confirm</h3><p>Review your choices and confirm. Your schedule appears in your profile.</p></li>
+        <li class="step s2"><span class="step-num">2</span><h3>Register</h3><p>Pick your courses, check your credit load and submit the form.</p></li>
+        <li class="step s3"><span class="step-num">3</span><h3>Manage</h3><p>Review your schedule and drop courses from your profile anytime.</p></li>
       </ol>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="footer-year"></span> Horizon University · Office of the Registrar</p>
-    <p class="footer-links"><a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="register.html">Register</a><a href="profile.html">Profile</a></p>
-  </footer>
+  <footer id="site-footer" class="site-footer"></footer>
 
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

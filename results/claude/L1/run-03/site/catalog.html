@@ -3,83 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Catalog — UniReg</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Course Catalog · Horizon University</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="catalog">
-  <header id="site-header"></header>
-
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-logo">🎓</span> Horizon University</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="home">🏠 Home</a></li>
+        <li><a href="catalog.html" data-page="catalog">📚 Catalog</a></li>
+        <li><a href="register.html" data-page="register">📝 Register</a></li>
+        <li><a href="profile.html" data-page="profile">👤 Profile <span class="badge" id="nav-badge">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <section class="page-header">
-      <div class="container">
-        <h1>📚 Course Catalog</h1>
-        <p>Search, filter and register for courses offered this semester.</p>
-      </div>
+    <section class="page-header header-catalog">
+      <h1>📚 Course Catalog</h1>
+      <p>Find the courses that fit your goals and schedule.</p>
     </section>
 
-    <section class="container">
-      <form class="toolbar" id="filters" role="search" onsubmit="return false">
-        <div class="field search-field">
-          <label for="search">Search</label>
-          <div class="search-wrap">
-            <input class="input" type="search" id="search" placeholder="Course name, code or instructor…">
-          </div>
-        </div>
-        <div class="field">
-          <label for="dept">Department</label>
-          <select id="dept">
-            <option value="">All departments</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="level">Level</label>
-          <select id="level">
-            <option value="">All levels</option>
-            <option value="100">100 – Introductory</option>
-            <option value="200">200 – Intermediate</option>
-            <option value="300">300 – Advanced</option>
-            <option value="400">400 – Senior</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="credits">Credits</label>
-          <select id="credits">
-            <option value="">Any credits</option>
-            <option value="2">2 credits</option>
-            <option value="3">3 credits</option>
-            <option value="4">4 credits</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="sort">Sort by</label>
-          <select id="sort">
-            <option value="code">Course code</option>
-            <option value="title">Title (A–Z)</option>
-            <option value="seats">Most seats open</option>
-            <option value="credits">Credits (high–low)</option>
-          </select>
-        </div>
-        <div class="field reset-field">
-          <button type="button" class="btn btn-ghost" id="reset">↺ Reset</button>
-        </div>
-      </form>
-
-      <div class="results-bar">
-        <p id="result-count" aria-live="polite"></p>
-        <div class="chip-row" id="day-chips" aria-label="Filter by day"></div>
+    <section class="toolbar" aria-label="Search and filters">
+      <div class="search-field">
+        <label for="q">Search</label>
+        <input type="search" id="q" placeholder="Title, code, instructor…">
       </div>
-
-      <div class="course-grid" id="course-grid"></div>
+      <div>
+        <label for="f-dept">Department</label>
+        <select id="f-dept"><option value="">All departments</option></select>
+      </div>
+      <div>
+        <label for="f-level">Level</label>
+        <select id="f-level">
+          <option value="">All levels</option>
+          <option value="100">100 – Intro</option>
+          <option value="200">200 – Intermediate</option>
+          <option value="300">300 – Advanced</option>
+          <option value="400">400 – Senior</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-credits">Credits</label>
+        <select id="f-credits">
+          <option value="">Any credits</option>
+          <option value="3">3 credits</option>
+          <option value="4">4 credits</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-avail">Availability</label>
+        <select id="f-avail">
+          <option value="">All courses</option>
+          <option value="open">Open seats</option>
+          <option value="registered">My courses</option>
+        </select>
+      </div>
     </section>
+    <div class="section-title" style="margin-top:0">
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <button class="btn btn-sm btn-outline" id="reset">Reset filters</button>
+    </div>
+    <div class="course-grid" id="catalog-grid"></div>
   </main>
-
-  <footer class="site-footer">
-    <div class="rainbow"></div>
-    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/catalog.js"></script>
+  <footer class="footer">© 2026 Horizon University · Course Registration Demo (sample data, stored in your browser)</footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="catalog.js"></script>
 </body>
 </html>

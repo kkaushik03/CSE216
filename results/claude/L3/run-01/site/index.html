@@ -3,132 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home – Northfield University Course Registration</title>
-  <meta name="description" content="Browse courses, register for classes and manage your schedule at Northfield University.">
-  <link rel="stylesheet" href="css/styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <title>Home – Northbridge University Course Registration</title>
+  <meta name="description" content="Search courses, plan your schedule and register for Spring 2027 classes at Northbridge University.">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="data.js" defer></script>
+  <script src="common.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
-    <div class="header-inner">
+    <div class="container header-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">NU</span>
-        <span>Northfield University <span class="brand-sub">Course Registration</span></span>
+        <svg class="brand-logo" aria-hidden="true" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#ffd23f"/><path d="M8 16 20 9l12 7-12 7z" fill="#2d1160"/><path d="M13 19v7c0 2 3.5 4 7 4s7-2 7-4v-7l-7 4z" fill="#b4005a"/><path d="M31 16v8" stroke="#2d1160" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Northbridge University<span class="brand-sub">Course Registration</span></span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
-      </button>
-      <nav class="primary-nav" id="primary-nav" aria-label="Main">
-        <ul>
+      <nav class="site-nav" aria-label="Main">
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <svg class="icon icon-open" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <svg class="icon icon-close" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          Menu
+        </button>
+        <ul class="nav-list" id="primary-menu">
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="catalog.html">Course catalog</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="profile.html">My profile</a></li>
+          <li><a href="register.html">Registration <span class="nav-count" data-plan-count hidden></span></a></li>
+          <li><a href="profile.html">Student profile</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-heading">
-      <span class="blob blob-1" aria-hidden="true"></span>
-      <span class="blob blob-3" aria-hidden="true"></span>
+    <section class="hero" aria-labelledby="page-title">
       <div class="container">
-        <p class="hero-eyebrow">Spring 2027 registration is open</p>
-        <h1 id="hero-heading">Build a semester you’ll love</h1>
-        <p class="hero-lead">Explore courses across eight departments, check open seats in real time and register in just a few steps.</p>
+        <p class="eyebrow">Spring 2027 registration is open</p>
+        <h1 id="page-title">Find your courses and register in <span class="highlight">three easy steps</span></h1>
+        <p>Browse 17 courses across 7 departments, build your plan and confirm your registration, all in one place.</p>
 
-        <form class="hero-search" action="catalog.html" method="get" role="search" aria-label="Quick course search">
+        <form class="hero-search" role="search" action="catalog.html" method="get">
           <label for="home-search">Search the course catalog</label>
           <div class="search-row">
-            <input type="search" id="home-search" name="q" aria-describedby="home-search-hint" autocomplete="off">
-            <button type="submit" class="btn btn-light">Search courses</button>
+            <input type="search" id="home-search" name="q" placeholder="For example: biology, CSE 216 or Dr. Chen">
+            <button type="submit" class="btn btn-yellow">Search courses</button>
           </div>
-          <p class="hint" id="home-search-hint">Try a course title, code such as “CS 220”, or an instructor’s name.</p>
         </form>
 
         <div class="hero-actions">
-          <a class="btn btn-light" href="catalog.html">Browse all courses</a>
-          <a class="btn btn-outline-light" href="profile.html">View my schedule</a>
+          <a class="btn btn-outline-light" href="catalog.html">Browse all courses</a>
+          <a class="btn btn-outline-light" href="register.html">Start registration</a>
         </div>
       </div>
     </section>
 
     <div class="container">
-      <section aria-labelledby="stats-heading">
-        <h2 id="stats-heading" class="visually-hidden">Registration at a glance</h2>
-        <ul class="stats" id="home-stats">
-          <li class="stat accent-indigo"><span class="stat-value" id="stat-courses">–</span><span class="stat-label">Courses offered</span></li>
-          <li class="stat accent-teal"><span class="stat-value" id="stat-depts">–</span><span class="stat-label">Departments</span></li>
-          <li class="stat accent-rose"><span class="stat-value" id="stat-registered">–</span><span class="stat-label">Courses you’re registered for</span></li>
-          <li class="stat accent-amber"><span class="stat-value" id="stat-credits">–</span><span class="stat-label">Credits this term</span></li>
+      <section class="section" aria-labelledby="steps-title">
+        <h2 id="steps-title">How registration works</h2>
+        <ol class="steps">
+          <li class="step">
+            <h3>Find courses</h3>
+            <p>Search the <a href="catalog.html">course catalog</a> and filter by department, level, credits or open seats.</p>
+          </li>
+          <li class="step">
+            <h3>Add them to your plan</h3>
+            <p>Select “Add to plan” on each course card. Your plan is saved on this device.</p>
+          </li>
+          <li class="step">
+            <h3>Confirm your registration</h3>
+            <p>On the <a href="register.html">registration page</a>, check your details and confirm. See your courses on your <a href="profile.html">student profile</a>.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="dept-title">
+        <h2 id="dept-title">Browse by department</h2>
+        <ul class="dept-tiles" id="dept-tiles">
+          <li><a class="dept-tile dept-CSE" href="catalog.html?dept=CSE">Computer Science <span>4 courses</span></a></li>
+          <li><a class="dept-tile dept-MATH" href="catalog.html?dept=MATH">Mathematics <span>3 courses</span></a></li>
+          <li><a class="dept-tile dept-BIO" href="catalog.html?dept=BIO">Biology <span>2 courses</span></a></li>
+          <li><a class="dept-tile dept-ART" href="catalog.html?dept=ART">Art and Design <span>2 courses</span></a></li>
+          <li><a class="dept-tile dept-HIST" href="catalog.html?dept=HIST">History <span>2 courses</span></a></li>
+          <li><a class="dept-tile dept-PSY" href="catalog.html?dept=PSY">Psychology <span>2 courses</span></a></li>
+          <li><a class="dept-tile dept-MUS" href="catalog.html?dept=MUS">Music <span>2 courses</span></a></li>
         </ul>
       </section>
 
-      <section class="section" aria-labelledby="actions-heading">
-        <h2 id="actions-heading">What would you like to do?</h2>
-        <ul class="action-grid">
-          <li>
-            <article class="action-card accent-indigo">
-              <span class="icon" aria-hidden="true">🔎</span>
-              <h3><a href="catalog.html">Explore the catalog</a></h3>
-              <p>Search and filter courses by department, level, credits and format.</p>
-            </article>
-          </li>
-          <li>
-            <article class="action-card accent-rose">
-              <span class="icon" aria-hidden="true">📝</span>
-              <h3><a href="register.html">Register for a course</a></h3>
-              <p>Pick a course, choose a grading option and confirm your seat.</p>
-            </article>
-          </li>
-          <li>
-            <article class="action-card accent-teal">
-              <span class="icon" aria-hidden="true">🎓</span>
-              <h3><a href="profile.html">Review your profile</a></h3>
-              <p>See your registered courses, total credits and drop classes.</p>
-            </article>
-          </li>
-        </ul>
-      </section>
+      <div class="info-grid section">
+        <section class="info-card" aria-labelledby="dates-title">
+          <h2 id="dates-title">Important dates</h2>
+          <ul class="dates-list">
+            <li><strong>Nov 3, 2026</strong> Registration opens</li>
+            <li><strong>Jan 11, 2027</strong> Classes begin</li>
+            <li><strong>Jan 22, 2027</strong> Last day to add or drop without a fee</li>
+            <li><strong>Mar 15, 2027</strong> Last day to withdraw</li>
+          </ul>
+        </section>
 
-      <section class="section" aria-labelledby="depts-heading">
-        <h2 id="depts-heading">Browse by department</h2>
-        <p class="section-intro">Jump straight to the courses offered by each department.</p>
-        <ul class="dept-grid" id="dept-grid"></ul>
-      </section>
-
-      <section class="section" aria-labelledby="dates-heading">
-        <h2 id="dates-heading">Important dates</h2>
-        <ul class="dates-list">
-          <li>
-            <span class="date-badge accent-indigo" aria-hidden="true"><span class="month">Nov</span><span class="day">2</span></span>
-            <p class="m0"><strong>November 2, 2026:</strong> Priority registration opens for seniors and juniors.</p>
-          </li>
-          <li>
-            <span class="date-badge accent-teal" aria-hidden="true"><span class="month">Nov</span><span class="day">9</span></span>
-            <p class="m0"><strong>November 9, 2026:</strong> Open registration begins for all students.</p>
-          </li>
-          <li>
-            <span class="date-badge accent-rose" aria-hidden="true"><span class="month">Jan</span><span class="day">22</span></span>
-            <p class="m0"><strong>January 22, 2027:</strong> Last day to add or drop a course without a “W” grade.</p>
-          </li>
-        </ul>
-      </section>
+        <section class="info-card teal" id="help" aria-labelledby="help-title" tabindex="-1">
+          <h2 id="help-title">Help and contact</h2>
+          <p>The Office of the Registrar can help with holds, prerequisites and credit limits.</p>
+          <ul class="dates-list">
+            <li><strong>Email</strong> <a href="mailto:registrar@northbridge.example">registrar@northbridge.example</a></li>
+            <li><strong>Phone</strong> <a href="tel:+15555550142">555-555-0142</a></li>
+            <li><strong>Office</strong> Founders Hall, Room 101, Monday to Friday, 9:00–17:00</li>
+          </ul>
+        </section>
+      </div>
     </div>
+    <div id="announcer" class="sr-only" role="status"></div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 Northfield University, Office of the Registrar</p>
-      <p>Need help? Email <a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a> or call <a href="tel:+15555550123">555-555-0123</a>.</p>
+    <div class="container footer-inner">
+      <p>© <span id="footer-year">2026</span> Northbridge University, Office of the Registrar</p>
+      <ul class="footer-links">
+        <li><a href="index.html#help">Help and contact</a></li>
+        <li><a href="mailto:registrar@northbridge.example">registrar@northbridge.example</a></li>
+      </ul>
     </div>
   </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/home.js"></script>
 </body>
 </html>

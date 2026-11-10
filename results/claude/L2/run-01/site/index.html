@@ -1,119 +1,112 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home · Northfield University Course Registration</title>
-  <meta name="description" content="Browse courses, register for classes and manage your schedule at Northfield University.">
+  <meta name="description" content="Register for courses at Horizon University.">
+  <title>Home – Horizon University Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="brand" href="index.html">
-        <span class="brand-logo" aria-hidden="true">🎓</span>
-        <span>Northfield University<small>Course Registration</small></span>
-      </a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-        <span class="nav-toggle-text">Menu</span>
+    <div class="container nav-bar">
+      <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">🎓</span> Horizon University</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span> Menu
       </button>
-      <ul id="nav-menu" class="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="catalog.html">Course Catalog</a></li>
-        <li><a href="register.html">Registration
-          <span class="count-badge" data-cart-count data-count="0"><span aria-hidden="true">0</span><span class="visually-hidden"></span></span></a></li>
-        <li><a href="profile.html">My Profile</a></li>
-      </ul>
-    </nav>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="catalog.html">Course Catalog</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">My Profile<span class="nav-badge" data-registered-badge hidden></span></a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
   <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Spring 2027 registration is open</span>
-          <h1 id="hero-title">Find your next favorite class</h1>
-          <p class="lead">Explore courses across eight departments, build a schedule that fits your life and register in minutes.</p>
-
-          <form class="hero-search" role="search" action="catalog.html" method="get">
-            <label for="hero-q" class="visually-hidden">Search courses by title, code or instructor</label>
-            <input id="hero-q" name="q" type="search" placeholder="Try “calculus”, “CS 350” or “Rivera”" autocomplete="off">
-            <button type="submit" class="btn btn-primary">Search courses</button>
-          </form>
-
-          <p style="margin-top:1.5rem">
-            <a class="btn btn-accent" href="catalog.html">Browse full catalog</a>
-            <a class="btn btn-ghost-light" href="register.html">Start registration</a>
-          </p>
+      <div class="container">
+        <p class="eyebrow">Spring 2027 registration is open</p>
+        <h1 id="hero-title">Find your next favorite class</h1>
+        <p>Browse courses from every department, build your schedule, and register in minutes.</p>
+        <div class="btn-row">
+          <a class="btn btn-accent" href="catalog.html">Browse the catalog</a>
+          <a class="btn btn-outline-light" href="register.html">Start registration</a>
         </div>
-
-        <aside class="hero-card" aria-labelledby="dates-title">
-          <h2 id="dates-title">Key dates</h2>
-          <ul class="deadline-list">
-            <li><span class="deadline-date">Nov<br>3</span><span><strong>Registration opens</strong><br>Seniors and juniors first</span></li>
-            <li><span class="deadline-date">Jan<br>12</span><span><strong>Classes begin</strong><br>Spring 2027 term</span></li>
-            <li><span class="deadline-date">Jan<br>23</span><span><strong>Add/drop deadline</strong><br>Last day to change courses</span></li>
-          </ul>
-        </aside>
+        <form class="quick-search" action="catalog.html" method="get" role="search" aria-label="Quick course search">
+          <label for="quick-q">Search courses</label>
+          <div class="quick-search-row">
+            <input type="search" id="quick-q" name="q" placeholder="e.g. Biology, Calculus, Dr. Kim" autocomplete="off">
+            <button class="btn btn-accent" type="submit">Search</button>
+          </div>
+        </form>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="glance-title">
+    <section class="section" aria-labelledby="stats-title">
       <div class="container">
-        <h2 id="glance-title">This term at a glance</h2>
-        <ul class="stats" id="home-stats">
-          <li class="stat"><span class="stat-value" data-stat="courses">–</span><span class="stat-label">courses offered</span></li>
-          <li class="stat"><span class="stat-value" data-stat="departments">–</span><span class="stat-label">departments</span></li>
-          <li class="stat"><span class="stat-value" data-stat="seats">–</span><span class="stat-label">open seats</span></li>
-          <li class="stat"><span class="stat-value" data-stat="registered">–</span><span class="stat-label">courses you're registered for</span></li>
-        </ul>
+        <h2 class="section-title" id="stats-title">At a glance</h2>
+        <dl class="stats" id="home-stats">
+          <div class="stat" style="--accent: var(--blue)"><dt>Courses offered</dt><dd data-stat="courses">–</dd></div>
+          <div class="stat" style="--accent: var(--pink)"><dt>Departments</dt><dd data-stat="depts">–</dd></div>
+          <div class="stat" style="--accent: var(--teal)"><dt>Courses with open seats</dt><dd data-stat="open">–</dd></div>
+          <div class="stat" style="--accent: var(--orange)"><dt>Your registered credits</dt><dd data-stat="credits">–</dd></div>
+        </dl>
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="dept-title">
+    <section class="section" aria-labelledby="how-title" style="padding-top: 0">
       <div class="container">
-        <h2 id="dept-title">Browse by department</h2>
-        <p class="section-intro">Jump straight to the courses offered by each academic department.</p>
-        <ul class="dept-grid" id="dept-list">
-          <noscript><li><a href="catalog.html">View all departments in the catalog</a></li></noscript>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="featured-title">
-      <div class="container">
-        <h2 id="featured-title">Featured courses</h2>
-        <p class="section-intro">Popular picks this term. Add them to your registration list and complete sign-up on the registration page.</p>
-        <ul class="course-grid" id="featured-courses"></ul>
-      </div>
-    </section>
-
-    <section class="section section-alt" aria-labelledby="how-title">
-      <div class="container">
-        <h2 id="how-title">How registration works</h2>
-        <ol class="steps">
-          <li><h3>Explore the catalog</h3><p>Search by keyword and filter by department, level, credits or meeting day.</p></li>
-          <li><h3>Build your list</h3><p>Add courses to your registration list. We'll check for time conflicts and credit limits.</p></li>
-          <li><h3>Confirm and go</h3><p>Review your choices, confirm, and see your schedule on your profile page.</p></li>
+        <h2 class="section-title" id="how-title">How registration works</h2>
+        <ol class="feature-grid">
+          <li class="feature" style="--accent: var(--blue)">
+            <span class="feature-icon" aria-hidden="true">🔎</span>
+            <h3>1. Explore</h3>
+            <p>Search and filter the <a href="catalog.html">course catalog</a> by department, level, credits and availability.</p>
+          </li>
+          <li class="feature" style="--accent: var(--pink)">
+            <span class="feature-icon" aria-hidden="true">📝</span>
+            <h3>2. Register</h3>
+            <p>Pick your courses on the <a href="register.html">registration page</a>, then review and confirm your choices.</p>
+          </li>
+          <li class="feature" style="--accent: var(--teal)">
+            <span class="feature-icon" aria-hidden="true">📅</span>
+            <h3>3. Track</h3>
+            <p>See your schedule and credit total on <a href="profile.html">your profile</a>, and drop courses if plans change.</p>
+          </li>
         </ol>
       </div>
     </section>
+
+    <section class="section" aria-labelledby="dept-title" style="padding-top: 0">
+      <div class="container">
+        <h2 class="section-title" id="dept-title">Browse by department</h2>
+        <ul class="dept-list" id="dept-list"></ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-title" style="padding-top: 0">
+      <div class="container">
+        <h2 class="section-title" id="featured-title">Featured courses with open seats</h2>
+        <ul class="course-grid" id="featured-courses"></ul>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>&copy; 2026 Northfield University · Office of the Registrar</p>
-      <ul>
-        <li><a href="#">Accessibility statement</a></li>
-        <li><a href="#">Registrar help desk</a></li>
-        <li><a href="mailto:registrar@northfield.edu">registrar@northfield.edu</a></li>
-      </ul>
+    <div class="container">
+      <p><strong>Horizon University</strong> · Office of the Registrar</p>
+      <p>Need help? Email <a href="mailto:registrar@horizon.edu">registrar@horizon.edu</a> or call <a href="tel:+15550100200">555-010-0200</a>.</p>
+      <p>This is a demo application. All data is stored only in your browser.</p>
     </div>
   </footer>
 
-  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

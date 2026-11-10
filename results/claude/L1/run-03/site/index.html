@@ -3,82 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UniReg — University Course Registration</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Home · Horizon University</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="home">
-  <header id="site-header"></header>
-
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-logo">🎓</span> Horizon University</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="home">🏠 Home</a></li>
+        <li><a href="catalog.html" data-page="catalog">📚 Catalog</a></li>
+        <li><a href="register.html" data-page="register">📝 Register</a></li>
+        <li><a href="profile.html" data-page="profile">👤 Profile <span class="badge" id="nav-badge">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="hero-tag">🌟 Spring 2027 registration is open</span>
-          <h1>Build your perfect semester, one course at a time.</h1>
-          <p>Browse the catalog, check seat availability in real time, avoid schedule clashes and register in just a few clicks.</p>
-          <form class="hero-search" id="hero-search" role="search">
-            <input type="search" id="hero-query" placeholder="Search by course, code or instructor…" aria-label="Search courses">
-            <button class="btn btn-warm" type="submit">Search</button>
-          </form>
-          <div class="hero-actions">
-            <a href="catalog.html" class="btn btn-light">📚 Browse Catalog</a>
-            <a href="register.html" class="btn btn-outline">📝 Register Now</a>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <h3>📅 Key Dates</h3>
-          <ul class="timeline">
-            <li><span class="dot" style="background:#facc15;color:#1e1b4b">1</span><div><strong>Early registration</strong><small>Nov 3 – Nov 14</small></div></li>
-            <li><span class="dot" style="background:#22c55e">2</span><div><strong>Open registration</strong><small>Nov 17 – Dec 12</small></div></li>
-            <li><span class="dot" style="background:#0ea5e9">3</span><div><strong>Add / drop deadline</strong><small>Jan 23</small></div></li>
-            <li><span class="dot" style="background:#ec4899">4</span><div><strong>Classes begin</strong><small>Jan 12</small></div></li>
-          </ul>
-        </aside>
+      <h1>Build your perfect semester ✨</h1>
+      <p>Explore courses across every department, check schedules and seats in real time, and register in just a few clicks.</p>
+      <form class="hero-search" id="home-search" role="search">
+        <input type="search" id="home-q" placeholder="Search courses, codes or instructors…" aria-label="Search courses">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="catalog.html">Browse catalog</a>
+        <a class="btn btn-outline" href="register.html">Start registration</a>
       </div>
     </section>
 
-    <section class="container">
-      <div class="stats-grid" id="stats-grid"></div>
-    </section>
+    <section class="stats" id="home-stats" aria-label="Quick stats"></section>
 
-    <section class="section container">
-      <h2 class="section-title">Explore <span class="gradient-text">Departments</span></h2>
-      <p class="section-subtitle">Jump straight into the subjects that excite you.</p>
-      <div class="dept-grid" id="dept-grid"></div>
-    </section>
+    <div class="section-title"><h2>🎨 Explore by department</h2></div>
+    <div class="dept-grid" id="dept-grid"></div>
 
-    <section class="section container" style="padding-top:0">
-      <h2 class="section-title">Popular <span class="gradient-text">Courses</span></h2>
-      <p class="section-subtitle">Filling up fast — grab a seat before they're gone.</p>
-      <div class="course-grid" id="featured-grid"></div>
-    </section>
+    <div class="section-title">
+      <h2>🔥 Featured courses</h2>
+      <a class="btn btn-sm btn-outline" href="catalog.html">See all courses →</a>
+    </div>
+    <div class="course-grid" id="featured"></div>
 
-    <section class="section container" style="padding-top:0">
-      <div class="feature-grid">
-        <div class="feature bg-main"><span class="emoji">⚡</span><h3>Instant Registration</h3><p>Register for multiple courses at once with live seat availability.</p></div>
-        <div class="feature bg-cool"><span class="emoji">🧭</span><h3>Clash Detection</h3><p>We automatically flag time conflicts and credit-limit issues.</p></div>
-        <div class="feature bg-warm"><span class="emoji">📊</span><h3>Your Dashboard</h3><p>See your weekly schedule and registered courses in one place.</p></div>
-      </div>
-    </section>
-
-    <section class="container">
-      <div class="cta">
-        <div>
-          <h2>Ready to get started?</h2>
-          <p>Create your student profile and register for up to <strong>18 credits</strong> this semester.</p>
-        </div>
-        <a href="register.html" class="btn btn-light">Start Registration →</a>
-      </div>
-    </section>
+    <div class="section-title"><h2>🚀 How it works</h2></div>
+    <div class="steps">
+      <div class="step" style="--c:#6c5ce7"><span class="step-num">1</span><h3>Browse</h3><p>Search and filter the catalog by department, level and credits.</p></div>
+      <div class="step" style="--c:#00b894"><span class="step-num">2</span><h3>Select</h3><p>Pick your courses on the registration page and watch your credit total.</p></div>
+      <div class="step" style="--c:#e84393"><span class="step-num">3</span><h3>Confirm</h3><p>Review your choices in the confirmation dialog and submit.</p></div>
+      <div class="step" style="--c:#fd9644"><span class="step-num">4</span><h3>Manage</h3><p>See your schedule on your profile and drop courses anytime.</p></div>
+    </div>
   </main>
-
-  <footer class="site-footer">
-    <div class="rainbow"></div>
-    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/home.js"></script>
+  <footer class="footer">© 2026 Horizon University · Course Registration Demo (sample data, stored in your browser)</footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>

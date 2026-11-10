@@ -1,122 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Course catalog – Northfield University Course Registration</title>
-  <meta name="description" content="Search and filter the Northfield University course catalog.">
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <title>Course catalog – Northbridge University Course Registration</title>
+  <meta name="description" content="Search and filter all courses offered at Northbridge University.">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="catalog">
+<body>
   <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <svg class="brand-logo" aria-hidden="true" focusable="false" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" r="23" fill="#fde047"/>
-          <path d="M24 11 8 19l16 8 13-6.5V30h3V19L24 11z" fill="#312e81"/>
-          <path d="M14 25v7c0 3 4.5 5.5 10 5.5S34 35 34 32v-7l-10 5-10-5z" fill="#be185d"/>
+        <svg class="brand-logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="#fde047"/>
+          <path d="M8 17 20 10l12 7-12 7z" fill="#3b0764"/>
+          <path d="M13 20v6c0 2 3.5 4 7 4s7-2 7-4v-6l-7 4z" fill="#9d174d"/>
         </svg>
-        <span class="brand-text">
-          <span class="brand-name">Northfield University</span>
-          <span class="brand-sub">Course Registration</span>
-        </span>
+        <span>Northbridge University <small>Course Registration</small></span>
       </a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+        Menu
+      </button>
       <nav class="site-nav" aria-label="Main">
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-          <span class="nav-toggle-icon" aria-hidden="true"></span>
-          Menu
-        </button>
-        <ul id="primary-menu" class="nav-menu" role="list">
+        <ul class="nav-list" id="primary-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="catalog.html" aria-current="page">Course catalog</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="profile.html">My profile</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="profile.html">Student profile</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main id="main" tabindex="-1">
-    <div class="page-intro">
+    <div class="page-hero">
       <div class="container">
+        <span class="eyebrow">Fall 2026 and Spring 2027</span>
         <h1>Course catalog</h1>
-        <p>Search all courses offered for 2027. Use the filters to narrow results; the list updates as you type.</p>
+        <p class="lead">Search by keyword and narrow the list with filters. Results update as you type or choose a filter.</p>
       </div>
     </div>
 
-    <div class="container section">
-      <form id="catalog-filters" class="filters" role="search" aria-label="Course filters">
-        <div class="filters-grid">
-          <div class="field field--search">
+    <div class="container">
+      <section class="panel" aria-labelledby="search-heading">
+        <h2 id="search-heading">Search and filter</h2>
+        <form class="search-form" role="search" id="search-form">
+          <div class="field">
             <label for="search">Search courses</label>
-            <input type="search" id="search" name="q" autocomplete="off" aria-describedby="search-hint">
-            <span id="search-hint" class="visually-hidden">Search by course code, title, instructor, or keyword. Results update automatically.</span>
+            <span class="hint" id="search-hint">Course code, title, instructor or topic.</span>
+            <input type="search" id="search" name="q" aria-describedby="search-hint" autocomplete="off">
           </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <div class="filters">
           <div class="field">
             <label for="filter-dept">Department</label>
-            <select id="filter-dept" name="dept">
+            <select id="filter-dept">
               <option value="">All departments</option>
             </select>
           </div>
           <div class="field">
-            <label for="filter-level">Course level</label>
-            <select id="filter-level" name="level">
+            <label for="filter-level">Level</label>
+            <select id="filter-level">
               <option value="">All levels</option>
               <option value="100">100-level (introductory)</option>
-              <option value="200">200-level (intermediate)</option>
-              <option value="300">300-level (advanced)</option>
-              <option value="400">400-level (seminar)</option>
+              <option value="200">200-level</option>
+              <option value="300">300-level</option>
+              <option value="400">400-level (advanced)</option>
             </select>
           </div>
           <div class="field">
             <label for="filter-credits">Credits</label>
-            <select id="filter-credits" name="credits">
+            <select id="filter-credits">
               <option value="">Any number of credits</option>
               <option value="3">3 credits</option>
               <option value="4">4 credits</option>
             </select>
           </div>
-        </div>
-        <div class="filters-footer">
-          <div class="check">
-            <input type="checkbox" id="filter-open" name="open">
-            <label for="filter-open">Only show courses with open seats</label>
+          <div class="field">
+            <label for="filter-availability">Availability</label>
+            <select id="filter-availability">
+              <option value="">All courses</option>
+              <option value="open">Open seats only</option>
+              <option value="full">Full courses only</option>
+            </select>
           </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Search courses</button>
-            <button type="reset" class="btn btn-secondary">Clear all filters</button>
+          <div class="filter-actions">
+            <button type="button" class="btn btn-secondary" id="clear-filters">Clear search and filters</button>
           </div>
         </div>
-      </form>
+      </section>
 
-      <section aria-labelledby="results-title">
-        <h2 id="results-title" class="visually-hidden">Search results</h2>
-        <p id="results-count" class="results-count" role="status" aria-live="polite" aria-atomic="true"></p>
-        <ul id="course-grid" class="course-grid" role="list"></ul>
-        <div id="empty-state" class="empty-state" hidden>
-          <h3>No courses match your search</h3>
-          <p>Try different keywords or remove some filters.</p>
-          <button type="button" id="empty-reset" class="btn btn-primary">Clear all filters</button>
+      <section class="section" aria-labelledby="results-heading">
+        <div class="results-bar">
+          <h2 id="results-heading">Courses</h2>
+          <p class="results-count" id="results-count"></p>
+        </div>
+        <ul class="card-grid" id="course-list"></ul>
+        <div class="empty-state" id="no-results" hidden>
+          <p><strong>No courses match your search.</strong></p>
+          <p>Try a different keyword, or choose “Clear search and filters”.</p>
         </div>
       </section>
     </div>
   </main>
-
+  <div id="status" role="status" class="visually-hidden"></div>
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Northfield University, Office of the Registrar.</p>
-      <ul aria-label="Contact">
-        <li><a href="mailto:registrar@northfield.edu">Email the Registrar</a></li>
-        <li><a href="tel:+15555550142">Call (555) 555-0142</a></li>
-      </ul>
+    <div class="container footer-grid">
+      <div>
+        <h2>Northbridge University</h2>
+        <p>Office of the Registrar, Founders Hall, Room 120</p>
+        <p>&copy; 2026 Northbridge University. Sample application with demo data.</p>
+      </div>
+      <div id="help">
+        <h2>Help and contact</h2>
+        <p>Email: <a href="mailto:registrar@northbridge.example.edu">registrar@northbridge.example.edu</a></p>
+        <p>Phone: <a href="tel:+15550123456">555 012 3456</a> (Monday to Friday, 9 AM to 5 PM)</p>
+      </div>
     </div>
   </footer>
-
-  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="catalog.js"></script>
 </body>
 </html>

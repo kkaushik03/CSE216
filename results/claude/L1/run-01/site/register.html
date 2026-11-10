@@ -3,115 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register · Horizon University</title>
+  <title>UniReg · Registration</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="register">
-  <a class="skip-link" href="#main">Skip to content</a>
   <header id="site-header"></header>
 
-  <main id="main">
-    <section class="page-header register-header">
+  <main>
+    <section class="page-banner banner-register">
       <div class="container">
-        <h1>📝 Course Registration</h1>
-        <p>Fill in your details, choose your courses and confirm. Max <strong>18 credits</strong> per semester.</p>
+        <h1>Course Registration</h1>
+        <p>Fill in your details, choose your courses and confirm.</p>
       </div>
     </section>
 
-    <section class="container">
-      <form id="registration-form" class="register-layout" novalidate>
-        <div class="panel">
-          <h2><span class="num">1</span> Student information</h2>
-          <div id="student-fields" class="form-grid">
-            <div class="form-group">
+    <section class="container section register-layout">
+      <form id="register-form" class="card form-card" novalidate>
+        <fieldset>
+          <legend><span class="legend-num">1</span> Student information</legend>
+          <div class="form-grid">
+            <div class="field">
               <label for="name">Full name *</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
-              <small class="field-error"></small>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <small class="error-msg" id="name-error"></small>
             </div>
-            <div class="form-group">
+            <div class="field">
               <label for="studentId">Student ID *</label>
-              <input id="studentId" name="studentId" type="text" placeholder="HU123456" required>
-              <small class="field-error"></small>
+              <input id="studentId" name="studentId" type="text" required>
+              <small class="error-msg" id="studentId-error"></small>
             </div>
-            <div class="form-group">
+            <div class="field">
               <label for="email">Email *</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@horizon.edu" required>
-              <small class="field-error"></small>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <small class="error-msg" id="email-error"></small>
             </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567">
-              <small class="field-error"></small>
-            </div>
-            <div class="form-group">
-              <label for="program">Program *</label>
-              <select id="program" name="program" required>
-                <option value="">Select your program…</option>
+            <div class="field">
+              <label for="major">Major *</label>
+              <select id="major" name="major" required>
+                <option value="">Choose…</option>
                 <option>Computer Science</option>
                 <option>Mathematics</option>
-                <option>Biology</option>
-                <option>Fine Arts</option>
-                <option>Business</option>
                 <option>Physics</option>
+                <option>Biology</option>
                 <option>English</option>
+                <option>Art &amp; Design</option>
+                <option>Business</option>
+                <option>Undeclared</option>
               </select>
-              <small class="field-error"></small>
+              <small class="error-msg" id="major-error"></small>
             </div>
-            <div class="form-group">
-              <label for="year">Year of study *</label>
+            <div class="field">
+              <label for="year">Year *</label>
               <select id="year" name="year" required>
-                <option value="">Select year…</option>
+                <option value="">Choose…</option>
                 <option>Freshman</option>
                 <option>Sophomore</option>
                 <option>Junior</option>
                 <option>Senior</option>
                 <option>Graduate</option>
               </select>
-              <small class="field-error"></small>
+              <small class="error-msg" id="year-error"></small>
+            </div>
+            <div class="field">
+              <label for="term">Term *</label>
+              <select id="term" name="term" required>
+                <option value="">Choose…</option>
+                <option selected>Spring 2027</option>
+                <option>Summer 2027</option>
+                <option>Fall 2027</option>
+              </select>
+              <small class="error-msg" id="term-error"></small>
             </div>
           </div>
+        </fieldset>
 
-          <h2><span class="num">2</span> Choose courses</h2>
+        <fieldset>
+          <legend><span class="legend-num">2</span> Choose courses</legend>
           <div class="picker-tools">
-            <label class="sr-only" for="picker-search">Search courses</label>
-            <input id="picker-search" type="search" placeholder="🔍 Filter courses…">
-            <label class="sr-only" for="picker-dept">Department</label>
+            <label for="picker-search" class="sr-only">Filter course list</label>
+            <input id="picker-search" type="search" placeholder="Filter courses…">
+            <label for="picker-dept" class="sr-only">Filter by department</label>
             <select id="picker-dept"><option value="">All departments</option></select>
           </div>
-          <div id="course-picker" class="course-picker"></div>
-          <small id="course-error" class="field-error" aria-live="polite"></small>
-        </div>
+          <div class="course-options" id="course-options"></div>
+          <small class="error-msg" id="course-error" aria-live="polite"></small>
+        </fieldset>
 
-        <aside class="panel summary-panel">
-          <div id="selection-summary"></div>
-          <label class="checkbox agree">
-            <input type="checkbox" id="agree">
-            I agree to the university registration and add/drop policy.
-          </label>
-          <small id="agree-error" class="field-error"></small>
-          <div class="summary-actions">
-            <button class="btn btn-primary btn-block" type="submit">Review &amp; submit</button>
-            <button class="btn btn-ghost btn-block" type="reset">Clear form</button>
+        <fieldset>
+          <legend><span class="legend-num">3</span> Finish up</legend>
+          <div class="field">
+            <label for="notes">Notes for your advisor (optional)</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Anything your advisor should know?"></textarea>
           </div>
-        </aside>
+          <div class="field checkbox-field">
+            <label><input type="checkbox" name="agree" id="agree"> I confirm I meet the prerequisites and accept the registration policy. *</label>
+            <small class="error-msg" id="agree-error"></small>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="reset" class="btn btn-ghost">Clear</button>
+          <button type="submit" class="btn btn-primary">Review &amp; Register</button>
+        </div>
       </form>
 
-      <section class="section">
-        <div class="section-head">
-          <h2>📋 Your registered courses</h2>
-          <a href="profile.html" class="link-arrow">Go to profile →</a>
+      <aside class="card summary-card" aria-label="Registration summary">
+        <h2>Your selection</h2>
+        <ul class="summary-list" id="summary-list"></ul>
+        <div class="credit-box">
+          <div class="credit-head"><span>Total credits (incl. registered)</span><strong id="summary-credits">0 / 18</strong></div>
+          <div class="meter"><span id="credit-meter"></span></div>
+          <small class="muted">Maximum load is 18 credits per term.</small>
         </div>
-        <div id="registered-table"></div>
-      </section>
+        <a href="catalog.html" class="link-arrow">← Back to catalog</a>
+      </aside>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="footer-year"></span> Horizon University · Office of the Registrar</p>
-    <p class="footer-links"><a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="register.html">Register</a><a href="profile.html">Profile</a></p>
-  </footer>
+  <footer id="site-footer" class="site-footer"></footer>
 
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/register.js"></script>
 </body>
 </html>

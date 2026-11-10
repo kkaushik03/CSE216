@@ -3,68 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Profile — UniReg</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Student Profile · Horizon University</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="profile">
-  <header id="site-header"></header>
-
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-logo">🎓</span> Horizon University</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="home">🏠 Home</a></li>
+        <li><a href="catalog.html" data-page="catalog">📚 Catalog</a></li>
+        <li><a href="register.html" data-page="register">📝 Register</a></li>
+        <li><a href="profile.html" data-page="profile">👤 Profile <span class="badge" id="nav-badge">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <section class="page-header main">
-      <div class="container">
-        <h1>🎓 Student Profile</h1>
-        <p>Your personal details, registered courses and weekly schedule.</p>
-      </div>
+    <section class="page-header header-profile">
+      <h1>👤 Student Profile</h1>
+      <p>Your details and current course schedule.</p>
     </section>
 
-    <section class="container profile-layout">
-      <aside class="panel profile-card" id="profile-card"></aside>
+    <div class="profile-layout">
+      <aside class="panel profile-card">
+        <div class="avatar" id="avatar"></div>
+        <h2 id="p-name"></h2>
+        <p id="p-major" style="color:var(--muted);margin-top:-.5rem"></p>
+        <ul class="profile-details" id="p-details"></ul>
+        <button class="btn btn-primary" id="edit-profile" style="width:100%">✏️ Edit profile</button>
+      </aside>
 
-      <div>
-        <div class="mini-stats" id="mini-stats"></div>
-
-        <div class="panel">
-          <div class="table-toolbar">
-            <h2>📋 Registered Courses</h2>
-            <div class="search-wrap">
-              <input class="input" type="search" id="table-search" placeholder="Search registered courses…" aria-label="Search registered courses">
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table class="data-table" id="course-table">
-              <thead>
-                <tr>
-                  <th data-sort="code">Code</th>
-                  <th data-sort="title">Course</th>
-                  <th data-sort="instructor">Instructor</th>
-                  <th data-sort="schedule">Schedule</th>
-                  <th data-sort="credits">Credits</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-              <tfoot></tfoot>
-            </table>
+      <section>
+        <div class="mini-stats" id="p-stats"></div>
+        <div class="section-title" style="margin-top:0">
+          <h2>📅 Registered courses</h2>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <input type="search" id="p-q" placeholder="Search my courses…" aria-label="Search registered courses" style="width:auto">
+            <a class="btn btn-sm btn-teal" href="register.html">+ Add courses</a>
           </div>
         </div>
-
-        <div class="panel" style="margin-top:1.5rem">
-          <h2>🗓️ Weekly Schedule</h2>
-          <p>Your classes at a glance.</p>
-          <div class="week-grid" id="week-grid"></div>
-        </div>
-      </div>
-    </section>
+        <div id="p-table"></div>
+      </section>
+    </div>
   </main>
-
-  <footer class="site-footer">
-    <div class="rainbow"></div>
-    <p>© <span id="year"></span> UniReg · University Course Registration System</p>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/profile.js"></script>
+  <footer class="footer">© 2026 Horizon University · Course Registration Demo (sample data, stored in your browser)</footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="profile.js"></script>
 </body>
 </html>

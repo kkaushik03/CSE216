@@ -1,81 +1,135 @@
-/* Course catalog data for Northbridge University course registration. */
-window.NU_DATA = {
-  departments: {
-    CS:   { name: 'Computer Science', color: '#1d4ed8', tint: '#dbeafe' },
-    MATH: { name: 'Mathematics',      color: '#6d28d9', tint: '#ede9fe' },
-    BIO:  { name: 'Biology',          color: '#047857', tint: '#d1fae5' },
-    HIST: { name: 'History',          color: '#b45309', tint: '#fef3c7' },
-    ART:  { name: 'Art & Design',     color: '#be185d', tint: '#fce7f3' },
-    PSYC: { name: 'Psychology',       color: '#0e7490', tint: '#cffafe' },
-    ENGL: { name: 'English',          color: '#a21caf', tint: '#fae8ff' }
-  },
+/* Sample data and shared storage helpers for the course registration app. */
+"use strict";
 
-  terms: ['Spring 2027', 'Summer 2027', 'Fall 2027'],
-
-  courses: [
-    { code: 'CS101', dept: 'CS', level: 100, credits: 4, title: 'Introduction to Programming',
-      days: ['Mon', 'Wed', 'Fri'], start: '09:00', end: '09:50', instructor: 'Dr. Ada Okafor',
-      enrolled: 18, capacity: 30, featured: true,
-      description: 'Learn the fundamentals of programming with Python: variables, control flow, functions, and problem solving.' },
-    { code: 'CS220', dept: 'CS', level: 200, credits: 4, title: 'Data Structures',
-      days: ['Tue', 'Thu'], start: '10:30', end: '11:45', instructor: 'Dr. Lin Chen',
-      enrolled: 30, capacity: 35,
-      description: 'Lists, stacks, queues, trees, hash tables, and graphs, with an emphasis on algorithmic efficiency.' },
-    { code: 'CS340', dept: 'CS', level: 300, credits: 3, title: 'Human-Computer Interaction',
-      days: ['Mon', 'Wed'], start: '13:00', end: '14:15', instructor: 'Prof. Maya Patel',
-      enrolled: 7, capacity: 25, featured: true,
-      description: 'Design, prototype, and evaluate inclusive user interfaces, including accessibility and usability testing.' },
-    { code: 'CS450', dept: 'CS', level: 400, credits: 3, title: 'Machine Learning',
-      days: ['Tue', 'Thu'], start: '14:00', end: '15:15', instructor: 'Dr. Samuel Reyes',
-      enrolled: 30, capacity: 30,
-      description: 'Supervised and unsupervised learning, model evaluation, and the ethics of data-driven systems.' },
-    { code: 'MATH120', dept: 'MATH', level: 100, credits: 4, title: 'Calculus I',
-      days: ['Mon', 'Wed', 'Fri'], start: '10:00', end: '10:50', instructor: 'Dr. Grace Kim',
-      enrolled: 18, capacity: 40,
-      description: 'Limits, derivatives, and integrals of single-variable functions with real-world applications.' },
-    { code: 'MATH250', dept: 'MATH', level: 200, credits: 3, title: 'Linear Algebra',
-      days: ['Tue', 'Thu'], start: '09:00', end: '10:15', instructor: 'Prof. Omar Haddad',
-      enrolled: 21, capacity: 30,
-      description: 'Vector spaces, matrices, linear transformations, eigenvalues, and their applications.' },
-    { code: 'MATH310', dept: 'MATH', level: 300, credits: 3, title: 'Probability and Statistics',
-      days: ['Mon', 'Wed'], start: '11:00', end: '12:15', instructor: 'Dr. Elena Rossi',
-      enrolled: 16, capacity: 30,
-      description: 'Probability models, random variables, estimation, and hypothesis testing.' },
-    { code: 'BIO110', dept: 'BIO', level: 100, credits: 4, title: 'Principles of Biology',
-      days: ['Tue', 'Thu'], start: '13:00', end: '14:15', instructor: 'Dr. Priya Nair',
-      enrolled: 30, capacity: 60, featured: true,
-      description: 'Cells, genetics, evolution, and ecology, with a weekly hands-on laboratory component.' },
-    { code: 'BIO305', dept: 'BIO', level: 300, credits: 4, title: 'Genetics',
-      days: ['Mon', 'Wed', 'Fri'], start: '14:00', end: '14:50', instructor: 'Dr. Kwame Mensah',
-      enrolled: 21, capacity: 24,
-      description: 'Mendelian and molecular genetics, gene regulation, and modern genomic techniques.' },
-    { code: 'HIST105', dept: 'HIST', level: 100, credits: 3, title: 'World History Since 1500',
-      days: ['Mon', 'Wed'], start: '09:30', end: '10:45', instructor: 'Prof. Hannah Weiss',
-      enrolled: 20, capacity: 45,
-      description: 'A global survey of empires, revolutions, trade, and cultural exchange in the modern era.' },
-    { code: 'HIST330', dept: 'HIST', level: 300, credits: 3, title: 'History of Science',
-      days: ['Thu'], start: '16:00', end: '18:30', instructor: 'Dr. Tomás Alvarez',
-      enrolled: 9, capacity: 20,
-      description: 'How scientific ideas emerged and changed society, from the Scientific Revolution to today.' },
-    { code: 'ART101', dept: 'ART', level: 100, credits: 3, title: 'Foundations of Drawing',
-      days: ['Tue', 'Thu'], start: '15:30', end: '16:45', instructor: 'Prof. Yuki Tanaka',
-      enrolled: 12, capacity: 18,
-      description: 'Observational drawing, composition, line, and value using a variety of traditional media.' },
-    { code: 'ART240', dept: 'ART', level: 200, credits: 3, title: 'Digital Design',
-      days: ['Mon', 'Wed'], start: '15:00', end: '16:15', instructor: 'Prof. Leila Ahmadi',
-      enrolled: 20, capacity: 20,
-      description: 'Typography, color theory, and layout for screen and print using industry-standard tools.' },
-    { code: 'PSYC101', dept: 'PSYC', level: 100, credits: 3, title: 'Introduction to Psychology',
-      days: ['Mon', 'Wed', 'Fri'], start: '11:00', end: '11:50', instructor: 'Dr. Marcus Bell',
-      enrolled: 40, capacity: 80,
-      description: 'An overview of perception, memory, development, personality, and mental health.' },
-    { code: 'PSYC320', dept: 'PSYC', level: 300, credits: 3, title: 'Cognitive Psychology',
-      days: ['Tue', 'Thu'], start: '11:00', end: '12:15', instructor: 'Dr. Sofia Lindqvist',
-      enrolled: 22, capacity: 30,
-      description: 'Attention, language, decision making, and problem solving from an information-processing view.' },
-    { code: 'ENGL210', dept: 'ENGL', level: 200, credits: 3, title: 'Creative Writing Workshop',
-      days: ['Wed'], start: '18:00', end: '20:45', instructor: 'Prof. Daniel Osei',
-      enrolled: 8, capacity: 18,
-      description: 'Write and workshop short fiction and poetry in a supportive, discussion-based evening seminar.' }
-  ]
+const DEPARTMENTS = {
+  CSE: { name: "Computer Science", color: "#1d4ed8" },
+  MATH: { name: "Mathematics", color: "#7e22ce" },
+  BIO: { name: "Biology", color: "#15803d" },
+  ENG: { name: "English", color: "#be123c" },
+  HIST: { name: "History", color: "#b45309" },
+  PHYS: { name: "Physics", color: "#0f766e" },
+  ART: { name: "Art and Design", color: "#a21caf" },
+  ECON: { name: "Economics", color: "#4338ca" }
 };
+
+const DAY_NAMES = { Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday" };
+
+/* start/end are minutes after midnight. */
+const COURSES = [
+  { id: "CSE 114", dept: "CSE", level: 100, title: "Introduction to Programming", credits: 4, instructor: "Dr. Ana Reyes", days: ["Mon", "Wed"], start: 600, end: 680, room: "Engineering 101", capacity: 40, enrolled: 31, description: "Learn to write programs in Python: variables, loops, functions and simple data structures." },
+  { id: "CSE 216", dept: "CSE", level: 200, title: "Software Engineering", credits: 4, instructor: "Dr. Kwame Mensah", days: ["Tue", "Thu"], start: 780, end: 860, room: "Engineering 220", capacity: 35, enrolled: 35, description: "Design, test and maintain software in teams, with version control and code review." },
+  { id: "CSE 310", dept: "CSE", level: 300, title: "Web Accessibility", credits: 3, instructor: "Prof. Lin Zhao", days: ["Fri"], start: 540, end: 710, room: "Library Lab 2", capacity: 25, enrolled: 22, description: "Build websites that everyone can use. Covers WCAG, assistive technology and inclusive design." },
+  { id: "MATH 125", dept: "MATH", level: 100, title: "Calculus I", credits: 4, instructor: "Dr. Priya Nair", days: ["Mon", "Wed", "Fri"], start: 480, end: 530, room: "Science Hall 12", capacity: 60, enrolled: 41, description: "Limits, derivatives and an introduction to integrals, with applications." },
+  { id: "MATH 221", dept: "MATH", level: 200, title: "Linear Algebra", credits: 3, instructor: "Dr. Tomás García", days: ["Tue", "Thu"], start: 600, end: 680, room: "Science Hall 30", capacity: 45, enrolled: 44, description: "Vectors, matrices, linear transformations, eigenvalues and their uses." },
+  { id: "BIO 101", dept: "BIO", level: 100, title: "Principles of Biology", credits: 4, instructor: "Dr. Grace Okafor", days: ["Mon", "Wed"], start: 780, end: 860, room: "Life Sciences 5", capacity: 80, enrolled: 52, description: "Cells, genetics, evolution and ecology, with a weekly lab." },
+  { id: "BIO 240", dept: "BIO", level: 200, title: "Marine Ecology", credits: 3, instructor: "Dr. Sven Larsen", days: ["Thu"], start: 840, end: 1010, room: "Life Sciences 40", capacity: 20, enrolled: 20, description: "Life in oceans and coasts, with two field trips to the bay." },
+  { id: "ENG 102", dept: "ENG", level: 100, title: "Academic Writing", credits: 3, instructor: "Prof. Maya Cohen", days: ["Tue", "Thu"], start: 540, end: 590, room: "Humanities 8", capacity: 25, enrolled: 12, description: "Plan, draft and revise clear essays that use evidence well." },
+  { id: "ENG 230", dept: "ENG", level: 200, title: "World Literature", credits: 3, instructor: "Dr. Hiro Tanaka", days: ["Mon", "Wed"], start: 900, end: 980, room: "Humanities 21", capacity: 30, enrolled: 26, description: "Read novels, poems and plays from six continents in translation." },
+  { id: "HIST 150", dept: "HIST", level: 100, title: "Modern World History", credits: 3, instructor: "Dr. Fatima Haddad", days: ["Mon", "Wed", "Fri"], start: 660, end: 710, room: "Humanities 2", capacity: 70, enrolled: 39, description: "Major events and ideas that shaped the world since 1750." },
+  { id: "HIST 320", dept: "HIST", level: 300, title: "History of Science", credits: 3, instructor: "Prof. Daniel Brooks", days: ["Tue"], start: 1080, end: 1250, room: "Humanities 30", capacity: 20, enrolled: 17, description: "How scientific ideas developed, from ancient astronomy to genetics." },
+  { id: "PHYS 151", dept: "PHYS", level: 100, title: "Physics I: Mechanics", credits: 4, instructor: "Dr. Olga Petrova", days: ["Tue", "Thu"], start: 690, end: 770, room: "Physics 100", capacity: 50, enrolled: 47, description: "Motion, forces, energy and momentum, with hands-on labs." },
+  { id: "PHYS 305", dept: "PHYS", level: 300, title: "Astrophysics", credits: 3, instructor: "Dr. Samuel Adeyemi", days: ["Wed"], start: 1080, end: 1250, room: "Observatory", capacity: 18, enrolled: 9, description: "Stars, galaxies and cosmology. Includes evening telescope sessions." },
+  { id: "ART 110", dept: "ART", level: 100, title: "Drawing Fundamentals", credits: 3, instructor: "Prof. Lucia Romano", days: ["Fri"], start: 780, end: 950, room: "Arts Studio A", capacity: 18, enrolled: 18, description: "Line, shape, value and perspective, drawn from life." },
+  { id: "ART 215", dept: "ART", level: 200, title: "Digital Illustration", credits: 3, instructor: "Prof. Jae Park", days: ["Tue", "Thu"], start: 900, end: 980, room: "Arts Lab 3", capacity: 22, enrolled: 15, description: "Create illustrations with tablets and vector tools, from sketch to final piece." },
+  { id: "ECON 101", dept: "ECON", level: 100, title: "Principles of Microeconomics", credits: 3, instructor: "Dr. Elena Popescu", days: ["Mon", "Wed"], start: 540, end: 590, room: "Business 10", capacity: 90, enrolled: 63, description: "How people and firms make choices: supply, demand, markets and prices." },
+  { id: "ECON 340", dept: "ECON", level: 300, title: "Behavioral Economics", credits: 3, instructor: "Dr. Ravi Shah", days: ["Thu"], start: 1080, end: 1250, room: "Business 40", capacity: 30, enrolled: 27, description: "Why real decisions differ from theory: biases, habits and nudges." }
+];
+
+const MAX_CREDITS = 18;
+
+const DEFAULT_PROFILE = {
+  name: "Jordan Lee",
+  email: "jordan.lee@example.edu",
+  studentId: "20241234",
+  major: "CSE",
+  year: "2"
+};
+
+const DEFAULT_REGISTRATIONS = [
+  { id: "MATH 125", term: "Spring 2027" },
+  { id: "ENG 102", term: "Spring 2027" }
+];
+
+/* In-memory copy, so the app still works for this page view when localStorage is unavailable. */
+const memoryStore = {};
+
+const Store = {
+  read(key, fallback) {
+    if (Object.prototype.hasOwnProperty.call(memoryStore, key)) return JSON.parse(memoryStore[key]);
+    try {
+      const raw = window.localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (e) {
+      return fallback;
+    }
+  },
+  write(key, value) {
+    memoryStore[key] = JSON.stringify(value);
+    try {
+      window.localStorage.setItem(key, memoryStore[key]);
+    } catch (e) {
+      /* Storage can be unavailable (private mode or file restrictions). The memory copy is used instead. */
+    }
+  },
+  getProfile() {
+    return Object.assign({}, DEFAULT_PROFILE, this.read("ucr-profile", {}));
+  },
+  saveProfile(profile) {
+    this.write("ucr-profile", profile);
+  },
+  getRegistrations() {
+    return this.read("ucr-registrations", DEFAULT_REGISTRATIONS).filter(function (r) {
+      return findCourse(r.id);
+    });
+  },
+  saveRegistrations(list) {
+    this.write("ucr-registrations", list);
+  }
+};
+
+function findCourse(id) {
+  return COURSES.find(function (c) { return c.id === id; }) || null;
+}
+
+function seatsLeft(course) {
+  return Math.max(0, course.capacity - course.enrolled);
+}
+
+/* Returns "open", "few" or "full". */
+function availability(course) {
+  const left = seatsLeft(course);
+  if (left === 0) return "full";
+  if (left <= 5) return "few";
+  return "open";
+}
+
+const AVAILABILITY_TEXT = { open: "Open", few: "Few seats left", full: "Full" };
+const AVAILABILITY_ICON = { open: "✓", few: "!", full: "✕" };
+
+function formatTime(minutes) {
+  const h24 = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  const suffix = h24 >= 12 ? "PM" : "AM";
+  const h12 = ((h24 + 11) % 12) + 1;
+  return h12 + ":" + String(m).padStart(2, "0") + " " + suffix;
+}
+
+function formatSchedule(course) {
+  return course.days.join(", ") + " " + formatTime(course.start) + "–" + formatTime(course.end);
+}
+
+function formatScheduleLong(course) {
+  return course.days.map(function (d) { return DAY_NAMES[d]; }).join(", ") +
+    ", " + formatTime(course.start) + " to " + formatTime(course.end);
+}
+
+function coursesOverlap(a, b) {
+  const sharedDay = a.days.some(function (d) { return b.days.indexOf(d) !== -1; });
+  return sharedDay && a.start < b.end && b.start < a.end;
+}
+
+function escapeHtml(text) {
+  return String(text).replace(/[&<>"']/g, function (ch) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+  });
+}

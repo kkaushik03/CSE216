@@ -3,65 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UniReg · Home</title>
-  <meta name="description" content="University course registration — browse courses, register, and manage your schedule.">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Home · PrismU Course Registration</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="home">
-  <main>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">🎓</span><span>Prism<strong>U</strong></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="catalog.html" data-page="catalog">Course Catalog</a></li>
+        <li><a href="register.html" data-page="register">Register</a></li>
+        <li><a href="profile.html" data-page="profile">My Profile <span class="nav-badge" id="nav-badge" hidden>0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
     <section class="hero">
-      <div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div>
-      <div class="container hero-inner">
-        <p class="eyebrow">🍂 Fall 2026 registration is open</p>
-        <h1>Welcome back, <span class="gradient-text" id="welcome-name">Student</span>!</h1>
-        <p class="hero-sub">Discover courses, build a conflict-free schedule, and register in just a few clicks.</p>
-        <form class="hero-search" id="hero-search" role="search">
-          <label for="hero-query" class="sr-only">Search courses</label>
-          <input id="hero-query" type="search" placeholder="Search by course code, title, or instructor…" autocomplete="off">
-          <button class="btn btn-primary" type="submit">🔍 Search</button>
+      <div class="hero-content">
+        <p class="eyebrow">Spring 2027 registration is open</p>
+        <h1>Welcome back, <span id="home-greeting">Student</span>! <br><span class="gradient-text">Build your perfect semester.</span></h1>
+        <p class="lead">Browse courses across six departments, check open seats, and register in a few clicks.</p>
+        <form class="hero-search" id="home-search" role="search">
+          <label for="home-search-input" class="sr-only">Search courses</label>
+          <input id="home-search-input" type="search" placeholder="Search by course, code or instructor…">
+          <button class="btn btn-primary" type="submit">Search</button>
         </form>
         <div class="hero-actions">
-          <a href="catalog.html" class="btn btn-light">📖 Browse Catalog</a>
-          <a href="register.html" class="btn btn-outline-light">📝 Start Registration</a>
+          <a class="btn btn-light" href="catalog.html">Browse catalog</a>
+          <a class="btn btn-outline-light" href="register.html">Register now</a>
         </div>
       </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob b1">📚</div>
+        <div class="blob b2">🧪</div>
+        <div class="blob b3">🎨</div>
+        <div class="blob b4">💻</div>
+      </div>
     </section>
 
-    <section class="container stats">
-      <div class="stat-card" style="--accent:#6c5ce7"><span class="stat-icon">📚</span><strong id="stat-courses">0</strong><span>Courses offered</span></div>
-      <div class="stat-card" style="--accent:#00b894"><span class="stat-icon">🏛️</span><strong id="stat-depts">0</strong><span>Departments</span></div>
-      <div class="stat-card" style="--accent:#e84393"><span class="stat-icon">💺</span><strong id="stat-seats">0</strong><span>Open seats</span></div>
-      <div class="stat-card" style="--accent:#fdcb6e"><span class="stat-icon">✅</span><strong id="stat-mine">0</strong><span>Your courses</span></div>
+    <section class="container">
+      <div class="stats-grid" id="home-stats"></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">Explore departments</h2>
+      <div class="dept-grid" id="home-depts"></div>
     </section>
 
     <section class="container section">
       <div class="section-head">
-        <h2>Explore by Department</h2>
-        <a href="catalog.html" class="link-arrow">View all →</a>
+        <h2 class="section-title">Featured courses</h2>
+        <a href="catalog.html" class="link-arrow">See all courses →</a>
       </div>
-      <div class="dept-grid" id="dept-grid"></div>
+      <div class="course-grid" id="featured-courses"></div>
     </section>
 
     <section class="container section">
-      <div class="section-head">
-        <h2>✨ Featured Courses</h2>
-        <a href="catalog.html" class="link-arrow">See catalog →</a>
-      </div>
-      <div class="course-grid" id="featured-grid"></div>
-    </section>
-
-    <section class="container section">
-      <h2 class="center">How Registration Works</h2>
-      <div class="steps">
-        <div class="step" style="--accent:#6c5ce7"><span class="step-num">1</span><h3>Browse</h3><p>Search and filter the catalog to find courses that fit your goals.</p></div>
-        <div class="step" style="--accent:#0984e3"><span class="step-num">2</span><h3>Select</h3><p>Pick your courses — we'll flag time conflicts and credit limits automatically.</p></div>
-        <div class="step" style="--accent:#00b894"><span class="step-num">3</span><h3>Confirm</h3><p>Review your selection and confirm. Your seat is reserved instantly.</p></div>
-        <div class="step" style="--accent:#e84393"><span class="step-num">4</span><h3>Manage</h3><p>View your weekly schedule and drop courses from your profile.</p></div>
-      </div>
+      <h2 class="section-title">How it works</h2>
+      <ol class="steps">
+        <li class="step step-1"><span>1</span><h3>Browse</h3><p>Search and filter the catalog to find courses that fit your goals.</p></li>
+        <li class="step step-2"><span>2</span><h3>Register</h3><p>Fill in the registration form and confirm your choice.</p></li>
+        <li class="step step-3"><span>3</span><h3>Manage</h3><p>Review or drop courses any time from your profile.</p></li>
+      </ol>
     </section>
   </main>
 
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> PrismU Course Registration · Demo application with sample data</p>
+  </footer>
+
+  <div class="modal-overlay" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon" id="modal-icon" aria-hidden="true">✓</div>
+      <h2 id="modal-title">Confirm</h2>
+      <div id="modal-body"></div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="modal-cancel" type="button">Cancel</button>
+        <button class="btn btn-primary" id="modal-confirm" type="button">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

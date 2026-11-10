@@ -1,171 +1,112 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="View your student profile and registered courses.">
-  <meta name="theme-color" content="#4338ca">
-  <title>My Profile | Horizon University Registration</title>
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <title>My profile · Northbridge University Course Registration</title>
+  <meta name="description" content="Your student profile and registered courses.">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="profile.js" defer></script>
 </head>
-<body data-page="profile">
+<body>
   <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
-    <nav class="container nav-bar" aria-label="Main">
+    <nav class="container nav" aria-label="Main">
       <a class="brand" href="index.html">
-        <span class="brand-logo" aria-hidden="true">🎓</span>
-        Horizon University
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span>Northbridge University<span class="brand__sub">Course Registration</span></span>
       </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
         Menu
       </button>
-      <div class="nav-menu" id="primary-menu">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="catalog.html">Course Catalog</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="profile.html" aria-current="page">My Profile<span class="nav-badge" id="nav-reg-count" aria-hidden="true" hidden>0</span><span class="visually-hidden" id="nav-reg-count-label"></span></a></li>
+      <div class="nav__menu" id="primary-menu">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html"><span aria-hidden="true">🏠</span> Home</a></li>
+          <li><a class="nav__link" href="catalog.html"><span aria-hidden="true">📚</span> Course catalog</a></li>
+          <li><a class="nav__link" href="register.html"><span aria-hidden="true">📝</span> Registration <span class="nav__badge" id="nav-selected-count" hidden></span></a></li>
+          <li><a class="nav__link" href="profile.html" aria-current="page"><span aria-hidden="true">🎓</span> My profile</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main id="main" tabindex="-1">
-    <div class="page-hero">
-      <div class="container">
-        <h1>My Profile</h1>
-        <p>Manage your personal details and review your schedule for the term.</p>
-      </div>
-    </div>
-
-    <div class="section container layout-2col layout-2col-flip">
-      <section class="card profile-card" aria-labelledby="profile-name">
-        <div class="avatar" id="profile-avatar" aria-hidden="true">?</div>
-        <h2 id="profile-name">Student</h2>
-        <p id="profile-major" class="hint"></p>
-        <dl class="profile-details">
-          <dt>Student ID</dt><dd id="pd-id"></dd>
-          <dt>Email</dt><dd id="pd-email"></dd>
-          <dt>Major</dt><dd id="pd-major"></dd>
-          <dt>Year</dt><dd id="pd-year"></dd>
-        </dl>
-        <div class="progress-wrap">
-          <label for="credit-progress">Credit load</label>
-          <progress class="progress" id="credit-progress" max="18" value="0" aria-describedby="credit-progress-text"></progress>
-          <p class="hint" id="credit-progress-text"></p>
+    <div class="container">
+      <section class="profile-card" aria-labelledby="profile-name">
+        <div class="avatar" id="avatar" aria-hidden="true">JR</div>
+        <div>
+          <p class="eyebrow">Student profile</p>
+          <h1 id="profile-name">Jordan Rivera</h1>
+          <dl class="profile-details">
+            <div><dt>Student ID</dt><dd id="p-id"></dd></div>
+            <div><dt>Email</dt><dd id="p-email"></dd></div>
+            <div><dt>Program</dt><dd id="p-program"></dd></div>
+            <div><dt>Year</dt><dd id="p-year"></dd></div>
+          </dl>
         </div>
       </section>
 
-      <div>
-        <section aria-labelledby="summary-title">
-          <h2 id="summary-title" class="visually-hidden">Term summary</h2>
-          <ul class="stats-grid" style="margin-top:0;list-style:none;padding:0">
-            <li class="stat-card accent-purple"><span class="stat-value" id="ps-courses">0</span><span class="stat-label">Courses</span></li>
-            <li class="stat-card accent-pink"><span class="stat-value" id="ps-credits">0</span><span class="stat-label">Credits</span></li>
-            <li class="stat-card accent-teal"><span class="stat-value" id="ps-remaining">18</span><span class="stat-label">Credits available</span></li>
-          </ul>
-        </section>
+      <h2 class="visually-hidden" id="overview-title">Overview</h2>
+      <ul class="stat-tiles" aria-labelledby="overview-title">
+        <li class="c-violet"><span class="value" id="s-courses">0</span> <span class="label">registered courses</span></li>
+        <li class="c-pink"><span class="value" id="s-credits">0</span> <span class="label">total credits</span></li>
+        <li class="c-teal"><span class="value" id="s-remaining">18</span> <span class="label">credits remaining</span></li>
+        <li class="c-amber"><span class="value" id="s-days">0</span> <span class="label">days on campus per week</span></li>
+      </ul>
 
-        <section class="card" style="margin-top:1.5rem" aria-labelledby="edit-title">
-          <h2 id="edit-title">Edit details</h2>
-          <div class="alert alert-success" id="profile-saved" hidden>
-            <span aria-hidden="true">✓</span><p>Your profile has been saved.</p>
+      <section aria-labelledby="schedule-title">
+        <div class="results-bar">
+          <h2 id="schedule-title" style="margin:0">My registered courses</h2>
+          <div class="form-actions">
+            <a class="btn btn--primary btn--small" href="catalog.html">Add more courses</a>
+            <a class="btn btn--ghost btn--small" href="register.html">Edit my details</a>
           </div>
-          <form id="profile-form" novalidate>
-            <div class="form-grid">
-              <div class="field">
-                <label for="pf-name">Full name</label>
-                <input type="text" id="pf-name" autocomplete="name" required aria-describedby="pf-name-error">
-                <p class="error-message" id="pf-name-error"></p>
-              </div>
-              <div class="field">
-                <label for="pf-email">Email</label>
-                <input type="email" id="pf-email" autocomplete="email" required aria-describedby="pf-email-error">
-                <p class="error-message" id="pf-email-error"></p>
-              </div>
-              <div class="field">
-                <label for="pf-major">Major</label>
-                <input type="text" id="pf-major" required aria-describedby="pf-major-error">
-                <p class="error-message" id="pf-major-error"></p>
-              </div>
-              <div class="field">
-                <label for="pf-year">Year</label>
-                <select id="pf-year">
-                  <option>Freshman</option>
-                  <option>Sophomore</option>
-                  <option>Junior</option>
-                  <option>Senior</option>
-                  <option>Graduate</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
+        </div>
 
-    <section class="container" aria-labelledby="registered-heading">
-      <div class="section-header">
-        <h2 id="registered-heading" tabindex="-1">My registered courses</h2>
-        <a class="btn btn-secondary" href="catalog.html">Add a course</a>
-      </div>
-      <div class="table-wrapper" role="region" aria-labelledby="registered-caption" tabindex="0">
-        <table class="data-table">
-          <caption id="registered-caption">Courses you are registered for</caption>
-          <thead>
-            <tr>
-              <th scope="col">Code</th>
-              <th scope="col">Title</th>
-              <th scope="col" class="num">Credits</th>
-              <th scope="col">Schedule</th>
-              <th scope="col">Instructor</th>
-              <th scope="col">Term</th>
-              <th scope="col">Grading</th>
-              <th scope="col"><span class="visually-hidden">Actions</span></th>
-            </tr>
-          </thead>
-          <tbody id="registered-tbody"></tbody>
-          <tfoot id="registered-tfoot"></tfoot>
-        </table>
-      </div>
-    </section>
+        <div class="alert alert--success" id="drop-status" tabindex="-1" hidden></div>
+
+        <div class="table-wrap" role="region" aria-labelledby="table-caption" tabindex="0">
+          <table>
+            <caption id="table-caption">
+              Registered courses
+              <span id="table-sub">Scroll sideways on small screens to see all columns.</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Title</th>
+                <th scope="col">Department</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Instructor</th>
+                <th scope="col">Term</th>
+                <th scope="col"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody id="reg-body"></tbody>
+            <tfoot id="reg-foot"></tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section class="section panel c-orange" aria-labelledby="demo-title">
+        <h2 id="demo-title">Demo data</h2>
+        <p>This demo saves your registrations in your browser only. You can clear them at any time.</p>
+        <button type="button" class="btn btn--danger" id="reset-demo">Reset all demo data</button>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Horizon University · Office of the Registrar</p>
-      <ul class="footer-links">
-        <li><a href="catalog.html">Course Catalog</a></li>
-        <li><a href="mailto:registrar@horizon.edu">registrar@horizon.edu</a></li>
-        <li><a href="tel:+15555550123">(555) 555-0123</a></li>
-      </ul>
+    <div class="container footer__inner">
+      <p>&copy; <span id="footer-year">2026</span> Northbridge University · Demo app with sample data</p>
+      <p><a href="index.html">Home</a> · <a href="catalog.html">Catalog</a> · <a href="register.html">Registration</a> · <a href="profile.html">Profile</a></p>
     </div>
   </footer>
-
-  <!-- Shared confirmation modal -->
-  <dialog class="modal" id="confirm-modal" aria-labelledby="modal-title" aria-describedby="modal-body">
-    <div class="modal-header">
-      <h2 id="modal-title">Confirm</h2>
-      <button type="button" class="modal-close" data-modal-close aria-label="Close dialog">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body" id="modal-body"></div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline" id="modal-cancel" data-modal-close>Cancel</button>
-      <button type="button" class="btn btn-primary" id="modal-confirm">Confirm</button>
-    </div>
-  </dialog>
-
-  <!-- Polite live region for dynamic status announcements -->
-  <div id="live-region" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>
