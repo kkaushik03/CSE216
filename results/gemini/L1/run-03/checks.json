@@ -1,0 +1,2206 @@
+{
+  "checked": "2026-11-09T00:23:31.350Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.79",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title > .accent-text",
+                "html": "<span class=\"accent-text\">Portal</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.98 (foreground color: #818cf8, background color: #ffffff, font size: 16.2pt (21.6px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#818cf8",
+                  "bg": "#ffffff",
+                  "ratio": 2.98,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".footer-desc",
+                "html": "<p class=\"footer-desc\">Office of the University Registrar • Student Information Systems • Apex University of Technology</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 35,
+            "nodes": [
+              {
+                "selector": "#nav-registered-count",
+                "html": "<span class=\"badge-pill badge-primary\" id=\"nav-registered-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".avatar-circle",
+                "html": "<div class=\"avatar-circle\">RS</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".term-tag",
+                "html": "<div class=\"term-tag\"> <span class=\"pulse-indicator\"></span> Fall 2026 Course Registration is Open! </div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-title",
+                "html": "<h1 class=\"hero-title\">Empower Your Future. <br><span class=\"gradient-text\">Design Your Semester.</span></h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".gradient-text",
+                "html": "<span class=\"gradient-text\">Design Your Semester.</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-description",
+                "html": "<p class=\"hero-description\"> Browse over 250+ accredited undergraduate and graduate courses. Check real-time seat availability, consult interactive prerequisites, and lock in your schedule today. </p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-actions > .btn-lg.btn-primary.btn",
+                "html": "<button class=\"btn btn-primary btn-lg\" onclick=\"window.appRouter.navigate('catalog')\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-outline-light",
+                "html": "<button class=\"btn btn-outline-light btn-lg\" onclick=\"window.appRouter.navigate('registration')\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-accent-1 > div:nth-child(2) > .f-title",
+                "html": "<div class=\"f-title\">Priority Window</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-accent-1 > div:nth-child(2) > .f-sub",
+                "html": "<div class=\"f-sub\">Oct 12 - Nov 18, 2026</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-accent-2 > div:nth-child(2) > .f-title",
+                "html": "<div class=\"f-title\">Units Cap</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-accent-2 > div:nth-child(2) > .f-sub",
+                "html": "<div class=\"f-sub\">Max 20.0 Units / Term</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-accent-3 > div:nth-child(2) > .f-title",
+                "html": "<div class=\"f-title\">Academic Standing</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-accent-3 > div:nth-child(2) > .f-sub",
+                "html": "<div class=\"f-sub\">Dean's Honor List</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(1) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(1) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(1) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. David Martinez</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(1) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed 10:00 - 11:30 AM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(1) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>CSE Hall 1202 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(1) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (28/35)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(1) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">7 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(2) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(2) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(2) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Alex Snoeren</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(2) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 2:00 - 3:30 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(2) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Warren Lecture Hall 2001 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(2) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (39/40)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(2) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">Only 1 Seats Left!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(3) > div:nth-child(1) > .card-top > .dept-math.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(3) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(3) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Dr. Elena Vance</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(3) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed/Fri 1:00 - 1:50 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(3) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Applied Physics 110 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(3) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (115/120)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#featured-courses-container > .course-card:nth-child(3) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">Only 5 Seats Left!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1.",
+            "count": 13,
+            "nodes": [
+              {
+                "selector": "#featured-courses-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">7 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">Only 1 Seats Left!</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#featured-courses-container > div:nth-child(3) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">Only 5 Seats Left!</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(1) > p",
+                "html": "<p class=\"footer-desc\">Office of the University Regist...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(2)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(4)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(6)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+            "impact": "error",
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form",
+                "html": "<form id=\"profile-edit-form\" class=\"profile-settings-form\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputTel.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(1) > input",
+                "html": "<input type=\"tel\" class=\"form-control\" value=\"+1 (858) 555-0199\">",
+                "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputEmail.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(2) > input",
+                "html": "<input type=\"email\" class=\"form-control\" value=\"rahat.s@apex.edu\" readonly=\"\">",
+                "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 9
+      },
+      "lighthouse": {
+        "score": 93,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 2
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Course Catalog",
+      "url": "/index.html#catalog",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title > .accent-text",
+                "html": "<span class=\"accent-text\">Portal</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.98 (foreground color: #818cf8, background color: #ffffff, font size: 16.2pt (21.6px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#818cf8",
+                  "bg": "#ffffff",
+                  "ratio": 2.98,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".footer-desc",
+                "html": "<p class=\"footer-desc\">Office of the University Registrar • Student Information Systems • Apex University of Technology</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 95,
+            "nodes": [
+              {
+                "selector": "#nav-registered-count",
+                "html": "<span class=\"badge-pill badge-primary\" id=\"nav-registered-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".avatar-circle",
+                "html": "<div class=\"avatar-circle\">RS</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".dept-biol",
+                "html": "<span class=\"course-dept-pill dept-biol\">BIOL</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(1) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(1) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Dr. Maya Lin</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(1) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed 8:30 - 9:50 AM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(1) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Bonner Hall 2130 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(1) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (48/60)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(1) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">12 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"BIOL-100\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"BIOL-100\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".dept-cogs",
+                "html": "<span class=\"course-dept-pill dept-cogs\">COGS</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(2) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(2) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Dr. Shannon Ellis</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(2) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 9:30 - 10:50 AM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(2) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Cognitive Sci Bldg 001 • Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(2) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (130/150)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(2) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">20 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"COGS-108\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"COGS-108\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(3) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(3) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(3) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Christine Alvarado</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(3) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed/Fri 2:00 - 2:50 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(3) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>York Hall 2622 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(3) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (185/200)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#course-cards-container > .course-card:nth-child(3) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">15 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"CSE-100\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"CSE-100\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Thomas Powell</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 3:30 - 4:50 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Center Hall 212 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (138/140)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(4) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">Only 2 Seats Left!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"CSE-110\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"CSE-110\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Gary Cottrell</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed/Fri 11:00 - 11:50 AM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Peterson Hall 108 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (74/90)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(5) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">16 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"CSE-150B\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"CSE-150B\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. David Martinez</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed 10:00 - 11:30 AM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>CSE Hall 1202 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (28/35)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(6) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">7 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Alex Snoeren</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 2:00 - 3:30 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Warren Lecture Hall 2001 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (39/40)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(7) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">Only 1 Seats Left!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .card-top > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Julian McAuley</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 11:00 AM - 12:20 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Center Hall 105 • Hybrid</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (62/80)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(8) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">18 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"CSE-258\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"CSE-258\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".dept-ece",
+                "html": "<span class=\"course-dept-pill dept-ece\">ECE</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(9) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(9) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Ramsin Khoshabeh</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(9) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed 3:30 - 4:50 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(9) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Jacobs Hall 4309 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(9) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (45/45)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".text-rose",
+                "html": "<strong class=\"text-rose\">Waitlist Only (0 Seats)</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"ECE-140A\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"ECE-140A\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".dept-econ",
+                "html": "<span class=\"course-dept-pill dept-econ\">ECON</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(10) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(10) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Prof. Jeffrey Candido</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(10) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 5:00 - 6:20 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(10) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Galbraith Hall 242 • Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(10) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (82/100)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(10) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">18 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"ECON-120A\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"ECON-120A\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .card-top > .dept-math.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Dr. Elena Vance</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Mon/Wed/Fri 1:00 - 1:50 PM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Applied Physics 110 • In-Person</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (115/120)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(11) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">Only 5 Seats Left!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .card-top > .dept-math.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .card-top > .course-units-badge",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(1) > span",
+                "html": "<span>Dr. Aaron Stevens</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(2) > span",
+                "html": "<span>Tue/Thu 8:00 - 9:20 AM</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .course-meta-tags > .meta-row:nth-child(3) > span",
+                "html": "<span>Ledden Auditorium • Online</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .seat-status-box > .seat-header > .text-muted",
+                "html": "<span class=\"text-muted\">Capacity (210/250)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".course-card:nth-child(12) > div:nth-child(1) > .seat-status-box > .seat-header > .text-success",
+                "html": "<strong class=\"text-success\">40 Seats Available</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-quick-enroll.btn-primary[data-course-id=\"MATH-20C\"]",
+                "html": "<button class=\"btn btn-primary btn-quick-enroll\" data-course-id=\"MATH-20C\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1.",
+            "count": 40,
+            "nodes": [
+              {
+                "selector": "#course-cards-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-biol\">BIOL</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">12 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cogs\">COGS</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">20 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(3) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">15 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(4) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">Only 2 Seats Left!</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(5) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">16 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(6) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">7 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(7) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(7) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(7) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">Only 1 Seats Left!</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(8) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">18 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-ece\">ECE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(9) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-rose\">Waitlist Only (0 Seats)</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(10) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-econ\">ECON</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(10) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(10) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">18 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(11) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(11) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(11) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">Only 5 Seats Left!</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(12) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(12) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"course-units-badge\">4 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#course-cards-container > div:nth-child(12) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > strong",
+                "html": "<strong class=\"text-success\">40 Seats Available</strong>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(1) > p",
+                "html": "<p class=\"footer-desc\">Office of the University Regist...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(2)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(4)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(6)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+            "impact": "error",
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form",
+                "html": "<form id=\"profile-edit-form\" class=\"profile-settings-form\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputTel.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(1) > input",
+                "html": "<input type=\"tel\" class=\"form-control\" value=\"+1 (858) 555-0199\">",
+                "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputEmail.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(2) > input",
+                "html": "<input type=\"email\" class=\"form-control\" value=\"rahat.s@apex.edu\" readonly=\"\">",
+                "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 9
+      },
+      "lighthouse": {
+        "score": 94,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 2
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Registration 3",
+      "url": "/index.html#registration",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title > .accent-text",
+                "html": "<span class=\"accent-text\">Portal</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.98 (foreground color: #818cf8, background color: #ffffff, font size: 16.2pt (21.6px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#818cf8",
+                  "bg": "#ffffff",
+                  "ratio": 2.98,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".summary-row:nth-child(2) > .font-semibold.text-success",
+                "html": "<span class=\"text-success font-semibold\">Cleared • Paid</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #10b981, background color: #f8fafc, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#f8fafc",
+                  "ratio": 2.42,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".summary-row:nth-child(3) > .font-semibold.text-success",
+                "html": "<span class=\"text-success font-semibold\">0 Holds</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #10b981, background color: #f8fafc, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#f8fafc",
+                  "ratio": 2.42,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".summary-row:nth-child(4) > .font-semibold.text-success",
+                "html": "<span class=\"text-success font-semibold\">Approved</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #10b981, background color: #f8fafc, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#f8fafc",
+                  "ratio": 2.42,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "tr:nth-child(1) > td:nth-child(3) > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.62 (foreground color: #6366f1, background color: #e0e7ff, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#e0e7ff",
+                  "ratio": 3.62,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "tr:nth-child(1) > .text-center > .btn-danger.btn-drop-course[title=\"Drop this course\"]",
+                "html": "<button class=\"btn btn-sm btn-danger btn-drop-course\" data-course-id=\"CSE-216\" title=\"Drop this course\">",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.95 (foreground color: #dc2626, background color: #fee2e2, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#dc2626",
+                  "bg": "#fee2e2",
+                  "ratio": 3.95,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "tr:nth-child(2) > td:nth-child(3) > .dept-cse.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.62 (foreground color: #6366f1, background color: #e0e7ff, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#e0e7ff",
+                  "ratio": 3.62,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "tr:nth-child(2) > .text-center > .btn-danger.btn-drop-course[title=\"Drop this course\"]",
+                "html": "<button class=\"btn btn-sm btn-danger btn-drop-course\" data-course-id=\"CSE-224\" title=\"Drop this course\">",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.95 (foreground color: #dc2626, background color: #fee2e2, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#dc2626",
+                  "bg": "#fee2e2",
+                  "ratio": 3.95,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "td:nth-child(3) > .dept-math.course-dept-pill",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.62 (foreground color: #6366f1, background color: #e0e7ff, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#e0e7ff",
+                  "ratio": 3.62,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "tr:nth-child(3) > .text-center > .btn-danger.btn-drop-course[title=\"Drop this course\"]",
+                "html": "<button class=\"btn btn-sm btn-danger btn-drop-course\" data-course-id=\"MATH-180A\" title=\"Drop this course\">",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.95 (foreground color: #dc2626, background color: #fee2e2, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#dc2626",
+                  "bg": "#fee2e2",
+                  "ratio": 3.95,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-desc",
+                "html": "<p class=\"footer-desc\">Office of the University Registrar • Student Information Systems • Apex University of Technology</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "#nav-registered-count",
+                "html": "<span class=\"badge-pill badge-primary\" id=\"nav-registered-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".avatar-circle",
+                "html": "<div class=\"avatar-circle\">RS</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".card-header-with-badge > .badge-primary.badge",
+                "html": "<span class=\"badge badge-primary\">Fall 2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#btn-submit-registration",
+                "html": "<button type=\"submit\" class=\"btn btn-primary btn-lg\" id=\"btn-submit-registration\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.42:1. Recommendation:  change text colour to #00170f.",
+            "count": 13,
+            "nodes": [
+              {
+                "selector": "#page-registration > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > span:nth-child(2)",
+                "html": "<span class=\"text-success font-semibold\">Cleared • Paid</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.42:1. Recommendation:  change text colour to #00170f."
+              },
+              {
+                "selector": "#page-registration > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:nth-child(3) > span:nth-child(2)",
+                "html": "<span class=\"text-success font-semibold\">0 Holds</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.42:1. Recommendation:  change text colour to #00170f."
+              },
+              {
+                "selector": "#page-registration > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:nth-child(4) > span:nth-child(2)",
+                "html": "<span class=\"text-success font-semibold\">Approved</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.42:1. Recommendation:  change text colour to #00170f."
+              },
+              {
+                "selector": "#registered-courses-tbody > tr:nth-child(1) > td:nth-child(3) > span",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#registered-courses-tbody > tr:nth-child(1) > td:nth-child(9) > button",
+                "html": "<button class=\"btn btn-sm btn-danger btn-drop-course\" data-course-id=\"CSE-216\" title=\"Drop this course\"> <svg width=\"14...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.95:1. Recommendation:  change text colour to #cf1919."
+              },
+              {
+                "selector": "#registered-courses-tbody > tr:nth-child(2) > td:nth-child(3) > span",
+                "html": "<span class=\"course-dept-pill dept-cse\">CSE</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#registered-courses-tbody > tr:nth-child(2) > td:nth-child(9) > button",
+                "html": "<button class=\"btn btn-sm btn-danger btn-drop-course\" data-course-id=\"CSE-224\" title=\"Drop this course\"> <svg width=\"14...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.95:1. Recommendation:  change text colour to #cf1919."
+              },
+              {
+                "selector": "#registered-courses-tbody > tr:nth-child(3) > td:nth-child(3) > span",
+                "html": "<span class=\"course-dept-pill dept-math\">MATH</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.63:1. Recommendation:  change text colour to #5356e1."
+              },
+              {
+                "selector": "#registered-courses-tbody > tr:nth-child(3) > td:nth-child(9) > button",
+                "html": "<button class=\"btn btn-sm btn-danger btn-drop-course\" data-course-id=\"MATH-180A\" title=\"Drop this course\"> <svg width=\"14...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.95:1. Recommendation:  change text colour to #cf1919."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(1) > p",
+                "html": "<p class=\"footer-desc\">Office of the University Regist...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(2)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(4)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(6)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+            "impact": "error",
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form",
+                "html": "<form id=\"profile-edit-form\" class=\"profile-settings-form\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputTel.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(1) > input",
+                "html": "<input type=\"tel\" class=\"form-control\" value=\"+1 (858) 555-0199\">",
+                "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputEmail.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(2) > input",
+                "html": "<input type=\"email\" class=\"form-control\" value=\"rahat.s@apex.edu\" readonly=\"\">",
+                "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 9
+      },
+      "lighthouse": {
+        "score": 96,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Student Profile",
+      "url": "/index.html#profile",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title > .accent-text",
+                "html": "<span class=\"accent-text\">Portal</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.98 (foreground color: #818cf8, background color: #ffffff, font size: 16.2pt (21.6px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#818cf8",
+                  "bg": "#ffffff",
+                  "ratio": 2.98,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".s-val.text-success",
+                "html": "<div class=\"s-val text-success\">3.94</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.42 (foreground color: #10b981, background color: #f8fafc, font size: 19.2pt (25.6px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#f8fafc",
+                  "ratio": 2.42,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".text-amber",
+                "html": "<div class=\"s-val text-amber\">Tau Beta Pi</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.05 (foreground color: #f59e0b, background color: #f8fafc, font size: 19.2pt (25.6px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#f59e0b",
+                  "bg": "#f8fafc",
+                  "ratio": 2.05,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".btn-sm.btn-outline-primary.btn",
+                "html": "<button class=\"btn btn-sm btn-outline-primary\" onclick=\"window.appRouter.navigate('registration')\"> Edit in Registration → </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.46 (foreground color: #6366f1, background color: #ffffff, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#ffffff",
+                  "ratio": 4.46,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-desc",
+                "html": "<p class=\"footer-desc\">Office of the University Registrar • Student Information Systems • Apex University of Technology</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.9pt (13.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "rule": "label",
+            "impact": "critical",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Form elements must have labels",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label?application=axe-puppeteer",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "input[type=\"tel\"]",
+                "html": "<input type=\"tel\" class=\"form-control\" value=\"+1 (858) 555-0199\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              },
+              {
+                "selector": "input[value=\"Tamarack Apts #402B\"]",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              },
+              {
+                "selector": "input[type=\"email\"]",
+                "html": "<input type=\"email\" class=\"form-control\" value=\"rahat.s@apex.edu\" readonly=\"\">",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              }
+            ]
+          },
+          {
+            "rule": "select-name",
+            "impact": "critical",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Select element must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/select-name?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".form-field:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option selected=\"\">Email &amp; SMS Notifications</option> <option>Email Only</option> <option>Portal Dashboard Only</option> </select>",
+                "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 13,
+            "nodes": [
+              {
+                "selector": "#nav-registered-count",
+                "html": "<span class=\"badge-pill badge-primary\" id=\"nav-registered-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".avatar-circle",
+                "html": "<div class=\"avatar-circle\">RS</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-name",
+                "html": "<h1 class=\"profile-name\">Rahat S.</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".profile-name-row > .badge-primary.badge",
+                "html": "<span class=\"badge badge-primary\">Senior • Year 4</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-major",
+                "html": "<p class=\"profile-major\">B.S. in Computer Science &amp; Engineering | Minor in Data Analytics</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-tags > span:nth-child(1)",
+                "html": "<span><strong>ID:</strong> APX-84920</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(1) > strong",
+                "html": "<strong>ID:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-tags > span:nth-child(3)",
+                "html": "<span><strong>Email:</strong> rahat.s@apex.edu</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(3) > strong",
+                "html": "<strong>Email:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(5)",
+                "html": "<span><strong>Advisor:</strong> Prof. Elena Vance</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(5) > strong",
+                "html": "<strong>Advisor:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(7)",
+                "html": "<span><strong>College:</strong> John Muir College</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "span:nth-child(7) > strong",
+                "html": "<strong>College:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#catalog-search",
+                "html": "<input type=\"text\" id=\"catalog-search\" class=\"form-control search-field\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(2) > input",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.42:1. Recommendation:  change text colour to #00170f.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#page-profile > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2)",
+                "html": "<div class=\"s-val text-success\">3.94</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.42:1. Recommendation:  change text colour to #00170f."
+              },
+              {
+                "selector": "#page-profile > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2)",
+                "html": "<div class=\"s-val text-amber\">Tau Beta Pi</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.05:1. Recommendation:  change text colour to #1e1300."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.47:1. Recommendation:  change text colour to #6265f0.",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "#page-profile > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > button",
+                "html": "<button class=\"btn btn-sm btn-outline-primary\" onclick=\"window.appRouter.navigate('registration')\"> Edit in Regi...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.47:1. Recommendation:  change text colour to #6265f0."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(1) > p",
+                "html": "<p class=\"footer-desc\">Office of the University Regist...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(2)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(4)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(2) > span:nth-child(6)",
+                "html": "<span class=\"footer-separator\">•</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.36:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+            "impact": "error",
+            "wcag": [
+              "3.2.2"
+            ],
+            "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form",
+                "html": "<form id=\"profile-edit-form\" class=\"profile-settings-form\"> <div class=\"fo...</form>",
+                "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputTel.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(1) > div:nth-child(1) > input",
+                "html": "<input type=\"tel\" class=\"form-control\" value=\"+1 (858) 555-0199\">",
+                "message": "This telinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputEmail.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(2) > input",
+                "html": "<input type=\"email\" class=\"form-control\" value=\"rahat.s@apex.edu\" readonly=\"\">",
+                "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#profile-edit-form > div:nth-child(3) > select",
+                "html": "<select class=\"form-select\"> <option se...</select>",
+                "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 9
+      },
+      "lighthouse": {
+        "score": 81,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 5
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          },
+          {
+            "rule": "label",
+            "count": 3
+          },
+          {
+            "rule": "select-name",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

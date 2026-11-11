@@ -1,0 +1,1444 @@
+{
+  "checked": "2026-11-09T00:22:41.059Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.79",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "button[data-view=\"catalog\"] > span",
+                "html": "<span>Course Catalog</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"registration\"] > span:nth-child(2)",
+                "html": "<span>Registration</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"profile\"] > span",
+                "html": "<span>Student Profile</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy > p",
+                "html": "<p>© 2026 Regents of the University of California. All rights reserved.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.56 (foreground color: #94a3b8, background color: #ffffff, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#94a3b8",
+                  "bg": "#ffffff",
+                  "ratio": 2.56,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 36,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title",
+                "html": "<span class=\"brand-title\">Triton<span class=\"accent-gradient\">Register</span></span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-text > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Fall 2026 Enrollment</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#nav-reg-count",
+                "html": "<span class=\"badge-count\" id=\"nav-reg-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".user-avatar",
+                "html": "<div class=\"user-avatar\">AC</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".hero-badge",
+                "html": "<div class=\"hero-badge\">🎓 Fall Quarter 2026 Enrollment Open</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-title",
+                "html": "<h1 class=\"hero-title\">Shape Your Academic Journey with <span class=\"gradient-text\">Confidence</span></h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".gradient-text",
+                "html": "<span class=\"gradient-text\">Confidence</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-subtitle",
+                "html": "<p class=\"hero-subtitle\"> Explore hundreds of interdisciplinary courses, build an optimal weekly schedule, and secure your classes seamlessly before pass times close. </p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-lg.btn-primary[onclick=\"navigateTo('catalog')\"]",
+                "html": "<button class=\"btn btn-primary btn-lg\" onclick=\"navigateTo('catalog')\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-secondary.btn-lg[onclick=\"navigateTo('registration')\"]",
+                "html": "<button class=\"btn btn-secondary btn-lg\" onclick=\"navigateTo('registration')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Quick Register Courses </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#home-registered-units",
+                "html": "<span class=\"stat-number\" id=\"home-registered-units\">12</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-purple > .stat-info > .stat-label",
+                "html": "<span class=\"stat-label\">Units Enrolled</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-cyan.quick-stat-card > .stat-info > .stat-number",
+                "html": "<span class=\"stat-number\">Pass 1</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-cyan.quick-stat-card > .stat-info > .stat-label",
+                "html": "<span class=\"stat-label\">Priority Window Open</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-amber > .stat-info > .stat-number",
+                "html": "<span class=\"stat-number\">18 Max</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-amber > .stat-info > .stat-label",
+                "html": "<span class=\"stat-label\">Unit Cap (Pass 1)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-emerald > .stat-info > .stat-number",
+                "html": "<span class=\"stat-number\">Cleared</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".card-emerald > .stat-info > .stat-label",
+                "html": "<span class=\"stat-label\">Zero Academic Holds</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".section-header:nth-child(2) > div > .section-title",
+                "html": "<h2 class=\"section-title\">Quick Portals &amp; Fast Track</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".section-header:nth-child(2) > div > .section-desc",
+                "html": "<p class=\"section-desc\">Jump straight to what you need today</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".portal-card.gradient-border-hover[onclick=\"navigateTo('catalog')\"] > .portal-arrow",
+                "html": "<span class=\"portal-arrow\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".portal-card.gradient-border-hover[onclick=\"navigateTo('registration')\"]:nth-child(2) > .portal-arrow",
+                "html": "<span class=\"portal-arrow\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".portal-card.gradient-border-hover[onclick=\"navigateTo('registration')\"]:nth-child(3) > .portal-arrow",
+                "html": "<span class=\"portal-arrow\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".portal-card.gradient-border-hover[onclick=\"navigateTo('profile')\"] > .portal-arrow",
+                "html": "<span class=\"portal-arrow\">→</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": ".section-header.mt-4 > div > .section-title",
+                "html": "<h2 class=\"section-title\">High-Demand &amp; Featured Courses</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".section-header.mt-4 > div > .section-desc",
+                "html": "<p class=\"section-desc\">Trending electives and essential degree milestones for Fall 2026</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#home-featured-courses > .dept-cse[data-crn=\"52101\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52101')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#home-featured-courses > .dept-cse[data-crn=\"52108\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52108')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#home-featured-courses > .dept-dsc[data-crn=\"52115\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52115')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".alert-text-side > h4",
+                "html": "<h4>Important Academic Dates for Fall Quarter 2026</h4>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".alert-text-side > p",
+                "html": "<p>• <strong>Pass 1 Ends:</strong> November 14, 2026 (Max 11.5 units) &nbsp;|&nbsp; • <strong>Pass 2 Begins:</strong> November 18, 2026 (Max 19.5 units) &nbsp;|&nbsp; • <strong>Add/Drop Without Penalty:</strong> October 9, 2026</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".alert-text-side > p > strong:nth-child(1)",
+                "html": "<strong>Pass 1 Ends:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "p > strong:nth-child(2)",
+                "html": "<strong>Pass 2 Begins:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "strong:nth-child(3)",
+                "html": "<strong>Add/Drop Without Penalty:</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-group > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "#main-nav > button:nth-child(2) > span",
+                "html": "<span>Course Catalog</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(3) > span:nth-child(2)",
+                "html": "<span>Registration</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(4) > span",
+                "html": "<span>Student Profile</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3) > p",
+                "html": "<p>© 2026 Regents of the Universit...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change text colour to #68778c."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 5
+      },
+      "lighthouse": {
+        "score": 91,
+        "issues": [
+          {
+            "rule": "aria-dialog-name",
+            "count": 2
+          },
+          {
+            "rule": "color-contrast",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Course Catalog",
+      "url": "/index.html#catalog",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "button[data-view=\"home\"] > span",
+                "html": "<span>Home</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"registration\"] > span:nth-child(2)",
+                "html": "<span>Registration</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"profile\"] > span",
+                "html": "<span>Student Profile</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy > p",
+                "html": "<p>© 2026 Regents of the University of California. All rights reserved.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.56 (foreground color: #94a3b8, background color: #ffffff, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#94a3b8",
+                  "bg": "#ffffff",
+                  "ratio": 2.56,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 23,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title",
+                "html": "<span class=\"brand-title\">Triton<span class=\"accent-gradient\">Register</span></span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-text > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Fall 2026 Enrollment</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#nav-reg-count",
+                "html": "<span class=\"badge-count\" id=\"nav-reg-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".user-avatar",
+                "html": "<div class=\"user-avatar\">AC</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".catalog-banner > .banner-text > .page-title",
+                "html": "<h1 class=\"page-title\">University Course Catalog</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".catalog-banner > .banner-text > .page-subtitle",
+                "html": "<p class=\"page-subtitle\">Search, filter, and discover available sections for the upcoming academic session.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#catalog-total-count",
+                "html": "<span class=\"kpi-val\" id=\"catalog-total-count\">12</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".kpi-box:nth-child(1) > .kpi-lbl",
+                "html": "<span class=\"kpi-lbl\">Total Courses</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#catalog-open-count",
+                "html": "<span class=\"kpi-val\" id=\"catalog-open-count\">9</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".kpi-box:nth-child(2) > .kpi-lbl",
+                "html": "<span class=\"kpi-lbl\">Open Seats</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#results-count-text",
+                "html": "<span id=\"results-count-text\">Showing 12 of 12 courses</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "label[for=\"sort-courses\"]",
+                "html": "<label for=\"sort-courses\">Sort by:</label>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[data-crn=\"52150\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52150')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[data-crn=\"52140\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52140')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#catalog-course-grid > .dept-cse[data-crn=\"52101\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52101')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#catalog-course-grid > .dept-cse[data-crn=\"52108\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52108')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[data-crn=\"52170\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52170')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#catalog-course-grid > .dept-dsc[data-crn=\"52115\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52115')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".dept-econ > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52155')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article[data-crn=\"52126\"] > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52126')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".dept-vis > .course-card-body > .course-card-actions > .btn-primary.btn",
+                "html": "<button class=\"btn btn-primary\" onclick=\"initiateCourseRegistration('52162')\"> <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" class=\"btn-icon\"><path d=\"M12 5v14M5 12h14\"></path></svg> Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-group > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "#main-nav > button:nth-child(1) > span",
+                "html": "<span>Home</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(3) > span:nth-child(2)",
+                "html": "<span>Registration</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(4) > span",
+                "html": "<span>Student Profile</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3) > p",
+                "html": "<p>© 2026 Regents of the Universit...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change text colour to #68778c."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 5
+      },
+      "lighthouse": {
+        "score": 90,
+        "issues": [
+          {
+            "rule": "aria-dialog-name",
+            "count": 2
+          },
+          {
+            "rule": "color-contrast",
+            "count": 4
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Registration 3",
+      "url": "/index.html#registration",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 7,
+            "nodes": [
+              {
+                "selector": "button[data-view=\"home\"] > span",
+                "html": "<span>Home</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"catalog\"] > span",
+                "html": "<span>Course Catalog</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"profile\"] > span",
+                "html": "<span>Student Profile</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-table-drop[onclick=\"openDropModal('52120')\"][title=\"Drop this course\"]",
+                "html": "<button class=\"btn-table-drop\" onclick=\"openDropModal('52120')\" title=\"Drop this course\"> Drop </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #f43f5e, background color: #ffffff, font size: 9.8pt (13.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#ffffff",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-table-drop[onclick=\"openDropModal('52132')\"][title=\"Drop this course\"]",
+                "html": "<button class=\"btn-table-drop\" onclick=\"openDropModal('52132')\" title=\"Drop this course\"> Drop </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #f43f5e, background color: #ffffff, font size: 9.8pt (13.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#ffffff",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-table-drop[onclick=\"openDropModal('52145')\"][title=\"Drop this course\"]",
+                "html": "<button class=\"btn-table-drop\" onclick=\"openDropModal('52145')\" title=\"Drop this course\"> Drop </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #f43f5e, background color: #ffffff, font size: 9.8pt (13.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#ffffff",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy > p",
+                "html": "<p>© 2026 Regents of the University of California. All rights reserved.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.56 (foreground color: #94a3b8, background color: #ffffff, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#94a3b8",
+                  "bg": "#ffffff",
+                  "ratio": 2.56,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 17,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title",
+                "html": "<span class=\"brand-title\">Triton<span class=\"accent-gradient\">Register</span></span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-text > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Fall 2026 Enrollment</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#nav-reg-count",
+                "html": "<span class=\"badge-count\" id=\"nav-reg-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".user-avatar",
+                "html": "<div class=\"user-avatar\">AC</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".registration-banner > .banner-text > .page-title",
+                "html": "<h1 class=\"page-title\">Course Registration &amp; Enrollment</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".registration-banner > .banner-text > .page-subtitle",
+                "html": "<p class=\"page-subtitle\">Add sections using course codes or CRN, adjust grading options, and manage your active schedule.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".tracker-header > span",
+                "html": "<span>Quarter Credit Budget</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#credit-meter-text",
+                "html": "<strong id=\"credit-meter-text\">12 / 18 Units Enrolled</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#credit-status-pill",
+                "html": "<span class=\"pill-badge pill-safe\" id=\"credit-status-pill\">Normal Load (Full-Time)</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#credit-remaining-text",
+                "html": "<span class=\"text-muted\" id=\"credit-remaining-text\">6 units available</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#submit-add-btn",
+                "html": "<button type=\"submit\" class=\"btn btn-primary btn-block btn-lg\" id=\"submit-add-btn\">",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "li:nth-child(1) > .check-box.checked",
+                "html": "<span class=\"check-box checked\">✓</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "li:nth-child(2) > .check-box.checked",
+                "html": "<span class=\"check-box checked\">✓</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "li:nth-child(3) > .check-box.checked",
+                "html": "<span class=\"check-box checked\">✓</span>",
+                "summary": "Fix any of the following: Element content contains only non-text characters"
+              },
+              {
+                "selector": "#table-credit-summary",
+                "html": "<span class=\"table-total-badge\" id=\"table-credit-summary\">Total: 12 Units | 3 Courses</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-group > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe.",
+            "count": 12,
+            "nodes": [
+              {
+                "selector": "#main-nav > button:nth-child(1) > span",
+                "html": "<span>Home</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(2) > span",
+                "html": "<span>Course Catalog</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(4) > span",
+                "html": "<span>Student Profile</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#add-course-form > div:nth-child(1) > label > span",
+                "html": "<span class=\"required\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#add-course-form > div:nth-child(2) > div:nth-child(1) > label > span",
+                "html": "<span class=\"required\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#add-course-form > div:nth-child(2) > div:nth-child(2) > label > span",
+                "html": "<span class=\"required\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#registered-table-body > tr:nth-child(1) > td:nth-child(9) > div > button",
+                "html": "<button class=\"btn-table-drop\" onclick=\"openDropModal('52120')\" title=\"Drop this course\"> Drop </button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#registered-table-body > tr:nth-child(2) > td:nth-child(9) > div > button",
+                "html": "<button class=\"btn-table-drop\" onclick=\"openDropModal('52132')\" title=\"Drop this course\"> Drop </button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#registered-table-body > tr:nth-child(3) > td:nth-child(9) > div > button",
+                "html": "<button class=\"btn-table-drop\" onclick=\"openDropModal('52145')\" title=\"Drop this course\"> Drop </button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3) > p",
+                "html": "<p>© 2026 Regents of the Universit...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change text colour to #68778c."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 5
+      },
+      "lighthouse": {
+        "score": 93,
+        "issues": [
+          {
+            "rule": "aria-dialog-name",
+            "count": 2
+          },
+          {
+            "rule": "color-contrast",
+            "count": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Student Profile",
+      "url": "/index.html#profile",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "button[data-view=\"home\"] > span",
+                "html": "<span>Home</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"catalog\"] > span",
+                "html": "<span>Course Catalog</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[data-view=\"registration\"] > span:nth-child(2)",
+                "html": "<span>Registration</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 11.0pt (14.72px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy > p",
+                "html": "<p>© 2026 Regents of the University of California. All rights reserved.</p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.56 (foreground color: #94a3b8, background color: #ffffff, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#94a3b8",
+                  "bg": "#ffffff",
+                  "ratio": 2.56,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": ".brand-text > .brand-title",
+                "html": "<span class=\"brand-title\">Triton<span class=\"accent-gradient\">Register</span></span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-text > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".brand-sub",
+                "html": "<span class=\"brand-sub\">Fall 2026 Enrollment</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#nav-reg-count",
+                "html": "<span class=\"badge-count\" id=\"nav-reg-count\">3</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".user-avatar",
+                "html": "<div class=\"user-avatar\">AC</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-banner > .banner-text > .page-title",
+                "html": "<h1 class=\"page-title\">Student Profile &amp; Academic Record</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".profile-banner > .banner-text > .page-subtitle",
+                "html": "<p class=\"page-subtitle\">Manage personal academic details, view cumulative progress, and access historical transcripts.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-avatar-large",
+                "html": "<div class=\"profile-avatar-large\">AC</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".btn-sm",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"navigateTo('registration')\"> Manage Courses → </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".brand-group > .brand-title > .accent-gradient",
+                "html": "<span class=\"accent-gradient\">Register</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "#main-nav > button:nth-child(1) > span",
+                "html": "<span>Home</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(2) > span",
+                "html": "<span>Course Catalog</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#main-nav > button:nth-child(3) > span:nth-child(2)",
+                "html": "<span>Registration</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "#drop-modal > div > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(1)",
+                "html": "<span class=\"text-rose font-bold\">⚠️</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.36:1. Recommendation:  change text colour to #030303."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3) > p",
+                "html": "<p>© 2026 Regents of the Universit...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change text colour to #68778c."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#course-search-input",
+                "html": "<input type=\"text\" id=\"course-search-input\" placeholder=\"Search by title, course code (e.g. CSE 110), instructor, or keywords...\" class=\"search-input\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 5
+      },
+      "lighthouse": {
+        "score": 92,
+        "issues": [
+          {
+            "rule": "aria-dialog-name",
+            "count": 2
+          },
+          {
+            "rule": "color-contrast",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

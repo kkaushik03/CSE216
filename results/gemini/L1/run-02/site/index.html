@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TritonRegister - University Course Registration System</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="app-header">
+    <div class="nav-container">
+      <div class="brand-group">
+        <a href="#home" class="brand-logo" onclick="navigateTo('home')">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Triton<span class="accent-gradient">Register</span></span>
+            <span class="brand-sub">Fall 2026 Enrollment</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <button class="nav-link active" data-view="home" onclick="navigateTo('home')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-link" data-view="catalog" onclick="navigateTo('catalog')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10M6 14h6"/></svg>
+          <span>Course Catalog</span>
+        </button>
+        <button class="nav-link" data-view="registration" onclick="navigateTo('registration')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+          <span>Registration</span>
+          <span class="badge-count" id="nav-reg-count">3</span>
+        </button>
+        <button class="nav-link" data-view="profile" onclick="navigateTo('profile')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Student Profile</span>
+        </button>
+      </nav>
+
+      <div class="user-pill" onclick="navigateTo('profile')" title="View Student Profile">
+        <div class="user-avatar">AC</div>
+        <div class="user-meta">
+          <span class="user-name">Alex Chen</span>
+          <span class="user-status"><span class="status-dot online"></span>Eligible (3.84 GPA)</span>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NOTIFICATION TOAST CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- MAIN APP CONTAINER -->
+  <main class="app-main">
+
+    <!-- ============================================== -->
+    <!-- VIEW 1: HOME PAGE                             -->
+    <!-- ============================================== -->
+    <section id="view-home" class="page-view active">
+      <!-- Hero Banner -->
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="hero-badge">🎓 Fall Quarter 2026 Enrollment Open</div>
+          <h1 class="hero-title">Shape Your Academic Journey with <span class="gradient-text">Confidence</span></h1>
+          <p class="hero-subtitle">
+            Explore hundreds of interdisciplinary courses, build an optimal weekly schedule, and secure your classes seamlessly before pass times close.
+          </p>
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" onclick="navigateTo('catalog')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Explore Course Catalog
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="navigateTo('registration')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M12 5v14M5 12h14"/></svg>
+              Quick Register Courses
+            </button>
+          </div>
+        </div>
+        <div class="hero-stats-panel">
+          <div class="quick-stat-card card-purple">
+            <div class="stat-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number" id="home-registered-units">12</span>
+              <span class="stat-label">Units Enrolled</span>
+            </div>
+          </div>
+          <div class="quick-stat-card card-cyan">
+            <div class="stat-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">Pass 1</span>
+              <span class="stat-label">Priority Window Open</span>
+            </div>
+          </div>
+          <div class="quick-stat-card card-amber">
+            <div class="stat-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">18 Max</span>
+              <span class="stat-label">Unit Cap (Pass 1)</span>
+            </div>
+          </div>
+          <div class="quick-stat-card card-emerald">
+            <div class="stat-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">Cleared</span>
+              <span class="stat-label">Zero Academic Holds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Grid -->
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Quick Portals & Fast Track</h2>
+          <p class="section-desc">Jump straight to what you need today</p>
+        </div>
+      </div>
+
+      <div class="quick-portals-grid">
+        <div class="portal-card gradient-border-hover" onclick="navigateTo('catalog')">
+          <div class="portal-icon bg-indigo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <div class="portal-body">
+            <h3>Search Catalog</h3>
+            <p>Browse by department, subject code, instructor, or meeting times.</p>
+          </div>
+          <span class="portal-arrow">→</span>
+        </div>
+
+        <div class="portal-card gradient-border-hover" onclick="navigateTo('registration')">
+          <div class="portal-icon bg-fuchsia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <div class="portal-body">
+            <h3>Direct CRN Add</h3>
+            <p>Know your Course Reference Numbers? Register directly in seconds.</p>
+          </div>
+          <span class="portal-arrow">→</span>
+        </div>
+
+        <div class="portal-card gradient-border-hover" onclick="navigateTo('registration')">
+          <div class="portal-icon bg-emerald">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="portal-body">
+            <h3>Schedule & Units</h3>
+            <p>View your enrolled courses table, schedule calendar, and dropped units.</p>
+          </div>
+          <span class="portal-arrow">→</span>
+        </div>
+
+        <div class="portal-card gradient-border-hover" onclick="navigateTo('profile')">
+          <div class="portal-icon bg-amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <div class="portal-body">
+            <h3>Degree Audit & GPA</h3>
+            <p>Monitor your progress toward graduation and academic standing.</p>
+          </div>
+          <span class="portal-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Featured Courses Carousel/Grid -->
+      <div class="section-header mt-4">
+        <div>
+          <h2 class="section-title">High-Demand & Featured Courses</h2>
+          <p class="section-desc">Trending electives and essential degree milestones for Fall 2026</p>
+        </div>
+        <button class="btn btn-outline" onclick="navigateTo('catalog')">View All Courses →</button>
+      </div>
+
+      <div class="course-grid" id="home-featured-courses">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Academic Deadlines Alert Banner -->
+      <div class="alert-banner-colorful mt-4">
+        <div class="alert-icon-side">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="alert-text-side">
+          <h4>Important Academic Dates for Fall Quarter 2026</h4>
+          <p>• <strong>Pass 1 Ends:</strong> November 14, 2026 (Max 11.5 units) &nbsp;|&nbsp; • <strong>Pass 2 Begins:</strong> November 18, 2026 (Max 19.5 units) &nbsp;|&nbsp; • <strong>Add/Drop Without Penalty:</strong> October 9, 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 2: COURSE CATALOG                         -->
+    <!-- ============================================== -->
+    <section id="view-catalog" class="page-view">
+      <div class="page-banner catalog-banner">
+        <div class="banner-text">
+          <h1 class="page-title">University Course Catalog</h1>
+          <p class="page-subtitle">Search, filter, and discover available sections for the upcoming academic session.</p>
+        </div>
+        <div class="banner-kpis">
+          <div class="kpi-box">
+            <span class="kpi-val" id="catalog-total-count">0</span>
+            <span class="kpi-lbl">Total Courses</span>
+          </div>
+          <div class="kpi-box">
+            <span class="kpi-val" id="catalog-open-count">0</span>
+            <span class="kpi-lbl">Open Seats</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search & Filters Container -->
+      <div class="filters-card">
+        <div class="search-bar-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="course-search-input" placeholder="Search by title, course code (e.g. CSE 110), instructor, or keywords..." class="search-input">
+          <button id="clear-search-btn" class="clear-btn" title="Clear search" style="display:none;">&times;</button>
+        </div>
+
+        <div class="filter-dropdowns-row">
+          <div class="filter-group">
+            <label for="filter-department">Department</label>
+            <div class="select-styled">
+              <select id="filter-department">
+                <option value="ALL">All Departments</option>
+                <option value="CSE">Computer Science & Eng (CSE)</option>
+                <option value="DSC">Data Science (DSC)</option>
+                <option value="MATH">Mathematics (MATH)</option>
+                <option value="COGS">Cognitive Science (COGS)</option>
+                <option value="BILD">Biological Sciences (BILD)</option>
+                <option value="ECON">Economics (ECON)</option>
+                <option value="VIS">Visual Arts & Design (VIS)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-level">Academic Level</label>
+            <div class="select-styled">
+              <select id="filter-level">
+                <option value="ALL">All Levels</option>
+                <option value="Lower">Lower Division (0-99)</option>
+                <option value="Upper">Upper Division (100-199)</option>
+                <option value="Grad">Graduate (200+)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-credits">Units / Credits</label>
+            <div class="select-styled">
+              <select id="filter-credits">
+                <option value="ALL">Any Units</option>
+                <option value="2">2 Units</option>
+                <option value="4">4 Units</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-status">Seat Availability</label>
+            <div class="select-styled">
+              <select id="filter-status">
+                <option value="ALL">All Statuses</option>
+                <option value="OPEN">Open Seats Only</option>
+                <option value="WAITLIST">Waitlist Available</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-actions">
+            <button id="reset-filters-btn" class="btn btn-outline" title="Reset all filters">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              Reset Filters
+            </button>
+          </div>
+        </div>
+
+        <div class="active-filter-tags" id="active-filter-tags">
+          <!-- Dynamic tags of active filters -->
+        </div>
+      </div>
+
+      <!-- Course Cards Catalog Grid -->
+      <div class="catalog-results-header">
+        <span id="results-count-text">Showing all courses</span>
+        <div class="sort-selector">
+          <label for="sort-courses">Sort by:</label>
+          <select id="sort-courses" class="select-compact">
+            <option value="code-asc">Course Code (A - Z)</option>
+            <option value="code-desc">Course Code (Z - A)</option>
+            <option value="seats-desc">Most Available Seats</option>
+            <option value="credits-desc">Credits (High to Low)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="course-grid" id="catalog-course-grid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <div class="empty-state" id="no-courses-found" style="display: none;">
+        <div class="empty-icon">🔍</div>
+        <h3>No Courses Match Your Criteria</h3>
+        <p>Try widening your search terms, clearing department filters, or resetting filters.</p>
+        <button class="btn btn-primary" onclick="resetAllFilters()">Reset All Filters</button>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 3: REGISTRATION                           -->
+    <!-- ============================================== -->
+    <section id="view-registration" class="page-view">
+      <div class="page-banner registration-banner">
+        <div class="banner-text">
+          <h1 class="page-title">Course Registration & Enrollment</h1>
+          <p class="page-subtitle">Add sections using course codes or CRN, adjust grading options, and manage your active schedule.</p>
+        </div>
+        <div class="credit-tracker-card">
+          <div class="tracker-header">
+            <span>Quarter Credit Budget</span>
+            <strong id="credit-meter-text">12 / 18 Units Enrolled</strong>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="credit-progress-bar" style="width: 66.6%;"></div>
+          </div>
+          <div class="tracker-foot">
+            <span class="pill-badge pill-safe" id="credit-status-pill">Normal Load (Full-Time)</span>
+            <span class="text-muted" id="credit-remaining-text">6 units available</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="registration-layout">
+        <!-- Left Column: Add Course Form & Quick Lookup -->
+        <div class="reg-form-column">
+          <div class="content-card">
+            <div class="card-header">
+              <div class="header-icon-badge bg-fuchsia">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <div>
+                <h2 class="card-title">Add Course by Code or CRN</h2>
+                <p class="card-subtitle">Quickly enroll into a known course offering</p>
+              </div>
+            </div>
+
+            <form id="add-course-form" class="reg-form" onsubmit="handleRegistrationFormSubmit(event)">
+              <div class="form-group">
+                <label for="select-course-dropdown">Select Course Offering <span class="required">*</span></label>
+                <div class="select-styled">
+                  <select id="select-course-dropdown" required>
+                    <option value="" disabled selected>-- Choose a course from catalog --</option>
+                    <!-- Options populated by script.js -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="select-section">Section / Discussion <span class="required">*</span></label>
+                  <div class="select-styled">
+                    <select id="select-section" required>
+                      <option value="A01 (Mon/Wed 9:00 AM - 10:20 AM)">Section A01 (Mon/Wed)</option>
+                      <option value="A02 (Tue/Thu 11:00 AM - 12:20 PM)">Section A02 (Tue/Thu)</option>
+                      <option value="A03 (Mon/Wed 2:00 PM - 3:20 PM)">Section A03 (Mon/Wed)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group col-half">
+                  <label for="select-grading">Grading Option <span class="required">*</span></label>
+                  <div class="select-styled">
+                    <select id="select-grading" required>
+                      <option value="Letter Grade (A-F)" selected>Letter Grade (A-F)</option>
+                      <option value="Pass / No Pass (P/NP)">Pass / No Pass (P/NP)</option>
+                      <option value="Audit">Audit (No Credit)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Selected Course Live Preview Card -->
+              <div id="course-form-preview" class="course-mini-preview" style="display: none;">
+                <div class="preview-head">
+                  <span class="preview-code" id="preview-code">CSE 110</span>
+                  <span class="preview-units badge-pill badge-primary" id="preview-units">4.0 Units</span>
+                </div>
+                <h4 class="preview-title" id="preview-title">Software Engineering</h4>
+                <div class="preview-details">
+                  <span><strong>Instructor:</strong> <span id="preview-instructor">Prof. Gary Gillespie</span></span>
+                  <span><strong>Schedule:</strong> <span id="preview-schedule">MWF 10:00 - 10:50 AM</span></span>
+                  <span><strong>Location:</strong> <span id="preview-location">Center Hall 101</span></span>
+                  <span><strong>Seats:</strong> <span id="preview-seats" class="text-emerald">28 seats available</span></span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M12 5v14M5 12h14"/></svg>
+                  Enroll in Selected Course
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Academic Advising Tip -->
+          <div class="tip-card card-cyan mt-3">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+              <strong>Registration Pro-Tip:</strong>
+              <p>You can also register directly from the <em>Course Catalog</em> view by clicking the "Register Now" button on any course card.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Registration Summary & Quick Tools -->
+        <div class="reg-summary-column">
+          <div class="content-card">
+            <div class="card-header">
+              <div class="header-icon-badge bg-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <h2 class="card-title">Enrollment Checklist</h2>
+                <p class="card-subtitle">Ensure eligibility requirements are met</p>
+              </div>
+            </div>
+
+            <ul class="checklist-list">
+              <li class="checklist-item checked">
+                <span class="check-box checked">✓</span>
+                <div class="check-text">
+                  <strong>Full-time Student Clearance</strong>
+                  <span>Approved by Academic Registrar</span>
+                </div>
+              </li>
+              <li class="checklist-item checked">
+                <span class="check-box checked">✓</span>
+                <div class="check-text">
+                  <strong>Financial & Library Holds</strong>
+                  <span>$0.00 outstanding balance</span>
+                </div>
+              </li>
+              <li class="checklist-item checked">
+                <span class="check-box checked">✓</span>
+                <div class="check-text">
+                  <strong>Prerequisite Validations</strong>
+                  <span>Automated degree audit check active</span>
+                </div>
+              </li>
+              <li class="checklist-item pending">
+                <span class="check-box pending">•</span>
+                <div class="check-text">
+                  <strong>Final Schedule Confirmation</strong>
+                  <span>Current: <span id="checklist-enrolled-count">3</span> courses (<span id="checklist-units-count">12</span> units)</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="summary-actions-group">
+              <button class="btn btn-outline btn-block" onclick="printScheduleReceipt()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Print Official Schedule Slip
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA TABLE: REGISTERED COURSES -->
+      <div class="table-section mt-4">
+        <div class="content-card">
+          <div class="card-header table-header-flex">
+            <div>
+              <h2 class="card-title">Registered Courses Table - Fall 2026</h2>
+              <p class="card-subtitle">Active enrollments for current term. You may change grading options or drop sections here.</p>
+            </div>
+            <div class="table-actions">
+              <span class="table-total-badge" id="table-credit-summary">Total: 12 Units | 3 Courses</span>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="registered-courses-table">
+              <thead>
+                <tr>
+                  <th>CRN / Code</th>
+                  <th>Course Title</th>
+                  <th>Department</th>
+                  <th>Instructor</th>
+                  <th>Schedule & Room</th>
+                  <th>Units</th>
+                  <th>Grading Option</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="registered-table-body">
+                <!-- Rendered dynamically by script.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-empty-notice" id="registered-table-empty" style="display: none;">
+            <p>You have not registered for any courses yet. Select a course above or browse the catalog!</p>
+          </div>
+
+          <div class="table-footer-summary">
+            <div class="foot-left">
+              <span>Showing <span id="table-row-count">3</span> enrolled courses</span>
+            </div>
+            <div class="foot-right">
+              <span class="text-muted">Minimum Full-time: 12 Units &nbsp;|&nbsp; Maximum Allowed: 18 Units</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 4: STUDENT PROFILE                        -->
+    <!-- ============================================== -->
+    <section id="view-profile" class="page-view">
+      <div class="page-banner profile-banner">
+        <div class="banner-text">
+          <h1 class="page-title">Student Profile & Academic Record</h1>
+          <p class="page-subtitle">Manage personal academic details, view cumulative progress, and access historical transcripts.</p>
+        </div>
+      </div>
+
+      <div class="profile-layout">
+        <!-- Left: Student Profile Identity Card -->
+        <div class="profile-left-col">
+          <div class="content-card profile-card">
+            <div class="profile-avatar-large">AC</div>
+            <h2 class="profile-student-name">Alex Chen</h2>
+            <p class="profile-student-id">Student ID: A16892401</p>
+            <div class="profile-badges-row">
+              <span class="badge-pill badge-indigo">Undergraduate (Senior)</span>
+              <span class="badge-pill badge-emerald">In Good Standing</span>
+            </div>
+
+            <div class="profile-details-list">
+              <div class="profile-detail-row">
+                <span class="detail-label">Major</span>
+                <span class="detail-value">Computer Science (B.S.)</span>
+              </div>
+              <div class="profile-detail-row">
+                <span class="detail-label">Minor</span>
+                <span class="detail-value">Data Science</span>
+              </div>
+              <div class="profile-detail-row">
+                <span class="detail-label">College</span>
+                <span class="detail-value">Warren College</span>
+              </div>
+              <div class="profile-detail-row">
+                <span class="detail-label">Cumulative GPA</span>
+                <span class="detail-value highlight-gpa">3.84 / 4.00</span>
+              </div>
+              <div class="profile-detail-row">
+                <span class="detail-label">Total Units Completed</span>
+                <span class="detail-value">88.0 Units</span>
+              </div>
+              <div class="profile-detail-row">
+                <span class="detail-label">Enrollment Status</span>
+                <span class="detail-value text-emerald font-semibold">Active & Eligible</span>
+              </div>
+              <div class="profile-detail-row">
+                <span class="detail-label">Email</span>
+                <span class="detail-value">alchen@ucsd.edu</span>
+              </div>
+            </div>
+
+            <div class="profile-card-actions">
+              <button class="btn btn-outline btn-block" onclick="showAcademicAdviserModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Contact Academic Advisor
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Degree Progress & Registration History -->
+        <div class="profile-right-col">
+          <!-- Degree Milestones Card -->
+          <div class="content-card mb-4">
+            <div class="card-header">
+              <div class="header-icon-badge bg-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <h3 class="card-title">Degree Completion Progress</h3>
+                <p class="card-subtitle">Major & General Education Requirements for B.S.</p>
+              </div>
+            </div>
+
+            <div class="degree-meters">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span>Major Upper-Division Requirements</span>
+                  <strong>32 / 48 Units (66%)</strong>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill bg-gradient-indigo" style="width: 66%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span>General Education & College Breadth</span>
+                  <strong>40 / 40 Units (100% Complete)</strong>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill bg-gradient-emerald" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span>University Overall Degree Units</span>
+                  <strong>88 / 120 Units (73%)</strong>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill bg-gradient-purple" style="width: 73.3%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Current Term Registered Snapshot -->
+          <div class="content-card mb-4">
+            <div class="card-header table-header-flex">
+              <div>
+                <h3 class="card-title">Current Enrolled Courses (Fall 2026)</h3>
+                <p class="card-subtitle">Summary of your confirmed schedule</p>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="navigateTo('registration')">
+                Manage Courses →
+              </button>
+            </div>
+
+            <div class="profile-courses-list" id="profile-current-courses-list">
+              <!-- Rendered by script.js -->
+            </div>
+          </div>
+
+          <!-- Academic History Past Terms Accordion/Table -->
+          <div class="content-card">
+            <div class="card-header">
+              <div class="header-icon-badge bg-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+              <div>
+                <h3 class="card-title">Completed Quarters & Grades</h3>
+                <p class="card-subtitle">Official verified university transcript records</p>
+              </div>
+            </div>
+
+            <div class="term-history-group">
+              <div class="past-term-card">
+                <div class="past-term-header">
+                  <div>
+                    <h4>Spring Quarter 2026</h4>
+                    <span class="text-muted">16.0 Units Completed • Term GPA: 3.92</span>
+                  </div>
+                  <span class="badge-pill badge-primary">Dean's Honor List</span>
+                </div>
+                <div class="past-term-body">
+                  <table class="mini-table">
+                    <thead>
+                      <tr><th>Course</th><th>Title</th><th>Units</th><th>Grade</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><strong>CSE 101</strong></td><td>Design & Analysis of Algorithms</td><td>4.0</td><td><span class="grade-pill grade-a">A</span></td></tr>
+                      <tr><td><strong>CSE 120</strong></td><td>Operating Systems Principles</td><td>4.0</td><td><span class="grade-pill grade-a">A-</span></td></tr>
+                      <tr><td><strong>MATH 183</strong></td><td>Statistical Methods</td><td>4.0</td><td><span class="grade-pill grade-a">A</span></td></tr>
+                      <tr><td><strong>VIS 60</strong></td><td>Intro to Digital Photography</td><td>4.0</td><td><span class="grade-pill grade-p">P</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="past-term-card mt-3">
+                <div class="past-term-header">
+                  <div>
+                    <h4>Winter Quarter 2026</h4>
+                    <span class="text-muted">16.0 Units Completed • Term GPA: 3.75</span>
+                  </div>
+                  <span class="badge-pill badge-primary">Dean's Honor List</span>
+                </div>
+                <div class="past-term-body">
+                  <table class="mini-table">
+                    <thead>
+                      <tr><th>Course</th><th>Title</th><th>Units</th><th>Grade</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><strong>CSE 100</strong></td><td>Advanced Data Structures</td><td>4.0</td><td><span class="grade-pill grade-a">A</span></td></tr>
+                      <tr><td><strong>CSE 105</strong></td><td>Theory of Computability</td><td>4.0</td><td><span class="grade-pill grade-b">B+</span></td></tr>
+                      <tr><td><strong>DSC 80</strong></td><td>Practices of Data Science</td><td>4.0</td><td><span class="grade-pill grade-a">A</span></td></tr>
+                      <tr><td><strong>COGS 10</strong></td><td>Cognitive Neuroscience Intro</td><td>4.0</td><td><span class="grade-pill grade-a">A-</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================== -->
+  <!-- MODAL: REGISTRATION CONFIRMATION               -->
+  <!-- ============================================== -->
+  <div class="modal-overlay" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header-colorful">
+        <div class="modal-badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="modal-title-group">
+          <h3 id="modal-title">Confirm Course Enrollment</h3>
+          <span class="modal-subtitle">Review registration details carefully</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('confirm-modal')" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="course-confirm-box">
+          <div class="confirm-head">
+            <span class="confirm-code" id="modal-course-code">CSE 110</span>
+            <span class="badge-pill badge-primary" id="modal-course-units">4.0 Units</span>
+          </div>
+          <h4 class="confirm-name" id="modal-course-title">Software Engineering</h4>
+          
+          <div class="confirm-meta-grid">
+            <div class="meta-row">
+              <span class="m-label">Department:</span>
+              <span class="m-val" id="modal-course-dept">Computer Science</span>
+            </div>
+            <div class="meta-row">
+              <span class="m-label">Instructor:</span>
+              <span class="m-val" id="modal-course-instructor">Prof. Gary Gillespie</span>
+            </div>
+            <div class="meta-row">
+              <span class="m-label">Section & Time:</span>
+              <span class="m-val" id="modal-course-schedule">MWF 10:00 - 10:50 AM</span>
+            </div>
+            <div class="meta-row">
+              <span class="m-label">Classroom:</span>
+              <span class="m-val" id="modal-course-location">Center Hall 101</span>
+            </div>
+            <div class="meta-row">
+              <span class="m-label">Grading Basis:</span>
+              <span class="m-val font-semibold text-primary" id="modal-course-grading">Letter Grade (A-F)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="credit-impact-banner" id="modal-credit-impact">
+          <div class="impact-icon">ℹ️</div>
+          <div>
+            <strong>Credit Load Change:</strong>
+            <p>Your enrolled units will change from <span id="modal-prev-credits">12</span> to <span id="modal-new-credits" class="text-primary font-bold">16 units</span>.</p>
+          </div>
+        </div>
+
+        <div class="modal-alert-terms">
+          <label class="terms-checkbox-label">
+            <input type="checkbox" id="modal-agree-checkbox" checked>
+            <span>I verify that I have satisfied all required course prerequisites and accept university add/drop policies.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal('confirm-modal')">Cancel</button>
+        <button class="btn btn-primary" id="modal-confirm-submit-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M20 6L9 17l-5-5"/></svg>
+          Confirm & Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL: COURSE DETAILS / SYLLABUS               -->
+  <!-- ============================================== -->
+  <div class="modal-overlay" id="details-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header-colorful bg-gradient-indigo">
+        <div class="modal-title-group">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge-pill badge-light" id="detail-modal-code">CSE 110</span>
+            <span class="badge-pill badge-secondary" id="detail-modal-units">4 Units</span>
+          </div>
+          <h3 id="detail-modal-title" class="mt-1">Software Engineering</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('details-modal')" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="detail-description-section">
+          <h4>Course Overview & Learning Objectives</h4>
+          <p id="detail-modal-desc">Comprehensive introduction to software engineering principles, agile workflows, and collaborative project management.</p>
+        </div>
+
+        <div class="detail-cards-grid mt-3">
+          <div class="info-card-mini">
+            <span class="mini-label">Department</span>
+            <strong id="detail-modal-dept">Computer Science & Engineering</strong>
+          </div>
+          <div class="info-card-mini">
+            <span class="mini-label">Instructor</span>
+            <strong id="detail-modal-instructor">Prof. Gary Gillespie</strong>
+          </div>
+          <div class="info-card-mini">
+            <span class="mini-label">Meeting Days & Time</span>
+            <strong id="detail-modal-time">Mon, Wed, Fri • 10:00 - 10:50 AM</strong>
+          </div>
+          <div class="info-card-mini">
+            <span class="mini-label">Classroom Location</span>
+            <strong id="detail-modal-room">Center Hall 101</strong>
+          </div>
+        </div>
+
+        <div class="detail-prereq-box mt-3">
+          <div class="d-flex align-items-center gap-2">
+            <span class="prereq-badge">Prerequisites</span>
+            <span id="detail-modal-prereqs">CSE 100 or DSC 30 with a grade of C- or higher.</span>
+          </div>
+        </div>
+
+        <div class="detail-capacity-status mt-3">
+          <div class="d-flex justify-between mb-1">
+            <span>Seat Capacity</span>
+            <strong id="detail-modal-seats-text">120 / 150 Enrolled (30 Open)</strong>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill bg-gradient-emerald" id="detail-modal-seats-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal('details-modal')">Close</button>
+        <button class="btn btn-primary" id="detail-modal-enroll-btn">
+          Enroll in This Course
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL: DROP CONFIRMATION                       -->
+  <!-- ============================================== -->
+  <div class="modal-overlay" id="drop-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header-colorful bg-gradient-rose">
+        <div class="modal-badge-icon bg-white text-rose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+        </div>
+        <div class="modal-title-group">
+          <h3>Drop Course Confirmation</h3>
+          <span class="modal-subtitle">You are about to unenroll from this section</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('drop-modal')">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="drop-warning-text">
+          Are you sure you want to drop <strong id="drop-course-code-title">CSE 110 - Software Engineering</strong>?
+        </p>
+        <div class="drop-consequences">
+          <div class="consequence-item">
+            <span class="text-rose font-bold">⚠️</span>
+            <span>Your enrolled units will decrease by <span id="drop-course-units">4</span> units.</span>
+          </div>
+          <div class="consequence-item">
+            <span class="text-rose font-bold">⚠️</span>
+            <span>If there is a waitlist, your seat will be automatically given to the next queued student.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal('drop-modal')">Keep Course</button>
+        <button class="btn btn-danger" id="confirm-drop-btn">
+          Yes, Drop Course
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-group">
+          <div class="logo-icon small">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <span class="brand-title">Triton<span class="accent-gradient">Register</span></span>
+        </div>
+        <p class="footer-desc">Office of the University Registrar • Student Information System 4.0</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home" onclick="navigateTo('home')">Home</a>
+        <a href="#catalog" onclick="navigateTo('catalog')">Course Catalog</a>
+        <a href="#registration" onclick="navigateTo('registration')">Registration</a>
+        <a href="#profile" onclick="navigateTo('profile')">Student Profile</a>
+        <a href="javascript:void(0)" onclick="alert('Campus Helpdesk: support@ucsd.edu | (858) 534-3150')">Help & Support</a>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Regents of the University of California. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>

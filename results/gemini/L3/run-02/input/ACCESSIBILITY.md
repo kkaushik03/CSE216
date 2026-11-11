@@ -1,0 +1,13 @@
+The application must follow WCAG 2.2 AA guidelines including:
+- Semantic HTML structure
+- Proper heading hierarchy
+- Form labels associated with all inputs
+- Keyboard accessibility for all controls
+- Visible focus indicators
+- Sufficient color contrast
+- Accessible error messages
+- Accessible modal dialogs
+- Screen-reader friendly navigation
+- Appropriate ARIA attributes where needed
+- Meaningful button and link text
+- Accessible dropdown menus and tables

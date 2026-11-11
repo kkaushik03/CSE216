@@ -1,0 +1,446 @@
+{
+  "checked": "2026-11-09T00:30:28.940Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.79",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Elements must only use permitted ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".stats-grid",
+                "html": "<div class=\"stats-grid\" aria-label=\"Academic Enrollment Overview\">",
+                "summary": "Fix all of the following: aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": ".hero-badge",
+                "html": "<div class=\"hero-badge\" aria-hidden=\"true\">Fall 2026 Academic Term</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": "#home-hero-title",
+                "html": "<h1 id=\"home-hero-title\">Design Your Academic Journey with Confidence</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-lead",
+                "html": "<p class=\"hero-lead\"> Welcome to the official Course Registration Portal. Explore over 150 accredited courses across engineering, humanities, sciences, and design. Plan your prerequisites, enroll seamlessly, and manage your degree trajectory. </p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".hero-actions > .btn-lg.btn-primary.btn",
+                "html": "<button class=\"btn btn-primary btn-lg\" onclick=\"window.appRouter.navigateTo('catalog')\"> Browse Course Catalog </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-lg.btn-secondary.btn",
+                "html": "<button class=\"btn btn-secondary btn-lg\" onclick=\"window.appRouter.navigateTo('profile')\"> View Current Schedule </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.74:1. Recommendation:  change background to #008579.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#page-home > div:nth-child(1) > div > div:nth-child(4) > button:nth-child(2)",
+                "html": "<button class=\"btn btn-secondary btn-lg\" onclick=\"window.appRouter.navigateTo('profile')\"> View Current Sch...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.74:1. Recommendation:  change background to #008579."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#registered-courses-table",
+                "html": "<table class=\"data-table\" id=\"registered-courses-table\"> <caption class=\"...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": []
+      }
+    },
+    {
+      "name": "📚 Course Catalog",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "Elements must only use permitted ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#filter-tags",
+                "html": "<div id=\"filter-tags\" class=\"filter-tags\" aria-label=\"Active filters\"></div>",
+                "summary": "Fix all of the following: aria-label attribute cannot be used on \"div\" elements with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": ".btn-secondary.btn-sm[type=\"button\"]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-secondary\" onclick=\"registrationManager.quickRegisterFromCatalog('DSGN1')\" aria-label=\"Join Waitlist for DSGN 1 Design of Everyday Things\"> Join Waitlist </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.74 (foreground color: #ffffff, background color: #0d9488, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#0d9488",
+                  "ratio": 3.74,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.74:1. Recommendation:  change background to #008579.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#courses-container > article:nth-child(5) > footer > button",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-secondary\" onclick=\"registrationManager.quickRegisterFromCatalog('DSGN1')\" aria-label=\"Join Waitlist for DSGN 1 Design of Everyday Things\"> Join Waitlist ...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.74:1. Recommendation:  change background to #008579."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#registered-courses-table",
+                "html": "<table class=\"data-table\" id=\"registered-courses-table\"> <caption class=\"...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 92,
+        "issues": [
+          {
+            "rule": "aria-prohibited-attr",
+            "count": 1
+          },
+          {
+            "rule": "color-contrast",
+            "count": 1
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "📝 Direct Register",
+      "url": "/index.html",
+      "axe": {
+        "issues": [],
+        "needs_review": []
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#registered-courses-table",
+                "html": "<table class=\"data-table\" id=\"registered-courses-table\"> <caption class=\"...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": []
+      }
+    },
+    {
+      "name": "🎓 My Schedule & Profile 3",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "impact": "serious",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "Elements must have their visible text as part of their accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "button[onclick=\"window.print()\"]",
+                "html": "<button class=\"btn btn-outline\" onclick=\"window.print()\" aria-label=\"Print Current Schedule\"> 🖨️ Print Schedule </button>",
+                "summary": "Fix any of the following: Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 14,
+            "nodes": [
+              {
+                "selector": ".profile-avatar",
+                "html": "<div class=\"profile-avatar\" aria-hidden=\"true\">AC</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".profile-name",
+                "html": "<h2 class=\"profile-name\">Alex Chen</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-grid > div:nth-child(1)",
+                "html": "<div><span class=\"meta-label\">PID:</span> A17924538</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(1) > .meta-label",
+                "html": "<span class=\"meta-label\">PID:</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-grid > div:nth-child(2)",
+                "html": "<div><span class=\"meta-label\">Major:</span> Computer Science B.S.</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(2) > .meta-label",
+                "html": "<span class=\"meta-label\">Major:</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-grid > div:nth-child(3)",
+                "html": "<div><span class=\"meta-label\">Class Level:</span> Junior (Year 3)</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(3) > .meta-label",
+                "html": "<span class=\"meta-label\">Class Level:</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-grid > div:nth-child(4)",
+                "html": "<div><span class=\"meta-label\">College:</span> Muir College</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(4) > .meta-label",
+                "html": "<span class=\"meta-label\">College:</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-meta-grid > div:nth-child(5)",
+                "html": "<div><span class=\"meta-label\">Cumulative GPA:</span> 3.84</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(5) > .meta-label",
+                "html": "<span class=\"meta-label\">Cumulative GPA:</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "div:nth-child(6) > .meta-label",
+                "html": "<span class=\"meta-label\">Total Registered Units:</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profile-total-units",
+                "html": "<strong id=\"profile-total-units\">12.0 Units</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#registered-courses-table",
+                "html": "<table class=\"data-table\" id=\"registered-courses-table\"> <caption class=\"...</table>",
+                "message": "The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 0
+      },
+      "lighthouse": {
+        "score": 100,
+        "issues": [
+          {
+            "rule": "label-content-name-mismatch",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2171 @@
+/* ==========================================================================
+   Apex University Course Registration System - WCAG 2.2 AA Compliant Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens & CSS Variables
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Primary Colors */
+  --color-primary-900: #1e1b4b; /* Deep Indigo Navy (15.6:1 contrast on white) */
+  --color-primary-800: #312e81; /* Indigo Deep */
+  --color-primary-700: #3730a3; /* Indigo Base */
+  --color-primary-600: #4338ca; /* Vibrant Indigo */
+  --color-primary-100: #e0e7ff;
+  --color-primary-50:  #eef2ff;
+
+  /* Accent Color Palettes (All tested >= 4.5:1 text or >= 3:1 graphical) */
+  --color-teal-800:    #065f46;
+  --color-teal-700:    #047857; /* 5.5:1 on white */
+  --color-teal-600:    #059669;
+  --color-teal-100:    #d1fae5;
+  --color-teal-50:     #ecfdf5;
+
+  --color-amber-900:   #78350f;
+  --color-amber-800:   #92400e; /* 6.5:1 on white */
+  --color-amber-700:   #b45309; /* 4.6:1 on white */
+  --color-amber-600:   #d97706;
+  --color-amber-100:   #fef3c7;
+  --color-amber-50:    #fffbeb;
+
+  --color-rose-800:    #9f1239;
+  --color-rose-700:    #be123c; /* 5.6:1 on white */
+  --color-rose-600:    #e11d48;
+  --color-rose-100:    #ffe4e6;
+  --color-rose-50:     #fff1f2;
+
+  --color-purple-800:  #5b21b6;
+  --color-purple-700:  #6d28d9; /* 6.9:1 on white */
+  --color-purple-600:  #7c3aed;
+  --color-purple-100:  #ede9fe;
+  --color-purple-50:   #f5f3ff;
+
+  --color-sky-800:     #075985;
+  --color-sky-700:     #0369a1; /* 5.4:1 on white */
+  --color-sky-600:     #0284c7;
+  --color-sky-100:     #e0f2fe;
+  --color-sky-50:      #f0f9ff;
+
+  /* Neutral Slates & Typography */
+  --color-slate-900:   #0f172a; /* Body text (17.5:1 on white) */
+  --color-slate-800:   #1e293b;
+  --color-slate-700:   #334155; /* Secondary text (9.6:1 on white) */
+  --color-slate-600:   #475569; /* Muted text (5.9:1 on white) */
+  --color-slate-500:   #64748b; /* UI borders (3.5:1 on white) */
+  --color-slate-300:   #cbd5e1;
+  --color-slate-200:   #e2e8f0;
+  --color-slate-100:   #f1f5f9;
+  --color-slate-50:    #f8fafc;
+  --color-white:       #ffffff;
+
+  /* Focus Indicator Tokens (WCAG 2.2 AA) */
+  --focus-outline-color: #1d4ed8;
+  --focus-outline-width: 3px;
+  --focus-outline-offset: 3px;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.12), 0 4px 6px -4px rgba(15, 23, 42, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.15), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
+
+  /* Layout & Geometry */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+  --transition-fast: 0.15s ease-in-out;
+  --transition-norm: 0.25s ease-in-out;
+  --max-width-container: 1240px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base Typography
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-slate-900);
+  background-color: var(--color-slate-50);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-900);
+}
+
+/* --------------------------------------------------------------------------
+   3. Focus Indicators & Skip Links (WCAG 2.2 AA)
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: var(--color-primary-900);
+  color: var(--color-white);
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 99999;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-white);
+  box-shadow: var(--shadow-lg);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 4px solid var(--color-amber-600);
+  outline-offset: 3px;
+}
+
+.visually-hidden, .sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Layout Containers
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-spacer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   5. Top Announcement Notification Bar
+   -------------------------------------------------------------------------- */
+.top-announcement-bar {
+  background: linear-gradient(90deg, #1e1b4b 0%, #312e81 100%);
+  color: var(--color-white);
+  padding: 0.6rem 1.5rem;
+  border-bottom: 3px solid var(--color-amber-600);
+  font-size: 0.9375rem;
+}
+
+.announcement-content {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.announcement-pill {
+  background-color: var(--color-amber-600);
+  color: var(--color-slate-900);
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.announcement-text {
+  color: #f1f5f9;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   6. Header & Navigation Bar
+   -------------------------------------------------------------------------- */
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: var(--color-slate-900);
+  min-height: 48px;
+}
+
+.brand-logo {
+  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-teal-700) 100%);
+  color: var(--color-white);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(49, 46, 129, 0.3);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-primary-900);
+}
+
+.brand-portal {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-teal-700);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Navigation Links */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-slate-700);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  min-height: 44px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-primary-800);
+  background-color: var(--color-primary-50);
+}
+
+.nav-link.active {
+  color: var(--color-white);
+  background-color: var(--color-primary-800);
+}
+
+.nav-badge {
+  background-color: var(--color-rose-700);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  min-width: 22px;
+  text-align: center;
+}
+
+.nav-link.active .nav-badge {
+  background-color: var(--color-white);
+  color: var(--color-primary-900);
+}
+
+/* User Profile Chip */
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-slate-100);
+  border: 1px solid var(--color-slate-200);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-purple-700) 0%, var(--color-primary-700) 100%);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  line-height: 1.2;
+}
+
+.user-program {
+  font-size: 0.75rem;
+  color: var(--color-slate-600);
+}
+
+/* Mobile Nav Toggle */
+.mobile-nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-slate-100);
+  border: 1px solid var(--color-slate-300);
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  color: var(--color-slate-800);
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.hamburger-box {
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-slate-800);
+  border-radius: 2px;
+  position: absolute;
+  transition: transform var(--transition-fast);
+}
+
+.hamburger-inner {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-inner::before {
+  content: "";
+  top: -6px;
+}
+
+.hamburger-inner::after {
+  content: "";
+  bottom: -6px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Typography & Headings Hierarchy
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  color: var(--color-slate-900);
+  line-height: 1.25;
+}
+
+h1 { font-size: 2rem; font-weight: 800; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+h3 { font-size: 1.2rem; font-weight: 700; }
+h4 { font-size: 1rem; font-weight: 600; }
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  color: var(--color-primary-900);
+  font-size: 2.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.page-subtitle {
+  color: var(--color-slate-600);
+  font-size: 1.05rem;
+}
+
+.section-title {
+  font-size: 1.45rem;
+  color: var(--color-primary-900);
+  margin-bottom: 0.4rem;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-slate-600);
+  margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Buttons & Controls (WCAG 2.2 AA Minimum 44px Height)
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  min-height: 44px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-700);
+  color: var(--color-white);
+  border-color: var(--color-primary-700);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-900);
+  border-color: var(--color-primary-900);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-slate-800);
+  border-color: var(--color-slate-500);
+}
+.btn-secondary:hover {
+  background-color: var(--color-slate-100);
+  border-color: var(--color-slate-700);
+  color: var(--color-slate-900);
+}
+
+.btn-secondary-light {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  backdrop-filter: blur(4px);
+}
+.btn-secondary-light:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-900);
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  color: var(--color-slate-700);
+  border-color: var(--color-slate-500);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--color-slate-100);
+  color: var(--color-slate-900);
+}
+
+.btn-teal {
+  background-color: var(--color-teal-700);
+  color: var(--color-white);
+  border-color: var(--color-teal-700);
+}
+.btn-teal:hover {
+  background-color: var(--color-teal-800);
+  border-color: var(--color-teal-800);
+}
+
+.btn-danger {
+  background-color: var(--color-rose-700);
+  color: var(--color-white);
+  border-color: var(--color-rose-700);
+}
+.btn-danger:hover {
+  background-color: var(--color-rose-800);
+  border-color: var(--color-rose-800);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+  min-height: 38px;
+}
+
+.btn-lg {
+  padding: 0.85rem 1.6rem;
+  font-size: 1.05rem;
+  min-height: 48px;
+}
+
+.btn:disabled, .btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   9. Badges, Chips & Highlights
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  line-height: 1.2;
+}
+
+.badge-lg {
+  font-size: 0.9375rem;
+  padding: 0.45rem 1rem;
+}
+
+.badge-sm {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.badge-indigo {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-900);
+  border: 1px solid var(--color-primary-600);
+}
+
+.badge-teal, .badge-emerald {
+  background-color: var(--color-teal-50);
+  color: var(--color-teal-800);
+  border: 1px solid var(--color-teal-600);
+}
+
+.badge-amber {
+  background-color: var(--color-amber-50);
+  color: var(--color-amber-900);
+  border: 1px solid var(--color-amber-600);
+}
+
+.badge-purple {
+  background-color: var(--color-purple-50);
+  color: var(--color-purple-800);
+  border: 1px solid var(--color-purple-600);
+}
+
+.badge-cyan {
+  background-color: var(--color-sky-50);
+  color: var(--color-sky-800);
+  border: 1px solid var(--color-sky-600);
+}
+
+.badge-rose {
+  background-color: var(--color-rose-50);
+  color: var(--color-rose-800);
+  border: 1px solid var(--color-rose-600);
+}
+
+/* --------------------------------------------------------------------------
+   10. Cards & Panels
+   -------------------------------------------------------------------------- */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-slate-200);
+  background-color: var(--color-slate-50);
+}
+
+.card-header.border-indigo { border-top: 4px solid var(--color-primary-600); }
+.card-header.border-teal { border-top: 4px solid var(--color-teal-600); }
+.card-header.border-purple { border-top: 4px solid var(--color-purple-600); }
+.card-header.border-amber { border-top: 4px solid var(--color-amber-600); }
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.icon-bubble {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-indigo { background-color: var(--color-primary-100); color: var(--color-primary-700); }
+.icon-teal   { background-color: var(--color-teal-100);    color: var(--color-teal-700); }
+.icon-purple { background-color: var(--color-purple-100);  color: var(--color-purple-700); }
+.icon-amber  { background-color: var(--color-amber-100);   color: var(--color-amber-800); }
+
+/* --------------------------------------------------------------------------
+   11. View 1: Home Dashboard Styles
+   -------------------------------------------------------------------------- */
+.hero-banner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 45%, #047857 100%);
+  color: var(--color-white);
+  padding: 3.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-content {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  color: var(--color-white);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 750px;
+  color: #e0e7ff;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Stats Cards Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-blue   .stat-icon-wrapper { background-color: var(--color-sky-100); color: var(--color-sky-800); }
+.stat-emerald .stat-icon-wrapper { background-color: var(--color-teal-100); color: var(--color-teal-800); }
+.stat-purple .stat-icon-wrapper { background-color: var(--color-purple-100); color: var(--color-purple-800); }
+.stat-amber  .stat-icon-wrapper { background-color: var(--color-amber-100); color: var(--color-amber-800); }
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-slate-600);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-slate-900);
+  line-height: 1.2;
+}
+
+.stat-value .highlight {
+  color: var(--color-primary-700);
+}
+
+.stat-note {
+  font-size: 0.8125rem;
+  color: var(--color-slate-600);
+  margin-top: 0.35rem;
+}
+
+.status-clear {
+  color: var(--color-teal-700);
+}
+
+/* Dashboard Columns */
+.dashboard-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+/* Timeline */
+.timeline-list {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 6px;
+  width: 2px;
+  background-color: var(--color-slate-200);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.5rem;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 3px solid var(--color-slate-400);
+}
+
+.timeline-item.current .timeline-marker {
+  border-color: var(--color-teal-700);
+  background-color: var(--color-teal-700);
+}
+
+.timeline-date {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-teal-800);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin: 0.15rem 0 0.25rem 0;
+}
+
+.timeline-desc {
+  font-size: 0.875rem;
+  color: var(--color-slate-600);
+}
+
+/* Notices */
+.notice-item {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.notice-info {
+  background-color: var(--color-primary-50);
+  border-left: 4px solid var(--color-primary-600);
+}
+
+.notice-info .notice-title {
+  color: var(--color-primary-900);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.notice-info .notice-text {
+  color: var(--color-slate-700);
+  font-size: 0.875rem;
+}
+
+.notice-success {
+  background-color: var(--color-teal-50);
+  border-left: 4px solid var(--color-teal-600);
+}
+
+.notice-success .notice-title {
+  color: var(--color-teal-800);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.notice-success .notice-text {
+  color: var(--color-slate-700);
+  font-size: 0.875rem;
+}
+
+.card-action-box {
+  background-color: var(--color-slate-100);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.action-box-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-slate-800);
+}
+
+/* --------------------------------------------------------------------------
+   12. View 2: Course Catalog Styles
+   -------------------------------------------------------------------------- */
+.catalog-filters-panel {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.search-bar-wrapper {
+  margin-bottom: 1.25rem;
+}
+
+.filter-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin-bottom: 0.4rem;
+}
+
+.label-hint {
+  font-weight: 400;
+  color: var(--color-slate-600);
+  margin-left: 0.25rem;
+}
+
+.search-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-slate-500);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.8rem 0.75rem 2.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid var(--color-slate-500);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  color: var(--color-slate-900);
+  min-height: 48px;
+  transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-primary-600);
+}
+
+.clear-input-btn {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-slate-600);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.clear-input-btn:hover {
+  background-color: var(--color-slate-200);
+  color: var(--color-slate-900);
+}
+
+.form-helper-text {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-slate-600);
+  margin-top: 0.35rem;
+}
+
+/* Filters Grid */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-select, .form-control {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--color-slate-500);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  color: var(--color-slate-900);
+  min-height: 44px;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: var(--color-primary-600);
+}
+
+.catalog-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.results-count-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.catalog-legend {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-slate-700);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-green { background-color: var(--color-teal-600); }
+.dot-amber { background-color: var(--color-amber-600); }
+.dot-blue  { background-color: var(--color-primary-600); }
+
+/* Course Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Course Card (Colorful, Department Accentuated) */
+.course-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Department Top Stripes */
+.course-card.dept-cse  { border-top: 5px solid var(--color-primary-600); }
+.course-card.dept-dsc  { border-top: 5px solid var(--color-teal-600); }
+.course-card.dept-math { border-top: 5px solid var(--color-amber-600); }
+.course-card.dept-cogs { border-top: 5px solid var(--color-purple-600); }
+.course-card.dept-ece  { border-top: 5px solid var(--color-sky-600); }
+
+.card-top-meta {
+  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.course-code-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-primary-900);
+}
+
+.course-card-body {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.course-desc-brief {
+  font-size: 0.875rem;
+  color: var(--color-slate-700);
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.course-specs-list {
+  list-style: none;
+  border-top: 1px solid var(--color-slate-200);
+  border-bottom: 1px solid var(--color-slate-200);
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--color-slate-700);
+}
+
+.spec-icon {
+  color: var(--color-slate-500);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.spec-label {
+  font-weight: 700;
+  color: var(--color-slate-800);
+  min-width: 82px;
+}
+
+/* Seats Bar */
+.seats-availability-box {
+  margin-bottom: 1.25rem;
+  background-color: var(--color-slate-100);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md);
+}
+
+.seats-status-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.seats-status-text.status-open { color: var(--color-teal-800); }
+.seats-status-text.status-waitlist { color: var(--color-amber-900); }
+
+.seats-meter {
+  height: 8px;
+  background-color: var(--color-slate-300);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.seats-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+}
+
+.fill-open { background-color: var(--color-teal-600); }
+.fill-waitlist { background-color: var(--color-amber-600); }
+
+.course-card-actions {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.course-card-actions .btn {
+  flex: 1;
+}
+
+/* Empty State Box */
+.empty-state-box {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--color-slate-300);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.empty-icon {
+  color: var(--color-slate-400);
+  margin-bottom: 1rem;
+}
+
+.empty-title {
+  font-size: 1.45rem;
+  color: var(--color-slate-800);
+  margin-bottom: 0.5rem;
+}
+
+.empty-desc {
+  font-size: 1rem;
+  color: var(--color-slate-600);
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* --------------------------------------------------------------------------
+   13. View 3: Registration Page Styles
+   -------------------------------------------------------------------------- */
+.progress-card {
+  margin-bottom: 1.5rem;
+}
+
+.progress-card-inner {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.progress-details {
+  flex: 1;
+  min-width: 280px;
+}
+
+.progress-heading {
+  font-size: 1.25rem;
+  color: var(--color-primary-900);
+  margin-bottom: 0.35rem;
+}
+
+.progress-sub {
+  font-size: 0.95rem;
+  color: var(--color-slate-700);
+}
+
+.progress-bar-wrapper {
+  width: 320px;
+  max-width: 100%;
+}
+
+.progress-bar-track {
+  height: 14px;
+  background-color: var(--color-slate-200);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  border: 1px solid var(--color-slate-300);
+}
+
+.progress-bar-track.lg {
+  height: 20px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-600) 0%, var(--color-teal-600) 100%);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+.progress-bar-fill.fill-teal {
+  background: linear-gradient(90deg, var(--color-teal-600) 0%, var(--color-sky-600) 100%);
+}
+
+.progress-percentage-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-slate-700);
+  text-align: right;
+  margin-top: 0.35rem;
+}
+
+/* Registration Grid Layout */
+.registration-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 1.75rem;
+}
+
+.form-instructions {
+  font-size: 0.95rem;
+  color: var(--color-slate-700);
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin-bottom: 0.4rem;
+}
+
+.form-label.required::after {
+  content: " *";
+  color: var(--color-rose-700);
+  font-weight: 800;
+}
+
+/* Form Checkboxes */
+.form-check-group {
+  margin-bottom: 1.25rem;
+  background-color: var(--color-slate-50);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-slate-200);
+}
+
+.form-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.form-checkbox {
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--color-primary-700);
+  flex-shrink: 0;
+}
+
+.checkbox-label {
+  font-size: 0.875rem;
+  color: var(--color-slate-800);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.input-inline-error {
+  display: block;
+  color: var(--color-rose-700);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  padding-left: 1.85rem;
+}
+
+/* Alert Boxes */
+.alert-box {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.alert-danger {
+  background-color: var(--color-rose-50);
+  border: 1px solid var(--color-rose-600);
+  color: var(--color-rose-800);
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alert-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.alert-list {
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.alert-list li {
+  margin-bottom: 0.25rem;
+}
+
+.form-action-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Advising Sidebar */
+.advising-sidebar .rule-block {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+.advising-sidebar .rule-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.rule-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-purple-800);
+  margin-bottom: 0.25rem;
+}
+
+.rule-text {
+  font-size: 0.875rem;
+  color: var(--color-slate-700);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   14. Accessible Data Table Styles
+   -------------------------------------------------------------------------- */
+.registered-table-section {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+}
+
+.table-header-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-slate-300);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+}
+
+.table-responsive-wrapper:focus-visible {
+  outline: 3px solid var(--color-primary-600);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  text-align: left;
+}
+
+.data-table thead th {
+  background-color: var(--color-slate-100);
+  color: var(--color-slate-900);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--color-slate-300);
+  white-space: nowrap;
+}
+
+.data-table tbody td, .data-table tbody th {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-slate-200);
+  color: var(--color-slate-800);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: var(--color-slate-50);
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--color-primary-50);
+}
+
+.data-table tfoot th, .data-table tfoot td {
+  background-color: var(--color-slate-100);
+  padding: 0.9rem 1rem;
+  border-top: 2px solid var(--color-slate-300);
+  font-size: 0.95rem;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-muted  { color: var(--color-slate-600); }
+.text-emerald { color: var(--color-teal-700); }
+.text-teal   { color: var(--color-teal-700); }
+
+/* Grade Badges */
+.grade-pill {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+}
+
+.grade-a       { background-color: var(--color-teal-100); color: var(--color-teal-800); }
+.grade-a-minus { background-color: var(--color-teal-50);  color: var(--color-teal-700); border: 1px solid var(--color-teal-600); }
+.grade-pass    { background-color: var(--color-primary-100); color: var(--color-primary-900); }
+
+/* --------------------------------------------------------------------------
+   15. View 4: Student Profile Styles
+   -------------------------------------------------------------------------- */
+.profile-hero-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.profile-hero-body {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--color-slate-200);
+  flex-wrap: wrap;
+}
+
+.profile-avatar-large {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-purple-700) 100%);
+  color: var(--color-white);
+  font-size: 2.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--color-white);
+}
+
+.profile-main-meta {
+  flex: 1;
+}
+
+.profile-badge-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.profile-student-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-slate-900);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.profile-student-degree {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary-800);
+  margin-bottom: 0.75rem;
+}
+
+.profile-id-strip {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-slate-700);
+  flex-wrap: wrap;
+}
+
+.id-divider {
+  color: var(--color-slate-400);
+}
+
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+}
+
+.profile-detail-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-slate-500);
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-slate-900);
+}
+
+.inline-link {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.inline-link:hover {
+  color: var(--color-primary-900);
+}
+
+/* Degree Audit Requirements Grid */
+.degree-overall-progress {
+  margin-bottom: 2rem;
+  background-color: var(--color-slate-50);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-slate-200);
+}
+
+.degree-progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.requirement-box {
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 1px solid var(--color-slate-200);
+  background-color: var(--color-white);
+}
+
+.req-completed   { border-left: 4px solid var(--color-teal-600); }
+.req-in-progress { border-left: 4px solid var(--color-primary-600); }
+.req-pending     { border-left: 4px solid var(--color-slate-400); }
+
+.req-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.req-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+}
+
+.req-status-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+}
+
+.pill-completed { background-color: var(--color-teal-100); color: var(--color-teal-800); }
+.pill-progress  { background-color: var(--color-primary-100); color: var(--color-primary-800); }
+.pill-pending   { background-color: var(--color-slate-200); color: var(--color-slate-700); }
+
+.req-count {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin-bottom: 0.35rem;
+}
+
+.req-desc {
+  font-size: 0.8125rem;
+  color: var(--color-slate-600);
+}
+
+/* --------------------------------------------------------------------------
+   16. Accessible Modal Dialogs
+   -------------------------------------------------------------------------- */
+.modal-dialog {
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  box-shadow: var(--shadow-xl);
+  max-width: 600px;
+  width: 92vw;
+  margin: auto;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.modal-dialog::backdrop {
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-white);
+}
+
+.modal-header.header-indigo { background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-700) 100%); }
+.modal-header.header-teal   { background: linear-gradient(135deg, var(--color-teal-800) 0%, var(--color-teal-700) 100%); }
+.modal-header.header-rose   { background: linear-gradient(135deg, var(--color-rose-800) 0%, var(--color-rose-700) 100%); }
+
+.modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modal-icon-bubble {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-lead-text {
+  font-size: 1rem;
+  color: var(--color-slate-700);
+  margin-bottom: 1.25rem;
+}
+
+.modal-course-card {
+  background-color: var(--color-slate-50);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.drop-warning-card {
+  border-left: 5px solid var(--color-rose-700);
+}
+
+.modal-notice-box {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+.modal-notice-box.notice-info {
+  background-color: var(--color-primary-50);
+  border-left: 4px solid var(--color-primary-600);
+}
+
+.modal-notice-box.notice-danger {
+  background-color: var(--color-rose-50);
+  border-left: 4px solid var(--color-rose-600);
+}
+
+.modal-notice-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.notice-info .modal-notice-title { color: var(--color-primary-900); }
+.notice-danger .modal-notice-title { color: var(--color-rose-800); }
+
+.modal-notice-text {
+  font-size: 0.85rem;
+  color: var(--color-slate-700);
+  line-height: 1.4;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-slate-100);
+  border-top: 1px solid var(--color-slate-200);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   17. Toast Notifications
+   -------------------------------------------------------------------------- */
+.toast-stack {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 420px;
+  width: calc(100vw - 3rem);
+  pointer-events: none;
+}
+
+.toast-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem 1.25rem;
+  border-left: 6px solid var(--color-primary-600);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  pointer-events: auto;
+  animation: slideInUp 0.3s ease-out;
+}
+
+.toast-item.toast-success {
+  border-left-color: var(--color-teal-600);
+}
+
+.toast-item.toast-danger {
+  border-left-color: var(--color-rose-600);
+}
+
+.toast-item.toast-info {
+  border-left-color: var(--color-primary-600);
+}
+
+.toast-body {
+  flex: 1;
+}
+
+.toast-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin-bottom: 0.2rem;
+}
+
+.toast-message {
+  font-size: 0.85rem;
+  color: var(--color-slate-600);
+  line-height: 1.35;
+}
+
+.toast-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--color-slate-400);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.25rem;
+}
+
+.toast-close-btn:hover {
+  color: var(--color-slate-800);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-slate-900);
+  color: var(--color-slate-300);
+  margin-top: 4rem;
+  padding-top: 3.5rem;
+  border-top: 4px solid var(--color-primary-700);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  padding: 0.35rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.footer-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-slate-300);
+  margin-bottom: 0.85rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: var(--color-slate-300);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+  display: inline-block;
+  min-height: 30px;
+}
+
+.footer-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.inline-link-footer {
+  color: var(--color-amber-400, #fcd34d);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-slate-800);
+  padding: 1.5rem 0;
+  background-color: #0b1120;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8125rem;
+}
+
+.footer-copy {
+  color: var(--color-slate-400);
+}
+
+.footer-badge-strip {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   19. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .dashboard-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-primary-700);
+    box-shadow: var(--shadow-xl);
+    padding: 1rem 1.5rem;
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    width: 100%;
+  }
+
+  .user-chip {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-banner {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

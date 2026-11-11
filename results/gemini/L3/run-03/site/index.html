@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex University - Course Registration Portal</title>
+  <meta name="description" content="Accessible and responsive university course registration system for Apex University students.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Screen Reader Live Status Announcer -->
+  <div id="status-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main Application Header -->
+  <header class="app-header" role="banner">
+    <div class="header-container">
+      <div class="brand-group">
+        <a href="#home" class="brand-link" id="brand-home-link" aria-label="Apex University Portal Home">
+          <div class="brand-logo" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="36" height="36" fill="currentColor" focusable="false">
+              <path d="M20 2L2 12l18 10 18-10L20 2zm0 24.5L7.5 19.5V28L20 35l12.5-7v-8.5L20 26.5z" />
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Apex University</span>
+            <span class="brand-portal">Course Registration Portal</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mobile Navigation Toggle -->
+      <button type="button" 
+              class="mobile-nav-toggle" 
+              id="mobile-nav-btn" 
+              aria-controls="primary-navigation" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation menu">
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Primary Navigation Bar -->
+      <nav id="primary-navigation" class="primary-nav" aria-label="Main Navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" data-view="home" id="nav-link-home" aria-current="page">
+              <span class="nav-icon" aria-hidden="true">🏠</span>
+              <span class="nav-label">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" data-view="catalog" id="nav-link-catalog">
+              <span class="nav-icon" aria-hidden="true">📚</span>
+              <span class="nav-label">Course Catalog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#registration" class="nav-link" data-view="registration" id="nav-link-registration">
+              <span class="nav-icon" aria-hidden="true">✍️</span>
+              <span class="nav-label">Registration</span>
+              <span class="nav-badge" id="nav-registered-count" aria-label="3 courses registered">3</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#profile" class="nav-link" data-view="profile" id="nav-link-profile">
+              <span class="nav-icon" aria-hidden="true">👤</span>
+              <span class="nav-label">Student Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Quick Student Status Info -->
+      <div class="header-user-status" aria-label="Active student session">
+        <div class="user-avatar" aria-hidden="true">AM</div>
+        <div class="user-meta">
+          <span class="user-name">Alex Morgan</span>
+          <span class="term-badge">Fall 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    
+    <!-- ========================================== -->
+    <!-- VIEW 1: HOME PAGE                          -->
+    <!-- ========================================== -->
+    <section id="view-home" class="page-view active" aria-labelledby="home-welcome-heading">
+      <div class="view-container">
+        
+        <!-- Welcome Hero Section -->
+        <header class="hero-banner">
+          <div class="hero-content">
+            <span class="hero-eyebrow">Fall Semester 2026</span>
+            <h1 id="home-welcome-heading" class="hero-title">Welcome back, Alex!</h1>
+            <p class="hero-description">
+              Priority enrollment is now open. Search available courses, review prerequisites, and finalize your Fall 2026 academic schedule.
+            </p>
+            <div class="hero-actions">
+              <a href="#catalog" class="btn btn-primary" data-view="catalog">
+                <span aria-hidden="true">🔍</span> Browse Course Catalog
+              </a>
+              <a href="#registration" class="btn btn-secondary" data-view="registration">
+                <span aria-hidden="true">📅</span> Manage My Schedule (<span class="header-credits-quick">12</span> Units)
+              </a>
+            </div>
+          </div>
+          <div class="hero-stats-card" aria-labelledby="academic-snapshot-heading">
+            <h2 id="academic-snapshot-heading" class="stats-card-title">Enrollment Snapshot</h2>
+            <div class="stat-items-grid">
+              <div class="stat-box stat-primary">
+                <span class="stat-value" id="home-stat-courses">3</span>
+                <span class="stat-label">Enrolled Courses</span>
+              </div>
+              <div class="stat-box stat-success">
+                <span class="stat-value" id="home-stat-credits">12.0</span>
+                <span class="stat-label">Registered Units</span>
+              </div>
+              <div class="stat-box stat-info">
+                <span class="stat-value">3.82</span>
+                <span class="stat-label">Cumulative GPA</span>
+              </div>
+              <div class="stat-box stat-purple">
+                <span class="stat-value">Good</span>
+                <span class="stat-label">Academic Standing</span>
+              </div>
+            </div>
+            <div class="credit-limit-wrapper">
+              <div class="credit-label-row">
+                <span>Credit Load (12 of 19 max units)</span>
+                <span class="fw-bold">63%</span>
+              </div>
+              <div class="progress-bar-track" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="19" aria-label="Enrolled units progress">
+                <div class="progress-bar-fill progress-fill-primary" style="width: 63.15%;"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Urgent Registration Notice / Alert Box -->
+        <section class="alert-banner alert-warning" role="region" aria-labelledby="alert-heading">
+          <div class="alert-icon" aria-hidden="true">⚠️</div>
+          <div class="alert-content">
+            <h2 id="alert-heading" class="alert-title">Priority Registration Deadline Reminder</h2>
+            <p>
+              Your priority enrollment window closes on <strong>Friday, November 15, 2026 at 11:59 PM PST</strong>. 
+              Be sure to clear any prerequisite requirements and finalize your schedule before the open enrollment period begins.
+            </p>
+          </div>
+          <div class="alert-action">
+            <a href="#registration" class="btn btn-sm btn-warning-action" data-view="registration">
+              Review Schedule
+            </a>
+          </div>
+        </section>
+
+        <!-- Quick Navigation Cards Grid -->
+        <section class="home-quick-grid" aria-labelledby="quick-services-heading">
+          <h2 id="quick-services-heading" class="section-title">Registration Services</h2>
+          <div class="cards-grid-4">
+            
+            <article class="service-card card-purple">
+              <div class="service-icon" aria-hidden="true">📖</div>
+              <h3 class="service-card-title">Explore Catalog</h3>
+              <p class="service-card-desc">Search through hundreds of accredited courses across 6 departments with real-time seat availability.</p>
+              <a href="#catalog" class="card-link" data-view="catalog">
+                Open Course Catalog <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card card-teal">
+              <div class="service-icon" aria-hidden="true">⚡</div>
+              <h3 class="service-card-title">Add / Drop Courses</h3>
+              <p class="service-card-desc">Register with a 5-digit Course Reference Number (CRN) or drop currently enrolled classes seamlessly.</p>
+              <a href="#registration" class="card-link" data-view="registration">
+                Go to Registration <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card card-amber">
+              <div class="service-icon" aria-hidden="true">🎓</div>
+              <h3 class="service-card-title">Degree Audit</h3>
+              <p class="service-card-desc">Track degree progress, fulfilled general education credits, and core major prerequisites.</p>
+              <a href="#profile" class="card-link" data-view="profile">
+                View Degree Audit <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card card-indigo">
+              <div class="service-icon" aria-hidden="true">💬</div>
+              <h3 class="service-card-title">Academic Advising</h3>
+              <p class="service-card-desc">Need assistance? Contact your assigned academic advisor Dr. Elena Rostova for course planning approval.</p>
+              <a href="#profile" class="card-link" data-view="profile">
+                Contact Advisor <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Featured / Recommended Courses Section -->
+        <section class="home-featured-section" aria-labelledby="featured-courses-heading">
+          <div class="section-header-flex">
+            <div>
+              <h2 id="featured-courses-heading" class="section-title">Recommended Courses for Your Major</h2>
+              <p class="section-subtitle">Based on your Computer Science B.S. degree audit plan</p>
+            </div>
+            <a href="#catalog" class="btn btn-outline" data-view="catalog">
+              View All in Catalog <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="cards-grid-3" id="home-featured-grid">
+            <!-- Dynamically rendered or highlighted cards -->
+            <article class="course-card card-accent-blue" aria-labelledby="feat-c1-title">
+              <div class="card-badge-row">
+                <span class="badge badge-dept">Computer Science</span>
+                <span class="badge badge-success">Open Seats: 18</span>
+              </div>
+              <h3 id="feat-c1-title" class="course-title">CSE 216: Advanced Software Engineering</h3>
+              <p class="course-meta">
+                <span><strong>CRN:</strong> 10452</span> • 
+                <span><strong>Units:</strong> 4.0</span> • 
+                <span><strong>Level:</strong> Upper Div</span>
+              </p>
+              <p class="course-schedule">
+                <span aria-hidden="true">🕒</span> Mon, Wed 10:00 AM – 11:50 AM (WLH 2204)
+              </p>
+              <p class="course-instructor">
+                <span aria-hidden="true">👨‍🏫</span> <strong>Instructor:</strong> Prof. Maya Lin
+              </p>
+              <p class="course-desc-snip">
+                Modern software engineering paradigms, automated testing pipelines, architectural patterns, and cloud scalability.
+              </p>
+              <div class="card-actions">
+                <button type="button" class="btn btn-sm btn-outline btn-details" data-crn="10452" aria-label="View course details for CSE 216: Advanced Software Engineering">
+                  Details
+                </button>
+                <button type="button" class="btn btn-sm btn-primary btn-quick-reg" data-crn="10452" aria-label="Register for CSE 216: Advanced Software Engineering">
+                  Register
+                </button>
+              </div>
+            </article>
+
+            <article class="course-card card-accent-teal" aria-labelledby="feat-c2-title">
+              <div class="card-badge-row">
+                <span class="badge badge-dept-cyan">Data Science</span>
+                <span class="badge badge-success">Open Seats: 8</span>
+              </div>
+              <h3 id="feat-c2-title" class="course-title">DSC 140A: Probabilistic Modeling & ML</h3>
+              <p class="course-meta">
+                <span><strong>CRN:</strong> 10455</span> • 
+                <span><strong>Units:</strong> 4.0</span> • 
+                <span><strong>Level:</strong> Upper Div</span>
+              </p>
+              <p class="course-schedule">
+                <span aria-hidden="true">🕒</span> Tue, Thu 2:00 PM – 3:20 PM (CSB 002)
+              </p>
+              <p class="course-instructor">
+                <span aria-hidden="true">👩‍🏫</span> <strong>Instructor:</strong> Dr. Arthur Chen
+              </p>
+              <p class="course-desc-snip">
+                Principles of probabilistic inference, Bayesian networks, maximum likelihood, and foundational machine learning models.
+              </p>
+              <div class="card-actions">
+                <button type="button" class="btn btn-sm btn-outline btn-details" data-crn="10455" aria-label="View course details for DSC 140A: Probabilistic Modeling & ML">
+                  Details
+                </button>
+                <button type="button" class="btn btn-sm btn-primary btn-quick-reg" data-crn="10455" aria-label="Register for DSC 140A: Probabilistic Modeling & ML">
+                  Register
+                </button>
+              </div>
+            </article>
+
+            <article class="course-card card-accent-purple" aria-labelledby="feat-c3-title">
+              <div class="card-badge-row">
+                <span class="badge badge-dept-purple">Design & HCI</span>
+                <span class="badge badge-warning">Waitlist: 4</span>
+              </div>
+              <h3 id="feat-c3-title" class="course-title">DSGN 100: Prototyping Accessible Interfaces</h3>
+              <p class="course-meta">
+                <span><strong>CRN:</strong> 10456</span> • 
+                <span><strong>Units:</strong> 4.0</span> • 
+                <span><strong>Level:</strong> Upper Div</span>
+              </p>
+              <p class="course-schedule">
+                <span aria-hidden="true">🕒</span> Fri 9:00 AM – 12:50 PM (Design Lab Studio)
+              </p>
+              <p class="course-instructor">
+                <span aria-hidden="true">👩‍🏫</span> <strong>Instructor:</strong> Prof. Sarah Jenkins
+              </p>
+              <p class="course-desc-snip">
+                Inclusive design methods, WCAG compliance standards, screen-reader user testing, and accessible web interfaces.
+              </p>
+              <div class="card-actions">
+                <button type="button" class="btn btn-sm btn-outline btn-details" data-crn="10456" aria-label="View course details for DSGN 100: Prototyping Accessible Interfaces">
+                  Details
+                </button>
+                <button type="button" class="btn btn-sm btn-primary btn-quick-reg" data-crn="10456" aria-label="Register or Waitlist for DSGN 100: Prototyping Accessible Interfaces">
+                  Waitlist
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Academic Deadlines Timeline Section -->
+        <section class="home-deadlines-section" aria-labelledby="deadlines-heading">
+          <h2 id="deadlines-heading" class="section-title">Fall 2026 Academic Calendar & Deadlines</h2>
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-badge badge-active" aria-hidden="true">1</div>
+              <div class="timeline-body">
+                <h3 class="timeline-title">Priority Registration Opens</h3>
+                <time datetime="2026-11-01" class="timeline-date">November 1, 2026</time>
+                <p>Registration window begins for continuing undergraduate seniors and graduate researchers.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge badge-current" aria-hidden="true">2</div>
+              <div class="timeline-body">
+                <h3 class="timeline-title">Current Window: Junior & Sophomore Registration</h3>
+                <time datetime="2026-11-15" class="timeline-date">November 15, 2026 (Active Now)</time>
+                <p>All continuing juniors and sophomores may register up to 19 units without petition.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge" aria-hidden="true">3</div>
+              <div class="timeline-body">
+                <h3 class="timeline-title">Open Registration & Waitlist Processing</h3>
+                <time datetime="2026-11-20" class="timeline-date">November 20, 2026</time>
+                <p>Registration open to all students; automatic waitlist seats begin nightly execution.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge" aria-hidden="true">4</div>
+              <div class="timeline-body">
+                <h3 class="timeline-title">Add / Drop Without Transcript Notation Deadline</h3>
+                <time datetime="2026-12-04" class="timeline-date">December 4, 2026</time>
+                <p>Final day to drop classes without a 'W' grade and receive 100% tuition adjustment.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: COURSE CATALOG                     -->
+    <!-- ========================================== -->
+    <section id="view-catalog" class="page-view" aria-labelledby="catalog-main-heading">
+      <div class="view-container">
+        
+        <header class="catalog-page-header">
+          <div>
+            <h1 id="catalog-main-heading" class="page-title">Course Catalog</h1>
+            <p class="page-subtitle">
+              Browse available course sections, filter by department or format, and check real-time prerequisites and seat availability.
+            </p>
+          </div>
+          <div class="catalog-header-actions">
+            <a href="#registration" class="btn btn-secondary" data-view="registration">
+              <span aria-hidden="true">📋</span> View My Registered Classes (<span class="header-count-quick">3</span>)
+            </a>
+          </div>
+        </header>
+
+        <!-- Search and Filters Section Form -->
+        <section class="filters-card" aria-labelledby="filters-heading">
+          <div class="filters-card-header">
+            <h2 id="filters-heading" class="filters-title">
+              <span aria-hidden="true">🔍</span> Search & Filter Courses
+            </h2>
+            <button type="button" id="btn-reset-filters" class="btn btn-sm btn-ghost">
+              Reset Filters
+            </button>
+          </div>
+
+          <form id="catalog-search-form" class="filters-form" role="search" aria-label="Course catalog search and filter form">
+            
+            <!-- Text Search Input -->
+            <div class="form-group search-group">
+              <label for="catalog-search-input" class="form-label">
+                Search Course by Title, Code, or Instructor
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon" aria-hidden="true">🔎</span>
+                <input type="search" 
+                       id="catalog-search-input" 
+                       name="searchQuery" 
+                       class="form-control" 
+                       placeholder="e.g. CSE 216, Algorithms, Maya Lin..." 
+                       autocomplete="off"
+                       aria-describedby="search-hint">
+              </div>
+              <span id="search-hint" class="form-hint">Type any keyword or course number to filter in real-time</span>
+            </div>
+
+            <!-- Filter Dropdowns Row -->
+            <div class="filters-grid">
+              
+              <!-- Department Filter -->
+              <div class="form-group">
+                <label for="filter-department" class="form-label">Department</label>
+                <select id="filter-department" name="department" class="form-select">
+                  <option value="all">All Departments (6)</option>
+                  <option value="CSE">Computer Science & Engineering</option>
+                  <option value="DSC">Data Science</option>
+                  <option value="MATH">Mathematics</option>
+                  <option value="DSGN">Cognitive Science & Design</option>
+                  <option value="BENG">Bioengineering</option>
+                  <option value="PHYS">Physics</option>
+                </select>
+              </div>
+
+              <!-- Term Filter -->
+              <div class="form-group">
+                <label for="filter-term" class="form-label">Academic Term</label>
+                <select id="filter-term" name="term" class="form-select">
+                  <option value="Fall 2026">Fall 2026 (Current)</option>
+                  <option value="Spring 2027">Spring 2027 (Upcoming)</option>
+                </select>
+              </div>
+
+              <!-- Academic Level Filter -->
+              <div class="form-group">
+                <label for="filter-level" class="form-label">Course Level</label>
+                <select id="filter-level" name="level" class="form-select">
+                  <option value="all">All Levels</option>
+                  <option value="lower">Lower Division (1 - 99)</option>
+                  <option value="upper">Upper Division (100 - 199)</option>
+                  <option value="graduate">Graduate (200+)</option>
+                </select>
+              </div>
+
+              <!-- Availability Filter -->
+              <div class="form-group">
+                <label for="filter-availability" class="form-label">Seat Availability</label>
+                <select id="filter-availability" name="availability" class="form-select">
+                  <option value="all">All Statuses</option>
+                  <option value="open">Open Seats Only</option>
+                  <option value="waitlist">Waitlist Available</option>
+                  <option value="unregistered">Not Yet Registered</option>
+                </select>
+              </div>
+
+              <!-- Instruction Delivery Mode Filter -->
+              <div class="form-group">
+                <label for="filter-mode" class="form-label">Delivery Mode</label>
+                <select id="filter-mode" name="deliveryMode" class="form-select">
+                  <option value="all">All Formats</option>
+                  <option value="In-Person">In-Person</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Online">Online / Asynchronous</option>
+                </select>
+              </div>
+
+            </div>
+          </form>
+        </section>
+
+        <!-- Catalog Results Status Bar -->
+        <div class="results-status-bar" aria-live="polite">
+          <div class="results-count" id="catalog-results-count">
+            Showing <strong id="catalog-count-num">10</strong> courses
+          </div>
+          <div class="active-filter-tags" id="active-filter-tags" aria-label="Active filters">
+            <!-- Dynamically populated filter tags -->
+          </div>
+        </div>
+
+        <!-- Catalog Course Cards Grid -->
+        <section class="catalog-grid" id="catalog-cards-container" aria-label="Course list">
+          <!-- Populated dynamically by script.js -->
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: REGISTRATION & SCHEDULE            -->
+    <!-- ========================================== -->
+    <section id="view-registration" class="page-view" aria-labelledby="reg-main-heading">
+      <div class="view-container">
+        
+        <header class="reg-page-header">
+          <div>
+            <h1 id="reg-main-heading" class="page-title">Course Registration</h1>
+            <p class="page-subtitle">
+              Add courses to your schedule using Course Reference Numbers (CRN), verify prerequisites, and manage your enrolled classes.
+            </p>
+          </div>
+          <div class="schedule-summary-pill" aria-label="Total units summary">
+            <span class="pill-label">Total Units Enrolled:</span>
+            <span class="pill-value" id="reg-total-units">12.0</span>
+            <span class="pill-status badge-success">Full-Time Status</span>
+          </div>
+        </header>
+
+        <!-- Registration Layout: 2 Columns (Form & Schedule Table) -->
+        <div class="reg-layout-grid">
+          
+          <!-- Column 1: Registration Form -->
+          <section class="reg-form-section" aria-labelledby="add-course-heading">
+            <div class="card form-card">
+              <div class="form-card-header">
+                <h2 id="add-course-heading" class="form-card-title">
+                  <span aria-hidden="true">➕</span> Register for a Course
+                </h2>
+                <p class="form-card-subtitle">Enter course reference number or pick from offered courses.</p>
+              </div>
+
+              <!-- Form Error Summary Box (WCAG Accessible) -->
+              <div id="registration-error-summary" 
+                   class="error-summary-box d-none" 
+                   role="alert" 
+                   aria-labelledby="error-summary-title" 
+                   tabindex="-1">
+                <h3 id="error-summary-title" class="error-summary-title">
+                  <span aria-hidden="true">⚠️</span> There was a problem with your submission
+                </h3>
+                <ul id="error-summary-list" class="error-summary-list"></ul>
+              </div>
+
+              <!-- Success Notification Alert -->
+              <div id="registration-success-alert" 
+                   class="alert-banner alert-success d-none" 
+                   role="status" 
+                   aria-live="polite">
+                <span class="alert-icon" aria-hidden="true">✅</span>
+                <div class="alert-content">
+                  <h3 class="alert-title" id="reg-success-title">Registration Confirmed!</h3>
+                  <p id="reg-success-message">Course successfully added to your Fall 2026 academic schedule.</p>
+                </div>
+              </div>
+
+              <form id="course-registration-form" class="reg-form" novalidate>
+                
+                <!-- Term Selection (Pre-selected) -->
+                <div class="form-group">
+                  <label for="reg-term" class="form-label">
+                    Term / Semester <span class="required-indicator" aria-hidden="true">*</span>
+                    <span class="sr-only">(required)</span>
+                  </label>
+                  <select id="reg-term" name="term" class="form-select" required>
+                    <option value="Fall 2026" selected>Fall 2026</option>
+                    <option value="Spring 2027">Spring 2027</option>
+                  </select>
+                </div>
+
+                <!-- Course Selection Dropdown or Direct CRN -->
+                <div class="form-group">
+                  <label for="reg-course-select" class="form-label">
+                    Select Available Course <span class="required-indicator" aria-hidden="true">*</span>
+                    <span class="sr-only">(required)</span>
+                  </label>
+                  <select id="reg-course-select" name="courseCrn" class="form-select" required aria-describedby="course-select-hint">
+                    <option value="" disabled selected>-- Choose an open course --</option>
+                    <!-- Dynamically populated from course data -->
+                  </select>
+                  <span id="course-select-hint" class="form-hint">Selecting a course automatically populates the CRN code.</span>
+                  <div class="field-error-message" id="err-reg-course-select" aria-live="polite"></div>
+                </div>
+
+                <!-- CRN Input -->
+                <div class="form-group">
+                  <label for="reg-crn-input" class="form-label">
+                    Course Reference Number (CRN) <span class="required-indicator" aria-hidden="true">*</span>
+                    <span class="sr-only">(required)</span>
+                  </label>
+                  <input type="text" 
+                         id="reg-crn-input" 
+                         name="crn" 
+                         class="form-control" 
+                         placeholder="e.g. 10452" 
+                         maxlength="5" 
+                         pattern="[0-9]{5}" 
+                         required 
+                         aria-describedby="crn-hint">
+                  <span id="crn-hint" class="form-hint">Enter the 5-digit number associated with your course section.</span>
+                  <div class="field-error-message" id="err-reg-crn-input" aria-live="polite"></div>
+                </div>
+
+                <!-- Grading Option -->
+                <fieldset class="form-fieldset">
+                  <legend class="form-legend">
+                    Grading Option <span class="required-indicator" aria-hidden="true">*</span>
+                    <span class="sr-only">(required)</span>
+                  </legend>
+                  <div class="radio-group">
+                    <label class="radio-label">
+                      <input type="radio" name="gradingOption" value="Letter Grade" checked>
+                      <span class="radio-custom" aria-hidden="true"></span>
+                      <span>Letter Grade (A–F)</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="gradingOption" value="Pass/No Pass">
+                      <span class="radio-custom" aria-hidden="true"></span>
+                      <span>Pass / No Pass (P/NP)</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="gradingOption" value="Audit">
+                      <span class="radio-custom" aria-hidden="true"></span>
+                      <span>Audit (No Units/Grade)</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- Prerequisite Acknowledgment Checkbox -->
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label" for="reg-prereq-check">
+                    <input type="checkbox" id="reg-prereq-check" name="prereqAccepted" required aria-describedby="prereq-hint">
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    <span>I confirm I have satisfied all listed prerequisite coursework or received instructor consent. <span class="required-indicator" aria-hidden="true">*</span></span>
+                  </label>
+                  <span id="prereq-hint" class="form-hint">Failure to meet prerequisites may result in administrative drop.</span>
+                  <div class="field-error-message" id="err-reg-prereq-check" aria-live="polite"></div>
+                </div>
+
+                <!-- Optional Special Requests / Notes -->
+                <div class="form-group">
+                  <label for="reg-notes" class="form-label">
+                    Student Notes or Department Authorization Code (Optional)
+                  </label>
+                  <textarea id="reg-notes" 
+                            name="studentNotes" 
+                            class="form-control" 
+                            rows="2" 
+                            placeholder="Add authorization code or advising notes if applicable..."></textarea>
+                </div>
+
+                <!-- Form Submit Action -->
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-block" id="btn-submit-registration">
+                    <span aria-hidden="true">📝</span> Complete Course Registration
+                  </button>
+                  <button type="reset" class="btn btn-ghost btn-block" id="btn-reset-reg-form">
+                    Clear Form
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </section>
+
+          <!-- Column 2: Registered Courses Data Table -->
+          <section class="reg-table-section" aria-labelledby="enrolled-table-heading">
+            <div class="card table-card">
+              <div class="table-card-header">
+                <div>
+                  <h2 id="enrolled-table-heading" class="table-card-title">
+                    <span aria-hidden="true">📋</span> My Registered Courses
+                  </h2>
+                  <p class="table-card-subtitle">Official schedule for Fall 2026 semester</p>
+                </div>
+                <div class="table-header-meta">
+                  <span class="badge badge-primary" id="table-courses-count-badge">3 Classes</span>
+                </div>
+              </div>
+
+              <!-- Accessible Responsive Data Table -->
+              <div class="table-responsive-wrapper" tabindex="0" role="region" aria-label="Enrolled courses table scroll container">
+                <table class="data-table" id="registered-courses-table">
+                  <caption class="sr-only">List of courses registered for the Fall 2026 semester, including course code, title, units, schedule, location, grading basis, and drop action.</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="th-crn">CRN</th>
+                      <th scope="col" class="th-code">Course Code</th>
+                      <th scope="col" class="th-title">Course Title</th>
+                      <th scope="col" class="th-units text-center">Units</th>
+                      <th scope="col" class="th-schedule">Schedule & Room</th>
+                      <th scope="col" class="th-instructor">Instructor</th>
+                      <th scope="col" class="th-grading">Grading</th>
+                      <th scope="col" class="th-status">Status</th>
+                      <th scope="col" class="th-actions text-right">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="registered-courses-tbody">
+                    <!-- Populated dynamically via script.js -->
+                  </tbody>
+                  <tfoot>
+                    <tr class="table-footer-row">
+                      <th scope="row" colspan="3" class="text-right">Total Registered Units:</th>
+                      <td class="text-center font-bold" id="tfoot-total-units">12.0</td>
+                      <td colspan="5" class="table-footer-note">
+                        Full-Time minimum: 12.0 units • Maximum load: 19.0 units
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+
+              <!-- Empty Table State (Hidden when items present) -->
+              <div id="table-empty-state" class="table-empty-state d-none">
+                <div class="empty-icon" aria-hidden="true">📭</div>
+                <h3 class="empty-title">No Courses Registered Yet</h3>
+                <p class="empty-desc">You are not currently enrolled in any classes for this term. Use the form on the left or the Course Catalog to register.</p>
+                <a href="#catalog" class="btn btn-primary" data-view="catalog">Browse Available Courses</a>
+              </div>
+
+              <div class="table-card-footer">
+                <div class="tuition-note">
+                  <span aria-hidden="true">💡</span> Tuition Assessment: <strong>Full-Time Undergraduate Rate</strong>. Contact Financial Aid for award disbursement details.
+                </div>
+                <button type="button" class="btn btn-sm btn-outline" id="btn-print-schedule" onclick="window.print()">
+                  <span aria-hidden="true">🖨️</span> Print Schedule
+                </button>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: STUDENT PROFILE                    -->
+    <!-- ========================================== -->
+    <section id="view-profile" class="page-view" aria-labelledby="profile-main-heading">
+      <div class="view-container">
+        
+        <header class="profile-page-header">
+          <div>
+            <h1 id="profile-main-heading" class="page-title">Student Profile & Degree Progress</h1>
+            <p class="page-subtitle">
+              Review personal academic records, graduation requirements checklist, contact information, and registration holds.
+            </p>
+          </div>
+        </header>
+
+        <div class="profile-grid">
+          
+          <!-- Profile Card -->
+          <div class="profile-sidebar">
+            <article class="card profile-info-card" aria-labelledby="profile-card-name">
+              <div class="profile-header-visual">
+                <div class="profile-avatar-large" aria-hidden="true">AM</div>
+              </div>
+              <div class="profile-body-center">
+                <h2 id="profile-card-name" class="profile-name">Alex Morgan</h2>
+                <p class="profile-id">Student ID: <strong>#A17492038</strong></p>
+                <span class="badge badge-success">Good Academic Standing</span>
+              </div>
+
+              <hr class="divider">
+
+              <dl class="profile-datalist">
+                <div class="datalist-row">
+                  <dt>Degree Program:</dt>
+                  <dd>B.S. Computer Science</dd>
+                </div>
+                <div class="datalist-row">
+                  <dt>College / Campus:</dt>
+                  <dd>Warren College</dd>
+                </div>
+                <div class="datalist-row">
+                  <dt>Academic Level:</dt>
+                  <dd>Junior (3rd Year)</dd>
+                </div>
+                <div class="datalist-row">
+                  <dt>Cumulative GPA:</dt>
+                  <dd class="fw-bold text-primary">3.82 / 4.00</dd>
+                </div>
+                <div class="datalist-row">
+                  <dt>Major GPA:</dt>
+                  <dd class="fw-bold text-success">3.91 / 4.00</dd>
+                </div>
+                <div class="datalist-row">
+                  <dt>Academic Advisor:</dt>
+                  <dd>Dr. Elena Rostova</dd>
+                </div>
+                <div class="datalist-row">
+                  <dt>Advisor Email:</dt>
+                  <dd><a href="mailto:erostova@apex.edu" class="text-link">erostova@apex.edu</a></dd>
+                </div>
+              </dl>
+
+              <div class="profile-holds-box">
+                <h3 class="holds-title">Registration Holds</h3>
+                <div class="holds-status-clean">
+                  <span class="status-icon-check" aria-hidden="true">✓</span>
+                  <span>No holds on file. Your account is fully eligible for registration.</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Main Profile Details Column -->
+          <div class="profile-main-column">
+            
+            <!-- Degree Progress Audit Section -->
+            <section class="card degree-audit-card" aria-labelledby="degree-audit-heading">
+              <div class="card-header-flex">
+                <div>
+                  <h2 id="degree-audit-heading" class="card-title">
+                    <span aria-hidden="true">🎓</span> Degree Progress Audit
+                  </h2>
+                  <p class="card-subtitle">88 of 120 Total Units Completed (73.3% Complete)</p>
+                </div>
+                <span class="badge badge-purple">Expected Grad: June 2027</span>
+              </div>
+
+              <!-- Overall Progress Bar -->
+              <div class="overall-progress-wrapper">
+                <div class="progress-bar-track-large" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" aria-label="Degree completion progress">
+                  <div class="progress-bar-fill progress-fill-gradient" style="width: 73.3%;"></div>
+                </div>
+                <div class="progress-milestones">
+                  <span>Freshman (30)</span>
+                  <span>Sophomore (60)</span>
+                  <span class="milestone-current">Junior (88)</span>
+                  <span>Senior (120)</span>
+                </div>
+              </div>
+
+              <!-- Requirements Breakdown Checklist -->
+              <div class="requirements-list">
+                
+                <div class="requirement-item req-complete">
+                  <div class="req-status-col">
+                    <span class="req-icon" aria-hidden="true">✅</span>
+                  </div>
+                  <div class="req-content">
+                    <div class="req-title-row">
+                      <h3 class="req-title">Lower-Division Core Math & Science</h3>
+                      <span class="badge badge-success">Completed (36/36 Units)</span>
+                    </div>
+                    <p class="req-desc">Calculus I-III, Linear Algebra, Discrete Mathematics, General Physics I & II.</p>
+                  </div>
+                </div>
+
+                <div class="requirement-item req-progress">
+                  <div class="req-status-col">
+                    <span class="req-icon" aria-hidden="true">⏳</span>
+                  </div>
+                  <div class="req-content">
+                    <div class="req-title-row">
+                      <h3 class="req-title">Upper-Division Major Requirements</h3>
+                      <span class="badge badge-warning">In Progress (28/40 Units)</span>
+                    </div>
+                    <p class="req-desc">Data Structures, Algorithms, Software Engineering, Operating Systems, Computer Architecture.</p>
+                  </div>
+                </div>
+
+                <div class="requirement-item req-progress">
+                  <div class="req-status-col">
+                    <span class="req-icon" aria-hidden="true">⏳</span>
+                  </div>
+                  <div class="req-content">
+                    <div class="req-title-row">
+                      <h3 class="req-title">Computer Science Technical Electives</h3>
+                      <span class="badge badge-warning">In Progress (12/24 Units)</span>
+                    </div>
+                    <p class="req-desc">3 courses remaining from approved technical elective list (e.g. AI, Security, Cloud, UI/UX).</p>
+                  </div>
+                </div>
+
+                <div class="requirement-item req-complete">
+                  <div class="req-status-col">
+                    <span class="req-icon" aria-hidden="true">✅</span>
+                  </div>
+                  <div class="req-content">
+                    <div class="req-title-row">
+                      <h3 class="req-title">University General Education & Writing</h3>
+                      <span class="badge badge-success">Completed (12/12 Units)</span>
+                    </div>
+                    <p class="req-desc">College Writing I & II, Ethics in Technology & Society.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- Contact & Preferences Form -->
+            <section class="card profile-form-card" aria-labelledby="contact-pref-heading">
+              <h2 id="contact-pref-heading" class="card-title">
+                <span aria-hidden="true">⚙️</span> Student Contact & Notification Preferences
+              </h2>
+              <p class="card-subtitle">Keep your university communication preferences and emergency contact updated.</p>
+
+              <!-- Profile Form Status Message -->
+              <div id="profile-status-message" class="alert-banner alert-success d-none" role="status" aria-live="polite">
+                <span class="alert-icon" aria-hidden="true">✅</span>
+                <div class="alert-content">
+                  <p class="mb-0">Your contact settings and emergency preferences have been successfully updated.</p>
+                </div>
+              </div>
+
+              <form id="student-profile-form" class="profile-settings-form">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="pref-preferred-name" class="form-label">Preferred First Name</label>
+                    <input type="text" id="pref-preferred-name" name="preferredName" class="form-control" value="Alex">
+                  </div>
+                  <div class="form-group">
+                    <label for="pref-student-email" class="form-label">Official University Email</label>
+                    <input type="email" id="pref-student-email" name="email" class="form-control" value="amorgan@apex.edu" readonly aria-describedby="email-note">
+                    <span id="email-note" class="form-hint">University email cannot be modified online.</span>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="pref-phone" class="form-label">Mobile Phone (SMS Notifications)</label>
+                    <input type="tel" id="pref-phone" name="phone" class="form-control" value="(858) 555-0192" placeholder="(xxx) xxx-xxxx">
+                  </div>
+                  <div class="form-group">
+                    <label for="pref-emergency-contact" class="form-label">Emergency Contact Name & Relation</label>
+                    <input type="text" id="pref-emergency-contact" name="emergencyContact" class="form-control" value="Sarah Morgan (Parent)">
+                  </div>
+                </div>
+
+                <fieldset class="form-fieldset">
+                  <legend class="form-legend">Registration Notification Preferences</legend>
+                  <div class="checkbox-stack">
+                    <label class="checkbox-label" for="notify-waitlist">
+                      <input type="checkbox" id="notify-waitlist" name="notifyWaitlist" checked>
+                      <span class="checkbox-custom" aria-hidden="true"></span>
+                      <span>Send instant SMS and email when a waitlisted seat opens up</span>
+                    </label>
+                    <label class="checkbox-label" for="notify-schedule">
+                      <input type="checkbox" id="notify-schedule" name="notifySchedule" checked>
+                      <span class="checkbox-custom" aria-hidden="true"></span>
+                      <span>Send email receipt on course add/drop confirmations</span>
+                    </label>
+                    <label class="checkbox-label" for="notify-deadlines">
+                      <input type="checkbox" id="notify-deadlines" name="notifyDeadlines" checked>
+                      <span class="checkbox-custom" aria-hidden="true"></span>
+                      <span>Receive 48-hour deadline reminders for tuition and add/drop cutoffs</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="form-actions-left">
+                  <button type="submit" class="btn btn-primary" id="btn-save-profile">
+                    Save Profile Preferences
+                  </button>
+                </div>
+              </form>
+            </section>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- ACCESSIBLE MODALS                          -->
+  <!-- ========================================== -->
+
+  <!-- Modal 1: Confirmation Dialog (Register / Drop) -->
+  <dialog id="confirmation-modal" 
+          class="accessible-modal" 
+          role="dialog" 
+          aria-modal="true" 
+          aria-labelledby="confirm-modal-title" 
+          aria-describedby="confirm-modal-desc">
+    <div class="modal-backdrop-inner">
+      <div class="modal-box">
+        
+        <header class="modal-header">
+          <div class="modal-icon-badge" id="modal-icon-container" aria-hidden="true">❓</div>
+          <h2 id="confirm-modal-title" class="modal-title">Confirm Action</h2>
+          <button type="button" class="btn-close-modal" id="btn-modal-close" aria-label="Close dialog">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+
+        <div class="modal-body">
+          <p id="confirm-modal-desc" class="modal-description">
+            Are you sure you want to proceed with this course modification?
+          </p>
+          <div class="modal-course-card" id="modal-course-details">
+            <!-- Dynamic course details injected here -->
+          </div>
+          <div id="modal-warning-note" class="modal-note alert-warning d-none">
+            <!-- Optional alert notice e.g. Dropping below 12 units warning -->
+          </div>
+        </div>
+
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-outline" id="btn-modal-cancel">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-primary" id="btn-modal-action">
+            Confirm Action
+          </button>
+        </footer>
+
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Course Detailed Syllabus Modal -->
+  <dialog id="details-modal" 
+          class="accessible-modal" 
+          role="dialog" 
+          aria-modal="true" 
+          aria-labelledby="details-modal-title" 
+          aria-describedby="details-modal-desc">
+    <div class="modal-backdrop-inner">
+      <div class="modal-box modal-box-large">
+        
+        <header class="modal-header">
+          <div>
+            <span class="badge badge-dept" id="details-dept-badge">Computer Science</span>
+            <h2 id="details-modal-title" class="modal-title">Course Details</h2>
+          </div>
+          <button type="button" class="btn-close-modal" id="btn-details-close" aria-label="Close course details dialog">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+
+        <div class="modal-body" id="details-modal-body">
+          <p id="details-modal-desc" class="modal-course-overview">Detailed overview and syllabus requirements.</p>
+          <!-- Dynamic course detailed information injected here -->
+        </div>
+
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-outline" id="btn-details-dismiss">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" id="btn-details-register-action">
+            Register for This Course
+          </button>
+        </footer>
+
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ========================================== -->
+  <!-- APPLICATION FOOTER                         -->
+  <!-- ========================================== -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="brand-group">
+          <span class="brand-name text-white">Apex University</span>
+          <span class="brand-portal text-muted">Office of the Registrar</span>
+        </div>
+        <p class="footer-copy">
+          Dedicated to academic excellence, innovative research, and accessible education for every student.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Student Resources</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="#catalog" class="footer-link" data-view="catalog">Course Catalog</a></li>
+          <li><a href="#registration" class="footer-link" data-view="registration">Registration Services</a></li>
+          <li><a href="#profile" class="footer-link" data-view="profile">Degree Audit & Records</a></li>
+          <li><a href="mailto:registrar@apex.edu" class="footer-link">Contact Registrar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Accessibility & Assistance</h3>
+        <p class="footer-text">
+          Apex University is committed to WCAG 2.2 AA accessibility standards. 
+          For assistance with assistive technologies or alternative accommodations, contact the 
+          <strong>Office for Students with Disabilities (OSD)</strong> at (858) 555-0100 or email <a href="mailto:osd@apex.edu" class="footer-text-link">osd@apex.edu</a>.
+        </p>
+        <div class="accessibility-badges">
+          <span class="wcag-badge" aria-label="WCAG 2.2 Level AA Conformance Badge">WCAG 2.2 AA Verified</span>
+          <span class="wcag-badge">Keyboard Navigable</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>© 2026 Apex University Board of Regents. All Rights Reserved.</p>
+        <p>Built with accessible semantic HTML5, high-contrast CSS, and keyboard-first interactions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="script.js"></script>
+</body>
+</html>

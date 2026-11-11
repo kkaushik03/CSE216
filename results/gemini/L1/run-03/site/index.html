@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex University - Course Registration Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <div class="nav-brand">
+        <a href="#home" class="brand-link" id="brand-logo">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Apex<span class="accent-text">Portal</span></span>
+            <span class="brand-subtitle">University of Technology</span>
+          </div>
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li>
+            <a href="#home" class="nav-link active" data-page="home">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#catalog" class="nav-link" data-page="catalog">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                <path d="M6 6h10M6 10h10M6 14h6"/>
+              </svg>
+              Course Catalog
+            </a>
+          </li>
+          <li>
+            <a href="#registration" class="nav-link" data-page="registration">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/>
+                <line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+                <path d="m9 16 2 2 4-4"/>
+              </svg>
+              Registration
+              <span class="badge-pill badge-primary" id="nav-registered-count">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="#profile" class="nav-link" data-page="profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              Student Profile
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-user-preview">
+          <div class="avatar-circle">RS</div>
+          <div class="user-meta">
+            <span class="user-name">Rahat S.</span>
+            <span class="user-id">ID: #APX-84920</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Areas -->
+  <main class="main-container">
+    
+    <!-- ==================== HOME PAGE ==================== -->
+    <section id="page-home" class="page-section active">
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <div class="term-tag">
+              <span class="pulse-indicator"></span>
+              Fall 2026 Course Registration is Open!
+            </div>
+            <h1 class="hero-title">Empower Your Future. <br><span class="gradient-text">Design Your Semester.</span></h1>
+            <p class="hero-description">
+              Browse over 250+ accredited undergraduate and graduate courses. Check real-time seat availability, consult interactive prerequisites, and lock in your schedule today.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-lg" onclick="window.appRouter.navigate('catalog')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                Explore Courses
+              </button>
+              <button class="btn btn-outline-light btn-lg" onclick="window.appRouter.navigate('registration')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                Quick Register
+              </button>
+            </div>
+          </div>
+          <div class="hero-graphic">
+            <div class="floating-stat-card card-accent-1">
+              <div class="f-icon">🎓</div>
+              <div>
+                <div class="f-title">Priority Window</div>
+                <div class="f-sub">Oct 12 - Nov 18, 2026</div>
+              </div>
+            </div>
+            <div class="floating-stat-card card-accent-2">
+              <div class="f-icon">⚡</div>
+              <div>
+                <div class="f-title">Units Cap</div>
+                <div class="f-sub">Max 20.0 Units / Term</div>
+              </div>
+            </div>
+            <div class="floating-stat-card card-accent-3">
+              <div class="f-icon">🌟</div>
+              <div>
+                <div class="f-title">Academic Standing</div>
+                <div class="f-sub">Dean's Honor List</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="container metrics-wrapper">
+        <div class="metrics-grid">
+          <div class="metric-card card-blue">
+            <div class="metric-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+            </div>
+            <div class="metric-details">
+              <span class="metric-label">Enrolled Courses</span>
+              <h3 class="metric-value" id="home-enrolled-count">3</h3>
+              <span class="metric-subtext">Fall 2026 Term</span>
+            </div>
+          </div>
+
+          <div class="metric-card card-purple">
+            <div class="metric-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="metric-details">
+              <span class="metric-label">Registered Units</span>
+              <h3 class="metric-value" id="home-registered-units">12.0</h3>
+              <span class="metric-subtext">Out of 20.0 Max Limit</span>
+            </div>
+          </div>
+
+          <div class="metric-card card-green">
+            <div class="metric-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="metric-details">
+              <span class="metric-label">Cumulative GPA</span>
+              <h3 class="metric-value">3.88</h3>
+              <span class="metric-subtext">Senior Standing</span>
+            </div>
+          </div>
+
+          <div class="metric-card card-orange">
+            <div class="metric-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            </div>
+            <div class="metric-details">
+              <span class="metric-label">Add/Drop Deadline</span>
+              <h3 class="metric-value">14 Days</h3>
+              <span class="metric-subtext">Until Late Penalty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Announcements & Deadlines -->
+      <div class="container section-gap">
+        <div class="grid-2-col">
+          <div class="info-card">
+            <div class="card-header-flex">
+              <div class="header-icon icon-announcement">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+              </div>
+              <h3 class="card-title">Registration Notices</h3>
+            </div>
+            <ul class="announcement-list">
+              <li class="announcement-item">
+                <span class="badge badge-warning">High Priority</span>
+                <p><strong>Waitlist Purge:</strong> Courses with over-capacity will automatically process waitlists every night at 11:59 PM PST.</p>
+                <small class="text-muted">Updated today at 8:00 AM</small>
+              </li>
+              <li class="announcement-item">
+                <span class="badge badge-info">Department Notice</span>
+                <p><strong>CSE Upper-Division Lab Keys:</strong> Students registered for CSE 216 and CSE 224 must obtain RFID card authorization via Engineering Hall 302.</p>
+                <small class="text-muted">Yesterday</small>
+              </li>
+              <li class="announcement-item">
+                <span class="badge badge-success">Advising Tip</span>
+                <p><strong>Pass/No Pass Option:</strong> You can modify your grading mode up to the end of the 4th week via your registration dashboard.</p>
+                <small class="text-muted">3 days ago</small>
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <div class="card-header-flex">
+              <div class="header-icon icon-calendar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              </div>
+              <h3 class="card-title">Academic Schedule & Milestones</h3>
+            </div>
+            <div class="timeline">
+              <div class="timeline-step done">
+                <div class="timeline-bullet"></div>
+                <div class="timeline-content">
+                  <h4>Phase 1 Pass Window</h4>
+                  <p>Oct 1 - Oct 15: Up to 11.5 units enrollment.</p>
+                </div>
+              </div>
+              <div class="timeline-step active">
+                <div class="timeline-bullet"></div>
+                <div class="timeline-content">
+                  <h4>Phase 2 Open Enrollment (Current)</h4>
+                  <p>Oct 16 - Nov 20: Enrollment expands to maximum 20 units limit.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="timeline-bullet"></div>
+                <div class="timeline-content">
+                  <h4>Instruction Begins</h4>
+                  <p>Jan 5, 2027: First day of lectures and laboratories.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="timeline-bullet"></div>
+                <div class="timeline-content">
+                  <h4>Final Add / Drop Cutoff</h4>
+                  <p>Jan 18, 2027: Last day to add or drop without a "W" grade mark.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Courses Carousel / Grid -->
+      <div class="container section-gap">
+        <div class="section-heading-flex">
+          <div>
+            <h2 class="section-title">Trending & High-Demand Courses</h2>
+            <p class="section-subtitle">Recommended courses tailored for Computer Science & Data Engineering tracks</p>
+          </div>
+          <button class="btn btn-secondary" onclick="window.appRouter.navigate('catalog')">
+            View All Courses &rarr;
+          </button>
+        </div>
+        <div class="featured-cards-grid" id="featured-courses-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COURSE CATALOG PAGE ==================== -->
+    <section id="page-catalog" class="page-section">
+      <div class="container">
+        <!-- Catalog Header Banner -->
+        <div class="page-header">
+          <div class="page-header-content">
+            <span class="sub-header-pill">Course Explorer</span>
+            <h1 class="page-title">University Course Catalog</h1>
+            <p class="page-lead">Search and filter across departmental offerings, browse syllabus overviews, and instantly enroll.</p>
+          </div>
+          <div class="page-header-stats">
+            <div class="stat-bubble">
+              <span class="stat-num" id="catalog-total-count">12</span>
+              <span class="stat-text">Courses Listed</span>
+            </div>
+            <div class="stat-bubble">
+              <span class="stat-num" id="catalog-open-count">9</span>
+              <span class="stat-text">Open for Registration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-card">
+          <div class="search-row">
+            <div class="search-input-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="catalog-search" class="form-control search-field" placeholder="Search by course code, title, instructor, or keywords (e.g. CSE, Distributed, Algorithms)...">
+              <button class="clear-search-btn" id="btn-clear-search" title="Clear Search">&times;</button>
+            </div>
+            <button class="btn btn-outline-secondary" id="btn-reset-filters">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              Reset Filters
+            </button>
+          </div>
+
+          <div class="dropdowns-row">
+            <!-- Department Filter -->
+            <div class="filter-group">
+              <label for="filter-dept" class="filter-label">Department</label>
+              <select id="filter-dept" class="form-select">
+                <option value="ALL">All Departments</option>
+                <option value="CSE">Computer Science & Eng (CSE)</option>
+                <option value="MATH">Mathematics (MATH)</option>
+                <option value="ECE">Electrical & Computer Eng (ECE)</option>
+                <option value="COGS">Cognitive Science (COGS)</option>
+                <option value="ECON">Economics (ECON)</option>
+                <option value="BIOL">Biological Sciences (BIOL)</option>
+              </select>
+            </div>
+
+            <!-- Level Filter -->
+            <div class="filter-group">
+              <label for="filter-level" class="filter-label">Level</label>
+              <select id="filter-level" class="form-select">
+                <option value="ALL">All Levels</option>
+                <option value="Lower">Lower Division (1-99)</option>
+                <option value="Upper">Upper Division (100-199)</option>
+                <option value="Graduate">Graduate (200+)</option>
+              </select>
+            </div>
+
+            <!-- Delivery Mode -->
+            <div class="filter-group">
+              <label for="filter-mode" class="filter-label">Delivery Mode</label>
+              <select id="filter-mode" class="form-select">
+                <option value="ALL">All Modes</option>
+                <option value="In-Person">In-Person</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Online">Online Sync/Async</option>
+              </select>
+            </div>
+
+            <!-- Availability -->
+            <div class="filter-group">
+              <label for="filter-availability" class="filter-label">Seat Availability</label>
+              <select id="filter-availability" class="form-select">
+                <option value="ALL">All Statuses</option>
+                <option value="OPEN">Open Seats Only</option>
+                <option value="WAITLIST">Waitlist Available</option>
+              </select>
+            </div>
+
+            <!-- Sort By -->
+            <div class="filter-group">
+              <label for="filter-sort" class="filter-label">Sort By</label>
+              <select id="filter-sort" class="form-select">
+                <option value="code-asc">Course Code (A - Z)</option>
+                <option value="code-desc">Course Code (Z - A)</option>
+                <option value="units-desc">Credits (High to Low)</option>
+                <option value="units-asc">Credits (Low to High)</option>
+                <option value="seats-desc">Available Seats (Most First)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Summary & Results Counter -->
+        <div class="results-meta-bar">
+          <div class="results-count">
+            Showing <strong id="displayed-courses-count">0</strong> matching courses
+          </div>
+          <div class="active-chips" id="active-filter-chips">
+            <!-- Filter chips appear here -->
+          </div>
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div class="course-cards-grid" id="course-cards-container">
+          <!-- Course cards rendered dynamically -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state hidden" id="catalog-empty-state">
+          <div class="empty-icon">🔍</div>
+          <h3>No matching courses found</h3>
+          <p>Try adjusting your search query, clearing filters, or browsing other departments.</p>
+          <button class="btn btn-primary" onclick="window.catalogController.resetAllFilters()">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REGISTRATION PAGE ==================== -->
+    <section id="page-registration" class="page-section">
+      <div class="container">
+        <!-- Registration Header -->
+        <div class="page-header">
+          <div class="page-header-content">
+            <span class="sub-header-pill pill-violet">Course Enrollment</span>
+            <h1 class="page-title">Registration Workspace</h1>
+            <p class="page-lead">Submit new enrollment requests, adjust grading options, or drop registered classes.</p>
+          </div>
+          <div class="unit-meter-card">
+            <div class="meter-info">
+              <span class="meter-title">Term Credit Load</span>
+              <span class="meter-value"><strong id="reg-meter-current">12.0</strong> / 20.0 Units</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar-fill" id="reg-units-progress" style="width: 60%;"></div>
+            </div>
+            <small class="meter-note text-muted" id="reg-units-remaining">8.0 units remaining before approval needed</small>
+          </div>
+        </div>
+
+        <!-- Main Form & Quick Action Split -->
+        <div class="grid-form-split">
+          <!-- Left Column: Registration Form -->
+          <div class="form-card">
+            <div class="card-header-with-badge">
+              <div>
+                <h2 class="card-section-title">New Course Registration</h2>
+                <p class="card-section-subtitle">Select a course and specify your enrollment options below.</p>
+              </div>
+              <span class="badge badge-primary">Fall 2026</span>
+            </div>
+
+            <form id="registration-form" novalidate>
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="reg-student-name" class="form-label required">Student Name</label>
+                  <input type="text" id="reg-student-name" class="form-control" value="Rahat S." readonly>
+                  <small class="form-hint">Verified apex student record</small>
+                </div>
+                <div class="form-field">
+                  <label for="reg-student-id" class="form-label required">Student ID Number</label>
+                  <input type="text" id="reg-student-id" class="form-control" value="APX-84920" readonly>
+                  <small class="form-hint">Institutional Identifier</small>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="reg-course-select" class="form-label required">Select Course to Register</label>
+                <select id="reg-course-select" class="form-select" required>
+                  <option value="" disabled selected>-- Choose a course from catalog --</option>
+                  <!-- Populated dynamically with available courses -->
+                </select>
+                <div class="field-feedback" id="feedback-course"></div>
+              </div>
+
+              <!-- Course Live Preview Box (Appears when selected) -->
+              <div id="selected-course-preview" class="course-quick-preview hidden">
+                <div class="preview-badge" id="preview-dept">CSE</div>
+                <div class="preview-details">
+                  <div class="preview-title" id="preview-title">Advanced Software Engineering</div>
+                  <div class="preview-meta">
+                    <span id="preview-code">CSE 216</span> &bull; 
+                    <span id="preview-units">4 Units</span> &bull; 
+                    <span id="preview-instructor">Prof. David Martinez</span>
+                  </div>
+                  <div class="preview-schedule" id="preview-schedule">Mon/Wed 10:00 - 11:30 AM | CSE Hall 1202</div>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="reg-grade-option" class="form-label required">Grading Option</label>
+                  <select id="reg-grade-option" class="form-select" required>
+                    <option value="Letter Grade" selected>Letter Grade (A - F)</option>
+                    <option value="Pass/No Pass">Pass / No Pass (P/NP)</option>
+                    <option value="Audit">Audit (No Credit)</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="reg-term" class="form-label required">Academic Term</label>
+                  <select id="reg-term" class="form-select" required>
+                    <option value="Fall 2026" selected>Fall Quarter 2026</option>
+                    <option value="Winter 2027">Winter Quarter 2027 (Waitlist)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="reg-advisor-code" class="form-label">Advisor Authorization Code <span class="text-muted">(Optional)</span></label>
+                <input type="text" id="reg-advisor-code" class="form-control" placeholder="e.g., ADV-2026-X7 (Required only for special overrides)">
+              </div>
+
+              <div class="form-field">
+                <label for="reg-comments" class="form-label">Registration Notes / Remarks <span class="text-muted">(Optional)</span></label>
+                <textarea id="reg-comments" class="form-control" rows="2" placeholder="Add any special notes for your academic advisor or registrar..."></textarea>
+              </div>
+
+              <div class="form-checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="reg-prereq-ack" required>
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
+                    I confirm that I meet all stated prerequisites, co-requisites, and schedule clearance for this course enrollment.
+                  </span>
+                </label>
+                <div class="field-feedback" id="feedback-ack"></div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg" id="btn-submit-registration">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+                  Submit Registration
+                </button>
+                <button type="reset" class="btn btn-secondary" id="btn-reset-form">
+                  Clear Form
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Registration Guidelines & Tips -->
+          <div class="guidelines-card">
+            <h3 class="side-card-title">Registration Guidelines</h3>
+            <div class="guideline-item">
+              <div class="g-num">1</div>
+              <div>
+                <strong>Check Prerequisites</strong>
+                <p>Ensure upper-division courses have prerequisite equivalents logged on your transcript.</p>
+              </div>
+            </div>
+            <div class="guideline-item">
+              <div class="g-num">2</div>
+              <div>
+                <strong>Time Conflicts</strong>
+                <p>The system will flag schedule overlaps. Labs and discussions must not clash with lectures.</p>
+              </div>
+            </div>
+            <div class="guideline-item">
+              <div class="g-num">3</div>
+              <div>
+                <strong>Unit Limitations</strong>
+                <p>Maximum enrollment during standard phase is 20.0 credits. Petitions required for beyond 22.0.</p>
+              </div>
+            </div>
+
+            <div class="status-summary-box">
+              <h4 class="summary-box-title">Enrollment Snapshot</h4>
+              <div class="summary-row">
+                <span>Tuition Fee Status:</span>
+                <span class="text-success font-semibold">Cleared &bull; Paid</span>
+              </div>
+              <div class="summary-row">
+                <span>Registration Holds:</span>
+                <span class="text-success font-semibold">0 Holds</span>
+              </div>
+              <div class="summary-row">
+                <span>Advising Clear:</span>
+                <span class="text-success font-semibold">Approved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== DATA TABLE: REGISTERED COURSES ==================== -->
+        <div class="registered-table-wrapper section-gap">
+          <div class="table-card">
+            <div class="table-header-flex">
+              <div>
+                <h2 class="card-section-title">My Registered Courses</h2>
+                <p class="card-section-subtitle">Manage your current active course enrollments and grading schemes.</p>
+              </div>
+              <div class="table-actions">
+                <button class="btn btn-outline-secondary btn-sm" id="btn-print-schedule" onclick="window.print()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+                  Print Schedule
+                </button>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table" id="registered-courses-table">
+                <thead>
+                  <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Department</th>
+                    <th>Units</th>
+                    <th>Schedule & Room</th>
+                    <th>Instructor</th>
+                    <th>Grading</th>
+                    <th>Status</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="registered-courses-tbody">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Table Empty State -->
+            <div class="table-empty hidden" id="table-empty-state">
+              <p>You have not registered for any courses yet. Visit the <a href="#catalog" class="link-colored">Course Catalog</a> to begin!</p>
+            </div>
+
+            <!-- Table Footer Summary -->
+            <div class="table-footer-summary">
+              <div class="footer-stat">
+                <span>Total Courses:</span>
+                <strong id="summary-total-courses">0</strong>
+              </div>
+              <div class="footer-stat">
+                <span>Total Units:</span>
+                <strong id="summary-total-units">0.0 Units</strong>
+              </div>
+              <div class="footer-stat">
+                <span>Academic Status:</span>
+                <span class="badge badge-success" id="summary-academic-status">Full-Time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STUDENT PROFILE PAGE ==================== -->
+    <section id="page-profile" class="page-section">
+      <div class="container">
+        <!-- Profile Banner -->
+        <div class="profile-hero">
+          <div class="profile-avatar-large">
+            <span>RS</span>
+            <div class="avatar-status-badge" title="Active Student"></div>
+          </div>
+          <div class="profile-header-details">
+            <div class="profile-name-row">
+              <h1 class="profile-name">Rahat S.</h1>
+              <span class="badge badge-primary">Senior &bull; Year 4</span>
+              <span class="badge badge-success">Good Standing</span>
+            </div>
+            <p class="profile-major">B.S. in Computer Science & Engineering | Minor in Data Analytics</p>
+            <div class="profile-meta-tags">
+              <span><strong>ID:</strong> APX-84920</span>
+              <span>&bull;</span>
+              <span><strong>Email:</strong> rahat.s@apex.edu</span>
+              <span>&bull;</span>
+              <span><strong>Advisor:</strong> Prof. Elena Vance</span>
+              <span>&bull;</span>
+              <span><strong>College:</strong> John Muir College</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-grid section-gap">
+          <!-- Left Column: Academic Standing & Progress -->
+          <div class="profile-left">
+            <!-- Degree Progress Card -->
+            <div class="profile-card">
+              <h3 class="card-section-title">Degree Completion Progress</h3>
+              <p class="text-muted">B.S. in Computer Science (180 Total Quarter Units required)</p>
+
+              <div class="progress-bar-container">
+                <div class="progress-labels">
+                  <span>Units Earned</span>
+                  <span><strong>148 / 180 Units</strong> (82%)</span>
+                </div>
+                <div class="progress-track-lg">
+                  <div class="progress-fill fill-gradient" style="width: 82%;"></div>
+                </div>
+              </div>
+
+              <div class="degree-breakdown">
+                <div class="breakdown-item">
+                  <div class="b-dot dot-purple"></div>
+                  <div class="b-text">
+                    <span class="b-title">Major Core Requirements</span>
+                    <span class="b-val">76 / 80 Units Completed</span>
+                  </div>
+                </div>
+                <div class="breakdown-item">
+                  <div class="b-dot dot-blue"></div>
+                  <div class="b-text">
+                    <span class="b-title">Technical Electives</span>
+                    <span class="b-val">28 / 32 Units Completed</span>
+                  </div>
+                </div>
+                <div class="breakdown-item">
+                  <div class="b-dot dot-green"></div>
+                  <div class="b-text">
+                    <span class="b-title">General Education (GE)</span>
+                    <span class="b-val">44 / 48 Units Completed</span>
+                  </div>
+                </div>
+                <div class="breakdown-item">
+                  <div class="b-dot dot-amber"></div>
+                  <div class="b-text">
+                    <span class="b-title">Senior Capstone / Project</span>
+                    <span class="b-val">In Progress (Fall '26)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Academic Milestones & Stats -->
+            <div class="profile-card">
+              <h3 class="card-section-title">Academic Metrics</h3>
+              <div class="stats-pills-grid">
+                <div class="stat-box">
+                  <div class="s-label">Cumulative GPA</div>
+                  <div class="s-val text-primary">3.88</div>
+                  <div class="s-sub">Top 5% of class</div>
+                </div>
+                <div class="stat-box">
+                  <div class="s-label">Major GPA</div>
+                  <div class="s-val text-success">3.94</div>
+                  <div class="s-sub">CSE Department</div>
+                </div>
+                <div class="stat-box">
+                  <div class="s-label">Current Term Units</div>
+                  <div class="s-val text-violet" id="profile-term-units">12.0</div>
+                  <div class="s-sub">Fall Quarter 2026</div>
+                </div>
+                <div class="stat-box">
+                  <div class="s-label">Honor Society</div>
+                  <div class="s-val text-amber">Tau Beta Pi</div>
+                  <div class="s-sub">Member since 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Term Schedule & Settings -->
+          <div class="profile-right">
+            <!-- Current Term Enrollments Summary -->
+            <div class="profile-card">
+              <div class="card-header-flex">
+                <h3 class="card-section-title">Fall 2026 Enrolled Classes</h3>
+                <button class="btn btn-sm btn-outline-primary" onclick="window.appRouter.navigate('registration')">
+                  Edit in Registration &rarr;
+                </button>
+              </div>
+              <div class="profile-enrolled-list" id="profile-enrolled-list">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Student Account & Emergency Info -->
+            <div class="profile-card">
+              <h3 class="card-section-title">Contact & Personal Profile</h3>
+              <form id="profile-edit-form" class="profile-settings-form">
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" value="+1 (858) 555-0199">
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label">Campus Residence</label>
+                    <input type="text" class="form-control" value="Tamarack Apts #402B">
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Academic Email</label>
+                  <input type="email" class="form-control" value="rahat.s@apex.edu" readonly>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Preferred Notification Channel</label>
+                  <select class="form-select">
+                    <option selected>Email & SMS Notifications</option>
+                    <option>Email Only</option>
+                    <option>Portal Dashboard Only</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="window.appRouter.showToast('Profile preferences updated successfully!', 'success')">
+                  Save Preferences
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== CONFIRMATION MODAL ==================== -->
+  <div class="modal-backdrop hidden" id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-badge" id="modal-icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3 class="modal-title" id="modal-title">Confirm Course Registration</h3>
+          <p class="modal-subtitle" id="modal-subtitle">Please review your registration details before finalizing.</p>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="modal-body">
+        <!-- Injected dynamically with course summary details -->
+        <div class="modal-summary-box">
+          <div class="summary-line">
+            <span class="text-muted">Course:</span>
+            <strong id="modal-course-name">CSE 216 - Advanced Software Engineering</strong>
+          </div>
+          <div class="summary-line">
+            <span class="text-muted">Credits:</span>
+            <span id="modal-course-units">4.0 Units</span>
+          </div>
+          <div class="summary-line">
+            <span class="text-muted">Grading Scheme:</span>
+            <span id="modal-course-grading">Letter Grade</span>
+          </div>
+          <div class="summary-line">
+            <span class="text-muted">Schedule:</span>
+            <span id="modal-course-schedule">Mon/Wed 10:00 - 11:30 AM</span>
+          </div>
+          <div class="summary-line">
+            <span class="text-muted">Instructor:</span>
+            <span id="modal-course-instructor">Prof. David Martinez</span>
+          </div>
+        </div>
+
+        <div class="modal-alert-note" id="modal-alert-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>By confirming, you will be officially enrolled in this section. You can drop or change grading mode until the deadline.</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="modal-confirm-btn">
+          Confirm & Enroll
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== COURSE DETAILS MODAL ==================== -->
+  <div class="modal-backdrop hidden" id="course-detail-modal" role="dialog" aria-modal="true">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-icon-badge" id="detail-dept-badge">
+          <span id="detail-dept-text">CSE</span>
+        </div>
+        <div>
+          <h3 class="modal-title" id="detail-title">Course Title Here</h3>
+          <p class="modal-subtitle" id="detail-code-term">CSE 216 &bull; Fall 2026</p>
+        </div>
+        <button class="modal-close-btn" id="detail-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="detail-body">
+        <!-- Content injected dynamically -->
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="detail-dismiss-btn">Close</button>
+        <button type="button" class="btn btn-primary" id="detail-enroll-btn">
+          Enroll in this Course
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-title">Apex<span class="accent-text">Portal</span></div>
+        <p class="footer-desc">Office of the University Registrar &bull; Student Information Systems &bull; Apex University of Technology</p>
+      </div>
+      <div class="footer-links">
+        <span>&copy; 2026 Apex University. All rights reserved.</span>
+        <span class="footer-separator">&bull;</span>
+        <a href="#home" class="footer-link">Academic Calendar</a>
+        <span class="footer-separator">&bull;</span>
+        <a href="#catalog" class="footer-link">Degree Requirements</a>
+        <span class="footer-separator">&bull;</span>
+        <a href="#profile" class="footer-link">Helpdesk & Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

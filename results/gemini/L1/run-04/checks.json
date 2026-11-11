@@ -1,0 +1,1986 @@
+{
+  "checked": "2026-11-09T00:24:21.241Z",
+  "tools": {
+    "chromium": "Chrome/156.0.8078.79",
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0",
+    "lighthouse": "13.6.0"
+  },
+  "views": [
+    {
+      "name": "home",
+      "url": "/index.html",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 19,
+            "nodes": [
+              {
+                "selector": ".badge-pill",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #f43f5e, font size: 8.4pt (11.2px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-meta",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 8.6pt (11.52px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".step-card:nth-child(1) > .step-number",
+                "html": "<div class=\"step-number\">01</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 1.23 (foreground color: #e2e8f0, background color: #ffffff, font size: 26.4pt (35.2px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#e2e8f0",
+                  "bg": "#ffffff",
+                  "ratio": 1.23,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card:nth-child(2) > .step-number",
+                "html": "<div class=\"step-number\">02</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 1.23 (foreground color: #e2e8f0, background color: #ffffff, font size: 26.4pt (35.2px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#e2e8f0",
+                  "bg": "#ffffff",
+                  "ratio": 1.23,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card:nth-child(3) > .step-number",
+                "html": "<div class=\"step-number\">03</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 1.23 (foreground color: #e2e8f0, background color: #ffffff, font size: 26.4pt (35.2px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#e2e8f0",
+                  "bg": "#ffffff",
+                  "ratio": 1.23,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".step-card:nth-child(4) > .step-number",
+                "html": "<div class=\"step-number\">04</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 1.23 (foreground color: #e2e8f0, background color: #ffffff, font size: 26.4pt (35.2px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#e2e8f0",
+                  "bg": "#ffffff",
+                  "ratio": 1.23,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "#card-CS216 > .course-card-header > .course-code-wrap > .badge-dept-cs.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #eef2ff, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#eef2ff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS216 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 2:00 PM - 3:20 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS216 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Tech Center 204 (Hybrid)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS216 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 18 of 30 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS182 > .course-card-header > .course-code-wrap > .badge-dept-cs.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #eef2ff, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#eef2ff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS182 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 1:00 PM - 1:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS182 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>SciHall 301 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".seats-low",
+                "html": "<span class=\"seats-low\"> 5 of 45 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #f43f5e, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#ffffff",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".badge-dept-ds",
+                "html": "<span class=\"dept-badge badge-dept-ds\">Data Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.56 (foreground color: #0284c7, background color: #e0f2fe, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#0284c7",
+                  "bg": "#e0f2fe",
+                  "ratio": 3.56,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS100 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 12:30 PM - 1:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS100 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>DataHub 110 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS100 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 22 of 55 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University. All rights reserved. </div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 31,
+            "nodes": [
+              {
+                "selector": ".announcement-content > span:nth-child(2)",
+                "html": "<span><strong>Priority Registration is Open!</strong> Deadline for schedule adjustments: October 20, 2026.</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-content > span:nth-child(2) > strong",
+                "html": "<strong>Priority Registration is Open!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-link",
+                "html": "<a href=\"#catalog\" class=\"announcement-link\" data-target=\"catalog\">Browse Open Seats <i class=\"fa-solid fa-arrow-right\"></i></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".active.nav-item[href$=\"#home\"]",
+                "html": "<a href=\"#home\" class=\"nav-item active\" data-target=\"home\"> <i class=\"fa-solid fa-house\"></i> Home </a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#navRegisteredCount",
+                "html": "<span class=\"nav-badge\" id=\"navRegisteredCount\">2</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".hero-pill",
+                "html": "<div class=\"hero-pill\"> <i class=\"fa-solid fa-sparkles\"></i> Fall Semester 2026 Enrollment Live </div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".hero-title",
+                "html": "<h1 class=\"hero-title\"> Design Your Future with <span class=\"gradient-text\">Apex University</span> </h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".gradient-text",
+                "html": "<span class=\"gradient-text\">Apex University</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".hero-subtitle",
+                "html": "<p class=\"hero-subtitle\"> Browse world-class courses, track degree milestones, and build your ideal academic schedule with real-time seat availability and intelligent prerequisite checks. </p>",
+                "summary": "Fix any of the following: Element's background color could not be determined because it's partially obscured by another element",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-lg.btn-primary[onclick=\"navigateTo('catalog')\"]",
+                "html": "<button class=\"btn btn-primary btn-lg\" onclick=\"navigateTo('catalog')\"> <i class=\"fa-solid fa-compass\"></i> Explore Course Catalog </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-outline.btn-lg[onclick=\"navigateTo('registration')\"]",
+                "html": "<button class=\"btn btn-outline btn-lg\" onclick=\"navigateTo('registration')\"> <i class=\"fa-solid fa-id-card\"></i> Manage Registration </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#homeTotalCourses",
+                "html": "<span class=\"stat-number\" id=\"homeTotalCourses\">14</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(1) > .stat-details > .stat-label",
+                "html": "<span class=\"stat-label\">Available Courses</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(2) > .stat-details > .stat-number",
+                "html": "<span class=\"stat-number\">4,850+</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(2) > .stat-details > .stat-label",
+                "html": "<span class=\"stat-label\">Active Students</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#homeRegisteredUnits",
+                "html": "<span class=\"stat-number\" id=\"homeRegisteredUnits\">8 Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(3) > .stat-details > .stat-label",
+                "html": "<span class=\"stat-label\">Your Enrolled Units</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined because it partially overlaps other elements",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(4) > .stat-details > .stat-number",
+                "html": "<span class=\"stat-number\">8</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".stat-card:nth-child(4) > .stat-details > .stat-label",
+                "html": "<span class=\"stat-label\">Academic Depts</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS216 > .course-card-body > .course-card-footer > .btn-full.btn-sm.btn-primary",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS216')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS182 > .course-card-body > .course-card-footer > .btn-full.btn-sm.btn-primary",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS182')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS100 > .course-card-body > .course-card-footer > .btn-full.btn-sm.btn-primary",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('DS100')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".deadline-badge",
+                "html": "<div class=\"deadline-badge\"><i class=\"fa-solid fa-calendar-check\"></i> Key Fall 2026 Dates</div>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".deadline-content > h2",
+                "html": "<h2>Upcoming Academic Deadlines</h2>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".timeline-item:nth-child(1) > .timeline-date",
+                "html": "<span class=\"timeline-date\">Oct 12, 2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".timeline-item:nth-child(1) > .timeline-event",
+                "html": "<span class=\"timeline-event\">Last Day to Add Classes without Instructor Code</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".timeline-item:nth-child(2) > .timeline-date",
+                "html": "<span class=\"timeline-date\">Oct 26, 2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".timeline-item:nth-child(2) > .timeline-event",
+                "html": "<span class=\"timeline-event\">Deadline to Drop without \"W\" Grade &amp; Change Grading Option</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".timeline-item:nth-child(3) > .timeline-date",
+                "html": "<span class=\"timeline-date\">Nov 14, 2026</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".timeline-item:nth-child(3) > .timeline-event",
+                "html": "<span class=\"timeline-event\">Final Drop Deadline with Dean's Approval</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "selector": ".btn-glow.btn-primary[onclick=\"navigateTo('registration')\"]",
+                "html": "<button class=\"btn btn-primary btn-glow\" onclick=\"navigateTo('registration')\"> <i class=\"fa-solid fa-bolt\"></i> Register Now </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "error": "Assignment to constant variable."
+      },
+      "lighthouse": {
+        "score": 93,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 19
+          }
+        ]
+      }
+    },
+    {
+      "name": "Course Catalog",
+      "url": "/index.html#catalog",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 58,
+            "nodes": [
+              {
+                "selector": ".badge-pill",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #f43f5e, font size: 8.4pt (11.2px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-meta",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 8.6pt (11.52px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".badge-dept-art",
+                "html": "<span class=\"dept-badge badge-dept-art\">Visual &amp; Digital Arts</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.91 (foreground color: #db2777, background color: #fce7f3, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#db2777",
+                  "bg": "#fce7f3",
+                  "ratio": 3.91,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ART105 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 10:00 AM - 11:50 AM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ART105 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Arts Studio B (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ART105 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-low",
+                "html": "<span class=\"seats-low\"> 6 of 25 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #f43f5e, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#ffffff",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO100 > .course-card-header > .course-code-wrap > .badge-dept-bio.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-bio\">Biological Sciences</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #0d9488, background color: #ccfbf1, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#0d9488",
+                  "bg": "#ccfbf1",
+                  "ratio": 3.32,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO100 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 11:00 AM - 11:50 AM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO100 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>BioMed 102 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO100 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 8 of 60 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO150 > .course-card-header > .course-code-wrap > .badge-dept-bio.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-bio\">Biological Sciences</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #0d9488, background color: #ccfbf1, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#0d9488",
+                  "bg": "#ccfbf1",
+                  "ratio": 3.32,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO150 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 11:00 AM - 12:20 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO150 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>BioMed 215 (Hybrid)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO150 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 15 of 40 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS101 > .course-card-header > .course-code-wrap > .badge-dept-cs.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #eef2ff, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#eef2ff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS101 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 10:00 AM - 10:50 AM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS101 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Turing Hall 101 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-CS101 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 42 of 50 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-header > .course-code-wrap > .badge-dept-cs.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #eef2ff, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#eef2ff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 1:00 PM - 1:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>SciHall 301 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-low",
+                "html": "<span class=\"seats-low\"> 5 of 45 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #f43f5e, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#ffffff",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-header > .course-code-wrap > .badge-dept-cs.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #eef2ff, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#eef2ff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 2:00 PM - 3:20 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Tech Center 204 (Hybrid)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 18 of 30 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-header > .course-code-wrap > .badge-dept-ds.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-ds\">Data Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.56 (foreground color: #0284c7, background color: #e0f2fe, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#0284c7",
+                  "bg": "#e0f2fe",
+                  "ratio": 3.56,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 12:30 PM - 1:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>DataHub 110 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 22 of 55 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS210 > .course-card-header > .course-code-wrap > .badge-dept-ds.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-ds\">Data Science</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.56 (foreground color: #0284c7, background color: #e0f2fe, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#0284c7",
+                  "bg": "#e0f2fe",
+                  "ratio": 3.56,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS210 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MW 3:30 PM - 4:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS210 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>DataHub 205 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS210 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 10 of 35 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON101 > .course-card-header > .course-code-wrap > .badge-dept-econ.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-econ\">Economics</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.86 (foreground color: #d97706, background color: #fef3c7, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#d97706",
+                  "bg": "#fef3c7",
+                  "ratio": 2.86,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON101 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 2:00 PM - 2:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON101 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Virtual Lecture Hall (Online)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON101 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 30 of 80 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON130 > .course-card-header > .course-code-wrap > .badge-dept-econ.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-econ\">Economics</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.86 (foreground color: #d97706, background color: #fef3c7, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#d97706",
+                  "bg": "#fef3c7",
+                  "ratio": 2.86,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON130 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 3:30 PM - 4:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON130 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>SocialSci 210 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON130 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 14 of 40 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH109 > .course-card-header > .course-code-wrap > .badge-dept-math.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-math\">Mathematics</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #059669, background color: #d1fae5, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#059669",
+                  "bg": "#d1fae5",
+                  "ratio": 3.32,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH109 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 9:00 AM - 9:50 AM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH109 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Euclid Hall 120 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH109 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 25 of 60 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH180A > .course-card-header > .course-code-wrap > .badge-dept-math.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-math\">Mathematics</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #059669, background color: #d1fae5, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#059669",
+                  "bg": "#d1fae5",
+                  "ratio": 3.32,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH180A > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 9:30 AM - 10:50 AM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH180A > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Virtual Classroom Zoom (Online)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH180A > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 12 of 50 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".badge-dept-phil",
+                "html": "<span class=\"dept-badge badge-dept-phil\">Philosophy &amp; Ethics</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.23 (foreground color: #2563eb, background color: #dbeafe, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#2563eb",
+                  "bg": "#dbeafe",
+                  "ratio": 4.23,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PHIL110 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>TR 1:00 PM - 2:20 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PHIL110 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>Humanities 302 (Hybrid)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PHIL110 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 16 of 35 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PSYC101 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(2) > span",
+                "html": "<span>MWF 12:00 PM - 12:50 PM</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PSYC101 > .course-card-body > .course-meta-list > .course-meta-row:nth-child(3) > span",
+                "html": "<span>MindCenter 101 (In-Person)</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PSYC101 > .course-card-body > .seats-progress-wrap > .seats-label-row > .seats-open",
+                "html": "<span class=\"seats-open\"> 20 of 65 seats open </span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 9.4pt (12.48px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University. All rights reserved. </div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "rule": "target-size",
+            "impact": "serious",
+            "wcag": [
+              "2.5.8"
+            ],
+            "help": "All touch targets must be 24px large, or leave sufficient space",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/target-size?application=axe-puppeteer",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#clearSearchBtn",
+                "html": "<button class=\"search-clear-btn\" id=\"clearSearchBtn\" title=\"Clear search\"><i class=\"fa-solid fa-xmark\"></i></button>",
+                "summary": "Fix any of the following: Target has insufficient size (21.6px by 30.6px, should be at least 24px by 24px) Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 20,
+            "nodes": [
+              {
+                "selector": ".announcement-content > span:nth-child(2)",
+                "html": "<span><strong>Priority Registration is Open!</strong> Deadline for schedule adjustments: October 20, 2026.</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-content > span:nth-child(2) > strong",
+                "html": "<strong>Priority Registration is Open!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-link",
+                "html": "<a href=\"#catalog\" class=\"announcement-link\" data-target=\"catalog\">Browse Open Seats <i class=\"fa-solid fa-arrow-right\"></i></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".active.nav-item[href$=\"#catalog\"]",
+                "html": "<a href=\"#catalog\" class=\"nav-item active\" data-target=\"catalog\"> <i class=\"fa-solid fa-book-open\"></i> Course Catalog </a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#navRegisteredCount",
+                "html": "<span class=\"nav-badge\" id=\"navRegisteredCount\">2</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-catalog > .container > .page-pill",
+                "html": "<span class=\"page-pill\"><i class=\"fa-solid fa-layer-group\"></i> ACADEMIC DIRECTORY</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-catalog > .container > .page-title",
+                "html": "<h1 class=\"page-title\">Course Catalog</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-catalog > .container > .page-subtitle",
+                "html": "<p class=\"page-subtitle\">Search, filter, and discover comprehensive course offerings across 8 university departments.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ART105 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('ART105')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO100 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('BIO100')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-BIO150 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('BIO150')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(5) > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS182')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(6) > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS216')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "article:nth-child(7) > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('DS100')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-DS210 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('DS210')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON101 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('ECON101')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-ECON130 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('ECON130')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-MATH180A > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('MATH180A')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PHIL110 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('PHIL110')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#card-PSYC101 > .course-card-body > .course-card-footer > .btn-full.btn-primary.btn-sm",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('PSYC101')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "error": "Assignment to constant variable."
+      },
+      "lighthouse": {
+        "score": 86,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 58
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          },
+          {
+            "rule": "target-size",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Registration 2",
+      "url": "/index.html#registration",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": ".badge-pill",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #f43f5e, font size: 8.4pt (11.2px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-meta",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 8.6pt (11.52px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".reg-stat-value.text-green",
+                "html": "<div class=\"reg-stat-value text-green\">Cleared</div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 19.8pt (26.4px), font weight: bold). Expected contrast ratio of 3:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": "td:nth-child(1) > .badge-dept-cs.dept-badge",
+                "html": "<span class=\"dept-badge badge-dept-cs\">CS</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #eef2ff, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#6366f1",
+                  "bg": "#eef2ff",
+                  "ratio": 3.99,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[onclick=\"promptDropCourse('CS101')\"]",
+                "html": "<button class=\"btn-drop-action\" onclick=\"promptDropCourse('CS101')\" title=\"Drop course\"> <i class=\"fa-solid fa-trash-can\"></i> Drop </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3 (foreground color: #f43f5e, background color: #fee2e2, font size: 9.8pt (13.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#fee2e2",
+                  "ratio": 3,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".badge-dept-math",
+                "html": "<span class=\"dept-badge badge-dept-math\">MATH</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.32 (foreground color: #059669, background color: #d1fae5, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#059669",
+                  "bg": "#d1fae5",
+                  "ratio": 3.32,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "button[onclick=\"promptDropCourse('MATH109')\"]",
+                "html": "<button class=\"btn-drop-action\" onclick=\"promptDropCourse('MATH109')\" title=\"Drop course\"> <i class=\"fa-solid fa-trash-can\"></i> Drop </button>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3 (foreground color: #f43f5e, background color: #fee2e2, font size: 9.8pt (13.12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f43f5e",
+                  "bg": "#fee2e2",
+                  "ratio": 3,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University. All rights reserved. </div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": ".announcement-content > span:nth-child(2)",
+                "html": "<span><strong>Priority Registration is Open!</strong> Deadline for schedule adjustments: October 20, 2026.</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-content > span:nth-child(2) > strong",
+                "html": "<strong>Priority Registration is Open!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-link",
+                "html": "<a href=\"#catalog\" class=\"announcement-link\" data-target=\"catalog\">Browse Open Seats <i class=\"fa-solid fa-arrow-right\"></i></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".nav-links > li:nth-child(3) > .active[href$=\"#registration\"][data-target=\"registration\"]",
+                "html": "<a href=\"#registration\" class=\"nav-item active\" data-target=\"registration\"> <i class=\"fa-solid fa-clipboard-check\"></i> Registration <span class=\"nav-badge\" id=\"navRegisteredCount\">2</span> </a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-reg > .container > .page-pill",
+                "html": "<span class=\"page-pill\"><i class=\"fa-solid fa-clipboard-check\"></i> ENROLLMENT WORKBENCH</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-reg > .container > .page-title",
+                "html": "<h1 class=\"page-title\">Course Registration</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-reg > .container > .page-subtitle",
+                "html": "<p class=\"page-subtitle\">Add classes directly by code or selection, review grading options, and manage your registered schedule.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#submitRegBtn",
+                "html": "<button type=\"submit\" class=\"btn btn-primary btn-full btn-lg\" id=\"submitRegBtn\"> <i class=\"fa-solid fa-shield-halved\"></i> Review &amp; Register </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".reg-catalog-shortcut > p",
+                "html": "<p>Need more ideas? Browse by major requirements in the catalog.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-outline.btn-full[onclick=\"navigateTo('catalog')\"]",
+                "html": "<button class=\"btn btn-outline btn-full\" onclick=\"navigateTo('catalog')\"> <i class=\"fa-solid fa-arrow-up-right-from-square\"></i> Open Course Catalog </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".btn-sm.btn-primary[onclick=\"navigateTo('catalog')\"]",
+                "html": "<button class=\"btn btn-primary btn-sm\" onclick=\"navigateTo('catalog')\"> <i class=\"fa-solid fa-plus\"></i> Add More Courses </button>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "error": "Assignment to constant variable."
+      },
+      "lighthouse": {
+        "score": 92,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 8
+          },
+          {
+            "rule": "heading-order",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Student Profile",
+      "url": "/index.html#profile",
+      "axe": {
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": ".badge-pill",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #f43f5e, font size: 8.4pt (11.2px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".mini-meta",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 8.6pt (11.52px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".meta-item:nth-child(1) > .meta-label",
+                "html": "<span class=\"meta-label\">Student ID</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".meta-item:nth-child(2) > .meta-label",
+                "html": "<span class=\"meta-label\">Class Standing</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".meta-item:nth-child(3) > .meta-label",
+                "html": "<span class=\"meta-label\">Cumulative GPA</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".highlight-gpa",
+                "html": "<span class=\"meta-val highlight-gpa\">3.84 / 4.00</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.31 (foreground color: #10b981, background color: #f1f5f9, font size: 12.6pt (16.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#f1f5f9",
+                  "ratio": 2.31,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".meta-item:nth-child(4) > .meta-label",
+                "html": "<span class=\"meta-label\">Academic Advisor</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".meta-item:nth-child(5) > .meta-label",
+                "html": "<span class=\"meta-label\">College Affiliation</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".meta-item:nth-child(6) > .meta-label",
+                "html": "<span class=\"meta-label\">Campus Email</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".progress-total",
+                "html": "<span class=\"progress-total\">/ 120 Units</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 13.2pt (17.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".progress-foot-note",
+                "html": "<p class=\"progress-foot-note\"> <i class=\"fa-solid fa-circle-info text-blue\"></i> With current Fall 2026 registered units (<span id=\"profileCurrentRegUnits\">8</span> units), you will reach <span id=\"profileProjectedUnits\">84</span> units. </p>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.1pt (13.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profileProjectedUnits",
+                "html": "<span id=\"profileProjectedUnits\">84</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.1pt (13.44px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".req-item:nth-child(1) > .req-title-row > .req-status.text-green",
+                "html": "<span class=\"req-status text-green\"><i class=\"fa-solid fa-circle-check\"></i> 40/48 Units</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 10.3pt (13.76px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".text-amber.req-status",
+                "html": "<span class=\"req-status text-amber\"><i class=\"fa-solid fa-clock\"></i> 14/24 Units</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.14 (foreground color: #f59e0b, background color: #ffffff, font size: 10.3pt (13.76px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#f59e0b",
+                  "bg": "#ffffff",
+                  "ratio": 2.14,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".req-item:nth-child(3) > .req-title-row > .req-status.text-green",
+                "html": "<span class=\"req-status text-green\"><i class=\"fa-solid fa-circle-check\"></i> 30/36 Units</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 2.53 (foreground color: #10b981, background color: #ffffff, font size: 10.3pt (13.76px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#10b981",
+                  "bg": "#ffffff",
+                  "ratio": 2.53,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-course-item:nth-child(1) > .profile-course-info > .p-course-schedule",
+                "html": "<span class=\"p-course-schedule\"><i class=\"fa-regular fa-clock\"></i> MWF 10:00 AM - 10:50 AM • Turing Hall 101</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".profile-course-item:nth-child(2) > .profile-course-info > .p-course-schedule",
+                "html": "<span class=\"p-course-schedule\"><i class=\"fa-regular fa-clock\"></i> MWF 9:00 AM - 9:50 AM • Euclid Hall 120</span>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".footer-copy",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University. All rights reserved. </div>",
+                "summary": "Fix any of the following: Element has insufficient color contrast of 3.75 (foreground color: #64748b, background color: #0f172a, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#0f172a",
+                  "ratio": 3.75,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "wcag": [
+              "1.4.3"
+            ],
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axe-puppeteer",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": ".announcement-content > span:nth-child(2)",
+                "html": "<span><strong>Priority Registration is Open!</strong> Deadline for schedule adjustments: October 20, 2026.</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-content > span:nth-child(2) > strong",
+                "html": "<strong>Priority Registration is Open!</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".announcement-link",
+                "html": "<a href=\"#catalog\" class=\"announcement-link\" data-target=\"catalog\">Browse Open Seats <i class=\"fa-solid fa-arrow-right\"></i></a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#navRegisteredCount",
+                "html": "<span class=\"nav-badge\" id=\"navRegisteredCount\">2</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#ffffff",
+                  "bg": "#f43f5e",
+                  "ratio": 3.67,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".active.nav-item[href$=\"#profile\"]",
+                "html": "<a href=\"#profile\" class=\"nav-item active\" data-target=\"profile\"> <i class=\"fa-solid fa-user-graduate\"></i> Student Profile </a>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-profile > .container > .page-pill",
+                "html": "<span class=\"page-pill\"><i class=\"fa-solid fa-id-badge\"></i> ACADEMIC IDENTITY</span>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-profile > .container > .page-title",
+                "html": "<h1 class=\"page-title\">Student Profile</h1>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "3:1"
+                }
+              },
+              {
+                "selector": ".bg-gradient-profile > .container > .page-subtitle",
+                "html": "<p class=\"page-subtitle\">View degree progress, major requirements, academic standing, and advisor contact.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": "#profileCurrentRegUnits",
+                "html": "<span id=\"profileCurrentRegUnits\">8</span>",
+                "summary": "Fix any of the following: Element content is too short to determine if it is actual text content",
+                "contrast": {
+                  "fg": "#64748b",
+                  "bg": "#f1f5f9",
+                  "ratio": 4.34,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".advisor-info > strong",
+                "html": "<strong>Need degree auditing help?</strong>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              },
+              {
+                "selector": ".advisor-info > p",
+                "html": "<p>Schedule a 1-on-1 virtual or in-person consultation with Dr. Vance.</p>",
+                "summary": "Fix any of the following: Element's background color could not be determined due to a background gradient",
+                "contrast": {
+                  "ratio": 0,
+                  "expected": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "pa11y": {
+        "error": "Assignment to constant variable."
+      },
+      "lighthouse": {
+        "score": 93,
+        "issues": [
+          {
+            "rule": "color-contrast",
+            "count": 18
+          }
+        ]
+      }
+    }
+  ]
+}
