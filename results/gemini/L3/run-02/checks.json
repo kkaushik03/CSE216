@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:28:48.443Z",
+  "checked": "2026-11-19T06:22:35.513Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -186,6 +188,85 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" aria-label=\"Apex University Course Central Homepage\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M22 10v6M2 ",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "html": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "html": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "html": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -401,6 +482,153 @@
             "count": 13
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" aria-label=\"Apex University Course Central Homepage\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M22 10v6M2 ",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"cse-216\" aria-label=\"View syllabus and details for CSE 216: Computer Systems Security\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[2]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"dsc-100\" aria-label=\"View syllabus and details for DSC 100: Introduction to Data Management\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"cse-221\" aria-label=\"View syllabus and details for CSE 221: Operating Systems Principles\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"dsc-180a\" aria-label=\"View syllabus and details for DSC 180A: Data Science Capstone Project I\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"math-180a\" aria-label=\"View syllabus and details for MATH 180A: Introduction to Probability\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[6]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"math-20c\" aria-label=\"View syllabus and details for MATH 20C: Calculus & Analytic Geometry\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[7]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"cogs-108\" aria-label=\"View syllabus and details for COGS 108: Data Science in Practice\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[8]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"cogs-220\" aria-label=\"View syllabus and details for COGS 220: Information Visualization & Human-AI\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[9]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"ece-143\" aria-label=\"View syllabus and details for ECE 143: Programming for Data Analysis\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/article[10]/div[2]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" data-action=\"details\" data-course-id=\"ece-250\" aria-label=\"View syllabus and details for ECE 250: Random Processes & Signal Detection\"> Details & Syllabus </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[1]/div[1]/div[1]/button[1]/text()[1]",
+                "html": "×",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "html": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "html": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "html": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -552,6 +780,106 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r68",
+            "wcag": [
+              "1.3.1"
+            ],
+            "help": "The element owns no elements as required by its semantic role",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r68",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/section[1]/div[2]/div[1]/div[2]/ul[1]",
+                "html": "<ul id=\"reg-error-list\" class=\"alert-list\"></ul>",
+                "summary": "The element owns no elements as required by its semantic role"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" aria-label=\"Apex University Course Central Homepage\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M22 10v6M2 ",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/section[1]/div[1]/div[2]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\" onclick=\"window.print()\" aria-label=\"Print registered course schedule\"> <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <polyline points=\"6 9 6 2 18 2 18 9\"></polylin",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "html": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "html": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "html": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -709,6 +1037,85 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" aria-label=\"Apex University Course Central Homepage\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M22 10v6M2 ",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-reg-badge\" aria-label=\"2 courses registered\">2</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "html": "--> <div class=\"user-chip\" aria-label=\"Signed in student: Alex Rivera, ID A17894321\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "html": "> <div id=\"course-cards-container\" class=\"course-grid\" aria-label=\"Course Listings\"><artic",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "html": "> <h3 id=\"card-title-cse-216\" class=\"course-title\">",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

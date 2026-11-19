@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:27:48.320Z",
+  "checked": "2026-11-19T06:19:31.411Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -350,6 +352,198 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"nav-brand-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-icon\" aria-hidden=\"true\"> <svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button type=\"button\" class=\"student-profile-chip\" id=\"quick-profile-btn\" aria-label=\"Alex Rivera profile and settings menu\" aria-haspopup=\"true\" aria-expanded=\"false\"> <span class=\"avatar-circle\"> AR </span> <span class=\"student-short-name\"> Alex R. </span> <svg class=\"chevron-icon\" width=\"14\" heig",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.26:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[3]/text()[1]",
+                "html": "Max: 20 Units",
+                "summary": "The highest possible contrast of the text is 4.26:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[2]/div[3]/span[3]/text()[1]",
+                "html": "Dean's Honors",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[4]/p[1]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "html": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "html": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "html": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” not allowed as child of element “…” in this context.",
+            "wcag": [],
+            "message": "Element “…” not allowed as child of element “…” in this context.",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01\">Sectio",
+                "html": "<option value=\"A01\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\">Letter",
+                "html": "<option value=\"Letter Grade\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title-text\">Molecu",
+                "html": "<h3 class=\"course-title-text\">Molecu",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -693,6 +887,198 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"nav-brand-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-icon\" aria-hidden=\"true\"> <svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button type=\"button\" class=\"student-profile-chip\" id=\"quick-profile-btn\" aria-label=\"Alex Rivera profile and settings menu\" aria-haspopup=\"true\" aria-expanded=\"false\"> <span class=\"avatar-circle\"> AR </span> <span class=\"student-short-name\"> Alex R. </span> <svg class=\"chevron-icon\" width=\"14\" heig",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.26:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[2]/div[1]/span[3]/text()[1]",
+                "html": "Max: 20 Units",
+                "summary": "The highest possible contrast of the text is 4.26:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[2]/div[3]/span[3]/text()[1]",
+                "html": "Dean's Honors",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[4]/p[1]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "html": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "html": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "html": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” not allowed as child of element “…” in this context.",
+            "wcag": [],
+            "message": "Element “…” not allowed as child of element “…” in this context.",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01\">Sectio",
+                "html": "<option value=\"A01\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\">Letter",
+                "html": "<option value=\"Letter Grade\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title-text\">Molecu",
+                "html": "<h3 class=\"course-title-text\">Molecu",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -1132,6 +1518,258 @@
             "count": 3
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"nav-brand-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-icon\" aria-hidden=\"true\"> <svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button type=\"button\" class=\"student-profile-chip\" id=\"quick-profile-btn\" aria-label=\"Alex Rivera profile and settings menu\" aria-haspopup=\"true\" aria-expanded=\"false\"> <span class=\"avatar-circle\"> AR </span> <span class=\"student-short-name\"> Alex R. </span> <svg class=\"chevron-icon\" width=\"14\" heig",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/button[2]",
+                "html": "<button type=\"button\" class=\"btn btn-secondary btn-sm btn-register-quick\" data-id=\"bio100\" aria-label=\"Register for BIO 100\"> <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <path d=\"M12 5v14M5 12h14\"></path> </svg> <span> Waitli",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.58:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 14,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Biological Sciences",
+                "summary": "The highest possible contrast of the text is 3.58:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Cognitive Science",
+                "summary": "The highest possible contrast of the text is 3.07:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[1]/div[4]/div[1]/span[1]/text()[1]",
+                "html": "15 seats available",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[1]/div[4]/div[1]/span[1]/text()[1]",
+                "html": "44 seats available",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Economics",
+                "summary": "The highest possible contrast of the text is 3.35:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[1]/div[4]/div[1]/span[1]/text()[1]",
+                "html": "25 seats available",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[8]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Arts & Humanities",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.84:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[1]/div[4]/div[1]/span[1]/text()[1]",
+                "html": "18 seats available",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[1]/div[4]/div[1]/span[1]/text()[1]",
+                "html": "22 seats available",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Psychology",
+                "summary": "The highest possible contrast of the text is 3.59:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[1]/div[4]/div[1]/span[1]/text()[1]",
+                "html": "32 seats available",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Arts & Humanities",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[4]/p[1]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "html": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "html": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "html": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” not allowed as child of element “…” in this context.",
+            "wcag": [],
+            "message": "Element “…” not allowed as child of element “…” in this context.",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01\">Sectio",
+                "html": "<option value=\"A01\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\">Letter",
+                "html": "<option value=\"Letter Grade\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title-text\">Molecu",
+                "html": "<h3 class=\"course-title-text\">Molecu",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1544,6 +2182,243 @@
             "count": 3
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"nav-brand-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-icon\" aria-hidden=\"true\"> <svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button type=\"button\" class=\"student-profile-chip\" id=\"quick-profile-btn\" aria-label=\"Alex Rivera profile and settings menu\" aria-haspopup=\"true\" aria-expanded=\"false\"> <span class=\"avatar-circle\"> AR </span> <span class=\"student-short-name\"> Alex R. </span> <svg class=\"chevron-icon\" width=\"14\" heig",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-secondary btn-sm\" id=\"print-schedule-btn\" aria-label=\"Print registered schedule\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <polyline points=\"6 9 6 2 18 2 18 9\"></polyline> <path d=\"M6 1",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.84:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[1]/span[2]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.84:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[1]/span[2]/text()[1]",
+                "html": "Arts & Humanities",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[26]/div[1]/span[1]/text()[1]",
+                "html": "MATH 180A",
+                "summary": "The highest possible contrast of the text is 4.1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[26]/div[1]/span[2]/text()[1]",
+                "html": "Applied",
+                "summary": "The highest possible contrast of the text is 3.79:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[28]/div[1]/span[1]/text()[1]",
+                "html": "MATH 180A",
+                "summary": "The highest possible contrast of the text is 4.1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[28]/div[1]/span[2]/text()[1]",
+                "html": "Applied",
+                "summary": "The highest possible contrast of the text is 3.79:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[30]/div[1]/span[1]/text()[1]",
+                "html": "MATH 180A",
+                "summary": "The highest possible contrast of the text is 4.1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[30]/div[1]/span[2]/text()[1]",
+                "html": "Applied",
+                "summary": "The highest possible contrast of the text is 3.79:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[50]/div[1]/span[2]/text()[1]",
+                "html": "Visual",
+                "summary": "The highest possible contrast of the text is 4.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[52]/div[1]/span[2]/text()[1]",
+                "html": "Visual",
+                "summary": "The highest possible contrast of the text is 4.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[4]/p[1]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "html": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "html": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "html": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” not allowed as child of element “…” in this context.",
+            "wcag": [],
+            "message": "Element “…” not allowed as child of element “…” in this context.",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01\">Sectio",
+                "html": "<option value=\"A01\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\">Letter",
+                "html": "<option value=\"Letter Grade\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title-text\">Molecu",
+                "html": "<h3 class=\"course-title-text\">Molecu",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1807,6 +2682,188 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"nav-brand-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-icon\" aria-hidden=\"true\"> <svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"M",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button type=\"button\" class=\"student-profile-chip\" id=\"quick-profile-btn\" aria-label=\"Alex Rivera profile and settings menu\" aria-haspopup=\"true\" aria-expanded=\"false\"> <span class=\"avatar-circle\"> AR </span> <span class=\"student-short-name\"> Alex R. </span> <svg class=\"chevron-icon\" width=\"14\" heig",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.75:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[4]/p[1]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-counter-badge\" id=\"nav-reg-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "html": "> <div class=\"units-pill\" title=\"Current enrolled credits out of maximum 20 credits allowed\" aria-label=\"11 of 20 credits enrolled\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "html": "<div class=\"table-responsive\" tabindex=\"0\" aria-label=\"Registered courses data table, scrollable horizontally\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "html": "<div class=\"weekly-schedule-container\" tabindex=\"0\" aria-label=\"Visual weekly class schedule timetable\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-cs\" data-dept=\"Computer Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-ds\" data-dept=\"Data Science\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-math\" data-dept=\"Mathematics\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              },
+              {
+                "selector": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "html": "<button type=\"button\" class=\"category-card cat-bio\" data-dept=\"Biology\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “button”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” not allowed as child of element “…” in this context.",
+            "wcag": [],
+            "message": "Element “…” not allowed as child of element “…” in this context.",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "html": "<div class=\"category-icon-wrapper\" aria-hidden=\"true\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              },
+              {
+                "selector": "<div class=\"category-info\">",
+                "html": "<div class=\"category-info\">",
+                "message": "Element “div” not allowed as child of element “button” in this context. (Suppressing further errors from this subtree.)"
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01\">Sectio",
+                "html": "<option value=\"A01\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade\">Letter",
+                "html": "<option value=\"Letter Grade\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title-text\">Molecu",
+                "html": "<h3 class=\"course-title-text\">Molecu",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

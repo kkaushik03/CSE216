@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-10T00:46:28.737Z",
+  "checked": "2026-11-19T05:56:00.643Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -114,6 +116,13 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -245,6 +254,13 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -310,6 +326,27 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "div> <div class=\"error-summary\" id=\"error-summary\" tabindex=\"-1\" aria-labelledby=\"error-summary-title\" hidden=\"\">",
+                "html": "div> <div class=\"error-summary\" id=\"error-summary\" tabindex=\"-1\" aria-labelledby=\"error-summary-title\" hidden=\"\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -401,6 +438,27 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<div class=\"error-summary\" id=\"error-summary\" tabindex=\"-1\" aria-labelledby=\"error-summary-title\" hidden=\"\">",
+                "html": "<div class=\"error-summary\" id=\"error-summary\" tabindex=\"-1\" aria-labelledby=\"error-summary-title\" hidden=\"\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          }
+        ]
       }
     }
   ]

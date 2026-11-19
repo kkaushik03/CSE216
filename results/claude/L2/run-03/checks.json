@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-10T00:44:52.227Z",
+  "checked": "2026-11-19T05:53:18.982Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -168,6 +170,101 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 15,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "N",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "Northfield University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "Course Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "My Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/h1[1]/text()[1]",
+                "html": "Find your courses and build your semester",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/p[2]/text()[1]",
+                "html": "Explore classes across eight colorful departments, check open seats and register in a few steps.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/label[1]/text()[1]",
+                "html": "Search courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/a[1]/text()[1]",
+                "html": "Browse the full catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/a[2]/text()[1]",
+                "html": "Start registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[3]/h2[1]/text()[1]",
+                "html": "How registration works",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[4]/h2[1]/text()[1]",
+                "html": "Browse by department",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[5]/div[1]/h2[1]/text()[1]",
+                "html": "Featured courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[5]/div[1]/a[1]/text()[1]",
+                "html": "See all courses",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -352,6 +449,176 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 30,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "N",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "Northfield University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "Course Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "My Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Search and filter courses. Results update as you type or change a filter.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[1]/text()[1]",
+                "html": "All departments",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[3]/text()[1]",
+                "html": "Mathematics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[4]/text()[1]",
+                "html": "Biology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[5]/text()[1]",
+                "html": "History",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[6]/text()[1]",
+                "html": "Art & Design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[7]/text()[1]",
+                "html": "Psychology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[8]/text()[1]",
+                "html": "Music",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[2]/select[1]/option[9]/text()[1]",
+                "html": "Economics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[3]/select[1]/option[1]/text()[1]",
+                "html": "All levels",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[3]/select[1]/option[2]/text()[1]",
+                "html": "Introductory",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[3]/select[1]/option[3]/text()[1]",
+                "html": "Intermediate",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[3]/select[1]/option[4]/text()[1]",
+                "html": "Advanced",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[4]/select[1]/option[1]/text()[1]",
+                "html": "Any credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[4]/select[1]/option[2]/text()[1]",
+                "html": "1 credit",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[4]/select[1]/option[3]/text()[1]",
+                "html": "3 credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[4]/select[1]/option[4]/text()[1]",
+                "html": "4 credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[5]/select[1]/option[1]/text()[1]",
+                "html": "Course code",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[5]/select[1]/option[2]/text()[1]",
+                "html": "Title (A–Z)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[5]/select[1]/option[3]/text()[1]",
+                "html": "Credits (most first)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/form[1]/div[1]/div[5]/select[1]/option[4]/text()[1]",
+                "html": "Open seats (most first)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[2]/p[1]/text()[1]",
+                "html": "Showing all 17 courses",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -479,6 +746,141 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 23,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "N",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "Northfield University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "Course Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "My Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Register for courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Complete the form below. You can take up to",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/span[1]/text()[1]",
+                "html": "18",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[2]",
+                "html": "credits per term. All fields are required.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[1]/text()[1]",
+                "html": "Select your major",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[2]/text()[1]",
+                "html": "Undeclared",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[3]/text()[1]",
+                "html": "Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[4]/text()[1]",
+                "html": "Mathematics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[5]/text()[1]",
+                "html": "Biology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[6]/text()[1]",
+                "html": "History",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[7]/text()[1]",
+                "html": "Art & Design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[8]/text()[1]",
+                "html": "Psychology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[9]/text()[1]",
+                "html": "Music",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[1]/div[1]/div[4]/select[1]/option[10]/text()[1]",
+                "html": "Economics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[2]/div[1]/select[1]/option[1]/text()[1]",
+                "html": "Select a term",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[2]/div[1]/select[1]/option[2]/text()[1]",
+                "html": "Spring 2027",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[4]/form[1]/section[2]/div[1]/select[1]/option[3]/text()[1]",
+                "html": "Summer 2027",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -660,6 +1062,81 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "N",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "Northfield University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "Course Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "My profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Your details and the courses you are registered for in",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/span[1]/text()[1]",
+                "html": "Spring 2027",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[2]/div[1]/section[2]/div[1]/h2[1]/text()[1]",
+                "html": "Registered courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[2]/div[1]/section[2]/div[1]/a[1]/text()[1]",
+                "html": "Add more courses",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
         "issues": []
       }
     }

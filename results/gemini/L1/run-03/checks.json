@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:23:31.350Z",
+  "checked": "2026-11-19T06:12:08.436Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -447,6 +449,138 @@
           {
             "rule": "heading-order",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.98:1 which is\n        below the required contrast of 3:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 14,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/a[1]/div[2]/span[1]/span[1]/text()[1]",
+                "html": "Portal",
+                "summary": "The highest possible contrast of the text is 2.98:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/div[1]/div[1]/text()[1]",
+                "html": "RS",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[2]/button[1]/text()[2]",
+                "html": "Explore Courses",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[1]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "7 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[2]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[2]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "Only 1 Seats Left!",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[3]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "MATH",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[3]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/div[3]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "Only 5 Seats Left!",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Office of the University Registrar • Student Information Systems • Apex University of Technology",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "html": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"course-code\">BIOL 1",
+                "html": "<h3 class=\"course-code\">BIOL 1",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-section-title\">Degree",
+                "html": "<h3 class=\"card-section-title\">Degree",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -1364,6 +1498,313 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.98:1 which is\n        below the required contrast of 3:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 49,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/a[1]/div[2]/span[1]/span[1]/text()[1]",
+                "html": "Portal",
+                "summary": "The highest possible contrast of the text is 2.98:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/div[1]/div[1]/text()[1]",
+                "html": "RS",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "BIOL",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "12 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[1]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "COGS",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[2]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[2]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "20 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[2]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[3]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[3]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[3]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "15 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[3]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[4]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[4]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[4]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "Only 2 Seats Left!",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[4]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[5]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[5]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[5]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "16 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[5]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[6]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[6]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[6]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "7 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[7]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[7]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[7]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "Only 1 Seats Left!",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[8]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[8]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[8]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "18 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[8]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[9]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "ECE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[9]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[9]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "Waitlist Only (0 Seats)",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[9]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[10]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "ECON",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[10]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[10]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "18 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[10]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[11]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "MATH",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[11]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[11]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "Only 5 Seats Left!",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[12]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "MATH",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[12]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "4 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[12]/div[1]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "40 Seats Available",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/div[12]/div[2]/button[2]/text()[2]",
+                "html": "Register",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Office of the University Registrar • Student Information Systems • Apex University of Technology",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "html": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"course-code\">BIOL 1",
+                "html": "<h3 class=\"course-code\">BIOL 1",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-section-title\">Degree",
+                "html": "<h3 class=\"card-section-title\">Degree",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1754,6 +2195,143 @@
           {
             "rule": "color-contrast",
             "count": 11
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.98:1 which is\n        below the required contrast of 3:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 15,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/a[1]/div[2]/span[1]/span[1]/text()[1]",
+                "html": "Portal",
+                "summary": "The highest possible contrast of the text is 2.98:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/div[1]/div[1]/text()[1]",
+                "html": "RS",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Fall 2026",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[1]/form[1]/div[8]/button[1]/text()[2]",
+                "html": "Submit Registration",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[4]/div[1]/span[2]/text()[1]",
+                "html": "Cleared • Paid",
+                "summary": "The highest possible contrast of the text is 2.42:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[4]/div[2]/span[2]/text()[1]",
+                "html": "0 Holds",
+                "summary": "The highest possible contrast of the text is 2.42:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[4]/div[3]/span[2]/text()[1]",
+                "html": "Approved",
+                "summary": "The highest possible contrast of the text is 2.42:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[9]/button[1]/text()[2]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.95:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[3]/span[1]/text()[1]",
+                "html": "CSE",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[9]/button[1]/text()[2]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.95:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[3]/span[1]/text()[1]",
+                "html": "MATH",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[9]/button[1]/text()[2]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.95:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Office of the University Registrar • Student Information Systems • Apex University of Technology",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "html": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"course-code\">BIOL 1",
+                "html": "<h3 class=\"course-code\">BIOL 1",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-section-title\">Degree",
+                "html": "<h3 class=\"card-section-title\">Degree",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -2198,6 +2776,184 @@
           {
             "rule": "select-name",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r8",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "The form field does not have an accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r8",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[2]/div[2]/form[1]/div[1]/div[1]/input[1]",
+                "html": "<input type=\"tel\" class=\"form-control\" value=\"+1 (858) 555-0199\">",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[2]/div[2]/form[1]/div[1]/div[2]/input[1]",
+                "html": "<input type=\"text\" class=\"form-control\" value=\"Tamarack Apts #402B\">",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[2]/div[2]/form[1]/div[2]/input[1]",
+                "html": "<input type=\"email\" class=\"form-control\" value=\"rahat.s@apex.edu\" readonly=\"\">",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/select[1]",
+                "html": "<select class=\"form-select\"> <option selected=\"\"> Email & SMS Notifications </option> <option> Email Only </option> <option> Portal Dashboard Only </option> </select>",
+                "summary": "The form field does not have an accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.98:1 which is\n        below the required contrast of 3:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 17,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/a[1]/div[2]/span[1]/span[1]/text()[1]",
+                "html": "Portal",
+                "summary": "The highest possible contrast of the text is 2.98:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[2]/div[1]/div[1]/text()[1]",
+                "html": "RS",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "Senior • Year 4",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/p[1]/text()[1]",
+                "html": "B.S. in Computer Science & Engineering | Minor in Data Analytics",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[1]/strong[1]/text()[1]",
+                "html": "ID:",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[1]/text()[1]",
+                "html": "APX-84920",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[3]/strong[1]/text()[1]",
+                "html": "Email:",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[3]/text()[1]",
+                "html": "rahat.s@apex.edu",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[5]/strong[1]/text()[1]",
+                "html": "Advisor:",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[5]/text()[1]",
+                "html": "Prof. Elena Vance",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[7]/strong[1]/text()[1]",
+                "html": "College:",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[2]/div[2]/span[7]/text()[1]",
+                "html": "John Muir College",
+                "summary": "The highest possible contrast of the text is 2.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/text()[1]",
+                "html": "3.94",
+                "summary": "The highest possible contrast of the text is 2.42:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[4]/div[2]/text()[1]",
+                "html": "Tau Beta Pi",
+                "summary": "The highest possible contrast of the text is 2.05:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]/text()[1]",
+                "html": "Edit in Registration →",
+                "summary": "The highest possible contrast of the text is 4.47:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Office of the University Registrar • Student Information Systems • Apex University of Technology",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall Q",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "html": "<h3 class=\"metric-value\" id=\"home-enrolled-count\">3</h3>",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"course-code\">BIOL 1",
+                "html": "<h3 class=\"course-code\">BIOL 1",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-section-title\">Degree",
+                "html": "<h3 class=\"card-section-title\">Degree",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

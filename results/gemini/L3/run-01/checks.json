@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T00:37:00.949Z",
+  "checked": "2026-11-19T06:20:43.064Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -94,6 +96,36 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.3:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/a[1]/text()[1]",
+                "html": "Skip to main content",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -181,6 +213,60 @@
           {
             "rule": "color-contrast",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.3:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/a[1]/text()[1]",
+                "html": "Skip to main content",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "> <section id=\"home\" class=\"page-section\" aria-labelledby=\"home-title\" hidden=\"true\">",
+                "html": "> <section id=\"home\" class=\"page-section\" aria-labelledby=\"home-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"registration\" class=\"page-section\" aria-labelledby=\"registration-title\" hidden=\"true\">",
+                "html": "> <section id=\"registration\" class=\"page-section\" aria-labelledby=\"registration-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"profile\" class=\"page-section\" aria-labelledby=\"profile-title\" hidden=\"true\">",
+                "html": "> <section id=\"profile\" class=\"page-section\" aria-labelledby=\"profile-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
           }
         ]
       }
@@ -272,6 +358,60 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.3:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/a[1]/text()[1]",
+                "html": "Skip to main content",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Registration",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "> <section id=\"home\" class=\"page-section\" aria-labelledby=\"home-title\" hidden=\"true\">",
+                "html": "> <section id=\"home\" class=\"page-section\" aria-labelledby=\"home-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"catalog\" class=\"page-section\" aria-labelledby=\"catalog-title\" hidden=\"true\">",
+                "html": "> <section id=\"catalog\" class=\"page-section\" aria-labelledby=\"catalog-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"profile\" class=\"page-section\" aria-labelledby=\"profile-title\" hidden=\"true\">",
+                "html": "> <section id=\"profile\" class=\"page-section\" aria-labelledby=\"profile-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -359,6 +499,60 @@
           {
             "rule": "color-contrast",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.3:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/a[1]/text()[1]",
+                "html": "Skip to main content",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "Student Profile",
+                "summary": "The highest possible contrast of the text is 4.3:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "> <section id=\"home\" class=\"page-section\" aria-labelledby=\"home-title\" hidden=\"true\">",
+                "html": "> <section id=\"home\" class=\"page-section\" aria-labelledby=\"home-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"catalog\" class=\"page-section\" aria-labelledby=\"catalog-title\" hidden=\"true\">",
+                "html": "> <section id=\"catalog\" class=\"page-section\" aria-labelledby=\"catalog-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"registration\" class=\"page-section\" aria-labelledby=\"registration-title\" hidden=\"true\">",
+                "html": "> <section id=\"registration\" class=\"page-section\" aria-labelledby=\"registration-title\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
           }
         ]
       }

@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-10T00:47:15.755Z",
+  "checked": "2026-11-19T05:57:14.717Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -129,6 +131,41 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/span[1]/text()[1]",
+                "html": "Registration for Fall 2026 and Spring 2027 is open",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Plan your semester with confidence",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Search the course catalog, check open seats, and register for your classes in a few steps.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -300,6 +337,13 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -410,6 +454,13 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -519,6 +570,13 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
         "issues": []
       }
     }

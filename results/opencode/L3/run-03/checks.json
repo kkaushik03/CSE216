@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T04:35:25.374Z",
+  "checked": "2026-11-19T06:36:47.262Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -138,6 +140,66 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Spring 2027 registration is open",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Build a semester that fits you.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Explore 18 courses across eight departments, compare schedules and reserve your seat in a few friendly steps.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/a[2]/text()[1]",
+                "html": "Register now",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Featured this semester",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "A few popular courses with seats still available.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "How registration works",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Plan carefully, then confirm when you are ready.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -303,6 +365,46 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Find the right course for your plan. Search the full catalog, compare schedules and check seat availability before you register.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/h2[1]/text()[1]",
+                "html": "Search and filter courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/p[1]/text()[1]",
+                "html": "Showing 18 of 18 courses.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -394,6 +496,56 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Register for a course",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Complete your student details and choose a course. You will review everything in a confirmation window before your seat is saved.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/h2[1]/text()[1]",
+                "html": "Before you register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/ul[1]/li[1]/text()[1]",
+                "html": "Check that the course schedule does not overlap with your other classes.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/ul[1]/li[2]/text()[1]",
+                "html": "Confirm you meet any prerequisites listed with your academic advisor.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/ul[1]/li[3]/text()[1]",
+                "html": "Keep your student ID handy. You will need it to confirm your seat.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -550,6 +702,110 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 13,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Keep your contact details current and review every course on your Spring 2027 schedule.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/h2[1]/text()[1]",
+                "html": "Your details",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/div[1]/div[2]/strong[1]/text()[1]",
+                "html": "Jordan Rivera",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/div[1]/div[2]/p[1]/text()[1]",
+                "html": "jordan.rivera@northbridge.edu",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/dl[1]/div[1]/dt[1]/text()[1]",
+                "html": "Student ID",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/dl[1]/div[1]/dd[1]/text()[1]",
+                "html": "20261408",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/dl[1]/div[2]/dt[1]/text()[1]",
+                "html": "Program",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/dl[1]/div[2]/dd[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/dl[1]/div[3]/dt[1]/text()[1]",
+                "html": "Year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/article[1]/dl[1]/div[3]/dd[1]/text()[1]",
+                "html": "Year 2",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Registered courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Your confirmed Spring 2027 schedule. Drop a course only if you plan to replace it.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"Computer Science\">Comput",
+                "html": "<option value=\"Computer Science\">Comput",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"1\">Year 1",
+                "html": "<option value=\"1\">Year 1",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          }
+        ]
       }
     }
   ]

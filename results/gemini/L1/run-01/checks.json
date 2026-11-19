@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T00:35:23.722Z",
+  "checked": "2026-11-19T06:10:21.954Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -154,6 +156,31 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.87:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[1]/header[1]/p[1]/text()[1]",
+                "html": "Find, register, and manage your classes all in one colorful place!",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -495,6 +522,92 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r8",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "The form field does not have an accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r8",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[1]/select[1]",
+                "html": "<select id=\"departmentFilter\"> <option value=\"all\"> All Departments </option> <option value=\"cs\"> Computer Science </option> <option value=\"math\"> Mathematics </option> <option value=\"art\"> Art </option> </select>",
+                "summary": "The form field does not have an accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.54:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[1]/button[1]/text()[1]",
+                "html": "Filter",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/h3[1]/text()[1]",
+                "html": "Intro to Programming",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "Department: Computer Science",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Credits: 3",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/h3[1]/text()[1]",
+                "html": "Calculus I",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/text()[1]",
+                "html": "Department: Mathematics",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/p[2]/text()[1]",
+                "html": "Credits: 4",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[3]/h3[1]/text()[1]",
+                "html": "Modern Art History",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[3]/p[1]/text()[1]",
+                "html": "Department: Art",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[3]/p[2]/text()[1]",
+                "html": "Credits: 3",
+                "summary": "The highest possible contrast of the text is 2.48:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -739,6 +852,87 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r8",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "The form field does not have an accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r8",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[1]/input[1]",
+                "html": "<input type=\"text\" required=\"\">",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[2]/input[1]",
+                "html": "<input type=\"text\" required=\"\">",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[3]/select[1]",
+                "html": "<select required=\"\"> <option value=\"\"> -- Select a Course -- </option> <option value=\"prog\"> Intro to Programming </option> <option value=\"calc\"> Calculus I </option> <option value=\"art\"> Modern Art History </option> </select>",
+                "summary": "The form field does not have an accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.43:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 7,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[1]/label[1]/text()[1]",
+                "html": "Student Name",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[2]/label[1]/text()[1]",
+                "html": "Student ID",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[3]/label[1]/text()[1]",
+                "html": "Select Course",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[3]/select[1]/option[1]/text()[1]",
+                "html": "-- Select a Course --",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[3]/select[1]/option[2]/text()[1]",
+                "html": "Intro to Programming",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[3]/select[1]/option[3]/text()[1]",
+                "html": "Calculus I",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[3]/div[1]/form[1]/div[3]/select[1]/option[4]/text()[1]",
+                "html": "Modern Art History",
+                "summary": "The highest possible contrast of the text is 2.43:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -968,6 +1162,51 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.87:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[4]/div[2]/table[1]/thead[1]/tr[1]/th[1]/text()[1]",
+                "html": "Course ID",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[4]/div[2]/table[1]/thead[1]/tr[1]/th[2]/text()[1]",
+                "html": "Course Name",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[4]/div[2]/table[1]/thead[1]/tr[1]/th[3]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[4]/div[2]/table[1]/thead[1]/tr[1]/th[4]/text()[1]",
+                "html": "Status",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[4]/div[2]/table[1]/tbody[1]/tr[1]/td[4]/text()[1]",
+                "html": "Enrolled",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     }
   ]

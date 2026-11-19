@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:25:11.582Z",
+  "checked": "2026-11-19T06:16:06.313Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -630,6 +632,373 @@
             "count": 6
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"credit-pill\" id=\"quickCreditPill\" aria-label=\"Registered Credits: 14 out of 18 maximum. Click to view registration.\" data-view-target=\"registration\"> <span class=\"credit-pill-icon\" aria-hidden=\"true\"> ⚡ </span> <span class=\"credit-pill-text\"> <strong id=\"pillCredits\"> 14 </strong> / 1",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-216\" aria-label=\"View syllabus and requirements for CS 216\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"ART-140\" aria-label=\"View syllabus and requirements for ART 140\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-482\" aria-label=\"View syllabus and requirements for CS 482\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"PSYC-220\" aria-label=\"View syllabus and requirements for PSYC 220\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.15:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 24,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "4",
+                "summary": "The highest possible contrast of the text is 2.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Dean's Honor List",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "14 Days Remaining",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[3]/div[2]/article[1]/div[1]/text()[1]",
+                "html": "Priority Alert",
+                "summary": "The highest possible contrast of the text is 3.95:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[3]/div[2]/article[3]/div[1]/text()[1]",
+                "html": "Advising Hours",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "8 Seats Open (42/50)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "1 Seats Open (24/25)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "16 Seats Open (44/60)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "Fall 2026 Registration Is Currently Open",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Empower Your Academic Journey at",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/span[1]/text()[1]",
+                "html": "Horizon",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Explore cutting-edge courses, plan your ideal weekly schedule, and enroll with confidence. Over 250 accredited programs crafted for future leaders.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/button[1]/text()[2]",
+                "html": "Explore Course Catalog",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "html": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "html": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” is missing one or more of the following attributes: “…”.",
+            "wcag": [],
+            "message": "Element “…” is missing one or more of the following attributes: “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "html": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title\">Digita",
+                "html": "<h3 class=\"course-title\">Digita",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1253,6 +1622,373 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 6
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"credit-pill\" id=\"quickCreditPill\" aria-label=\"Registered Credits: 14 out of 18 maximum. Click to view registration.\" data-view-target=\"registration\"> <span class=\"credit-pill-icon\" aria-hidden=\"true\"> ⚡ </span> <span class=\"credit-pill-text\"> <strong id=\"pillCredits\"> 14 </strong> / 1",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-216\" aria-label=\"View syllabus and requirements for CS 216\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"ART-140\" aria-label=\"View syllabus and requirements for ART 140\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-482\" aria-label=\"View syllabus and requirements for CS 482\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"PSYC-220\" aria-label=\"View syllabus and requirements for PSYC 220\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.15:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 24,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "4",
+                "summary": "The highest possible contrast of the text is 2.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Dean's Honor List",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "14 Days Remaining",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[3]/div[2]/article[1]/div[1]/text()[1]",
+                "html": "Priority Alert",
+                "summary": "The highest possible contrast of the text is 3.95:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[3]/div[2]/article[3]/div[1]/text()[1]",
+                "html": "Advising Hours",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[1]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "8 Seats Open (42/50)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[2]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "1 Seats Open (24/25)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[3]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[4]/div[2]/article[4]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "16 Seats Open (44/60)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "Fall 2026 Registration Is Currently Open",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Empower Your Academic Journey at",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/span[1]/text()[1]",
+                "html": "Horizon",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Explore cutting-edge courses, plan your ideal weekly schedule, and enroll with confidence. Over 250 accredited programs crafted for future leaders.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/button[1]/text()[2]",
+                "html": "Explore Course Catalog",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "html": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "html": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” is missing one or more of the following attributes: “…”.",
+            "wcag": [],
+            "message": "Element “…” is missing one or more of the following attributes: “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "html": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title\">Digita",
+                "html": "<h3 class=\"course-title\">Digita",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -2656,6 +3392,610 @@
             "count": 17
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 15,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"credit-pill\" id=\"quickCreditPill\" aria-label=\"Registered Credits: 14 out of 18 maximum. Click to view registration.\" data-view-target=\"registration\"> <span class=\"credit-pill-icon\" aria-hidden=\"true\"> ⚡ </span> <span class=\"credit-pill-text\"> <strong id=\"pillCredits\"> 14 </strong> / 1",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"ART-140\" aria-label=\"View syllabus and requirements for ART 140\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"ART-225\" aria-label=\"View syllabus and requirements for ART 225\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"BIO-110\" aria-label=\"View syllabus and requirements for BIO 110\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[4]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"BIO-240\" aria-label=\"View syllabus and requirements for BIO 240\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-110\" aria-label=\"View syllabus and requirements for CS 110\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[6]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-216\" aria-label=\"View syllabus and requirements for CS 216\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-350\" aria-label=\"View syllabus and requirements for CS 350\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[8]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"CS-482\" aria-label=\"View syllabus and requirements for CS 482\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"ECON-201\" aria-label=\"View syllabus and requirements for ECON 201\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"ECON-340\" aria-label=\"View syllabus and requirements for ECON 340\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"MATH-312\" aria-label=\"View syllabus and requirements for MATH 312\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"MATH-410\" aria-label=\"View syllabus and requirements for MATH 410\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[13]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"PHYS-205\" aria-label=\"View syllabus and requirements for PHYS 205\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[14]/div[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-outline btn-sm action-view-details\" data-id=\"PSYC-220\" aria-label=\"View syllabus and requirements for PSYC 220\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.15:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 69,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "4",
+                "summary": "The highest possible contrast of the text is 2.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[1]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "1 Seats Open (24/25)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[2]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "7 Seats Open (18/25)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[3]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "7 Seats Open (68/75)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[4]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[4]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[4]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[4]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[5]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "5 Seats Open (95/100)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[6]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[6]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[6]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[6]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[6]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "8 Seats Open (42/50)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[7]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "2 Seats Open (38/40)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[8]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[8]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[8]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[8]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[9]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "10 Seats Open (110/120)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[10]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "10 Seats Open (25/35)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[11]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "2 Seats Open (48/50)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[12]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "7 Seats Open (28/35)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[13]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[13]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[13]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[13]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[13]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "9 Seats Open (36/45)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[14]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[14]/div[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Mode",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[14]/div[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Schedule",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[14]/div[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Instructor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/article[14]/div[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "16 Seats Open (44/60)",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "html": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "html": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” is missing one or more of the following attributes: “…”.",
+            "wcag": [],
+            "message": "Element “…” is missing one or more of the following attributes: “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "html": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title\">Digita",
+                "html": "<h3 class=\"course-title\">Digita",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -3041,6 +4381,248 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"credit-pill\" id=\"quickCreditPill\" aria-label=\"Registered Credits: 14 out of 18 maximum. Click to view registration.\" data-view-target=\"registration\"> <span class=\"credit-pill-icon\" aria-hidden=\"true\"> ⚡ </span> <span class=\"credit-pill-text\"> <strong id=\"pillCredits\"> 14 </strong> / 1",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.32:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/div[2]/span[2]/text()[1]",
+                "html": "Registration Period Active",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[8]/span[1]/text()[2]",
+                "html": "Enrolled",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[8]/span[1]/text()[2]",
+                "html": "Enrolled",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[8]/span[1]/text()[2]",
+                "html": "Enrolled",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[4]/td[8]/span[1]/text()[2]",
+                "html": "Enrolled",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[3]/div[1]/div[2]/table[1]/tfoot[1]/tr[1]/td[3]/span[1]/text()[1]",
+                "html": "Good Standing",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/span[1]/text()[1]",
+                "html": "12 (FT)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[2]/div[3]/span[1]/text()[1]",
+                "html": "18 Max",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "html": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "html": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” is missing one or more of the following attributes: “…”.",
+            "wcag": [],
+            "message": "Element “…” is missing one or more of the following attributes: “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "html": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title\">Digita",
+                "html": "<h3 class=\"course-title\">Digita",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -3486,6 +5068,263 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"credit-pill\" id=\"quickCreditPill\" aria-label=\"Registered Credits: 14 out of 18 maximum. Click to view registration.\" data-view-target=\"registration\"> <span class=\"credit-pill-icon\" aria-hidden=\"true\"> ⚡ </span> <span class=\"credit-pill-text\"> <strong id=\"pillCredits\"> 14 </strong> / 1",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.15:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "4",
+                "summary": "The highest possible contrast of the text is 2.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[2]/div[2]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Department of Computer Science & Engineering",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[1]/ul[1]/li[1]/strong[1]/text()[1]",
+                "html": "A",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[1]/ul[1]/li[2]/strong[1]/text()[1]",
+                "html": "A",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[1]/ul[1]/li[3]/strong[1]/text()[1]",
+                "html": "A-",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[1]/ul[1]/li[4]/strong[1]/text()[1]",
+                "html": "A",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[2]/ul[1]/li[1]/strong[1]/text()[1]",
+                "html": "A",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[2]/ul[1]/li[2]/strong[1]/text()[1]",
+                "html": "A",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[2]/ul[1]/li[3]/strong[1]/text()[1]",
+                "html": "B+",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[3]/div[1]/div[2]/ul[1]/li[4]/strong[1]/text()[1]",
+                "html": "A",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/div[1]/text()[1]",
+                "html": "AM",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "html": "<span class=\"nav-badge\" id=\"navCourseCount\" aria-label=\"4 courses registered\">4</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "html": "<div class=\"registered-table-wrapper\" aria-labelledby=\"registeredTableHeading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "t\"> <article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "html": "s\"> <article class=\"course-card\" data-course-id=\"ART-140\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ART-225\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"BIO-240\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-110\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-216\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-350\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"CS-482\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-201\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"ECON-340\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-312\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"MATH-410\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PHYS-205\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              },
+              {
+                "selector": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "html": "<article class=\"course-card\" data-course-id=\"PSYC-220\" role=\"listitem\">",
+                "message": "Bad value “listitem” for attribute “role” on element “article”."
+              }
+            ]
+          },
+          {
+            "rule": "Element “…” is missing one or more of the following attributes: “…”.",
+            "wcag": [],
+            "message": "Element “…” is missing one or more of the following attributes: “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefHighContrastBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle High Contrast Mode\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "html": "<button class=\"toggle-switch-btn\" id=\"prefReducedMotionBtn\" role=\"switch\" aria-checked=\"false\" aria-label=\"Toggle Reduced Motion\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              },
+              {
+                "selector": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "html": "<button class=\"toggle-switch-btn active\" id=\"prefNotificationsBtn\" role=\"switch\" aria-checked=\"true\" aria-label=\"Toggle Waitlist Notifications\">",
+                "message": "Element “button” is missing one or more of the following attributes: “type”."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-title\">Digita",
+                "html": "<h3 class=\"course-title\">Digita",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

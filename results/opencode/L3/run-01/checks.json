@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T04:09:40.273Z",
+  "checked": "2026-11-19T06:34:35.252Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -222,6 +224,130 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Build a semester that fits your curiosity.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Explore more than a dozen courses across eight departments, check seat availability, and save your spot in a schedule that feels like you.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/ul[1]/li[1]/text()[1]",
+                "html": "Search by subject, course code or instructor",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/ul[1]/li[2]/text()[1]",
+                "html": "See open seats before you register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/ul[1]/li[3]/text()[1]",
+                "html": "Manage your schedule in one place",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "Spring 2027",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Your semester at a glance",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Registration in three easy steps",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Ready when you are",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Your next semester starts here.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Registration takes only a few minutes. Your student profile is already set up with sample details you can update at any time.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Northbridge University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Office of the Registrar · 100 College Way, Northbridge",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[3]/text()[1]",
+                "html": "Spring 2027 registration is open until January 12.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/h2[1]/text()[1]",
+                "html": "Need help?",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[1]/a[1]/text()[1]",
+                "html": "Contact student support",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[2]/a[1]/text()[1]",
+                "html": "Call +1 (555) 010‑0100",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "© 2026 Northbridge University. Built as an accessible course registration demo.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -378,6 +504,175 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 27,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Find the right course for you.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Search the full Spring 2027 catalog, narrow the list with filters, and register when you find a course with an open seat.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[1]/text()[1]",
+                "html": "All departments",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[2]/text()[1]",
+                "html": "Art & Design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[3]/text()[1]",
+                "html": "Biology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[4]/text()[1]",
+                "html": "Business",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[5]/text()[1]",
+                "html": "Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[6]/text()[1]",
+                "html": "English",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[7]/text()[1]",
+                "html": "Mathematics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[8]/text()[1]",
+                "html": "Physics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[2]/select[1]/option[9]/text()[1]",
+                "html": "Psychology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[3]/select[1]/option[1]/text()[1]",
+                "html": "All levels",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[3]/select[1]/option[2]/text()[1]",
+                "html": "100-level",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[3]/select[1]/option[3]/text()[1]",
+                "html": "200-level",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[3]/select[1]/option[4]/text()[1]",
+                "html": "300-level",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[3]/select[1]/option[5]/text()[1]",
+                "html": "400-level",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[4]/select[1]/option[1]/text()[1]",
+                "html": "All availability",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[4]/select[1]/option[2]/text()[1]",
+                "html": "Open seats",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[4]/select[1]/option[3]/text()[1]",
+                "html": "Almost full",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/form[1]/div[4]/select[1]/option[4]/text()[1]",
+                "html": "Full",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Northbridge University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Office of the Registrar · 100 College Way, Northbridge",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[3]/text()[1]",
+                "html": "Spring 2027 registration is open until January 12.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/h2[1]/text()[1]",
+                "html": "Need help?",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[1]/a[1]/text()[1]",
+                "html": "Contact student support",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[2]/a[1]/text()[1]",
+                "html": "Call +1 (555) 010‑0100",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "© 2026 Northbridge University. Built as an accessible course registration demo.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -551,6 +846,155 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 23,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Register for your next course.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Your profile details are filled in for you. Choose a course, review the confirmation, and your schedule updates immediately.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/option[1]/text()[1]",
+                "html": "Select a course",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[1]/option[1]/text()[1]",
+                "html": "CSE 101 — Introduction to Programming (24 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[1]/option[3]/text()[1]",
+                "html": "CSE 340 — Web Application Design (3 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[2]/option[1]/text()[1]",
+                "html": "MTH 151 — Calculus I (15 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[2]/option[2]/text()[1]",
+                "html": "MTH 220 — Linear Algebra (6 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[3]/option[1]/text()[1]",
+                "html": "PHY 110 — Astronomy: The Cosmos (12 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[3]/option[2]/text()[1]",
+                "html": "PHY 205 — Modern Physics (2 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[4]/option[1]/text()[1]",
+                "html": "BIO 120 — Foundations of Biology (9 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[4]/option[2]/text()[1]",
+                "html": "BIO 310 — Ecology and Conservation (14 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[5]/option[1]/text()[1]",
+                "html": "BUS 210 — Principles of Marketing (5 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[5]/option[2]/text()[1]",
+                "html": "BUS 330 — Entrepreneurship (11 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[6]/option[2]/text()[1]",
+                "html": "PSY 260 — Cognitive Psychology (4 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[7]/option[1]/text()[1]",
+                "html": "ART 115 — Digital Illustration (7 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[4]/select[1]/optgroup[8]/option[1]/text()[1]",
+                "html": "ENG 240 — Creative Writing Workshop (10 seats available)",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Northbridge University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Office of the Registrar · 100 College Way, Northbridge",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[3]/text()[1]",
+                "html": "Spring 2027 registration is open until January 12.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/h2[1]/text()[1]",
+                "html": "Need help?",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[1]/a[1]/text()[1]",
+                "html": "Contact student support",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[2]/a[1]/text()[1]",
+                "html": "Call +1 (555) 010‑0100",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "© 2026 Northbridge University. Built as an accessible course registration demo.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -796,6 +1240,165 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 25,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Your details, in one place.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Keep your contact information current. The registration form uses these details so you never need to type them twice.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[1]/text()[1]",
+                "html": "Select your program",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[3]/text()[1]",
+                "html": "Data Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[4]/text()[1]",
+                "html": "Mathematics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[5]/text()[1]",
+                "html": "Physics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[6]/text()[1]",
+                "html": "Biology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[7]/text()[1]",
+                "html": "Business",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[8]/text()[1]",
+                "html": "Psychology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[9]/text()[1]",
+                "html": "Art & Design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[5]/select[1]/option[10]/text()[1]",
+                "html": "English",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[6]/select[1]/option[1]/text()[1]",
+                "html": "Select your year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[6]/select[1]/option[2]/text()[1]",
+                "html": "1st year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[6]/select[1]/option[3]/text()[1]",
+                "html": "2nd year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[6]/select[1]/option[4]/text()[1]",
+                "html": "3rd year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[6]/select[1]/option[5]/text()[1]",
+                "html": "4th year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/form[1]/div[1]/div[6]/select[1]/option[6]/text()[1]",
+                "html": "Graduate",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Northbridge University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Office of the Registrar · 100 College Way, Northbridge",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[3]/text()[1]",
+                "html": "Spring 2027 registration is open until January 12.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/h2[1]/text()[1]",
+                "html": "Need help?",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[1]/a[1]/text()[1]",
+                "html": "Contact student support",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[2]/p[2]/a[1]/text()[1]",
+                "html": "Call +1 (555) 010‑0100",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "© 2026 Northbridge University. Built as an accessible course registration demo.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d28d9'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='white'%3ENU%3C/text%",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
+          }
+        ]
       }
     }
   ]

@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T01:59:56.192Z",
+  "checked": "2026-11-19T06:30:19.103Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -586,6 +588,222 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 32,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "CF",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "CampusFlow",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/small[1]/text()[1]",
+                "html": "Course registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Fall 2026 registration is open",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/text()[1]",
+                "html": "Find your next",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/em[1]/text()[1]",
+                "html": "favorite",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/h1[1]/text()[2]",
+                "html": "course.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Explore 18 vibrant courses across 10 departments, build a schedule that fits your life, and register in just a few clicks.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/ul[1]/li[1]/text()[1]",
+                "html": "No application fee",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/ul[1]/li[2]/text()[1]",
+                "html": "Flexible formats",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/ul[1]/li[3]/text()[1]",
+                "html": "Accessible by design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "CS",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/strong[1]/text()[1]",
+                "html": "CS 315 · Web Development",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Mon, Wed, Fri · 09:00",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[2]/span[1]/text()[1]",
+                "html": "ART",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[2]/div[1]/strong[1]/text()[1]",
+                "html": "ART 115 · Digital Design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "Self-paced · Online",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[3]/span[1]/text()[1]",
+                "html": "BIO",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[3]/div[1]/strong[1]/text()[1]",
+                "html": "BIO 150 · Principles of Biology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[2]/div[3]/div[1]/span[1]/text()[1]",
+                "html": "Mon, Wed · 13:00",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Student favorites",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Courses worth talking about",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "A handpicked mix of creative, technical, and world-changing classes. Your next big idea could start here.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[1]/text()[1]",
+                "html": "View all courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Simple by design",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "From curious to registered in three steps",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[5]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Your best semester starts with one click.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[5]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Registration is open now. Browse the catalog and reserve your seat before classes fill up.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
           }
         ]
       }
@@ -1804,6 +2022,122 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 12,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "CF",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "CampusFlow",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/small[1]/text()[1]",
+                "html": "Course registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Choose a course that fits your curiosity.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Browse every class available this year. Search by keyword, then narrow the results by department, level, format, or meeting day.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/p[1]/text()[1]",
+                "html": "Showing all 18 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/button[1]/text()[1]",
+                "html": "Clear all filters",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -2090,6 +2424,187 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 25,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "CF",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "CampusFlow",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/small[1]/text()[1]",
+                "html": "Course registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Reserve your seat in a few simple steps.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Confirm your student details, choose a course and term, then submit the form. You will see a confirmation before anything is final.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/h2[1]/text()[1]",
+                "html": "Your plan at a glance",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/p[1]/text()[1]",
+                "html": "This summary updates whenever you add or remove a course.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/strong[1]/text()[1]",
+                "html": "2",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Courses registered",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/div[1]/div[2]/strong[1]/text()[1]",
+                "html": "7",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Total credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/div[1]/div[3]/strong[1]/text()[1]",
+                "html": "CS 210 · Tue",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Next class",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/ul[1]/li[1]/text()[1]",
+                "html": "Check the meeting time against your weekly schedule.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/ul[1]/li[2]/text()[1]",
+                "html": "Review the format: in person, hybrid, or online.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/aside[1]/div[1]/ul[1]/li[3]/text()[1]",
+                "html": "Keep your student email up to date.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Your schedule",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Your registered courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Review your current registrations or remove a course if your plans change.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[1]/text()[1]",
+                "html": "Add another course",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
           }
         ]
       }
@@ -2417,6 +2932,192 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 26,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "CF",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "CampusFlow",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/small[1]/text()[1]",
+                "html": "Course registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Your details, your schedule, your semester.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Keep your student information up to date and see every course in your registration plan at a glance.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/h2[1]/text()[1]",
+                "html": "Academic snapshot",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/p[1]/text()[1]",
+                "html": "A quick look at your current student record.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[1]/span[1]/text()[1]",
+                "html": "Program",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[1]/strong[1]/text()[1]",
+                "html": "BSc Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[2]/span[1]/text()[1]",
+                "html": "Year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[2]/strong[1]/text()[1]",
+                "html": "2nd year",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[3]/span[1]/text()[1]",
+                "html": "Student ID",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[3]/strong[1]/text()[1]",
+                "html": "U20260418",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[4]/span[1]/text()[1]",
+                "html": "Advising status",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[4]/strong[1]/text()[1]",
+                "html": "On track",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[5]/span[1]/text()[1]",
+                "html": "Registration window",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/aside[1]/div[1]/ul[1]/li[5]/strong[1]/text()[1]",
+                "html": "Open now",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Your schedule",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/h2[1]/text()[1]",
+                "html": "Registered courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "These are the courses currently linked to your student profile.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[1]/text()[1]",
+                "html": "Find another course",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
           }
         ]
       }
@@ -2823,6 +3524,122 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"index.html\" aria-label=\"CampusFlow home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> CF </span> <span class=\"brand-text\"> CampusFlow <small> Course registration </small> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 12,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "CF",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/text()[1]",
+                "html": "CampusFlow",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]/span[2]/small[1]/text()[1]",
+                "html": "Course registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "Student profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Course catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Choose a course that fits your curiosity.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Browse every class available this year. Search by keyword, then narrow the results by department, level, format, or meeting day.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/p[1]/text()[1]",
+                "html": "Showing 4 of 18 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/button[1]/text()[1]",
+                "html": "Clear all filters",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "wcag": [],
+            "message": "Bad value  for attribute “…” on element “…”: Illegal character after “…”. Space is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect wi",
+                "message": "Bad value  for attribute “href” on element “link”: Illegal character after “ta:”. Space is not allowed."
+              }
+            ]
           }
         ]
       }

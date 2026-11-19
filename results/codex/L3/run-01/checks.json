@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T00:33:42.532Z",
+  "checked": "2026-11-19T06:07:19.027Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -159,6 +161,45 @@
             "count": 4
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> ✦ </span> <span> campus <span class=\"brand-accent\"> compass </span> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[2]/article[1]/div[2]/a[1]",
+                "html": "<a href=\"#catalog\" aria-label=\"View ART 210 in course catalog\"> Explore course → </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[2]/article[2]/div[2]/a[1]",
+                "html": "<a href=\"#catalog\" aria-label=\"View BIO 145 in course catalog\"> Explore course → </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[2]/div[2]/article[3]/div[2]/a[1]",
+                "html": "<a href=\"#catalog\" aria-label=\"View BUS 230 in course catalog\"> Explore course → </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -301,6 +342,90 @@
             "count": 15
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 13,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> ✦ </span> <span> campus <span class=\"brand-accent\"> compass </span> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[1]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ART 210\" aria-label=\"Add ART 210 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[2]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"BIO 145\" aria-label=\"Add BIO 145 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[3]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"BUS 230\" aria-label=\"Add BUS 230 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[4]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"COM 218\" aria-label=\"Add COM 218 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[6]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"DES 305\" aria-label=\"Add DES 305 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[7]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ECO 202\" aria-label=\"Add ECO 202 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[8]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ENG 240\" aria-label=\"Add ENG 240 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[9]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"ENV 115\" aria-label=\"Add ENV 115 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[10]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"HIS 180\" aria-label=\"Add HIS 180 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[11]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"MTH 125\" aria-label=\"Add MTH 125 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[12]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"MUS 260\" aria-label=\"Add MUS 260 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[3]/article[14]/div[2]/button[1]",
+                "html": "<button class=\"button card-action \" type=\"button\" data-course=\"SOC 150\" aria-label=\"Add SOC 150 to your registration\"> Add course </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -412,6 +537,77 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r46",
+            "wcag": [
+              "1.3.1"
+            ],
+            "help": "The header cell is not assigned to any cell",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r46",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/section[1]/div[2]/table[1]/thead[1]/tr[1]/th[1]",
+                "html": "<th scope=\"col\"> Course </th>",
+                "summary": "The header cell is not assigned to any cell"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/section[1]/div[2]/table[1]/thead[1]/tr[1]/th[2]",
+                "html": "<th scope=\"col\"> Schedule </th>",
+                "summary": "The header cell is not assigned to any cell"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/section[1]/div[2]/table[1]/thead[1]/tr[1]/th[3]",
+                "html": "<th scope=\"col\"> Credits </th>",
+                "summary": "The header cell is not assigned to any cell"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/section[1]/div[2]/table[1]/thead[1]/tr[1]/th[4]",
+                "html": "<th scope=\"col\"> Status </th>",
+                "summary": "The header cell is not assigned to any cell"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r68",
+            "wcag": [
+              "1.3.1"
+            ],
+            "help": "The element owns no elements as required by its semantic role",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r68",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/section[1]/div[2]/table[1]/tbody[1]",
+                "html": "<tbody id=\"registered-table-body\"></tbody>",
+                "summary": "The element owns no elements as required by its semantic role"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> ✦ </span> <span> campus <span class=\"brand-accent\"> compass </span> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -516,6 +712,30 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a class=\"brand\" href=\"#home\" aria-label=\"Campus Compass home\"> <span class=\"brand-mark\" aria-hidden=\"true\"> ✦ </span> <span> campus <span class=\"brand-accent\"> compass </span> </span> </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     }
   ]

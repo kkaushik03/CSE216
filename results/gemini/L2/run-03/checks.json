@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:26:58.538Z",
+  "checked": "2026-11-19T06:18:30.496Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -403,6 +405,195 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 9
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 9,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"brandHomeLink\" aria-label=\"Horizon University Portal Home\"> <div class=\"logo-icon\" aria-hidden=\"true\"> <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"avatar-button\" id=\"headerAvatarBtn\" aria-label=\"Open student profile\" data-target=\"profile-view\"> <span class=\"avatar-initials\"> ML </span> </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[1]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cse-101\" aria-label=\"View syllabus and prerequisites for CSE 101\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[2]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"dsc-100\" aria-label=\"View syllabus and prerequisites for DSC 100\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[2]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"dsc-100\" aria-label=\"Add DSC 100 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[3]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cse-110\" aria-label=\"View syllabus and prerequisites for CSE 110\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[3]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"cse-110\" aria-label=\"Add CSE 110 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[4]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cogs-120\" aria-label=\"View syllabus and prerequisites for COGS 120\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[4]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"cogs-120\" aria-label=\"Add COGS 120 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 2.86:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 9,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Fall 2026",
+                "summary": "The highest possible contrast of the text is 2.86:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "0",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "Active Window",
+                "summary": "The highest possible contrast of the text is 3.45:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[1]/div[1]/span[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[2]/div[1]/span[1]/text()[1]",
+                "html": "Data Science",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[2]/article[3]/div[1]/span[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[3]/div[1]/div[1]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "OCT",
+                "summary": "The highest possible contrast of the text is 3.68:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[3]/div[1]/div[1]/div[2]/div[2]/span[1]/text()[1]",
+                "html": "Happening this week",
+                "summary": "The highest possible contrast of the text is 2.86:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "© 2026 Horizon State University Registrar Office. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "html": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "html": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\">Fall 2",
+                "html": "<option value=\"Fall 2026\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>Enroll",
+                "html": "<h3>Enroll",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "v> <h3 class=\"course-title\">The Ce",
+                "html": "v> <h3 class=\"course-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h4>Instru",
+                "html": "<h4>Instru",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              },
+              {
+                "selector": "> <h4>Regist",
+                "html": "> <h4>Regist",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -887,6 +1078,285 @@
             "count": 25
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 24,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"brandHomeLink\" aria-label=\"Horizon University Portal Home\"> <div class=\"logo-icon\" aria-hidden=\"true\"> <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"avatar-button\" id=\"headerAvatarBtn\" aria-label=\"Open student profile\" data-target=\"profile-view\"> <span class=\"avatar-initials\"> ML </span> </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[1]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"bild-1\" aria-label=\"View syllabus and prerequisites for BILD 1\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[1]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"bild-1\" aria-label=\"Add BILD 1 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=\"5",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[2]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cogs-10\" aria-label=\"View syllabus and prerequisites for COGS 10\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[2]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"cogs-10\" aria-label=\"Add COGS 10 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[3]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cogs-120\" aria-label=\"View syllabus and prerequisites for COGS 120\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[3]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"cogs-120\" aria-label=\"Add COGS 120 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[4]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cse-101\" aria-label=\"View syllabus and prerequisites for CSE 101\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[5]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cse-110\" aria-label=\"View syllabus and prerequisites for CSE 110\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[5]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"cse-110\" aria-label=\"Add CSE 110 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[6]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cse-150a\" aria-label=\"View syllabus and prerequisites for CSE 150A\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[7]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"cse-291\" aria-label=\"View syllabus and prerequisites for CSE 291\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[7]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"cse-291\" aria-label=\"Add CSE 291 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[8]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"dsc-100\" aria-label=\"View syllabus and prerequisites for DSC 100\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[8]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"dsc-100\" aria-label=\"Add DSC 100 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[9]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"dsc-180a\" aria-label=\"View syllabus and prerequisites for DSC 180A\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[9]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"dsc-180a\" aria-label=\"Add DSC 180A to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[10]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"econ-100a\" aria-label=\"View syllabus and prerequisites for ECON 100A\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[10]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"econ-100a\" aria-label=\"Add ECON 100A to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[11]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"math-109\" aria-label=\"View syllabus and prerequisites for MATH 109\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[11]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"math-109\" aria-label=\"Add MATH 109 to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[12]/div[4]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-sm\" data-action=\"details\" data-id=\"phys-2a\" aria-label=\"View syllabus and prerequisites for PHYS 2A\"> Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[12]/div[4]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" data-action=\"add-cart\" data-id=\"phys-2a\" aria-label=\"Add PHYS 2A to registration cart\"> <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"> <line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line> <line x1=",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.19:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 12,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "0",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[1]/div[1]/span[1]/text()[1]",
+                "html": "Biology",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[4]/div[1]/span[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[5]/div[1]/span[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[6]/div[1]/span[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[7]/div[1]/span[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.63:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[8]/div[1]/span[1]/text()[1]",
+                "html": "Data Science",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[9]/div[1]/span[1]/text()[1]",
+                "html": "Data Science",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[10]/div[1]/span[1]/text()[1]",
+                "html": "Economics",
+                "summary": "The highest possible contrast of the text is 2.86:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[11]/div[1]/span[1]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.57:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/article[12]/div[1]/span[1]/text()[1]",
+                "html": "Physics",
+                "summary": "The highest possible contrast of the text is 3.91:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "© 2026 Horizon State University Registrar Office. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "html": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "html": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\">Fall 2",
+                "html": "<option value=\"Fall 2026\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>Enroll",
+                "html": "<h3>Enroll",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "v> <h3 class=\"course-title\">The Ce",
+                "html": "v> <h3 class=\"course-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h4>Instru",
+                "html": "<h4>Instru",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              },
+              {
+                "selector": "> <h4>Regist",
+                "html": "> <h4>Regist",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1273,6 +1743,130 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"brandHomeLink\" aria-label=\"Horizon University Portal Home\"> <div class=\"logo-icon\" aria-hidden=\"true\"> <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"avatar-button\" id=\"headerAvatarBtn\" aria-label=\"Open student profile\" data-target=\"profile-view\"> <span class=\"avatar-initials\"> ML </span> </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.19:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "0",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/div[4]/span[3]/text()[1]",
+                "html": "Need +8 Units for Full-Time",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "© 2026 Horizon State University Registrar Office. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "html": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "html": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\">Fall 2",
+                "html": "<option value=\"Fall 2026\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>Enroll",
+                "html": "<h3>Enroll",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "v> <h3 class=\"course-title\">The Ce",
+                "html": "v> <h3 class=\"course-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h4>Instru",
+                "html": "<h4>Instru",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              },
+              {
+                "selector": "> <h4>Regist",
+                "html": "> <h4>Regist",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -1700,6 +2294,166 @@
           {
             "rule": "label",
             "count": 3
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r8",
+            "wcag": [
+              "4.1.2"
+            ],
+            "help": "The form field does not have an accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r8",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[3]/div[2]/div[1]/form[1]/div[1]/label[1]/input[1]",
+                "html": "<input type=\"checkbox\" id=\"prefWaitlist\" checked>",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[3]/div[2]/div[1]/form[1]/div[2]/label[1]/input[1]",
+                "html": "<input type=\"checkbox\" id=\"prefSms\" checked>",
+                "summary": "The form field does not have an accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[3]/div[2]/div[1]/form[1]/div[3]/label[1]/input[1]",
+                "html": "<input type=\"checkbox\" id=\"prefConflict\" checked>",
+                "summary": "The form field does not have an accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-logo\" id=\"brandHomeLink\" aria-label=\"Horizon University Portal Home\"> <div class=\"logo-icon\" aria-hidden=\"true\"> <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <path d=\"",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"avatar-button\" id=\"headerAvatarBtn\" aria-label=\"Open student profile\" data-target=\"profile-view\"> <span class=\"avatar-initials\"> ML </span> </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.19:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]/span[2]/text()[1]",
+                "html": "0",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "100% Complete",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "100% Complete",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/span[2]/text()[1]",
+                "html": "75% Complete",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "© 2026 Horizon State University Registrar Office. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "html": "<span class=\"nav-badge\" id=\"cartCountBadge\" aria-label=\"Courses in cart\">0</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "html": "--> <div class=\"course-cards-grid\" id=\"catalogGrid\" aria-label=\"Course list\"> <",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\">Fall 2",
+                "html": "<option value=\"Fall 2026\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>Enroll",
+                "html": "<h3>Enroll",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "v> <h3 class=\"course-title\">The Ce",
+                "html": "v> <h3 class=\"course-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h4>Instru",
+                "html": "<h4>Instru",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              },
+              {
+                "selector": "> <h4>Regist",
+                "html": "> <h4>Regist",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

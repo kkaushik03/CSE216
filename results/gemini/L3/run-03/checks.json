@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:29:34.170Z",
+  "checked": "2026-11-19T06:23:36.385Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -388,6 +390,142 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" id=\"brand-home-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg viewBox=\"0 0 40 40\" width=\"36\" height=\"36\" fill=\"currentColor\" focusable=\"false\"> <path d=\"M20 2L2 12l18 10 18-10L20 2zm0 24.5L7.5 19.5V28L20 35l12.5-7v-",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/span[3]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AM",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/section[4]/div[1]/div[1]/div[1]/text()[1]",
+                "html": "1",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "© 2026 Apex University Board of Regents. All Rights Reserved.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Built with accessible semantic HTML5, high-contrast CSS, and keyboard-first interactions.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "html": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "html": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "html": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "html": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "html": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
           }
         ]
       }
@@ -775,6 +913,142 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" id=\"brand-home-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg viewBox=\"0 0 40 40\" width=\"36\" height=\"36\" fill=\"currentColor\" focusable=\"false\"> <path d=\"M20 2L2 12l18 10 18-10L20 2zm0 24.5L7.5 19.5V28L20 35l12.5-7v-",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/span[3]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AM",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/section[4]/div[1]/div[1]/div[1]/text()[1]",
+                "html": "1",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "© 2026 Apex University Board of Regents. All Rights Reserved.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Built with accessible semantic HTML5, high-contrast CSS, and keyboard-first interactions.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "html": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "html": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "html": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "html": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "html": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1109,6 +1383,182 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 13
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" id=\"brand-home-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg viewBox=\"0 0 40 40\" width=\"36\" height=\"36\" fill=\"currentColor\" focusable=\"false\"> <path d=\"M20 2L2 12l18 10 18-10L20 2zm0 24.5L7.5 19.5V28L20 35l12.5-7v-",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[1]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10450\" aria-label=\"View syllabus and prerequisites for CSE 101: Design and Analysis of Algorithms\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[2]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10452\" aria-label=\"View syllabus and prerequisites for CSE 216: Advanced Software Engineering\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[3]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10455\" aria-label=\"View syllabus and prerequisites for DSC 140A: Probabilistic Modeling & ML\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[4]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10456\" aria-label=\"View syllabus and prerequisites for DSGN 100: Prototyping Accessible Interfaces\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[5]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10460\" aria-label=\"View syllabus and prerequisites for MATH 180A: Introduction to Probability\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[6]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10465\" aria-label=\"View syllabus and prerequisites for CSE 110: Software Engineering Project Lab\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[7]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10470\" aria-label=\"View syllabus and prerequisites for PHYS 2A: Physics - Mechanics\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[8]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10480\" aria-label=\"View syllabus and prerequisites for BENG 100: Frontiers of Bioengineering\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/section[2]/article[9]/div[3]/button[1]",
+                "html": "<button type=\"button\" class=\"btn btn-sm btn-outline btn-card-details\" data-crn=\"10495\" aria-label=\"View syllabus and prerequisites for MATH 20C: Calculus & Analytic Geometry for Science\"> Syllabus & Details </button>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/span[3]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AM",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "© 2026 Apex University Board of Regents. All Rights Reserved.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Built with accessible semantic HTML5, high-contrast CSS, and keyboard-first interactions.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "html": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "html": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "html": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "html": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "html": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "= --> <section id=\"view-home\" class=\"page-view\" aria-labelledby=\"home-welcome-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-home\" class=\"page-view\" aria-labelledby=\"home-welcome-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
           }
         ]
       }
@@ -1483,6 +1933,147 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" id=\"brand-home-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg viewBox=\"0 0 40 40\" width=\"36\" height=\"36\" fill=\"currentColor\" focusable=\"false\"> <path d=\"M20 2L2 12l18 10 18-10L20 2zm0 24.5L7.5 19.5V28L20 35l12.5-7v-",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.77:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AM",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/section[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/span[1]/text()[1]",
+                "html": "WLH 2001",
+                "summary": "The highest possible contrast of the text is 2.56:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/section[2]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[5]/span[1]/text()[1]",
+                "html": "PETER 108",
+                "summary": "The highest possible contrast of the text is 2.45:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[1]/section[2]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[5]/span[1]/text()[1]",
+                "html": "CENTR 115",
+                "summary": "The highest possible contrast of the text is 2.56:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "© 2026 Apex University Board of Regents. All Rights Reserved.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Built with accessible semantic HTML5, high-contrast CSS, and keyboard-first interactions.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "html": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "html": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "html": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "html": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "html": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "= --> <section id=\"view-home\" class=\"page-view\" aria-labelledby=\"home-welcome-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-home\" class=\"page-view\" aria-labelledby=\"home-welcome-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-profile\" class=\"page-view\" aria-labelledby=\"profile-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1749,6 +2340,137 @@
           {
             "rule": "label-content-name-mismatch",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[1]/a[1]",
+                "html": "<a href=\"#home\" class=\"brand-link\" id=\"brand-home-link\" aria-label=\"Apex University Portal Home\"> <div class=\"brand-logo\" aria-hidden=\"true\"> <svg viewBox=\"0 0 40 40\" width=\"36\" height=\"36\" fill=\"currentColor\" focusable=\"false\"> <path d=\"M20 2L2 12l18 10 18-10L20 2zm0 24.5L7.5 19.5V28L20 35l12.5-7v-",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]/span[3]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AM",
+                "summary": "The highest possible contrast of the text is 3.77:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "© 2026 Apex University Board of Regents. All Rights Reserved.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[2]/div[1]/p[2]/text()[1]",
+                "html": "Built with accessible semantic HTML5, high-contrast CSS, and keyboard-first interactions.",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "wcag": [],
+            "message": "The “…” attribute must not be specified on any “…” element unless the element has a “…” value other than “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, “…”, or “…”.",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "html": "<span class=\"nav-badge\" id=\"nav-registered-count\" aria-label=\"3 courses registered\">3</spa",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "html": "--> <div class=\"header-user-status\" aria-label=\"Active student session\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "html": "<div class=\"hero-stats-card\" aria-labelledby=\"academic-snapshot-heading\">",
+                "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "html": "<div class=\"active-filter-tags\" id=\"active-filter-tags\" aria-label=\"Active filters\"><span",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "html": "<div class=\"schedule-summary-pill\" aria-label=\"Total units summary\">",
+                "message": "The “aria-label” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              },
+              {
+                "selector": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "html": "<span class=\"wcag-badge\" aria-label=\"WCAG 2.2 Level AA Conformance Badge\">WCAG 2",
+                "message": "The “aria-label” attribute must not be specified on any “span” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”."
+              }
+            ]
+          },
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "= --> <section id=\"view-home\" class=\"page-view\" aria-labelledby=\"home-welcome-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-home\" class=\"page-view\" aria-labelledby=\"home-welcome-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-catalog\" class=\"page-view\" aria-labelledby=\"catalog-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "html": "= --> <section id=\"view-registration\" class=\"page-view\" aria-labelledby=\"reg-main-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "html": "<option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
           }
         ]
       }

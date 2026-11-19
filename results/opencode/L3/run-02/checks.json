@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T04:18:12.504Z",
+  "checked": "2026-11-19T06:35:51.133Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -151,6 +153,36 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Plan your next semester with confidence",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Explore more than a dozen courses across eight departments, compare schedules and build a registration that fits your goals.",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -242,6 +274,13 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -316,6 +355,27 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "rm-error\"><option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "html": "rm-error\"><option value=\"Fall 2026\" selected=\"\">Fall 2",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -416,6 +476,13 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
         "issues": []
       }
     }

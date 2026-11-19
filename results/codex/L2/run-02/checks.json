@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T00:32:18.044Z",
+  "checked": "2026-11-19T06:04:58.829Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -189,6 +191,62 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[2]",
+                "html": "<a class=\"avatar-link\" href=\"#profile\" aria-label=\"View student profile\"> JD </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.73:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "UNIVERSITY",
+                "summary": "The highest possible contrast of the text is 3.73:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Your next chapter starts here",
+                "summary": "The highest possible contrast of the text is 4.14:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[2]/div[2]/a[1]/text()[1]",
+                "html": "Browse all courses",
+                "summary": "The highest possible contrast of the text is 4.46:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[2]/div[3]/article[2]/div[1]/span[1]/text()[1]",
+                "html": "ART 108",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -432,6 +490,96 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[2]",
+                "html": "<a class=\"avatar-link\" href=\"#profile\" aria-label=\"View student profile\"> JD </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.73:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "UNIVERSITY",
+                "summary": "The highest possible contrast of the text is 3.73:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Find your next favorite class",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "A little curiosity can take you a long way. Explore this semester’s courses.",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/p[1]/text()[1]",
+                "html": "12 courses found",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[2]/article[2]/div[1]/span[1]/text()[1]",
+                "html": "ART 108",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[2]/article[5]/div[1]/span[1]/text()[1]",
+                "html": "MTH 142",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[2]/article[8]/div[1]/span[1]/text()[1]",
+                "html": "MUS 120",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[2]/article[11]/div[1]/span[1]/text()[1]",
+                "html": "COM 150",
+                "summary": "The highest possible contrast of the text is 4.21:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "pan></div><h3>Ecolog",
+                "html": "pan></div><h3>Ecolog",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -591,6 +739,57 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[2]",
+                "html": "<a class=\"avatar-link\" href=\"#profile\" aria-label=\"View student profile\"> JD </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.73:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "UNIVERSITY",
+                "summary": "The highest possible contrast of the text is 3.73:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "Build a semester that feels like you",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Choose a course and add it to your schedule in just a few steps.",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     },
     {
@@ -734,6 +933,57 @@
             "count": 2
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r14",
+            "wcag": [
+              "2.5.3"
+            ],
+            "help": "The visible text content of the element is not included within its accessible name",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r14",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[2]",
+                "html": "<a class=\"avatar-link\" href=\"#profile\" aria-label=\"View student profile\"> JD </a>",
+                "summary": "The visible text content of the element is not included within its accessible name"
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.73:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/a[1]/span[2]/span[1]/text()[1]",
+                "html": "UNIVERSITY",
+                "summary": "The highest possible contrast of the text is 3.73:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[1]/text()[1]",
+                "html": "A little home base",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/div[1]/p[2]/text()[1]",
+                "html": "Your details and the courses you have planned for this semester.",
+                "summary": "The highest possible contrast of the text is 4.43:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": []
       }
     }
   ]

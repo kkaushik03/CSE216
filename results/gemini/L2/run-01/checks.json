@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-04T00:35:48.765Z",
+  "checked": "2026-11-19T06:14:12.473Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -20,6 +22,13 @@
       },
       "lighthouse": {
         "score": 100,
+        "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
         "issues": []
       }
     },
@@ -37,6 +46,37 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "> <section id=\"home\" class=\"page\" aria-labelledby=\"home-heading\" hidden=\"true\">",
+                "html": "> <section id=\"home\" class=\"page\" aria-labelledby=\"home-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"registration\" class=\"page\" aria-labelledby=\"registration-heading\" hidden=\"true\">",
+                "html": "> <section id=\"registration\" class=\"page\" aria-labelledby=\"registration-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"profile\" class=\"page\" aria-labelledby=\"profile-heading\" hidden=\"true\">",
+                "html": "> <section id=\"profile\" class=\"page\" aria-labelledby=\"profile-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -53,6 +93,37 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "> <section id=\"home\" class=\"page\" aria-labelledby=\"home-heading\" hidden=\"true\">",
+                "html": "> <section id=\"home\" class=\"page\" aria-labelledby=\"home-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"catalog\" class=\"page\" aria-labelledby=\"catalog-heading\" hidden=\"true\">",
+                "html": "> <section id=\"catalog\" class=\"page\" aria-labelledby=\"catalog-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"profile\" class=\"page\" aria-labelledby=\"profile-heading\" hidden=\"true\">",
+                "html": "> <section id=\"profile\" class=\"page\" aria-labelledby=\"profile-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -129,6 +200,60 @@
           {
             "rule": "color-contrast",
             "count": 2
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.81:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/table[1]/tbody[1]/tr[1]/td[4]/span[1]/text()[1]",
+                "html": "Enrolled",
+                "summary": "The highest possible contrast of the text is 3.81:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/table[1]/tbody[1]/tr[2]/td[4]/span[1]/text()[1]",
+                "html": "Waitlisted",
+                "summary": "The highest possible contrast of the text is 2.26:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "> <section id=\"home\" class=\"page\" aria-labelledby=\"home-heading\" hidden=\"true\">",
+                "html": "> <section id=\"home\" class=\"page\" aria-labelledby=\"home-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"catalog\" class=\"page\" aria-labelledby=\"catalog-heading\" hidden=\"true\">",
+                "html": "> <section id=\"catalog\" class=\"page\" aria-labelledby=\"catalog-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              },
+              {
+                "selector": "> <section id=\"registration\" class=\"page\" aria-labelledby=\"registration-heading\" hidden=\"true\">",
+                "html": "> <section id=\"registration\" class=\"page\" aria-labelledby=\"registration-heading\" hidden=\"true\">",
+                "message": "Bad value “true” for attribute “hidden” on element “section”."
+              }
+            ]
           }
         ]
       }

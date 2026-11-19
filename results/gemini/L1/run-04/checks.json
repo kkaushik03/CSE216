@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:24:21.241Z",
+  "checked": "2026-11-19T06:38:58.960Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -495,7 +497,163 @@
         ]
       },
       "pa11y": {
-        "error": "Assignment to constant variable."
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f.",
+            "count": 16,
+            "nodes": [
+              {
+                "selector": "html > body > div:nth-child(1) > div > span:nth-child(1)",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navRegisteredCount",
+                "html": "<span class=\"nav-badge\" id=\"navRegisteredCount\">2</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navProfileTrigger > div > span:nth-child(2)",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #000007."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 2:00 PM - 3:20 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Tech Center 204 (Hybrid)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 18 of 30 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #000007."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 1:00 PM - 1:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>SciHall 301 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-low\"> 5 of 45 seats op...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-ds\">Data Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.57:1. Recommendation:  change text colour to #000203."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 12:30 PM - 1:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>DataHub 110 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 22 of 55 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3)",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University...</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 14
       },
       "lighthouse": {
         "score": 93,
@@ -503,6 +661,302 @@
           {
             "rule": "color-contrast",
             "count": 19
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 16,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "FALL 2026",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "2",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "CS Junior • 3.84 GPA",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[1]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[1]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 2:00 PM - 3:20 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[1]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Tech Center 204 (Hybrid)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[1]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "18 of 30 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[2]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 1:00 PM - 1:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[2]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "SciHall 301 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[2]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "5 of 45 seats open",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Data Science",
+                "summary": "The highest possible contrast of the text is 3.57:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[3]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 12:30 PM - 1:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[3]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "DataHub 110 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[3]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "22 of 55 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r65",
+            "wcag": [
+              "2.4.7"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r65",
+            "count": 10,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[2]/button[1]",
+                "html": "<button class=\"btn btn-primary btn-lg\" onclick=\"navigateTo('catalog')\"> <i class=\"fa-solid fa-compass\"></i> Explore Course Catalog </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[2]/button[2]",
+                "html": "<button class=\"btn btn-outline btn-lg\" onclick=\"navigateTo('registration')\"> <i class=\"fa-solid fa-id-card\"></i> Manage Registration </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"btn btn-secondary\" onclick=\"navigateTo('catalog')\"> View All Courses <i class=\"fa-solid fa-arrow-right\"></i> </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[1]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('CS216')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[1]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS216')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[2]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('CS182')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[2]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS182')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[3]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('DS100')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[2]/div[1]/div[2]/article[3]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('DS100')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[3]/div[1]/div[2]/button[1]",
+                "html": "<button class=\"btn btn-primary btn-glow\" onclick=\"navigateTo('registration')\"> <i class=\"fa-solid fa-bolt\"></i> Register Now </button>",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[1]/text()[2]",
+                "html": "Fall Semester 2026 Enrollment Live",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/h1[1]/text()[1]",
+                "html": "Design Your Future with",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/h1[1]/span[1]/text()[1]",
+                "html": "Apex University",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/p[1]/text()[1]",
+                "html": "Browse world-class courses, track degree milestones, and build your ideal academic schedule with real-time seat availability and intelligent prerequisite checks.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[2]/button[1]/text()[2]",
+                "html": "Explore Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[2]/button[2]/text()[2]",
+                "html": "Manage Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "14",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/span[2]/text()[1]",
+                "html": "Available Courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]/span[1]/text()[1]",
+                "html": "4,850+",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]/span[2]/text()[1]",
+                "html": "Active Students",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[3]/div[2]/span[1]/text()[1]",
+                "html": "8 Units",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[3]/div[2]/span[2]/text()[1]",
+                "html": "Your Enrolled Units",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[2]/span[1]/text()[1]",
+                "html": "8",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/div[3]/div[4]/div[2]/span[2]/text()[1]",
+                "html": "Academic Depts",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[1]/div[2]/div[1]/div[1]/text()[1]",
+                "html": "01",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[1]/div[2]/div[2]/div[1]/text()[1]",
+                "html": "02",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[1]/div[2]/div[3]/div[1]/text()[1]",
+                "html": "03",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/section[1]/div[2]/div[4]/div[1]/text()[1]",
+                "html": "04",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>No mat",
+                "html": "<h3>No mat",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-title\">Add Co",
+                "html": "<h3 class=\"card-title\">Add Co",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -1378,7 +1832,404 @@
         ]
       },
       "pa11y": {
-        "error": "Assignment to constant variable."
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f.",
+            "count": 59,
+            "nodes": [
+              {
+                "selector": "html > body > div:nth-child(1) > div > span:nth-child(1)",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navRegisteredCount",
+                "html": "<span class=\"nav-badge\" id=\"navRegisteredCount\">2</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navProfileTrigger > div > span:nth-child(2)",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ART105 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-art\">Visual &amp; Digital Arts</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.91:1. Recommendation:  change background to #fdfdfd."
+              },
+              {
+                "selector": "#card-ART105 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 10:00 AM - 11:50 AM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ART105 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Arts Studio B (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ART105 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-low\"> 6 of 25 seats op...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#card-BIO100 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-bio\">Biological Sciences</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.32:1. Recommendation:  change text colour to #000201."
+              },
+              {
+                "selector": "#card-BIO100 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 11:00 AM - 11:50 AM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-BIO100 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>BioMed 102 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-BIO100 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 8 of 60 seats op...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-BIO150 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-bio\">Biological Sciences</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.32:1. Recommendation:  change text colour to #000201."
+              },
+              {
+                "selector": "#card-BIO150 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 11:00 AM - 12:20 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-BIO150 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>BioMed 215 (Hybrid)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-BIO150 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 15 of 40 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-CS101 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #000007."
+              },
+              {
+                "selector": "#card-CS101 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 10:00 AM - 10:50 AM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS101 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Turing Hall 101 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS101 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 42 of 50 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #000007."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 1:00 PM - 1:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>SciHall 301 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS182 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-low\"> 5 of 45 seats op...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-cs\">Computer Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #000007."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 2:00 PM - 3:20 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Tech Center 204 (Hybrid)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-CS216 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 18 of 30 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-ds\">Data Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.57:1. Recommendation:  change text colour to #000203."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 12:30 PM - 1:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>DataHub 110 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-DS100 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 22 of 55 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-DS210 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-ds\">Data Science</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.57:1. Recommendation:  change text colour to #000203."
+              },
+              {
+                "selector": "#card-DS210 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MW 3:30 PM - 4:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-DS210 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>DataHub 205 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-DS210 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 10 of 35 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-ECON101 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-econ\">Economics</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.86:1. Recommendation:  change text colour to #020100."
+              },
+              {
+                "selector": "#card-ECON101 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 2:00 PM - 2:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ECON101 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Virtual Lecture Hall (Online)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ECON101 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 30 of 80 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-ECON130 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-econ\">Economics</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.86:1. Recommendation:  change text colour to #020100."
+              },
+              {
+                "selector": "#card-ECON130 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 3:30 PM - 4:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ECON130 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>SocialSci 210 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-ECON130 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 14 of 40 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-MATH109 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-math\">Mathematics</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.32:1. Recommendation:  change text colour to #000201."
+              },
+              {
+                "selector": "#card-MATH109 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 9:00 AM - 9:50 AM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-MATH109 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Euclid Hall 120 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-MATH109 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 25 of 60 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-MATH180A > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-math\">Mathematics</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.32:1. Recommendation:  change text colour to #000201."
+              },
+              {
+                "selector": "#card-MATH180A > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 9:30 AM - 10:50 AM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-MATH180A > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Virtual Classroom Zoom (Online)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-MATH180A > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 12 of 50 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-PHIL110 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-phil\">Philosophy &amp; Ethics</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.24:1. Recommendation:  change text colour to #205ee6."
+              },
+              {
+                "selector": "#card-PHIL110 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>TR 1:00 PM - 2:20 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-PHIL110 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>Humanities 302 (Hybrid)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-PHIL110 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 16 of 35 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#card-PSYC101 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > span",
+                "html": "<span>MWF 12:00 PM - 12:50 PM</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-PSYC101 > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > span",
+                "html": "<span>MindCenter 101 (In-Person)</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#card-PSYC101 > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"seats-open\"> 20 of 65 seats o...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3)",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University...</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+            "impact": "error",
+            "wcag": [
+              "4.1.1"
+            ],
+            "message": "Duplicate id attribute value \"card-CS182\" found on the web page.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#card-CS182",
+                "html": "<article class=\"course-card\" id=\"card-CS182\"> <div class=\"course-card-...</article>",
+                "message": "Duplicate id attribute value \"card-CS182\" found on the web page."
+              },
+              {
+                "selector": "#card-CS216",
+                "html": "<article class=\"course-card\" id=\"card-CS216\"> <div class=\"course-card-...</article>",
+                "message": "Duplicate id attribute value \"card-CS216\" found on the web page."
+              },
+              {
+                "selector": "#card-DS100",
+                "html": "<article class=\"course-card\" id=\"card-DS100\"> <div class=\"course-card-...</article>",
+                "message": "Duplicate id attribute value \"card-DS100\" found on the web page."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 14
       },
       "lighthouse": {
         "score": 86,
@@ -1394,6 +2245,528 @@
           {
             "rule": "target-size",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 59,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "FALL 2026",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "2",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "CS Junior • 3.84 GPA",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[1]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Visual & Digital Arts",
+                "summary": "The highest possible contrast of the text is 3.91:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[1]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 10:00 AM - 11:50 AM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[1]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Arts Studio B (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[1]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "6 of 25 seats open",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Biological Sciences",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[2]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 11:00 AM - 11:50 AM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[2]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "BioMed 102 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[2]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "8 of 60 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Biological Sciences",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[3]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 11:00 AM - 12:20 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[3]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "BioMed 215 (Hybrid)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[3]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "15 of 40 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[4]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[4]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 10:00 AM - 10:50 AM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[4]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Turing Hall 101 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[4]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "42 of 50 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[5]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[5]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 1:00 PM - 1:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[5]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "SciHall 301 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[5]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "5 of 45 seats open",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[6]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Computer Science",
+                "summary": "The highest possible contrast of the text is 3.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[6]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 2:00 PM - 3:20 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[6]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Tech Center 204 (Hybrid)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[6]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "18 of 30 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[7]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Data Science",
+                "summary": "The highest possible contrast of the text is 3.57:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[7]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 12:30 PM - 1:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[7]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "DataHub 110 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[7]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "22 of 55 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[8]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Data Science",
+                "summary": "The highest possible contrast of the text is 3.57:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[8]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MW 3:30 PM - 4:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[8]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "DataHub 205 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[8]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "10 of 35 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[9]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Economics",
+                "summary": "The highest possible contrast of the text is 2.86:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[9]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 2:00 PM - 2:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[9]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Virtual Lecture Hall (Online)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[9]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "30 of 80 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[10]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Economics",
+                "summary": "The highest possible contrast of the text is 2.86:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[10]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 3:30 PM - 4:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[10]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "SocialSci 210 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[10]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "14 of 40 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[11]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[11]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 9:00 AM - 9:50 AM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[11]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Euclid Hall 120 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[11]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "25 of 60 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[12]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[12]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 9:30 AM - 10:50 AM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[12]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Virtual Classroom Zoom (Online)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[12]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "12 of 50 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[13]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Philosophy & Ethics",
+                "summary": "The highest possible contrast of the text is 4.24:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[13]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "TR 1:00 PM - 2:20 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[13]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Humanities 302 (Hybrid)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[13]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "16 of 35 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[14]/div[3]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "MWF 12:00 PM - 12:50 PM",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[14]/div[3]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "MindCenter 101 (In-Person)",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[14]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "20 of 65 seats open",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r65",
+            "wcag": [
+              "2.4.7"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r65",
+            "count": 28,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[1]/div[1]/div[1]/button[1]",
+                "html": "<button class=\"search-clear-btn\" id=\"clearSearchBtn\" title=\"Clear search\"> <i class=\"fa-solid fa-xmark\"></i> </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[1]/div[2]/div[5]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-full\" id=\"resetFiltersBtn\"> <i class=\"fa-solid fa-rotate-left\"></i> Reset Filters </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[1]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('ART105')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[1]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('ART105')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[2]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('BIO100')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[2]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('BIO100')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[3]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('BIO150')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[3]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('BIO150')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[4]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('CS101')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[5]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('CS182')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[5]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS182')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[6]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('CS216')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[6]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('CS216')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[7]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('DS100')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[7]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('DS100')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[8]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('DS210')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[8]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('DS210')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[9]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('ECON101')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[9]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('ECON101')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[10]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('ECON130')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[10]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('ECON130')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[11]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('MATH109')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[12]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('MATH180A')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[12]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('MATH180A')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[13]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('PHIL110')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[13]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('PHIL110')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[14]/div[3]/div[3]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"openDetailModal('PSYC101')\"> <i class=\"fa-solid fa-circle-info\"></i> Details </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/div[2]/article[14]/div[3]/div[3]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm btn-full\" onclick=\"promptDirectEnrollment('PSYC101')\"> <i class=\"fa-solid fa-plus-circle\"></i> Quick Register </button>",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Duplicate ID “…”.",
+            "wcag": [],
+            "message": "Duplicate ID “…”.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "e> <article class=\"course-card\" id=\"card-CS182\">",
+                "html": "e> <article class=\"course-card\" id=\"card-CS182\">",
+                "message": "Duplicate ID “card-CS182”."
+              },
+              {
+                "selector": "e> <article class=\"course-card\" id=\"card-CS216\">",
+                "html": "e> <article class=\"course-card\" id=\"card-CS216\">",
+                "message": "Duplicate ID “card-CS216”."
+              },
+              {
+                "selector": "e> <article class=\"course-card\" id=\"card-DS100\">",
+                "html": "e> <article class=\"course-card\" id=\"card-DS100\">",
+                "message": "Duplicate ID “card-DS100”."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "> <h3 class=\"course-title\">Digita",
+                "html": "> <h3 class=\"course-title\">Digita",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-title\">Add Co",
+                "html": "<h3 class=\"card-title\">Add Co",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -1619,7 +2992,144 @@
         ]
       },
       "pa11y": {
-        "error": "Assignment to constant variable."
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f.",
+            "count": 9,
+            "nodes": [
+              {
+                "selector": "html > body > div:nth-child(1) > div > span:nth-child(1)",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navProfileTrigger > div > span:nth-child(2)",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#registrationForm > div:nth-child(1) > label > span",
+                "html": "<span class=\"required\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#registrationForm > div:nth-child(3) > div:nth-child(2) > label > span",
+                "html": "<span class=\"required\">*</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change text colour to #3f3f3f."
+              },
+              {
+                "selector": "#registeredTableBody > tr:nth-child(1) > td:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-cs\">CS</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.99:1. Recommendation:  change text colour to #000007."
+              },
+              {
+                "selector": "#registeredTableBody > tr:nth-child(1) > td:nth-child(9) > button",
+                "html": "<button class=\"btn-drop-action\" onclick=\"promptDropCourse('CS101')\" title=\"Drop course\"> <i class=\"fa-sol...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.01:1. Recommendation:  change text colour to #010101."
+              },
+              {
+                "selector": "#registeredTableBody > tr:nth-child(2) > td:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"dept-badge badge-dept-math\">MATH</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.32:1. Recommendation:  change text colour to #000201."
+              },
+              {
+                "selector": "#registeredTableBody > tr:nth-child(2) > td:nth-child(9) > button",
+                "html": "<button class=\"btn-drop-action\" onclick=\"promptDropCourse('MATH109')\" title=\"Drop course\"> <i class=\"fa-sol...</button>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.01:1. Recommendation:  change text colour to #010101."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3)",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University...</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #01aa72.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#view-registration > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div",
+                "html": "<div class=\"reg-stat-value text-green\">Cleared</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #01aa72."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 14
       },
       "lighthouse": {
         "score": 92,
@@ -1631,6 +3141,145 @@
           {
             "rule": "heading-order",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 8,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "FALL 2026",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "CS Junior • 3.84 GPA",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[1]/div[4]/div[1]/text()[1]",
+                "html": "Cleared",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/span[2]/text()[1]",
+                "html": "CS",
+                "summary": "The highest possible contrast of the text is 3.99:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[9]/button[1]/text()[2]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.01:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[2]/table[1]/tbody[1]/tr[2]/td[1]/span[2]/text()[1]",
+                "html": "MATH",
+                "summary": "The highest possible contrast of the text is 3.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[2]/table[1]/tbody[1]/tr[2]/td[9]/button[1]/text()[2]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.01:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r65",
+            "wcag": [
+              "2.4.7"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r65",
+            "count": 7,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[2]/div[1]/form[1]/div[4]/label[1]/input[1]",
+                "html": "<input type=\"checkbox\" id=\"regPrereqAgree\" required=\"\">",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[2]/div[1]/form[1]/button[1]",
+                "html": "<button type=\"submit\" class=\"btn btn-primary btn-full btn-lg\" id=\"submitRegBtn\"> <i class=\"fa-solid fa-shield-halved\"></i> Review & Register </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[2]/div[2]/div[2]/button[1]",
+                "html": "<button class=\"btn btn-outline btn-full\" onclick=\"navigateTo('catalog')\"> <i class=\"fa-solid fa-arrow-up-right-from-square\"></i> Open Course Catalog </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[1]/div[2]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"printSchedule()\"> <i class=\"fa-solid fa-print\"></i> Print Schedule </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[1]/div[2]/button[2]",
+                "html": "<button class=\"btn btn-primary btn-sm\" onclick=\"navigateTo('catalog')\"> <i class=\"fa-solid fa-plus\"></i> Add More Courses </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[9]/button[1]",
+                "html": "<button class=\"btn-drop-action\" onclick=\"promptDropCourse('CS101')\" title=\"Drop course\"> <i class=\"fa-solid fa-trash-can\"></i> Drop </button>",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[2]/div[3]/div[2]/table[1]/tbody[1]/tr[2]/td[9]/button[1]",
+                "html": "<button class=\"btn-drop-action\" onclick=\"promptDropCourse('MATH109')\" title=\"Drop course\"> <i class=\"fa-solid fa-trash-can\"></i> Drop </button>",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>No mat",
+                "html": "<h3>No mat",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-title\">Add Co",
+                "html": "<h3 class=\"card-title\">Add Co",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }
@@ -1970,7 +3619,183 @@
         ]
       },
       "pa11y": {
-        "error": "Assignment to constant variable."
+        "issues": [
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+            "impact": "error",
+            "wcag": [
+              "1.4.3"
+            ],
+            "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f.",
+            "count": 20,
+            "nodes": [
+              {
+                "selector": "html > body > div:nth-child(1) > div > span:nth-child(1)",
+                "html": "<span class=\"badge-pill\">FALL 2026</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navRegisteredCount",
+                "html": "<span class=\"nav-badge\" id=\"navRegisteredCount\">2</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.67:1. Recommendation:  change background to #3f3f3f."
+              },
+              {
+                "selector": "#navProfileTrigger > div > span:nth-child(2)",
+                "html": "<span class=\"mini-meta\">CS Junior • 3.84 GPA</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > span:nth-child(1)",
+                "html": "<span class=\"meta-label\">Student ID</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > span:nth-child(1)",
+                "html": "<span class=\"meta-label\">Class Standing</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > span:nth-child(1)",
+                "html": "<span class=\"meta-label\">Cumulative GPA</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > span:nth-child(2)",
+                "html": "<span class=\"meta-val highlight-gpa\">3.84 / 4.00</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.32:1. Recommendation:  change text colour to #000b08."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(4) > span:nth-child(1)",
+                "html": "<span class=\"meta-label\">Academic Advisor</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(5) > span:nth-child(1)",
+                "html": "<span class=\"meta-label\">College Affiliation</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(6) > span:nth-child(1)",
+                "html": "<span class=\"meta-label\">Campus Email</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > span:nth-child(2)",
+                "html": "<span class=\"progress-total\">/ 120 Units</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > p",
+                "html": "<p class=\"progress-foot-note\"> <i class=\"fa-s...</p>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#profileCurrentRegUnits",
+                "html": "<span id=\"profileCurrentRegUnits\">8</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#profileProjectedUnits",
+                "html": "<span id=\"profileProjectedUnits\">84</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"req-status text-green\"><i class=\"fa-solid fa-circle-ch...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"req-status text-amber\"><i class=\"fa-solid fa-clock\"></...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.15:1. Recommendation:  change text colour to #a76900."
+              },
+              {
+                "selector": "#view-profile > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > span:nth-child(2)",
+                "html": "<span class=\"req-status text-green\"><i class=\"fa-solid fa-circle-ch...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.54:1. Recommendation:  change text colour to #00875b."
+              },
+              {
+                "selector": "#profileRegisteredList > div:nth-child(1) > div:nth-child(1) > span:nth-child(3)",
+                "html": "<span class=\"p-course-schedule\"><i class=\"fa-regular fa-clock\">...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "#profileRegisteredList > div:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "html": "<span class=\"p-course-schedule\"><i class=\"fa-regular fa-clock\">...</span>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.34:1. Recommendation:  change background to #f6fafe."
+              },
+              {
+                "selector": "html > body > footer > div > div:nth-child(3)",
+                "html": "<div class=\"footer-copy\"> © 2026 Apex University...</div>",
+                "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.75:1. Recommendation:  change text colour to #fefeff."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+            "impact": "error",
+            "wcag": [
+              "1.3.1"
+            ],
+            "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "#courseSearchInput",
+                "html": "<input type=\"text\" id=\"courseSearchInput\" class=\"search-input\" placeholder=\"Search by course code, title, instructor, or keywords (e.g. CS182, AI, Liskov)...\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(1) > input",
+                "html": "<input type=\"text\" class=\"form-input\" placeholder=\"e.g. Fall 2026 Elective Approval\" required=\"\">",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              },
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate."
+              }
+            ]
+          },
+          {
+            "rule": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+            "impact": "error",
+            "wcag": [
+              "4.1.2"
+            ],
+            "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "#advisorModal > div > div:nth-child(2) > form > div:nth-child(2) > textarea",
+                "html": "<textarea class=\"form-input\" rows=\"4\" placeholder=\"Type your inquiry or degree audit question here...\" required=\"\"></textarea>",
+                "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby ."
+              }
+            ]
+          }
+        ],
+        "ignored_route_links": 14
       },
       "lighthouse": {
         "score": 93,
@@ -1978,6 +3803,185 @@
           {
             "rule": "color-contrast",
             "count": 18
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.67:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 22,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "FALL 2026",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/span[1]/text()[1]",
+                "html": "2",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/div[1]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "CS Junior • 3.84 GPA",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "Student ID",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/span[1]/text()[1]",
+                "html": "Class Standing",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/span[1]/text()[1]",
+                "html": "Cumulative GPA",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/span[2]/text()[1]",
+                "html": "3.84 / 4.00",
+                "summary": "The highest possible contrast of the text is 2.32:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/span[1]/text()[1]",
+                "html": "Academic Advisor",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[5]/span[1]/text()[1]",
+                "html": "College Affiliation",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[1]/div[2]/div[2]/div[2]/div[6]/span[1]/text()[1]",
+                "html": "Campus Email",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "/ 120 Units",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[2]/p[1]/text()[2]",
+                "html": "With current Fall 2026 registered units (",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[2]/p[1]/span[1]/text()[1]",
+                "html": "8",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[2]/p[1]/text()[3]",
+                "html": "units), you will reach",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[2]/p[1]/span[2]/text()[1]",
+                "html": "84",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[2]/p[1]/text()[4]",
+                "html": "units.",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/span[2]/text()[1]",
+                "html": "40/48 Units",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "14/24 Units",
+                "summary": "The highest possible contrast of the text is 2.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[1]/div[3]/div[3]/div[1]/span[2]/text()[1]",
+                "html": "30/36 Units",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/span[3]/text()[1]",
+                "html": "MWF 10:00 AM - 10:50 AM • Turing Hall 101",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/span[3]/text()[1]",
+                "html": "MWF 9:00 AM - 9:50 AM • Euclid Hall 120",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/text()[1]",
+                "html": "© 2026 Apex University. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 3.75:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r65",
+            "wcag": [
+              "2.4.7"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r65",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[2]/div[3]/div[2]/button[1]",
+                "html": "<button class=\"btn btn-secondary btn-sm\" onclick=\"showAdvisorModal()\"> <i class=\"fa-solid fa-envelope\"></i> Message Advisor </button>",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<h3>No mat",
+                "html": "<h3>No mat",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              },
+              {
+                "selector": "<h3 class=\"card-title\">Add Co",
+                "html": "<h3 class=\"card-title\">Add Co",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

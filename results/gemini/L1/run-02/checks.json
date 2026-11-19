@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-09T00:22:41.059Z",
+  "checked": "2026-11-19T06:11:05.815Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -426,6 +428,101 @@
             "count": 4
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.34:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[2]/span[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[3]/span[1]/text()[1]",
+                "html": "Registration",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[4]/span[1]/text()[1]",
+                "html": "Student Profile",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AC",
+                "summary": "The highest possible contrast of the text is 3.68:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[2]/button[2]/text()[2]",
+                "html": "Quick Register Courses",
+                "summary": "The highest possible contrast of the text is 4.1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/p[1]/text()[1]",
+                "html": "© 2026 Regents of the University of California. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 2.56:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "html": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-card-title\">The Ce",
+                "html": "<h3 class=\"course-card-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "html": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -806,6 +903,96 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.34:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[1]/span[1]/text()[1]",
+                "html": "Home",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[3]/span[1]/text()[1]",
+                "html": "Registration",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[4]/span[1]/text()[1]",
+                "html": "Student Profile",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AC",
+                "summary": "The highest possible contrast of the text is 3.68:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/p[1]/text()[1]",
+                "html": "© 2026 Regents of the University of California. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 2.56:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "html": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-card-title\">The Ce",
+                "html": "<h3 class=\"course-card-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "html": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1179,6 +1366,116 @@
             "count": 7
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.34:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 9,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[1]/span[1]/text()[1]",
+                "html": "Home",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[2]/span[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[4]/span[1]/text()[1]",
+                "html": "Student Profile",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AC",
+                "summary": "The highest possible contrast of the text is 3.68:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/div[2]/div[3]/span[2]/text()[1]",
+                "html": "6 units available",
+                "summary": "The highest possible contrast of the text is 1.92:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[9]/div[1]/button[1]/text()[1]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[2]/td[9]/div[1]/button[1]/text()[1]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[3]/td[9]/div[1]/button[1]/text()[1]",
+                "html": "Drop",
+                "summary": "The highest possible contrast of the text is 3.67:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/p[1]/text()[1]",
+                "html": "© 2026 Regents of the University of California. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 2.56:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "html": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-card-title\">The Ce",
+                "html": "<h3 class=\"course-card-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "html": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1436,6 +1733,101 @@
           {
             "rule": "color-contrast",
             "count": 4
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.34:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 6,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[1]/span[1]/text()[1]",
+                "html": "Home",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[2]/span[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/nav[1]/button[3]/span[1]/text()[1]",
+                "html": "Registration",
+                "summary": "The highest possible contrast of the text is 4.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/div[1]/div[2]/div[1]/text()[1]",
+                "html": "AC",
+                "summary": "The highest possible contrast of the text is 3.68:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/div[2]/div[2]/div[1]/button[1]/text()[1]",
+                "html": "Manage Courses →",
+                "summary": "The highest possible contrast of the text is 4.1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/div[1]/div[3]/p[1]/text()[1]",
+                "html": "© 2026 Regents of the University of California. All rights reserved.",
+                "summary": "The highest possible contrast of the text is 2.56:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "html": "<option value=\"A01 (Mon/Wed 9:00 AM - 10:20 AM)\">Sectio",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "html": "<option value=\"Letter Grade (A-F)\" selected=\"\">Letter",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h3 class=\"course-card-title\">The Ce",
+                "html": "<h3 class=\"course-card-title\">The Ce",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 4) follows the heading “…” (with computed level 2), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "html": "<h4 class=\"preview-title\" id=\"preview-title\">Softwa",
+                "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level."
+              }
+            ]
           }
         ]
       }

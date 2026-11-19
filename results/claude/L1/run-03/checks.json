@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-10T00:42:23.691Z",
+  "checked": "2026-11-19T05:48:34.747Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -679,6 +681,215 @@
           {
             "rule": "color-contrast",
             "count": 19
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.71:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 35,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/form[1]/button[1]/text()[1]",
+                "html": "Search",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/a[1]/text()[1]",
+                "html": "Browse catalog",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/strong[1]/text()[1]",
+                "html": "7",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/text()[1]",
+                "html": "Departments",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[3]/text()[1]",
+                "html": "Courses with open seats",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[4]/strong[1]/text()[1]",
+                "html": "0",
+                "summary": "The highest possible contrast of the text is 2.18:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[4]/text()[1]",
+                "html": "Your registered credits",
+                "summary": "The highest possible contrast of the text is 2.18:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[1]/text()[1]",
+                "html": "Art & Design",
+                "summary": "The highest possible contrast of the text is 2.18:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[1]/small[1]/text()[1]",
+                "html": "2 courses",
+                "summary": "The highest possible contrast of the text is 2.02:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[2]/text()[1]",
+                "html": "Biology",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[2]/small[1]/text()[1]",
+                "html": "2 courses",
+                "summary": "The highest possible contrast of the text is 2.3:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[3]/text()[1]",
+                "html": "Business",
+                "summary": "The highest possible contrast of the text is 3.16:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[3]/small[1]/text()[1]",
+                "html": "2 courses",
+                "summary": "The highest possible contrast of the text is 2.84:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[4]/small[1]/text()[1]",
+                "html": "4 courses",
+                "summary": "The highest possible contrast of the text is 4.27:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[5]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[5]/small[1]/text()[1]",
+                "html": "3 courses",
+                "summary": "The highest possible contrast of the text is 3.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[6]/text()[1]",
+                "html": "Physics",
+                "summary": "The highest possible contrast of the text is 2.89:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[6]/small[1]/text()[1]",
+                "html": "1 course",
+                "summary": "The highest possible contrast of the text is 2.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[7]/text()[1]",
+                "html": "Psychology",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/a[7]/small[1]/text()[1]",
+                "html": "2 courses",
+                "summary": "The highest possible contrast of the text is 3.27:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[1]/div[1]/div[1]/text()[1]",
+                "html": "PSY100 · Psychology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[1]/div[1]/h3[1]/text()[1]",
+                "html": "Introduction to Psychology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[1]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[1]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[2]/div[1]/div[1]/text()[1]",
+                "html": "MATH330 · Mathematics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[2]/div[1]/h3[1]/text()[1]",
+                "html": "Probability & Statistics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[2]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 300",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[3]/div[1]/div[1]/text()[1]",
+                "html": "BUS350 · Business",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[3]/div[1]/h3[1]/text()[1]",
+                "html": "Entrepreneurship",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[3]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[4]/article[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 300",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[6]/div[2]/span[1]/text()[1]",
+                "html": "2",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[6]/div[3]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[6]/div[4]/span[1]/text()[1]",
+                "html": "4",
+                "summary": "The highest possible contrast of the text is 2.18:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
           }
         ]
       }
@@ -1779,6 +1990,383 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 1:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 66,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[1]/div[1]/div[1]/text()[1]",
+                "html": "CS101 · Computer Science",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[1]/div[1]/h3[1]/text()[1]",
+                "html": "Introduction to Programming",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[1]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[1]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[2]/div[1]/div[1]/text()[1]",
+                "html": "CS220 · Computer Science",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[2]/div[1]/h3[1]/text()[1]",
+                "html": "Data Structures & Algorithms",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[2]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[2]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 200",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[2]/div[2]/div[3]/span[2]/text()[1]",
+                "html": "Full",
+                "summary": "The highest possible contrast of the text is 4.01:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[3]/div[1]/div[1]/text()[1]",
+                "html": "CS340 · Computer Science",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[3]/div[1]/h3[1]/text()[1]",
+                "html": "Web Development",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[3]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[3]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 300",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[4]/div[1]/div[1]/text()[1]",
+                "html": "CS410 · Computer Science",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[4]/div[1]/h3[1]/text()[1]",
+                "html": "Machine Learning",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[4]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[4]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 400",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[5]/div[1]/div[1]/text()[1]",
+                "html": "MATH110 · Mathematics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[5]/div[1]/h3[1]/text()[1]",
+                "html": "Calculus I",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[5]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[5]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[6]/div[1]/div[1]/text()[1]",
+                "html": "MATH210 · Mathematics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[6]/div[1]/h3[1]/text()[1]",
+                "html": "Linear Algebra",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[6]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[6]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 200",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[7]/div[1]/div[1]/text()[1]",
+                "html": "MATH330 · Mathematics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[7]/div[1]/h3[1]/text()[1]",
+                "html": "Probability & Statistics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[7]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[7]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 300",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[8]/div[1]/div[1]/text()[1]",
+                "html": "BIO101 · Biology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[8]/div[1]/h3[1]/text()[1]",
+                "html": "General Biology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[8]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[8]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[9]/div[1]/div[1]/text()[1]",
+                "html": "BIO305 · Biology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[9]/div[1]/h3[1]/text()[1]",
+                "html": "Molecular Genetics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[9]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[9]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 300",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[10]/div[1]/div[1]/text()[1]",
+                "html": "PSY100 · Psychology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[10]/div[1]/h3[1]/text()[1]",
+                "html": "Introduction to Psychology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[10]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[10]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[11]/div[1]/div[1]/text()[1]",
+                "html": "PSY250 · Psychology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[11]/div[1]/h3[1]/text()[1]",
+                "html": "Cognitive Psychology",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[11]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[11]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 200",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[12]/div[1]/div[1]/text()[1]",
+                "html": "ART120 · Art & Design",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[12]/div[1]/h3[1]/text()[1]",
+                "html": "Drawing Foundations",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[12]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[12]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[13]/div[1]/div[1]/text()[1]",
+                "html": "ART280 · Art & Design",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[13]/div[1]/h3[1]/text()[1]",
+                "html": "Digital Illustration",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[13]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[13]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 200",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[13]/div[2]/div[3]/span[2]/text()[1]",
+                "html": "Full",
+                "summary": "The highest possible contrast of the text is 4.01:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[14]/div[1]/div[1]/text()[1]",
+                "html": "BUS200 · Business",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[14]/div[1]/h3[1]/text()[1]",
+                "html": "Principles of Marketing",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[14]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[14]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 200",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[15]/div[1]/div[1]/text()[1]",
+                "html": "BUS350 · Business",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[15]/div[1]/h3[1]/text()[1]",
+                "html": "Entrepreneurship",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[15]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "3 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[15]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 300",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[16]/div[1]/div[1]/text()[1]",
+                "html": "PHYS150 · Physics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[16]/div[1]/h3[1]/text()[1]",
+                "html": "Physics I: Mechanics",
+                "summary": "The highest possible contrast of the text is 1:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[16]/div[2]/div[1]/span[1]/text()[1]",
+                "html": "4 credits",
+                "summary": "The highest possible contrast of the text is 3.6:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[2]/article[16]/div[2]/div[1]/span[2]/text()[1]",
+                "html": "Level 100",
+                "summary": "The highest possible contrast of the text is 4.23:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "ence</div><h3>Introd",
+                "html": "ence</div><h3>Introd",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -2192,6 +2780,73 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.69:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 3,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/p[1]/text()[1]",
+                "html": "Fill in your details, choose your courses and confirm. Maximum",
+                "summary": "The highest possible contrast of the text is 3.69:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/p[1]/span[1]/text()[1]",
+                "html": "18",
+                "summary": "The highest possible contrast of the text is 3.69:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/p[1]/text()[2]",
+                "html": "credits per term.",
+                "summary": "The highest possible contrast of the text is 3.69:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
+          },
+          {
+            "rule": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "wcag": [],
+            "message": "The first “…” element in a “…” element with a “…” attribute, and without a “…” attribute, and without a “…” attribute whose value is greater than “…”, must have either an empty “…” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “…” attribute with a value equal to the number of “…” elements.",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "quired=\"\"><option value=\"Art &amp; Design\">Art &a",
+                "html": "quired=\"\"><option value=\"Art &amp; Design\">Art &a",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              },
+              {
+                "selector": "<option>Freshman</opti",
+                "html": "<option>Freshman</opti",
+                "message": "The first “option” element in a “select” element with a “required” attribute, and without a “multiple” attribute, and without a “size” attribute whose value is greater than “1”, must have either an empty “value” attribute, or must have no text content. Consider either adding a placeholder option label, or adding a “size” attribute with a value equal to the number of “option” elements."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -2423,6 +3078,65 @@
           {
             "rule": "color-contrast",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.57:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 5,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/p[1]/text()[1]",
+                "html": "Your details and current course schedule.",
+                "summary": "The highest possible contrast of the text is 3.57:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/div[2]/strong[1]/text()[1]",
+                "html": "0",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 3:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/div[2]/text()[1]",
+                "html": "Credits",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[1]/div[3]/text()[1]",
+                "html": "Credits available",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/div[1]/section[1]/div[2]/div[1]/a[1]/text()[1]",
+                "html": "+ Add courses",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": []
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
           }
         ]
       }

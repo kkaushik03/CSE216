@@ -1,10 +1,12 @@
 {
-  "checked": "2026-11-10T00:41:42.560Z",
+  "checked": "2026-11-19T05:47:03.508Z",
   "tools": {
     "chromium": "Chrome/156.0.8078.79",
     "axe-core": "4.14.0",
     "pa11y": "10.0.0",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "alfa": "0.84.3",
+    "nu": "26.11.4"
   },
   "views": [
     {
@@ -617,6 +619,305 @@
       "lighthouse": {
         "score": 100,
         "issues": []
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.15:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 9,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[1]/div[1]/span[1]/text()[1]",
+                "html": "CS340",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[2]/div[1]/span[1]/text()[1]",
+                "html": "BIO360",
+                "summary": "The highest possible contrast of the text is 2.26:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[2]/div[1]/span[2]/text()[1]",
+                "html": "Biology",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[3]/div[1]/span[1]/text()[1]",
+                "html": "ART320",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[3]/div[1]/span[2]/text()[1]",
+                "html": "Fine Arts",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[4]/div[1]/span[1]/text()[1]",
+                "html": "PSY420",
+                "summary": "The highest possible contrast of the text is 1.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[4]/div[1]/span[2]/text()[1]",
+                "html": "Psychology",
+                "summary": "The highest possible contrast of the text is 1.51:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[5]/ol[1]/li[2]/span[1]/text()[1]",
+                "html": "2",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[5]/ol[1]/li[3]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r81",
+            "wcag": [
+              "2.4.4",
+              "2.4.9"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r81",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[2]/article[1]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[4]/div[2]/article[2]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[4]/div[2]/article[3]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[4]/div[2]/article[4]/div[3]/a[1]",
+                "html": "<a class=\"btn btn-primary btn-sm\" href=\"register.html?course=CS340\"> Register </a> <a class=\"btn btn-primary btn-sm\" href=\"register.html?course=BIO360\"> Register </a> <a class=\"btn btn-primary btn-sm\" href=\"register.html?course=ART320\"> Register </a> <a class=\"btn btn-primary btn-sm\" href=\"register.",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 38,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/text()[1]",
+                "html": "Prism",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/strong[1]/text()[1]",
+                "html": "U",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "My Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Spring 2027 registration is open",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Welcome back,",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/span[1]/text()[1]",
+                "html": "Jordan",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[2]",
+                "html": "!",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[2]/text()[1]",
+                "html": "Browse courses across six departments, check open seats, and register in a few clicks.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/a[2]/text()[1]",
+                "html": "Register now",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/strong[1]/text()[1]",
+                "html": "18",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Courses offered",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/strong[1]/text()[1]",
+                "html": "6",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Departments",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[3]/strong[1]/text()[1]",
+                "html": "16",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Open for enrollment",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/strong[1]/text()[1]",
+                "html": "0",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Your credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/h2[1]/text()[1]",
+                "html": "Explore departments",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[1]/strong[1]/text()[1]",
+                "html": "Computer Science",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[1]/span[1]/text()[1]",
+                "html": "4 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[2]/strong[1]/text()[1]",
+                "html": "Mathematics",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[2]/span[1]/text()[1]",
+                "html": "3 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[3]/strong[1]/text()[1]",
+                "html": "Biology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[3]/span[1]/text()[1]",
+                "html": "3 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[4]/strong[1]/text()[1]",
+                "html": "Fine Arts",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[4]/span[1]/text()[1]",
+                "html": "3 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[5]/strong[1]/text()[1]",
+                "html": "History",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[5]/span[1]/text()[1]",
+                "html": "2 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[6]/strong[1]/text()[1]",
+                "html": "Psychology",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[3]/div[1]/a[6]/span[1]/text()[1]",
+                "html": "3 courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/h2[1]/text()[1]",
+                "html": "Featured courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[4]/div[1]/a[1]/text()[1]",
+                "html": "See all courses →",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[5]/h2[1]/text()[1]",
+                "html": "How it works",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "©",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/span[1]/text()[1]",
+                "html": "2026",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[2]",
+                "html": "PrismU Course Registration · Demo application with sample data",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -1821,6 +2122,348 @@
             "count": 1
           }
         ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 4.13:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 35,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[8]/button[1]/text()[1]",
+                "html": "Clear filters",
+                "summary": "The highest possible contrast of the text is 4.13:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[1]/div[1]/span[1]/text()[1]",
+                "html": "ART105",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[1]/div[1]/span[2]/text()[1]",
+                "html": "Fine Arts",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[2]/div[1]/span[1]/text()[1]",
+                "html": "ART230",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[2]/div[1]/span[2]/text()[1]",
+                "html": "Fine Arts",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[2]/div[3]/span[2]/text()[1]",
+                "html": "Class full",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[3]/div[1]/span[1]/text()[1]",
+                "html": "ART320",
+                "summary": "The highest possible contrast of the text is 3.19:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[3]/div[1]/span[2]/text()[1]",
+                "html": "Fine Arts",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[4]/div[1]/span[1]/text()[1]",
+                "html": "BIO101",
+                "summary": "The highest possible contrast of the text is 2.26:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[4]/div[1]/span[2]/text()[1]",
+                "html": "Biology",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[5]/div[1]/span[1]/text()[1]",
+                "html": "BIO250",
+                "summary": "The highest possible contrast of the text is 2.26:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[5]/div[1]/span[2]/text()[1]",
+                "html": "Biology",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[6]/div[1]/span[1]/text()[1]",
+                "html": "BIO360",
+                "summary": "The highest possible contrast of the text is 2.26:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[6]/div[1]/span[2]/text()[1]",
+                "html": "Biology",
+                "summary": "The highest possible contrast of the text is 2.54:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[7]/div[1]/span[1]/text()[1]",
+                "html": "CS101",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[8]/div[1]/span[1]/text()[1]",
+                "html": "CS220",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[8]/div[3]/span[2]/text()[1]",
+                "html": "Class full",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[9]/div[1]/span[1]/text()[1]",
+                "html": "CS340",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[10]/div[1]/span[1]/text()[1]",
+                "html": "CS410",
+                "summary": "The highest possible contrast of the text is 4.15:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[11]/div[1]/span[1]/text()[1]",
+                "html": "HIST120",
+                "summary": "The highest possible contrast of the text is 2.79:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[11]/div[1]/span[2]/text()[1]",
+                "html": "History",
+                "summary": "The highest possible contrast of the text is 3.16:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[12]/div[1]/span[1]/text()[1]",
+                "html": "HIST315",
+                "summary": "The highest possible contrast of the text is 2.79:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[12]/div[1]/span[2]/text()[1]",
+                "html": "History",
+                "summary": "The highest possible contrast of the text is 3.16:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[13]/div[1]/span[1]/text()[1]",
+                "html": "MATH110",
+                "summary": "The highest possible contrast of the text is 3.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[13]/div[1]/span[2]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[14]/div[1]/span[1]/text()[1]",
+                "html": "MATH210",
+                "summary": "The highest possible contrast of the text is 3.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[14]/div[1]/span[2]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[15]/div[1]/span[1]/text()[1]",
+                "html": "MATH330",
+                "summary": "The highest possible contrast of the text is 3.34:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[15]/div[1]/span[2]/text()[1]",
+                "html": "Mathematics",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[16]/div[1]/span[1]/text()[1]",
+                "html": "PSY101",
+                "summary": "The highest possible contrast of the text is 1.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[16]/div[1]/span[2]/text()[1]",
+                "html": "Psychology",
+                "summary": "The highest possible contrast of the text is 1.51:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[17]/div[1]/span[1]/text()[1]",
+                "html": "PSY280",
+                "summary": "The highest possible contrast of the text is 1.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[17]/div[1]/span[2]/text()[1]",
+                "html": "Psychology",
+                "summary": "The highest possible contrast of the text is 1.51:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[18]/div[1]/span[1]/text()[1]",
+                "html": "PSY420",
+                "summary": "The highest possible contrast of the text is 1.43:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[18]/div[1]/span[2]/text()[1]",
+                "html": "Psychology",
+                "summary": "The highest possible contrast of the text is 1.51:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r81",
+            "wcag": [
+              "2.4.4",
+              "2.4.9"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r81",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[2]/article[1]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[3]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[4]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[5]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[6]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[7]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[9]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[10]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[11]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[12]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[13]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[14]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[15]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[16]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[17]/div[3]/a[1] | /html[1]/body[1]/main[1]/section[2]/div[2]/article[18]/div[3]/a[1]",
+                "html": "<a class=\"btn btn-primary btn-sm\" href=\"register.html?course=ART105\"> Register </a> <a class=\"btn btn-primary btn-sm\" href=\"register.html?course=ART320\"> Register </a> <a class=\"btn btn-primary btn-sm\" href=\"register.html?course=BIO101\"> Register </a> <a class=\"btn btn-primary btn-sm\" href=\"register",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/text()[1]",
+                "html": "Prism",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/strong[1]/text()[1]",
+                "html": "U",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "My Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Find the right courses for Spring 2027.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/label[1]/text()[1]",
+                "html": "Search",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/label[1]/text()[1]",
+                "html": "Department",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[3]/label[1]/text()[1]",
+                "html": "Level",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[4]/label[1]/text()[1]",
+                "html": "Credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[5]/label[1]/text()[1]",
+                "html": "Days",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[6]/label[1]/text()[1]",
+                "html": "Availability",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[7]/label[1]/text()[1]",
+                "html": "Sort by",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/p[1]/text()[1]",
+                "html": "18 courses found",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "©",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/span[1]/text()[1]",
+                "html": "2026",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[2]",
+                "html": "PrismU Course Registration · Demo application with sample data",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
+          },
+          {
+            "rule": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "wcag": [],
+            "message": "The heading “…” (with computed level 3) follows the heading “…” (with computed level 1), skipping 1 heading level.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "> <h3>Drawin",
+                "html": "> <h3>Drawin",
+                "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -2022,6 +2665,128 @@
           {
             "rule": "color-contrast",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.71:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 4,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/form[1]/fieldset[2]/legend[1]/span[1]/text()[1]",
+                "html": "2",
+                "summary": "The highest possible contrast of the text is 3.71:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/form[1]/fieldset[3]/legend[1]/span[1]/text()[1]",
+                "html": "3",
+                "summary": "The highest possible contrast of the text is 3.16:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/form[1]/div[2]/button[1]/text()[1]",
+                "html": "Reset",
+                "summary": "The highest possible contrast of the text is 4.13:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/aside[1]/a[1]/text()[1]",
+                "html": "Manage my courses",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 11,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/text()[1]",
+                "html": "Prism",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/strong[1]/text()[1]",
+                "html": "U",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[4]/a[1]/text()[1]",
+                "html": "My Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Course Registration",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Register for courses for",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/strong[1]/text()[1]",
+                "html": "Spring 2027",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "©",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/span[1]/text()[1]",
+                "html": "2026",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[2]",
+                "html": "PrismU Course Registration · Demo application with sample data",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
           }
         ]
       }
@@ -2278,6 +3043,153 @@
           {
             "rule": "color-contrast",
             "count": 1
+          }
+        ]
+      },
+      "alfa": {
+        "issues": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "The highest possible contrast of the text is 3.87:1 which is\n        below the required contrast of 4.5:1",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 2,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/aside[1]/button[1]/text()[1]",
+                "html": "✏️ Edit profile",
+                "summary": "The highest possible contrast of the text is 3.87:1 which is below the required contrast of 4.5:1"
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[2]/div[1]/div[1]/button[1]/text()[1]",
+                "html": "Drop all",
+                "summary": "The highest possible contrast of the text is 4.13:1 which is below the required contrast of 4.5:1"
+              }
+            ]
+          }
+        ],
+        "needs_review": [
+          {
+            "rule": "sia-r69",
+            "wcag": [
+              "1.4.3",
+              "1.4.6"
+            ],
+            "help": "",
+            "help_url": "https://alfa.siteimprove.com/rules/sia-r69",
+            "count": 18,
+            "nodes": [
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/text()[1]",
+                "html": "Prism",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/a[1]/span[2]/strong[1]/text()[1]",
+                "html": "U",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[1]/a[1]/text()[1]",
+                "html": "Home",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[2]/a[1]/text()[1]",
+                "html": "Course Catalog",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/header[1]/nav[1]/ul[1]/li[3]/a[1]/text()[1]",
+                "html": "Register",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/h1[1]/text()[1]",
+                "html": "Student Profile",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[1]/div[1]/p[1]/text()[1]",
+                "html": "Your details and registered courses.",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[1]/strong[1]/text()[1]",
+                "html": "0",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[1]/span[1]/text()[1]",
+                "html": "Courses",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[2]/strong[1]/text()[1]",
+                "html": "0",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[2]/span[1]/text()[1]",
+                "html": "Credits",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[3]/strong[1]/text()[1]",
+                "html": "18",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[3]/span[1]/text()[1]",
+                "html": "Credits available",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[4]/strong[1]/text()[1]",
+                "html": "Spring 2027",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/main[1]/section[2]/div[1]/div[1]/div[4]/span[1]/text()[1]",
+                "html": "Term",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[1]",
+                "html": "©",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/span[1]/text()[1]",
+                "html": "2026",
+                "summary": ""
+              },
+              {
+                "selector": "/html[1]/body[1]/footer[1]/p[1]/text()[2]",
+                "html": "PrismU Course Registration · Demo application with sample data",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      "nu": {
+        "issues": [
+          {
+            "rule": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "wcag": [],
+            "message": "Bad value “…” for attribute “…” on element “…”: Illegal character after “…”. “…” is not allowed.",
+            "count": 1,
+            "nodes": [
+              {
+                "selector": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "html": "/title> <link rel=\"icon\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🎓&lt;/text&gt;&lt;/svg&gt;\"> <li",
+                "message": "Bad value “data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>” for attribute “href” on element “link”: Illegal character after “ta:”. “<” is not allowed."
+              }
+            ]
           }
         ]
       }
