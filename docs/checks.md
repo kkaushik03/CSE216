@@ -2,6 +2,8 @@
 
 `checks/run.sh` checks the generated sites with five automated tools. It runs in Docker, so all teammates get the same tool versions. [Tools](#tools) tells which tools we use, which settings, and why. Use it for the method section of the paper.
 
+The automated checks do not replace the manual review. See [manual-review.md](manual-review.md).
+
 ## See the results
 
 The easiest way is the dashboard. It shows which WCAG rules each assistant's sites break at each level, and the failing elements.
