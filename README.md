@@ -8,12 +8,12 @@ We give the same website prompt to four AI coding assistants at three levels of 
 | 2 | The prompt asks for an accessible UI. |
 | 3 | The prompt lists strict WCAG 2.2 AA requirements. |
 
-| Assistant | Owner |
-|---|---|
-| Codex | Braxton |
-| OpenCode (DeepSeek) | Liza |
-| Claude Code | Khushi |
-| Gemini | Rahat |
+| Assistant | Model | Owner |
+|---|---|---|
+| Codex | gpt-6-luna | Braxton |
+| OpenCode | deepseek-v4.1-flash-free | Liza |
+| Claude Code | claude-opus-5-5 | Khushi |
+| Gemini CLI | Gemini 3.8 Flash | Rahat |
 
 ## Repo structure
 

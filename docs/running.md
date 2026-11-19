@@ -20,7 +20,7 @@ Each run makes one website in a new, clean Docker container. The container does 
    |---|---|---|
    | `claude` | Khushi | Run `claude setup-token` on your computer. Put the token in `CLAUDE_CODE_OAUTH_TOKEN`. Or set `ANTHROPIC_API_KEY`. |
    | `codex` | Braxton | Run `codex login` on your computer. Set `CODEX_AUTH_FILE=~/.codex/auth.json`. Or set `OPENAI_API_KEY`. |
-   | `gemini` | Rahat | Get a key at https://aistudio.google.com/apikey. Put it in `GEMINI_API_KEY`. |
+   | `gemini` (Gemini CLI) | Rahat | Get a key at https://aistudio.google.com/apikey. Put it in `GEMINI_API_KEY`. |
    | `opencode` | Liza | No login. The free model needs no key. |
 
 Do not commit `.env`. Git ignores it.
