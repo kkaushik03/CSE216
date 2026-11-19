@@ -175,6 +175,8 @@ footer { font-size: var(--step--1); color: var(--ink-3); max-width: 80ch; displa
         <button type="button" id="src-axe" data-v="axe" aria-pressed="true">axe violations</button>
         <button type="button" id="src-pa11y" data-v="pa11y" aria-pressed="false">Pa11y errors</button>
         <button type="button" id="src-review" data-v="review" aria-pressed="false">axe needs review</button>
+        <button type="button" id="src-alfa" data-v="alfa" aria-pressed="false">Alfa failures</button>
+        <button type="button" id="src-nu" data-v="nu" aria-pressed="false">Nu HTML errors</button>
       </div>
     </div>
     <div class="control">
@@ -239,7 +241,10 @@ const SRC_HINT = {
   axe: 'axe-core 4.14, WCAG 2.0–2.2 A and AA rules. Lighthouse runs the same engine.',
   pa11y: 'Pa11y with HTML_CodeSniffer, WCAG2AA, errors only. A second, independent engine.',
   review: 'Items axe could not decide. A person must check them; they are not failures yet.',
+  alfa: 'Siteimprove Alfa, WCAG 2.2 A and AA rules. A third, independent engine.',
+  nu: 'W3C Nu HTML Checker on the rendered page, errors only. HTML validity, not WCAG rules.',
 };
+const SRC_LABEL = { axe: 'axe violations', pa11y: 'Pa11y errors', review: 'axe needs review', alfa: 'Alfa failures', nu: 'Nu HTML errors' };
 const BINS = [0, 1, 3, 10, 30, 100];
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const pa11yShort = (code) => code.split('.').slice(4).join('.');
@@ -279,7 +284,7 @@ function renderMeta() {
   const n = new Set(D.runs.map((r) => r.assistant)).size;
   document.getElementById('meta').innerHTML = [
     `<span><b>${D.runs.length}</b> sites from <b>${n}</b> assistants</span>`,
-    `<span>axe-core <b>${esc(t['axe-core'])}</b> · Pa11y <b>${esc(t.pa11y)}</b> · Lighthouse <b>${esc(t.lighthouse)}</b> · ${esc(t.chromium)}</span>`,
+    `<span>axe-core <b>${esc(t['axe-core'])}</b> · Pa11y <b>${esc(t.pa11y)}</b> · Lighthouse <b>${esc(t.lighthouse)}</b> · Alfa <b>${esc(t.alfa)}</b> · Nu <b>${esc(t.nu)}</b> · ${esc(t.chromium)}</span>`,
     `<span>Checked <b>${esc(D.checked.slice(0, 10))}</b></span>`,
   ].join('');
 }
@@ -298,7 +303,7 @@ function renderLegend() {
 function renderHeat() {
   const rs = rules();
   const byA = Object.keys(ASSISTANTS).map((a) => ({ a, n: groups.filter((g) => g.a === a).length })).filter((x) => x.n);
-  let h = `<caption class="label" style="text-align:left;padding:12px 14px 0">${esc({ axe: 'axe violations', pa11y: 'Pa11y errors', review: 'axe needs review' }[state.src])}</caption>`;
+  let h = `<caption class="label" style="text-align:left;padding:12px 14px 0">${esc(SRC_LABEL[state.src])}</caption>`;
   h += `<thead><tr><th scope="col" rowspan="2" class="rowhead" style="text-align:left;vertical-align:bottom">WCAG criterion · rule</th>`
     + byA.map((x) => `<th scope="colgroup" colspan="${x.n}" class="asst">${esc(ASSISTANTS[x.a])}</th>`).join('') + `</tr><tr>`
     + groups.map((g) => `<th scope="col" class="lvl">${g.l}</th>`).join('') + `</tr></thead><tbody>`;
@@ -328,20 +333,20 @@ function renderSites() {
   const uniq = (i, src) => D.findings.filter((f) => f.run === i && f.src === src).reduce((n, f) => n + f.els.length, 0);
   let h = `<thead><tr><th scope="col">Site</th><th scope="col" class="num">Views</th><th scope="col" class="num">Lighthouse<br>mean / min</th>`
     + `<th scope="col" class="num">axe<br>violations</th><th scope="col" class="num">axe<br>rules</th><th scope="col" class="num">Pa11y<br>errors</th>`
-    + `<th scope="col" class="num">axe needs<br>review</th><th scope="col" class="num">Route links<br>removed</th><th scope="col">Notes</th></tr></thead><tbody>`;
+    + `<th scope="col" class="num">axe needs<br>review</th><th scope="col" class="num">Alfa<br>failures</th><th scope="col" class="num">Nu<br>errors</th><th scope="col" class="num">Route links<br>removed</th><th scope="col">Notes</th></tr></thead><tbody>`;
   let prev = '';
   D.runs.forEach((r, i) => {
     const sc = r.views.map((v) => v.lighthouse).filter((s) => s !== null);
     const mean = sc.length ? Math.round(sc.reduce((a, b) => a + b, 0) / sc.length) : '–';
     const min = sc.length ? Math.min(...sc) : '–';
-    const ax = uniq(i, 'axe'), pa = uniq(i, 'pa11y'), rv = uniq(i, 'review');
+    const ax = uniq(i, 'axe'), pa = uniq(i, 'pa11y'), rv = uniq(i, 'review'), al = uniq(i, 'alfa'), nu = uniq(i, 'nu');
     const axr = D.findings.filter((f) => f.run === i && f.src === 'axe').length;
     const notes = [!r.meta && '<span class="chip neutral">no meta.json</span>', r.errors && `<span class="chip critical">${r.errors} tool errors</span>`].filter(Boolean).join(' ');
     const cls = [prev && prev !== r.assistant && 'lvl-split', state.sel?.run === i && 'sel'].filter(Boolean).join(' ');
     prev = r.assistant;
     const z = (n) => `<td class="num${n === 0 ? ' zero' : ''}">${n}</td>`;
     h += `<tr data-run="${i}"${cls ? ` class="${cls}"` : ''}><th scope="row" class="site"><button type="button" data-run="${i}">${esc(runLabel(r))}</button></th>`
-      + `<td class="num">${r.views.length}</td><td class="num">${mean} / ${min}</td>${z(ax)}${z(axr)}${z(pa)}${z(rv)}${z(r.routeLinks)}<td>${notes}</td></tr>`;
+      + `<td class="num">${r.views.length}</td><td class="num">${mean} / ${min}</td>${z(ax)}${z(axr)}${z(pa)}${z(rv)}${z(al)}${z(nu)}${z(r.routeLinks)}<td>${notes}</td></tr>`;
   });
   document.getElementById('sites').innerHTML = h + `</tbody>`;
 }
@@ -384,7 +389,7 @@ function renderDrawer() {
   const byRun = new Map();
   for (const f of fs) byRun.set(f.run, [...(byRun.get(f.run) ?? []), f]);
   const total = fs.reduce((n, f) => n + f.els.length, 0);
-  let h = `<div class="drawer-head"><span class="label">${esc({ axe: 'axe violations', pa11y: 'Pa11y errors', review: 'axe needs review' }[state.src])}</span>`
+  let h = `<div class="drawer-head"><span class="label">${esc(SRC_LABEL[state.src])}</span>`
     + `<h2 id="drawer-title">${esc(title)}</h2><p class="hint" style="max-width:none">${sub}</p>`
     + `<div class="crumbs"><span class="chip neutral">${total} unique elements</span><span class="chip neutral">${byRun.size} runs</span>`
     + `<button type="button" class="clear" id="clear">Clear selection</button></div></div>`;

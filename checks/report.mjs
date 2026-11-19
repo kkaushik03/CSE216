@@ -19,7 +19,8 @@ const pa11yContrast = (message) => {
   return ratio && { ratio: Number(ratio), expected: `${message.match(/at least ([\d.]+):1/)?.[1]}:1` };
 };
 
-const SOURCES = [['axe', 'issues', 'axe'], ['axe', 'needs_review', 'review'], ['pa11y', 'issues', 'pa11y']];
+const SOURCES = [['axe', 'issues', 'axe'], ['axe', 'needs_review', 'review'], ['pa11y', 'issues', 'pa11y'],
+  ['alfa', 'issues', 'alfa'], ['nu', 'issues', 'nu']];
 const runs = [];
 const findings = [];
 let tools = {};
@@ -36,7 +37,7 @@ for (const [assistant, level, run] of allRuns()) {
   const r = runs.push({ assistant, level, run, meta: fs.existsSync(path.join(dir, 'meta.json')),
     views: report.views.map((v) => ({ name: v.name, url: v.url, lighthouse: v.lighthouse?.score ?? null })),
     routeLinks: report.views.reduce((n, v) => n + (v.pa11y?.ignored_route_links ?? 0), 0),
-    errors: report.views.flatMap((v) => ['axe', 'pa11y', 'lighthouse'].filter((t) => v[t]?.error)).length }) - 1;
+    errors: report.views.flatMap((v) => ['axe', 'pa11y', 'lighthouse', 'alfa', 'nu'].filter((t) => v[t]?.error)).length }) - 1;
   for (const [tool, list, src] of SOURCES) {
     const rules = new Map();
     report.views.forEach((v, vi) => {

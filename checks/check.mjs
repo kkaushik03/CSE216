@@ -1,13 +1,20 @@
-// Check each generated site with axe-core, Pa11y and Lighthouse. Runs inside the container (see checks/run.sh).
+// Check each generated site with axe-core, Pa11y, Lighthouse, Siteimprove Alfa and the Nu HTML Checker.
+// Runs inside the container (see checks/run.sh). docs/checks.md describes the tools.
 // A "view" is the start page, or the state after a click on one navigation item.
 // This covers sites with one HTML file per page and single-page apps.
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
+import os from 'node:os';
+import { spawnSync } from 'node:child_process';
 import puppeteer from 'puppeteer';
 import { AxePuppeteer } from '@axe-core/puppeteer';
 import pa11y from 'pa11y';
 import { startFlow } from 'lighthouse';
+import { Puppeteer as Alfa } from '@siteimprove/alfa-puppeteer';
+import { Audit, Rules } from '@siteimprove/alfa-test-utils';
+import { Outcome } from '@siteimprove/alfa-act';
+import vnuJar from 'vnu-jar';
 
 const RESULTS = '/results';
 const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
@@ -100,6 +107,24 @@ const byRule = (list) => Object.values(list.reduce((acc, i) => {
   return acc;
 }, {}));
 
+// Alfa outcomes: one issue per rule, with each failing element. The rule id is the end of the rule URI (sia-r2).
+const alfaIssues = (outcomes) => Object.values(outcomes.reduce((acc, o) => {
+  const { rule, expectations = [] } = o.toJSON();
+  const id = rule.uri.split('/').pop();
+  const message = expectations.map(([, e]) => e.error?.message).filter(Boolean).join(' ');
+  acc[id] ??= { rule: id, wcag: rule.requirements.filter((r) => r.type === 'criterion').map((r) => r.chapter),
+    help: message, help_url: rule.uri, count: 0, nodes: [] };
+  // The target is one node, or a group of nodes for some rules (for example, links with the same name).
+  const targets = typeof o.target.path === 'function' ? [o.target] : [...o.target];
+  acc[id].count += 1;
+  acc[id].nodes.push({ selector: targets.map((t) => t.path()).join(' | '),
+    html: clip(targets.map(String).join(' ')), summary: clip(message) });
+  return acc;
+}, {}));
+
+// Nu messages have no rule id. The message with each quoted name replaced by "…" is the rule.
+const nuRule = (message) => message.replace(/“[^”]*”/g, '“…”').replace(/ \(Suppressing further errors from this subtree\.\)/, '');
+
 const TOOLS = {
   async axe(page) {
     const r = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
@@ -122,6 +147,27 @@ const TOOLS = {
     return { score: Math.round(lhr.categories.accessibility.score * 100),
       issues: failed.map((a) => ({ rule: a.id, count: a.details?.items?.length ?? 1 })) };
   },
+  async alfa(page) {
+    const document = await page.evaluateHandle(() => window.document);
+    const audit = await Audit.run(await Alfa.toPage(document), { rules: { include: Rules.aaFilter } });
+    const outcomes = [...audit.outcomes.values()].flatMap((list) => [...list]);
+    return { issues: alfaIssues(outcomes.filter(Outcome.isFailed)), needs_review: alfaIssues(outcomes.filter(Outcome.isCantTell)) };
+  },
+  // The rendered DOM of the view, as the browser serializes it. Errors only, no warnings.
+  async nu(page) {
+    const file = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'nu-')), 'view.html');
+    fs.writeFileSync(file, await page.content());
+    const r = spawnSync('java', ['-jar', vnuJar, '--format', 'json', '--errors-only', '--stdout', file], { encoding: 'utf8' });
+    fs.rmSync(path.dirname(file), { recursive: true });
+    const messages = JSON.parse(r.stdout).messages.filter((m) => m.type === 'error');
+    return { issues: Object.values(messages.reduce((acc, m) => {
+      const rule = nuRule(m.message);
+      acc[rule] ??= { rule, wcag: [], message: rule, count: 0, nodes: [] };
+      acc[rule].count += 1;
+      acc[rule].nodes.push({ selector: clip(m.extract), html: clip(m.extract), message: m.message });
+      return acc;
+    }, {})) };
+  },
 };
 
 async function checkRun(browser, runDir) {
@@ -129,7 +175,8 @@ async function checkRun(browser, runDir) {
   const server = await serve(site);
   const base = `http://127.0.0.1:${server.address().port}`;
   const report = { checked: new Date().toISOString(), tools: {
-    chromium: await browser.version(), 'axe-core': version('axe-core'), pa11y: version('pa11y'), lighthouse: version('lighthouse') },
+    chromium: await browser.version(), 'axe-core': version('axe-core'), pa11y: version('pa11y'), lighthouse: version('lighthouse'),
+    alfa: version('@siteimprove/alfa-test-utils'), nu: version('vnu-jar') },
     views: [] };
   try {
     const { views, routes } = await findViews(browser, base);
@@ -169,7 +216,8 @@ function writeSummary() {
     (i.nodes ?? []).map((n) => `${i.rule} ${n.selector}`)))).size;
   const rows = [['assistant', 'level', 'run', 'views', 'axe_issues', 'axe_rules', 'axe_critical', 'axe_serious',
     'pa11y_errors', 'pa11y_rules', 'lighthouse_min', 'lighthouse_mean', 'tool_errors',
-    'axe_unique', 'pa11y_unique', 'axe_needs_review', 'pa11y_ignored_route_links']];
+    'axe_unique', 'pa11y_unique', 'axe_needs_review', 'pa11y_ignored_route_links',
+    'alfa_issues', 'alfa_rules', 'alfa_unique', 'alfa_needs_review', 'nu_errors', 'nu_rules', 'nu_unique']];
   const issues = [['assistant', 'level', 'run', 'view', 'url', 'tool', 'kind', 'rule', 'wcag', 'impact', 'selector', 'html', 'detail',
     'contrast_ratio', 'contrast_expected', 'fg', 'bg']];
   for (const dir of allRuns().sort()) {
@@ -185,8 +233,11 @@ function writeSummary() {
       scores.length ? Math.min(...scores) : '', scores.length ? Math.round(scores.reduce((a, b) => a + b) / scores.length) : '',
       views.flatMap((v) => Object.keys(TOOLS).filter((t) => v[t]?.error)).length,
       unique(views, 'axe'), unique(views, 'pa11y'), sum(views, 'axe', undefined, 'needs_review'),
-      views.reduce((n, v) => n + (v.pa11y?.ignored_route_links ?? 0), 0)]);
-    for (const v of views) for (const [tool, kind] of [['axe', 'issues'], ['axe', 'needs_review'], ['pa11y', 'issues']])
+      views.reduce((n, v) => n + (v.pa11y?.ignored_route_links ?? 0), 0),
+      sum(views, 'alfa'), rules(views, 'alfa'), unique(views, 'alfa'), sum(views, 'alfa', undefined, 'needs_review'),
+      sum(views, 'nu'), rules(views, 'nu'), unique(views, 'nu')]);
+    for (const v of views) for (const [tool, kind] of [['axe', 'issues'], ['axe', 'needs_review'], ['pa11y', 'issues'],
+      ['alfa', 'issues'], ['alfa', 'needs_review'], ['nu', 'issues']])
       for (const i of v[tool]?.[kind] ?? []) for (const n of i.nodes ?? [])
         issues.push([assistant, level, run, v.name, v.url, tool, kind === 'issues' ? 'violation' : 'needs_review', i.rule,
           (i.wcag ?? []).join(' '), i.impact, n.selector, n.html, n.summary ?? n.message,
