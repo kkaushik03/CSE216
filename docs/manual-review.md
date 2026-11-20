@@ -86,7 +86,7 @@ Do the steps in this order. Each step tells which checks to fill in. [5. Checks]
 
 **Step C. Visual (VoiceOver off).**
 
-1. **Develop → Enter Responsive Design Mode**. Set the width to 320 px. Look at each page. (Z1)
+1. **Develop → Enter Responsive Design Mode**. Set the width to 320 px. The height does not matter (for example, 320 × 568). Look at each page and scroll down. (Z1)
 2. Leave responsive design mode. Zoom to 200% (Cmd+plus, 4 times). Look at each page. (Z2)
 3. Look at the errors, status messages and selected filters from steps A and B. (Z3)
 
