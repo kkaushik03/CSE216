@@ -1,0 +1,35 @@
+check,area,wcag,title,result,note,evidence,reviewer
+K1,Keyboard,2.4.1,A skip link or landmarks let you go past the navigation bar,pass,no skip link; rotor lists the main landmark,,Liza
+K2,Keyboard,2.1.1,All navigation bar items work with the keyboard,pass,,,Liza
+K3,Keyboard,2.1.1,Search and all filters work with the keyboard,pass,,,Liza
+K4,Keyboard,2.1.1,You can fill in and submit the registration form with the keyboard,pass,course list and checkbox reachable with Tab,,Liza
+K5,Keyboard,2.1.1,Course card buttons and table buttons (register / drop) work with the keyboard,pass,,,Liza
+K6,Keyboard,2.1.2,The focus does not get stuck anywhere on the page,pass,,,Liza
+K7,Keyboard,2.4.3,The focus order follows the visual order,fail,profile: after Remove the focus is lost and goes back to the top of the page,,Liza
+K8,Keyboard,2.4.7,The focus is always visible,pass,,,Liza
+K9,Keyboard,2.4.11,The focused element is not hidden behind other content,pass,,,Liza
+M1,Modal,2.4.3,The focus goes into the modal when it opens,fail,"register: after submit the focus stays on the page behind the modal, not in the modal",M1-focus-outside-modal.png,Liza
+M2,Modal,2.4.3,Tab and Shift+Tab stay in the modal while it is open,fail,register: Tab goes through all page links behind the modal before it reaches the modal buttons; no focus trap,,Liza
+M3,Modal,2.1.1,Esc and the close or cancel button close the modal,pass,,,Liza
+M4,Modal,2.4.3,The focus goes back to the button that opened the modal,pass,,,Liza
+M5,Modal,4.1.2,VoiceOver says that a dialog opened and reads its name,fail,"register: when the modal opens, VoiceOver stays on the ""Confirm registration"" button behind it and says nothing about a dialog",M5-no-dialog-announced.png,Liza
+F1,Form,3.3.2 1.3.1,Each field has a visible label and VoiceOver reads it,pass,"VoiceOver reads each field label, type, ""required"" and the selected value",,Liza
+F2,Form,3.3.2 1.4.1,Required fields are marked with text or a symbol that is explained (not color only),fail,"register: required fields have no asterisk or ""required"" text; only the Notes field says (optional)",F2-no-required-marks.png,Liza
+F3,Form,3.3.1,An empty or wrong submit shows each error in text next to its field,pass,"only the browser bubble (""Select an item in the list""), one field at a time, no lasting text or highlight; decide at calibration",,Liza
+F4,Form,3.3.3,Each error message tells how to correct it,pass,"browser messages say what to do (""Select an item in the list"", ""Fill out this field""); decide at calibration",,Liza
+F5,Form,3.3.1 4.1.3,VoiceOver reads the errors after submit,pass,"after an empty submit the focus moves to the first required field and VoiceOver reads the browser message (""Fill out this field""), but not the field name",,Liza
+S1,Status,4.1.3,VoiceOver reads the result count after a search or filter change and the focus stays in place,fail,"catalog: ""Showing 3 of 18 courses"" is not read after the search for ""data""; the count has no live region",,Liza
+S2,Status,4.1.3,VoiceOver reads the confirmation after you register or drop a course,fail,"register: ""You are registered!"" is not read (the focus stays behind the modal); profile: after Remove nothing is read and VoiceOver goes back to the top of the page",,Liza
+V1,VoiceOver,2.4.2,Each page or view has a title that tells what it is,pass,"each page has its own title (CampusFlow | Course Registration, Course Catalog | CampusFlow, Registration | CampusFlow, My Profile | CampusFlow)",,Liza
+V2,VoiceOver,1.3.1 2.4.6,Headings: one h1 per view and levels in a logical order,pass,"home: one h1 (""Find your next big idea.""), then h2 and h3 in order",,Liza
+V3,VoiceOver,1.3.1,Landmarks: banner or header and navigation and main and footer,pass,,,Liza
+V4,VoiceOver,2.4.4,Link and button names tell what they do,fail,"home: 4 course card links all named ""Register"", with no course name; the same on other pages",V4-register-links.png,Liza
+V5,VoiceOver,1.1.1,Meaningful images and icons have a text alternative and decorative ones are hidden,pass,no images; decorative icons are hidden; the icon-only Remove button has a name,,Liza
+V6,VoiceOver,1.3.1,VoiceOver reads the column header for each cell of the registered-courses table,pass,profile: VoiceOver reads the column header when moving to another column,,Liza
+V7,VoiceOver,4.1.2,Dropdowns and toggles and tabs announce their role and state (for example expanded or selected),pass,dropdowns: VoiceOver reads role and state,,Liza
+V8,VoiceOver,1.3.1,The navigation bar tells which page is the current page,pass,"VoiceOver says ""current page"" on the menu item",,Liza
+Z1,Visual,1.4.10,At 320 px width there is no horizontal scroll and no content is lost,pass,,,Liza
+Z2,Visual,1.4.4,At 200% zoom all text is readable and nothing is cut off or on top of other content,pass,,,Liza
+Z3,Visual,1.4.1,Errors and status and selected filters are not shown by color only,pass,,,Liza
+C1,Contrast,1.4.11,Focus indicators and field borders have a contrast of at least 3:1,fail,"lowest 1.1:1 (computed from the CSS, not measured): fields have no border, only a #f5f3ff fill on white (1.1:1); field focus border #c9c1ff on white 1.67:1 plus a 10% purple glow; link focus ring rgba(91,75,255,.45) on white about 2.0:1",C1-search-focus.png,Liza
+C2,Contrast,1.4.3,The needs-review contrast sample passes (4.5:1 for normal text and 3:1 for large text),fail,"Needs-review sample (worst point of the background, measured by script in headless Chromium at 1280 px, not by hand): home ""Browse the catalog"" button white 14.7px/700 on purple gradient 4.22:1 (needs 4.5:1, fail); menu ""Course catalog"" #4a4568 on near-white 8.84:1 (pass); stat label ""courses this term"" white on dark purple 12.02:1 (pass) | Found by the reviewer outside the sample (profile, only after registering, so the automated tools did not see it): course code badges in the table are grey #6d6887 on the purple gradient, 1.18:1 (script; CSS .cell-course span sets the muted color); stat card icons are grey #6d6887 on colored tiles, 1.0-2.5:1 (computed from CSS), but they are decorative next to a text label, so not counted",C2-btn-browse-catalog.png C2-nav-course-catalog.png C2-stat-courses-this-term.png C2-profile-code-badges.png C2-profile-stat-icons.png,Liza
