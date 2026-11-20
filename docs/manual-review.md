@@ -31,7 +31,11 @@ Keep your calibration result as `results/claude/L1/run-01/manual-review-<your na
 5. Learn the VoiceOver basics (Apple's VoiceOver Utility has a short tutorial):
    - **Cmd+F5**: turn VoiceOver on or off.
    - **Ctrl+Option+→ / ←**: read the next or previous item.
-   - **Ctrl+Option+U**: open the rotor (lists of headings, landmarks, links, form controls). Use ← and → to change the list.
+   - **Ctrl+Option+U**: open the rotor. The rotor is a VoiceOver menu that lists all elements of one type on the page (headings, landmarks, links, form controls). Screen reader users use it to see how a page is built.
+     1. Click once in the page content, then press Ctrl+Option+U.
+     2. Press ← and → to change the list.
+     3. Press ↑ and ↓ to move through the items. VoiceOver reads each item.
+     4. Press Enter to go to an item, or Esc to close the rotor.
    - **Ctrl**: stop speaking.
 6. Make your review files. From the repo root:
 
@@ -70,7 +74,11 @@ Do the steps in this order. Each step tells which checks to fill in. [5. Checks]
 
 **Step B. VoiceOver (Cmd+F5), in a new Private Window.** Do the same path again, and listen.
 
-1. On each page or view: listen to the page title. Use the rotor for headings, landmarks and links. (V1–V5, V8)
+1. On each page or view: listen to the page title (V1). Then open the rotor (Ctrl+Option+U) and look at these lists:
+   - **Headings**: one heading level 1 and levels in order. (V2)
+   - **Landmarks**: main, navigation, banner, content information. (V3, and K1 if there is no skip link)
+   - **Links** and **Form Controls**: the names of links and buttons. (V4)
+   - Also listen for image names (V5) and for "current page" on the navigation item (V8).
 2. Search and change a filter. Listen for the result count. (S1, V7)
 3. Submit the form empty. Listen for the errors. Move through the fields and listen for the labels. (F1, F5)
 4. Register. Listen to the modal and the confirmation. (M5, S2)
