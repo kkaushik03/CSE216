@@ -2,16 +2,17 @@
 
 The automated checks (see [checks.md](checks.md)) find only part of the problems. They do not use the keyboard, they do not listen with a screen reader, and they do not open the modal, submit the form or use the filters. The manual review checks these things.
 
-Each teammate reviews **all runs of their own assistant**, with the same checklist and the same steps. Each check is linked to a WCAG 2.2 success criterion.
+Each teammate reviews the runs of their own assistant, with the same checklist and the same steps. Each check is linked to a WCAG 2.2 success criterion.
+
+Gemini is not in the study (it did not follow the run protocol), so there is no Gemini review.
 
 | Reviewer | Assistant | Sites |
 |---|---|---|
 | Braxton | codex | 9 |
 | Liza | opencode | 9 |
 | Khushi | claude | 9 |
-| Rahat | gemini | 12 |
 
-A site takes about 40 minutes. The first sites take longer.
+Start with one site. If it takes too long, the team agrees on fewer sites. The required minimum is one run per assistant and level.
 
 ## 1. Before you start: the calibration site
 
