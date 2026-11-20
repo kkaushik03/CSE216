@@ -1,0 +1,35 @@
+check,area,wcag,title,result,note,evidence,reviewer
+K1,Keyboard,2.4.1,A skip link or landmarks let you go past the navigation bar,pass,skip link works,,Liza
+K2,Keyboard,2.1.1,All navigation bar items work with the keyboard,pass,,,Liza
+K3,Keyboard,2.1.1,Search and all filters work with the keyboard,pass,,,Liza
+K4,Keyboard,2.1.1,You can fill in and submit the registration form with the keyboard,pass,,,Liza
+K5,Keyboard,2.1.1,Course card buttons and table buttons (register / drop) work with the keyboard,pass,,,Liza
+K6,Keyboard,2.1.2,The focus does not get stuck anywhere on the page,pass,,,Liza
+K7,Keyboard,2.4.3,The focus order follows the visual order,pass,,,Liza
+K8,Keyboard,2.4.7,The focus is always visible,pass,,,Liza
+K9,Keyboard,2.4.11,The focused element is not hidden behind other content,pass,,,Liza
+M1,Modal,2.4.3,The focus goes into the modal when it opens,pass,,,Liza
+M2,Modal,2.4.3,Tab and Shift+Tab stay in the modal while it is open,pass,,,Liza
+M3,Modal,2.1.1,Esc and the close or cancel button close the modal,pass,,,Liza
+M4,Modal,2.4.3,The focus goes back to the button that opened the modal,pass,,,Liza
+M5,Modal,4.1.2,VoiceOver says that a dialog opened and reads its name,pass,VoiceOver reads the dialog and its title,,Liza
+F1,Form,3.3.2 1.3.1,Each field has a visible label and VoiceOver reads it,pass,VoiceOver reads each field label,,Liza
+F2,Form,3.3.2 1.4.1,Required fields are marked with text or a symbol that is explained (not color only),fail,"registration: required fields (name, email, student ID, program) have no asterisk or ""required"" text; no note that all fields are required",F2-no-required-marks.png,Liza
+F3,Form,3.3.1,An empty or wrong submit shows each error in text next to its field,pass,,,Liza
+F4,Form,3.3.3,Each error message tells how to correct it,pass,,,Liza
+F5,Form,3.3.1 4.1.3,VoiceOver reads the errors after submit,pass,"after an empty submit the focus moves to the first required field and VoiceOver reads the browser message (""Fill out this field""), but not the field name",,Liza
+S1,Status,4.1.3,VoiceOver reads the result count after a search or filter change and the focus stays in place,fail,"catalog: the new result count is not read after a search, also after a pause; the count has aria-live=""polite"" in the code, but VoiceOver reads only the typed word",,Liza
+S2,Status,4.1.3,VoiceOver reads the confirmation after you register or drop a course,fail,register: confirmation is read; profile: nothing is read after Drop (the focus stays in place),,Liza
+V1,VoiceOver,2.4.2,Each page or view has a title that tells what it is,pass,"each page has its own title (Prism University | Find your color, Course Catalog | ..., Registration | ..., Student Profile | ...)",,Liza
+V2,VoiceOver,1.3.1 2.4.6,Headings: one h1 per view and levels in a logical order,fail,"catalog: h1 then course titles at h3, no h2 between (levels jump from 1 to 3)",V2-catalog-headings.png,Liza
+V3,VoiceOver,1.3.1,Landmarks: banner or header and navigation and main and footer,pass,"banner, navigation, main, region, content information",,Liza
+V4,VoiceOver,2.4.4,Link and button names tell what they do,fail,"catalog: each course card button is named only ""Add to plan"" (VoiceOver: ""Add to plan, button""), with no course name; links are fine; Remove and Drop buttons include the course code",,Liza
+V5,VoiceOver,1.1.1,Meaningful images and icons have a text alternative and decorative ones are hidden,pass,"no meaningful images; icon buttons have names that include the course (for example ""Drop CS 110"")",,Liza
+V6,VoiceOver,1.3.1,VoiceOver reads the column header for each cell of the registered-courses table,pass,VoiceOver reads the column headers,,Liza
+V7,VoiceOver,4.1.2,Dropdowns and toggles and tabs announce their role and state (for example expanded or selected),pass,dropdowns: VoiceOver reads role and state,,Liza
+V8,VoiceOver,1.3.1,The navigation bar tells which page is the current page,pass,"VoiceOver says ""current page"" on the menu item",,Liza
+Z1,Visual,1.4.10,At 320 px width there is no horizontal scroll and no content is lost,pass,,,Liza
+Z2,Visual,1.4.4,At 200% zoom all text is readable and nothing is cut off or on top of other content,pass,"also seen at 100%: catalog search icon is on top of the placeholder text; home: calendar icon is not centered in its tile (cosmetic, not counted)",search-icon-overlap.png icon-misaligned.png,Liza
+Z3,Visual,1.4.1,Errors and status and selected filters are not shown by color only,pass,,,Liza
+C1,Contrast,1.4.11,Focus indicators and field borders have a contrast of at least 3:1,fail,"lowest 1.38:1 (computed from the CSS, not measured): field border #ded9eb on white; link focus ring rgba(107,76,255,.42) on white about 1.9:1; field focus border #9d86ff on white 2.88:1",,Liza
+C2,Contrast,1.4.3,The needs-review contrast sample passes (4.5:1 for normal text and 3:1 for large text),fail,"Needs-review sample (worst point of the background, measured by script in headless Chromium at 1280 px, not by hand): home top bar link ""Register by November 14"" white 12.5px/700 on pink-purple gradient 3.81:1 (needs 4.5:1, fail); home ""Browse courses"" button white 13.9px/750 on gradient 3.22:1 (fail); catalog card code ""BIO 150"" white 21.9px/850 on teal art 1.75:1 (large text, needs 3:1, fail); home lead text #3e395d 9.93:1 (pass)",C2-topbar-link.png C2-btn-browse-courses.png C2-card-code-bio150.png C2-hero-lead.png,Liza
