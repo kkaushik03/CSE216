@@ -1,0 +1,35 @@
+check,area,wcag,title,result,note,evidence,reviewer
+K1,Keyboard,2.4.1,A skip link or landmarks let you go past the navigation bar,pass,"no skip link (first Tab goes to Home nav link), but VoiceOver rotor lists a main landmark",,Khushi
+K2,Keyboard,2.1.1,All navigation bar items work with the keyboard,pass,all 4 nav items open with Enter,,Khushi
+K3,Keyboard,2.1.1,Search and all filters work with the keyboard,pass,"search and all 5 filters (Department, Level, Credits, Availability, Sort) work with the keyboard",,Khushi
+K4,Keyboard,2.1.1,You can fill in and submit the registration form with the keyboard,pass,"all fields can be filled and the form submits; policy checkbox: Tab from Notes, VoiceOver reads 'checkbox, unchecked' and Space checks it (first try without VoiceOver looked like Space did nothing, likely because the focus is not visible, see K8)",,Khushi
+K5,Keyboard,2.1.1,Course card buttons and table buttons (register / drop) work with the keyboard,pass,catalog card Register and profile table Drop both work with Enter,,Khushi
+K6,Keyboard,2.1.2,The focus does not get stuck anywhere on the page,pass,,,Khushi
+K7,Keyboard,2.4.3,The focus order follows the visual order,pass,,,Khushi
+K8,Keyboard,2.4.7,The focus is always visible,fail,register: no visible focus on the course checkboxes or the policy checkbox (VoiceOver off); CSS input:focus sets outline:none,,Khushi
+K9,Keyboard,2.4.11,The focused element is not hidden behind other content,pass,,,Khushi
+M1,Modal,2.4.3,The focus goes into the modal when it opens,pass,Enter right after the modal opens runs its main button,,Khushi
+M2,Modal,2.4.3,Tab and Shift+Tab stay in the modal while it is open,pass,Tab and Shift+Tab stay in the modal,,Khushi
+M3,Modal,2.1.1,Esc and the close or cancel button close the modal,pass,"Esc, Cancel and the close button all close the modal",,Khushi
+M4,Modal,2.4.3,The focus goes back to the button that opened the modal,pass,"after Esc, Enter reopens the modal, so focus went back to the submit button (tested with keyboard submit; mouse submit leaves focus elsewhere in Safari)",,Khushi
+M5,Modal,4.1.2,VoiceOver says that a dialog opened and reads its name,pass,"modal has role=dialog, aria-modal=true, aria-labelledby to its h2 'Confirm your registration'",,Khushi
+F1,Form,3.3.2 1.3.1,Each field has a visible label and VoiceOver reads it,pass,register: every field has a visible <label for>; course checkboxes and policy checkbox are wrapped in labels,,Khushi
+F2,Form,3.3.2 1.4.1,Required fields are marked with text or a symbol that is explained (not color only),fail,"registration: required fields have a red * but no text on the page explains what * means (borderline, raise at calibration)",,Khushi
+F3,Form,3.3.1,An empty or wrong submit shows each error in text next to its field,pass,empty submit: error text shows next to each field,,Khushi
+F4,Form,3.3.3,Each error message tells how to correct it,pass,"Student ID: ""Enter a valid student ID (e.g. S2026-0417)."" gives an example; Email: ""Enter a valid email address."" has no example (borderline, raise at calibration)",,Khushi
+F5,Form,3.3.1 4.1.3,VoiceOver reads the errors after submit,pass,"register: after an empty submit, VoiceOver reads the errors (tested); note the code only moves the scroll, not the focus, and announces the toast 'Please fix the highlighted fields.'",,Khushi
+S1,Status,4.1.3,VoiceOver reads the result count after a search or filter change and the focus stays in place,pass,"catalog: #result-count is aria-live=polite, text 'Showing N of 16 courses'; focus stays in search",,Khushi
+S2,Status,4.1.3,VoiceOver reads the confirmation after you register or drop a course,pass,register: success opens a second dialog 'Registration complete!'; drop shows toast '<code> has been dropped.' in a role=status live region,,Khushi
+V1,VoiceOver,2.4.2,Each page or view has a title that tells what it is,pass,each page has its own title: UniReg · Home / Course Catalog / Registration / My Profile,,Khushi
+V2,VoiceOver,1.3.1 2.4.6,Headings: one h1 per view and levels in a logical order,pass,"home: h1 'Build your perfect semester', h2 section titles, h3 card and step titles; no level jumps in the markup",,Khushi
+V3,VoiceOver,1.3.1,Landmarks: banner or header and navigation and main and footer,pass,"home rotor: banner, navigation, main, content information",,Khushi
+V4,VoiceOver,2.4.4,Link and button names tell what they do,fail,"home: course card links in the rotor are all named just ""Register"", with no course name",,Khushi
+V5,VoiceOver,1.1.1,Meaningful images and icons have a text alternative and decorative ones are hidden,pass,no img elements; nav and card emoji have aria-hidden=true; seats bar is a labelled progressbar,,Khushi
+V6,VoiceOver,1.3.1,VoiceOver reads the column header for each cell of the registered-courses table,pass,"profile: table has <thead> with <th> for each column (Code, Course, Department, ...), sortable headers set aria-sort",,Khushi
+V7,VoiceOver,4.1.2,Dropdowns and toggles and tabs announce their role and state (for example expanded or selected),pass,"only custom control is the mobile menu button (visible under 860px), it has aria-expanded and aria-controls; filters are native selects",,Khushi
+V8,VoiceOver,1.3.1,The navigation bar tells which page is the current page,pass,"nav link of current page has aria-current=""page""",,Khushi
+Z1,Visual,1.4.10,At 320 px width there is no horizontal scroll and no content is lost,pass,"all 4 pages fit at 320 x 568, no sideways page scroll (incl. profile)",,Khushi
+Z2,Visual,1.4.4,At 200% zoom all text is readable and nothing is cut off or on top of other content,pass,"profile at 200%: layout does not reflow, the content is wider than the header and the page needs sideways scroll, but no text is cut off, overlapping or missing once you scroll (borderline, raise at calibration)",Z2-profile-200-khushi.png,Khushi
+Z3,Visual,1.4.1,Errors and status and selected filters are not shown by color only,pass,"form errors and filter states always have text, not color only",,Khushi
+C1,Contrast,1.4.11,Focus indicators and field borders have a contrast of at least 3:1,fail,lowest 1.1:1. Measured with CCA: empty field border on white 1.1:1 (fail); orange nav focus ring on header 1.8:1 (fail); purple focused field border on white 4.9:1 (pass),,Khushi
+C2,Contrast,1.4.3,The needs-review contrast sample passes (4.5:1 for normal text and 3:1 for large text),fail,"home, measured with CCA, all normal text (needs 4.5:1): nav 'My Profile' white on header 2.5:1; hero subtitle 'Browse courses...' white on #BC4EB3 4.3:1; stat card 'Open courses' white on green 2:1; typed text in hero search box white on white 1:1. All fail",C2-hero-subtitle-khushi.png,Khushi
