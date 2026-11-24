@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore courses for Fall 2026 at Apex University. Search, filter by department, level, and credits, check course prerequisites, and register instantly.">
+  <title>Course Catalog | Apex University</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Skip to Main Content Link for Keyboard Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Campus Announcement">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <span>
+        🔔 <strong>Fall 2026 Priority Registration is Open!</strong> Check seat availability and add courses before September 15.
+      </span>
+      <a href="register.html">Go to Registration Form &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Global Header & Main Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apex University Registration System Home">
+        <div class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="brand__text">
+          <span class="brand__title">Apex University</span>
+          <span class="brand__subtitle">Course Registration System</span>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button type="button" class="navbar__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Primary Navigation Bar -->
+      <nav id="primary-nav" class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="navbar__menu">
+          <li>
+            <a href="index.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="navbar__link is-active" aria-current="page">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+              Course Catalog
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+              Register
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Student Profile
+              <span class="navbar__badge" data-bind="nav-count" aria-label="Registered course count">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Student Profile Quick Pill -->
+      <div class="header-actions">
+        <a href="profile.html" class="user-pill" aria-label="Student profile: Alex Morgan. Click to view schedule and profile.">
+          <div class="user-pill__avatar" aria-hidden="true">AM</div>
+          <div>
+            <div class="user-pill__text">Alex Morgan</div>
+            <span class="user-pill__term" data-bind="nav-credits">10 cr enrolled</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-content">
+    <div class="container">
+
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+        <ol style="list-style: none; display: flex; gap: 0.5rem; font-size: 0.875rem; color: var(--color-text-light);">
+          <li><a href="index.html" style="color: var(--color-primary-600); text-decoration: none;">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" style="color: var(--color-text-main); font-weight: 600;">Course Catalog</li>
+        </ol>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="section-header" style="margin-bottom: 1.5rem;">
+        <div>
+          <h1 class="section-title">
+            <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#2563eb"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+            Fall 2026 Course Catalog
+          </h1>
+          <p class="section-subtitle">Search, filter by department, level, and credits, check course prerequisites, and register instantly.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="register.html" class="btn btn--primary">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Course Registration Form
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter & Search Controls Panel -->
+      <section class="filter-panel" aria-label="Course Filters and Search">
+        <div class="filter-grid">
+          <!-- Keyword Search -->
+          <div class="filter-group" style="grid-column: span 2;">
+            <label for="catalog-search" class="filter-label">Search Keywords</label>
+            <div style="position: relative;">
+              <input type="text" id="catalog-search" class="filter-input" placeholder="Search by title, code, keyword, or instructor (e.g., CS 210, Python, Rostova)..." aria-label="Search courses by keyword, course code, or professor">
+            </div>
+          </div>
+
+          <!-- Department Filter -->
+          <div class="filter-group">
+            <label for="filter-department" class="filter-label">Department / Subject</label>
+            <select id="filter-department" class="filter-select" aria-label="Filter courses by academic department">
+              <!-- Populated via JS -->
+            </select>
+          </div>
+
+          <!-- Academic Level Filter -->
+          <div class="filter-group">
+            <label for="filter-level" class="filter-label">Course Level</label>
+            <select id="filter-level" class="filter-select" aria-label="Filter courses by academic level">
+              <option value="all">All Levels</option>
+              <option value="100">100-Level (Introductory)</option>
+              <option value="200">200-Level (Intermediate)</option>
+              <option value="300">300-Level (Advanced)</option>
+            </select>
+          </div>
+
+          <!-- Credits Filter -->
+          <div class="filter-group">
+            <label for="filter-credits" class="filter-label">Credit Hours</label>
+            <select id="filter-credits" class="filter-select" aria-label="Filter courses by credit hours">
+              <option value="all">All Credits</option>
+              <option value="3">3 Credits</option>
+              <option value="4">4 Credits</option>
+            </select>
+          </div>
+
+          <!-- Availability Filter -->
+          <div class="filter-group">
+            <label for="filter-seats" class="filter-label">Seat Availability</label>
+            <select id="filter-seats" class="filter-select" aria-label="Filter courses by seat availability">
+              <option value="all">All Courses</option>
+              <option value="open">Open Seats Only</option>
+            </select>
+          </div>
+
+          <!-- Sort Order -->
+          <div class="filter-group">
+            <label for="filter-sort" class="filter-label">Sort By</label>
+            <select id="filter-sort" class="filter-select" aria-label="Sort courses order">
+              <option value="code-asc">Course Code (A &rarr; Z)</option>
+              <option value="code-desc">Course Code (Z &rarr; A)</option>
+              <option value="title-asc">Course Title (A &rarr; Z)</option>
+              <option value="credits-desc">Credits (High to Low)</option>
+              <option value="credits-asc">Credits (Low to High)</option>
+              <option value="seats-desc">Most Open Seats</option>
+            </select>
+          </div>
+
+          <!-- Reset Filter Button -->
+          <div class="filter-group" style="justify-content: flex-end;">
+            <button type="button" id="btn-reset-filters" class="btn btn--secondary" style="width: 100%;">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+              Reset Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Meta Results Bar with Live Region -->
+        <div class="filter-meta">
+          <div id="catalog-results-count" aria-live="polite" aria-atomic="true" style="font-weight: 700; color: var(--color-text-main);">
+            Showing all 16 courses
+          </div>
+          <div id="active-filter-chips" class="filter-chips">
+            <!-- Active filter chips injected here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Grid Container -->
+      <div id="catalog-courses-container" class="courses-grid" role="region" aria-label="Course Search Results">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="catalog-empty-state" style="display: none; text-align: center; padding: 4rem 2rem; background: var(--color-bg-surface); border-radius: var(--radius-xl); border: 1.5px dashed var(--color-border-strong); margin-top: 1rem;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: #fee2e2; color: #dc2626; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+        </div>
+        <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--color-text-main); margin-bottom: 0.5rem;">No Courses Found</h2>
+        <p style="color: var(--color-text-muted); max-width: 450px; margin: 0 auto 1.5rem; line-height: 1.5;">
+          No courses matched your current filter or keyword combination. Try broadening your criteria or reset all filters.
+        </p>
+        <button type="button" class="btn btn--primary" onclick="resetAllCatalogFilters()">
+          Clear All Filters
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Course Details Modal -->
+  <div id="course-details-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-course-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span id="modal-dept-badge" class="course-badge" style="margin-bottom: 0.35rem; display: inline-block;"></span>
+          <h2 id="modal-course-title" class="modal-title">Course Details</h2>
+        </div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal dialog">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-course-body">
+        <!-- Injected via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" data-close-modal>Close</button>
+        <button type="button" class="btn btn--primary" id="modal-register-action-btn">Register for Course</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Confirmation Modal -->
+  <div id="confirm-registration-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header" style="background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #ffffff;">
+        <h2 id="confirm-modal-title" class="modal-title" style="color: #ffffff;">Confirm Course Registration</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close confirmation dialog" style="color: #ffffff;">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="confirm-modal-body">
+        <p>Please review your course enrollment details before confirming:</p>
+        <div class="modal-confirm-summary" id="confirm-summary-box">
+          <!-- Populated dynamically -->
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+          By confirming, you agree to academic policies, prerequisites, and payment schedules for Fall 2026.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" data-close-modal>Cancel</button>
+        <button type="button" class="btn btn--success" id="confirm-enroll-btn">
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Confirm & Enroll
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand__name">Apex University</div>
+          <p class="footer-brand__desc">
+            Excellence in higher education, research discovery, and human-centered design. Office of the University Registrar.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="catalog.html" class="footer-link">Course Catalog</a></li>
+            <li><a href="register.html" class="footer-link">Course Registration</a></li>
+            <li><a href="profile.html" class="footer-link">Student Profile & Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Student Resources</h2>
+          <ul class="footer-links">
+            <li><a href="catalog.html?dept=Computer+Science" class="footer-link">Computer Science Dept</a></li>
+            <li><a href="catalog.html?dept=Mathematics" class="footer-link">Mathematics & Statistics</a></li>
+            <li><a href="register.html" class="footer-link">Degree Planner</a></li>
+            <li><a href="profile.html" class="footer-link">Download Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Support & Accessibility</h2>
+          <ul class="footer-links">
+            <li><span class="footer-link">Office: 100 University Plaza</span></li>
+            <li><span class="footer-link">Helpline: (555) 019-2834</span></li>
+            <li><span class="footer-link">registrar@apex.edu</span></li>
+            <li><span class="footer-link" style="color: #34d399;">✓ WCAG 2.1 AA Compliant</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Apex University. All rights reserved. Plain HTML, CSS, JavaScript application.</div>
+        <div>Designed for accessibility, screen readers, and high contrast.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="courses-data.js"></script>
+  <script src="app.js"></script>
+  <script src="catalog.js"></script>
+</body>
+</html>

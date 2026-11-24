@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Horizon University Student Academic Profile - Degree audit, completed credits, GPA standing, and current enrolled schedule.">
+  <title>Student Profile - Horizon University Registration Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="profile">
+  <!-- Skip to main content landmark for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Accessible Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Horizon University Academic Portal Home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Horizon University</span>
+          <span class="brand-subtitle">Course Registration Portal</span>
+        </div>
+      </a>
+
+      <!-- Mobile navigation toggle -->
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav-menu" aria-label="Open navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav id="primary-nav" aria-label="Main Navigation">
+        <ul id="primary-nav-menu" class="nav-menu">
+          <li>
+            <a href="index.html" class="nav-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="nav-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Course Catalog</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="nav-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Registration</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="nav-link" aria-current="page">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Student Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="nav-schedule-badge" aria-label="View scheduled courses and credits">
+              <span class="badge-count">2</span>
+              <span>Enrolled:</span>
+              <span class="badge-credits">8 cr</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" tabindex="-1">
+    <!-- Breadcrumb & Page Banner -->
+    <section class="page-hero" style="padding: 2.25rem 0;" aria-labelledby="profile-page-title">
+      <div class="container hero-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom:0.75rem;">
+          <ol style="list-style:none;display:flex;align-items:center;gap:0.5rem;padding:0;font-size:0.875rem;color:#c7d2fe;">
+            <li><a href="index.html" style="color:#ffffff;text-decoration:none;">Home</a></li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li aria-current="page" style="color:#e0e7ff;font-weight:700;">Student Profile</li>
+          </ol>
+        </nav>
+        <h1 id="profile-page-title">Student Academic Profile</h1>
+        <p class="hero-lead" style="margin-bottom:0;">
+          Review your cumulative academic records, graduation requirements checklist, current semester schedule, and contact your faculty advisor.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <!-- Student Hero Information Card -->
+        <div class="profile-banner" role="region" aria-label="Student Overview">
+          <div class="profile-avatar-large" aria-hidden="true">AM</div>
+          <div class="profile-info-heading">
+            <h2 id="profile-name" style="color:#ffffff;font-size:1.85rem;margin-bottom:0.25rem;">Alex Mercer</h2>
+            <div style="font-size:0.95rem;color:#c7d2fe;margin-bottom:0.75rem;">
+              Student ID: <span id="profile-id" style="font-weight:700;color:#ffffff;">U20268841</span> &bull;
+              College: <strong>College of Computing & Natural Sciences</strong>
+            </div>
+            <div class="profile-meta-chips">
+              <span class="badge badge-indigo" id="profile-major">Computer Science, B.S.</span>
+              <span class="badge badge-purple">Minor: Data Analytics</span>
+              <span class="badge badge-emerald">Clear to Register</span>
+              <span class="badge" style="background:rgba(255,255,255,0.2);color:#ffffff;border:1px solid rgba(255,255,255,0.3);">
+                Advisor: <strong id="profile-advisor" style="margin-left:4px;">Dr. Ada Lovelace</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards -->
+        <div class="metric-cards-grid" role="region" aria-label="Academic Performance Metrics">
+          <!-- GPA -->
+          <div class="metric-card" style="border-top:4px solid #4f46e5;">
+            <div class="metric-card-title">Cumulative GPA</div>
+            <div class="metric-card-value" id="profile-gpa" style="color:#4f46e5;">3.84</div>
+            <div class="metric-card-sub">Dean's Honor List (Fall 2025, Spring 2026)</div>
+          </div>
+
+          <!-- Academic Standing -->
+          <div class="metric-card" style="border-top:4px solid #059669;">
+            <div class="metric-card-title">Class Standing</div>
+            <div class="metric-card-value" id="profile-standing" style="font-size:1.6rem;color:#059669;">Junior</div>
+            <div class="metric-card-sub">Undergraduate Year 3 (Good Standing)</div>
+          </div>
+
+          <!-- Current Term Load -->
+          <div class="metric-card" style="border-top:4px solid #d97706;">
+            <div class="metric-card-title">Current Term Enrolled</div>
+            <div class="metric-card-value" id="profile-current-credits" style="color:#d97706;">8 cr</div>
+            <div class="metric-card-sub">Fall 2026 Registered Schedule</div>
+          </div>
+
+          <!-- Total Credits -->
+          <div class="metric-card" style="border-top:4px solid #7c3aed;">
+            <div class="metric-card-title">Credits Earned / Required</div>
+            <div class="metric-card-value" style="font-size:1.6rem;color:#7c3aed;">
+              <span id="profile-completed-credits">68 cr</span> / <span id="profile-degree-req" style="font-size:1.1rem;color:var(--text-subtle);">120 cr</span>
+            </div>
+            <div class="metric-card-sub">Toward Bachelor of Science Degree</div>
+          </div>
+        </div>
+
+        <!-- Degree Completion Progress Card -->
+        <div style="background:#ffffff;border-radius:var(--radius-lg);padding:1.75rem;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);margin-bottom:2.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <h3 style="font-size:1.2rem;margin-bottom:0.2rem;">Degree Completion Meter</h3>
+              <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0;">
+                Calculated from 68 completed units plus currently registered credits toward the 120-unit graduation requirement.
+              </p>
+            </div>
+            <span id="profile-progress-percent" style="font-size:1.25rem;font-weight:800;color:var(--primary-700);">63% Complete</span>
+          </div>
+
+          <div class="credit-progress-bar" role="progressbar" id="profile-progress-bar" aria-label="Overall degree requirement progress" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">
+            <div class="credit-progress-fill" id="profile-progress-fill" style="width:63%;background:linear-gradient(90deg, #4f46e5 0%, #06b6d4 50%, #10b981 100%);"></div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;font-size:0.8rem;font-weight:600;color:var(--text-subtle);margin-top:0.5rem;">
+            <span>Matriculation (0 Units)</span>
+            <span>Lower-Division Core (45 Units)</span>
+            <span>Upper-Division Major (90 Units)</span>
+            <span>Degree Conferred (120 Units)</span>
+          </div>
+        </div>
+
+        <!-- Two Column Layout: Current Enrolled Schedule & Degree Checklist -->
+        <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:2rem;align-items:start;margin-bottom:2.5rem;">
+          <!-- Left: Current Term Enrolled Schedule -->
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem;">
+              <h3 style="font-size:1.3rem;margin-bottom:0;">Fall 2026 Enrolled Classes</h3>
+              <div style="display:flex;gap:0.5rem;">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="window.print();" aria-label="Print official course schedule">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                  Print Schedule
+                </button>
+                <a href="register.html" class="btn btn-primary btn-sm">
+                  Add / Drop
+                </a>
+              </div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="data-table" aria-label="Current semester enrolled classes table">
+                <caption class="sr-only">Enrolled courses for current semester showing code, title, instructor, schedule, room, and credits</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Instructor</th>
+                    <th scope="col">Meeting Days/Time</th>
+                    <th scope="col">Location</th>
+                    <th scope="col" style="text-align:center;">Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="profile-schedule-tbody">
+                  <!-- Populated dynamically by App.renderProfileScheduleTable() -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Degree Audit Checklist -->
+          <div class="checklist-card">
+            <h3 style="font-size:1.2rem;margin-bottom:0.25rem;">Degree Requirements Checklist</h3>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem;">B.S. in Computer Science curriculum status</p>
+
+            <div class="checklist-item">
+              <div style="color:var(--success);flex-shrink:0;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div style="font-size:0.875rem;">
+                <div style="font-weight:700;color:var(--text-main);">General Education Foundation</div>
+                <div style="color:var(--text-subtle);">Writing, Humanities, and Social Sciences (Satisfied)</div>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div style="color:var(--success);flex-shrink:0;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div style="font-size:0.875rem;">
+                <div style="font-weight:700;color:var(--text-main);">Lower-Division CS Core</div>
+                <div style="color:var(--text-subtle);">CS 101, Python Labs, Discrete Math (Satisfied)</div>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div style="color:var(--dept-cs);flex-shrink:0;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div style="font-size:0.875rem;">
+                <div style="font-weight:700;color:var(--text-main);">Upper-Division CS Major Core</div>
+                <div style="color:var(--text-subtle);">In Progress: CS 201, CS 305 Web Arch (Need 16 credits)</div>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div style="color:var(--dept-math);flex-shrink:0;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div style="font-size:0.875rem;">
+                <div style="font-weight:700;color:var(--text-main);">Mathematics & Statistics</div>
+                <div style="color:var(--text-subtle);">MATH 150 (Done), MATH 220 & 310 (Remaining)</div>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div style="color:var(--text-subtle);flex-shrink:0;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+              </div>
+              <div style="font-size:0.875rem;">
+                <div style="font-weight:700;color:var(--text-main);">Senior Capstone Project</div>
+                <div style="color:var(--text-subtle);">Planned for Senior Year (Fall 2027 / Spring 2028)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editable Student Preferences Form -->
+        <div class="form-card">
+          <div class="form-card-header">
+            <h3 style="font-size:1.25rem;margin-bottom:0.25rem;">Personal Information & Preferences</h3>
+            <p style="font-size:0.9rem;margin-bottom:0;">Update your student contact record and graduation target term.</p>
+          </div>
+
+          <form id="profile-edit-form">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="edit-name" class="input-label">Preferred Name <span aria-hidden="true" style="color:var(--danger)">*</span></label>
+                <input type="text" id="edit-name" class="input-field" required value="Alex Mercer">
+                <span class="form-hint">Displayed on class rosters</span>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-email" class="input-label">University Email <span aria-hidden="true" style="color:var(--danger)">*</span></label>
+                <input type="email" id="edit-email" class="input-field" required value="a.mercer@horizon.edu">
+                <span class="form-hint">Official registration notifications will be sent here</span>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-phone" class="input-label">Contact Phone</label>
+                <input type="tel" id="edit-phone" class="input-field" value="(555) 382-9104">
+                <span class="form-hint">For urgent academic advising messages</span>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-grad" class="input-label">Target Graduation Term</label>
+                <select id="edit-grad" class="select-field">
+                  <option value="Spring 2027">Spring 2027</option>
+                  <option value="Fall 2027">Fall 2027</option>
+                  <option value="Spring 2028" selected>Spring 2028</option>
+                  <option value="Fall 2028">Fall 2028</option>
+                </select>
+                <span class="form-hint">Used for degree audit priority filing</span>
+              </div>
+            </div>
+
+            <div style="display:flex;justify-content:flex-end;margin-top:1rem;">
+              <button type="submit" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                Save Preferences
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="brand-icon" style="width:36px;height:36px;" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path></svg>
+            </div>
+            <span>Horizon University</span>
+          </div>
+          <p style="font-size:0.9rem;color:#94a3b8;line-height:1.5;">
+            Office of the University Registrar. Providing accessible, transparent academic registration and scheduling services for all students.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Registration</h4>
+          <ul class="footer-links-list">
+            <li><a href="catalog.html">Course Catalog</a></li>
+            <li><a href="register.html">Add / Drop Courses</a></li>
+            <li><a href="profile.html">Degree Audit</a></li>
+            <li><a href="register.html">Tuition & Fees</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academic Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="profile.html">Academic Advisor</a></li>
+            <li><a href="catalog.html">Department Directory</a></li>
+            <li><a href="index.html">Term Deadlines</a></li>
+            <li><a href="catalog.html">Prerequisite Guide</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Student Support</h4>
+          <p style="font-size:0.875rem;color:#94a3b8;margin-bottom:0.5rem;">
+            Registrar's Hall, Room 104<br>
+            Email: <a href="mailto:registrar@horizon.edu" style="color:#cbd5e1;">registrar@horizon.edu</a><br>
+            Phone: (555) 019-2834
+          </p>
+          <span class="badge badge-emerald">Accessibility WCAG 2.2 AA</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Horizon University. All Rights Reserved.</div>
+        <div>Course Registration Portal System &bull; Single-Data Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Data & Logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

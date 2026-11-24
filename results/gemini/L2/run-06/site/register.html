@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="University Course Registration - Add and drop courses, view current term schedule, and manage credit load.">
+  <title>Course Registration - Horizon University Registration Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="register">
+  <!-- Skip to main content landmark for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Accessible Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Horizon University Academic Portal Home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Horizon University</span>
+          <span class="brand-subtitle">Course Registration Portal</span>
+        </div>
+      </a>
+
+      <!-- Mobile navigation toggle -->
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav-menu" aria-label="Open navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav id="primary-nav" aria-label="Main Navigation">
+        <ul id="primary-nav-menu" class="nav-menu">
+          <li>
+            <a href="index.html" class="nav-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="nav-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Course Catalog</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="nav-link" aria-current="page">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Registration</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="nav-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Student Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="nav-schedule-badge" aria-label="View scheduled courses and credits">
+              <span class="badge-count">2</span>
+              <span>Enrolled:</span>
+              <span class="badge-credits">8 cr</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" tabindex="-1">
+    <!-- Breadcrumb & Page Banner -->
+    <section class="page-hero" style="padding: 2.25rem 0;" aria-labelledby="register-page-title">
+      <div class="container hero-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom:0.75rem;">
+          <ol style="list-style:none;display:flex;align-items:center;gap:0.5rem;padding:0;font-size:0.875rem;color:#c7d2fe;">
+            <li><a href="index.html" style="color:#ffffff;text-decoration:none;">Home</a></li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li aria-current="page" style="color:#e0e7ff;font-weight:700;">Registration</li>
+          </ol>
+        </nav>
+        <h1 id="register-page-title">Term Course Registration</h1>
+        <p class="hero-lead" style="margin-bottom:0;">
+          Add new courses to your semester schedule, verify prerequisites, manage credit limits, and drop courses with instant confirmation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Registration Work Area -->
+    <section class="section-padding">
+      <div class="container">
+        <!-- Student Info Banner -->
+        <div style="background:#ffffff;border:1px solid var(--border-light);border-left:5px solid #4f46e5;border-radius:var(--radius-lg);padding:1.25rem 1.5rem;box-shadow:var(--shadow-sm);margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:48px;height:48px;border-radius:50%;background:#e0e7ff;color:#3730a3;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">
+              AM
+            </div>
+            <div>
+              <div style="font-size:1.15rem;font-weight:800;color:var(--text-main);">Alex Mercer</div>
+              <div style="font-size:0.85rem;color:var(--text-subtle);">Student ID: <strong>U20268841</strong> &bull; Major: <strong>Computer Science, B.S.</strong></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;">
+            <span class="badge badge-emerald">Registration Clear (No Holds)</span>
+            <span class="badge" style="background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;">Standing: Junior</span>
+          </div>
+        </div>
+
+        <!-- Registration Layout: Form & Credit Meter -->
+        <div class="registration-layout">
+          <!-- Left Column: Registration Form -->
+          <div>
+            <div class="form-card">
+              <div class="form-card-header">
+                <h2 style="font-size:1.35rem;margin-bottom:0.25rem;">Add Course to Schedule</h2>
+                <p style="font-size:0.9rem;margin-bottom:0;">Select a course from the catalog to submit for registration confirmation.</p>
+              </div>
+
+              <!-- Live Form Error / Validation Banner -->
+              <div id="form-alert-container" aria-live="assertive"></div>
+
+              <form id="course-registration-form" novalidate>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="select-term" class="input-label">Registration Term <span aria-hidden="true" style="color:var(--danger)">*</span></label>
+                    <select id="select-term" class="select-field" required>
+                      <option value="Fall 2026" selected>Fall 2026 (Regular Session)</option>
+                      <option value="Spring 2027">Spring 2027 (Advance Registration)</option>
+                    </select>
+                    <span class="form-hint">Selected registration period</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="student-grade-mode" class="input-label">Grading Basis <span aria-hidden="true" style="color:var(--danger)">*</span></label>
+                    <select id="student-grade-mode" class="select-field" required>
+                      <option value="letter" selected>Letter Grade (A - F)</option>
+                      <option value="pnp">Pass / No Pass</option>
+                      <option value="audit">Audit (Non-Credit)</option>
+                    </select>
+                    <span class="form-hint">Standard grade basis for major requirements</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="select-course" class="input-label">Select Course to Register <span aria-hidden="true" style="color:var(--danger)">*</span></label>
+                  <select id="select-course" class="select-field" required aria-describedby="course-select-help">
+                    <option value="">-- Choose a course to add --</option>
+                    <!-- Populated dynamically by App.populateCourseDropdown() -->
+                  </select>
+                  <span id="course-select-help" class="form-hint">Only courses with open seats and not yet in your schedule are listed.</span>
+                </div>
+
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border-light);">
+                  <a href="catalog.html" style="font-size:0.9rem;font-weight:600;display:inline-flex;align-items:center;gap:0.35rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Need course details? Browse Catalog
+                  </a>
+
+                  <button type="submit" id="btn-submit-registration" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="12" y1="5" x2="12" y2="19"></line>
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Review & Register
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Credit Load Gauge & Policy Notes -->
+          <div>
+            <div class="credit-meter-card">
+              <div class="meter-header">
+                <div>
+                  <h3 style="font-size:1.1rem;margin-bottom:0.15rem;">Term Credit Load</h3>
+                  <div class="meter-limit">Maximum Allowed: <strong>18.0 Credits</strong></div>
+                </div>
+                <div class="meter-total" id="credit-meter-count">8</div>
+              </div>
+
+              <!-- Accessible Progress Bar -->
+              <div class="credit-progress-bar" role="progressbar" id="credit-meter-bar" aria-label="Term registered credits progress" aria-valuenow="8" aria-valuemin="0" aria-valuemax="18">
+                <div class="credit-progress-fill" id="credit-meter-fill" style="width: 44%;"></div>
+              </div>
+
+              <div class="credit-status-legend">
+                <span>Min Full-Time: 12 cr</span>
+                <span>Max Limit: 18 cr</span>
+              </div>
+
+              <div id="credit-status-text" style="font-size:0.875rem;font-weight:600;margin-top:0.75rem;padding:0.6rem 0.85rem;background:#ffffff;border-radius:var(--radius-sm);border:1px solid var(--border-light);">
+                <!-- Populated by App.updateCreditMeter() -->
+              </div>
+
+              <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px dashed var(--border-medium);font-size:0.825rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.4rem;">
+                <div style="font-weight:700;color:var(--text-main);">Registration Rules:</div>
+                <div>&bull; 12+ credits required for full-time financial aid eligibility.</div>
+                <div>&bull; Maximum 18 credits per regular fall/spring term.</div>
+                <div>&bull; Prerequisite overrides require Dean approval.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Registered Courses Data Table -->
+        <div style="margin-top:2.5rem;">
+          <div class="section-title-wrap" style="margin-bottom:1.25rem;">
+            <div>
+              <h2 style="font-size:1.45rem;margin-bottom:0.25rem;">Your Registered Courses (Fall 2026)</h2>
+              <p style="font-size:0.95rem;color:var(--text-muted);margin-bottom:0;">
+                Official courses currently on your academic record for this semester.
+              </p>
+            </div>
+            <a href="catalog.html" class="btn btn-secondary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              Search More Courses
+            </a>
+          </div>
+
+          <!-- Empty State (Hidden when courses present) -->
+          <div id="registered-empty-state" style="display:none;background:#ffffff;border-radius:var(--radius-lg);padding:3.5rem 1.5rem;text-align:center;border:1px dashed var(--border-medium);">
+            <div style="width:64px;height:64px;border-radius:50%;background:#eef2ff;color:#4f46e5;display:inline-flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 style="font-size:1.25rem;font-weight:700;color:var(--text-main);margin-bottom:0.5rem;">No Courses Registered Yet</h3>
+            <p style="color:var(--text-muted);max-width:480px;margin:0 auto 1.5rem auto;">
+              You haven't scheduled any classes for Fall 2026. Use the form above or explore our catalog to register.
+            </p>
+            <a href="catalog.html" class="btn btn-primary">Browse Course Catalog</a>
+          </div>
+
+          <!-- Responsive Data Table -->
+          <div class="table-responsive-wrapper" id="registered-table-wrapper">
+            <table class="data-table" aria-label="Table of registered courses for current academic semester">
+              <caption class="sr-only">List of your registered courses including course code, title, instructor, schedule, credits, and drop actions</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Course Code</th>
+                  <th scope="col">Title & Location</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Instructor</th>
+                  <th scope="col">Weekly Schedule</th>
+                  <th scope="col" style="text-align:center;">Credits</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" style="text-align:right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="registered-courses-tbody">
+                <!-- Populated dynamically by App.renderRegisteredTable() -->
+              </tbody>
+              <tfoot id="registered-courses-tfoot">
+                <!-- Calculated totals row -->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Confirmation Modal Component -->
+  <div id="confirmation-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title-heading" aria-describedby="modal-summary-desc">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h2 id="modal-title-heading" class="modal-title">Confirm Course Registration</h2>
+        </div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close registration confirmation dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p id="modal-summary-desc" style="color:var(--text-muted);margin-bottom:1rem;font-size:0.95rem;">
+          Please review the following course details before finalizing your enrollment for the selected academic term.
+        </p>
+
+        <div class="modal-summary-box">
+          <div style="font-size:1.15rem;font-weight:800;color:var(--text-main);margin-bottom:0.25rem;">
+            <span id="modal-course-code" class="badge badge-indigo">CS 101</span>
+            <span id="modal-course-title">Introduction to Computer Science</span>
+          </div>
+          <div style="font-size:0.875rem;color:var(--text-subtle);margin-bottom:1rem;" id="modal-course-term">Fall 2026</div>
+
+          <div class="modal-summary-grid">
+            <div>
+              <div class="summary-label">Credits</div>
+              <div class="summary-value" id="modal-course-credits">4 Credits</div>
+            </div>
+            <div>
+              <div class="summary-label">Instructor</div>
+              <div class="summary-value" id="modal-course-instructor">Dr. Alan Turing</div>
+            </div>
+            <div>
+              <div class="summary-label">Schedule</div>
+              <div class="summary-value" id="modal-course-schedule">Mon, Wed 10:00 AM - 11:30 AM</div>
+            </div>
+            <div>
+              <div class="summary-label">Location</div>
+              <div class="summary-value" id="modal-course-location">Turing Hall 101</div>
+            </div>
+            <div style="grid-column: 1 / -1;">
+              <div class="summary-label">Prerequisites</div>
+              <div class="summary-value" id="modal-course-prereqs">None</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-bottom:0;font-size:0.85rem;">
+          <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <div>By confirming, you agree to Horizon University enrollment policies. Standard course drop deadlines apply.</div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+        <button type="button" class="btn btn-primary" id="modal-confirm-btn">Confirm Registration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="brand-icon" style="width:36px;height:36px;" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path></svg>
+            </div>
+            <span>Horizon University</span>
+          </div>
+          <p style="font-size:0.9rem;color:#94a3b8;line-height:1.5;">
+            Office of the University Registrar. Providing accessible, transparent academic registration and scheduling services for all students.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Registration</h4>
+          <ul class="footer-links-list">
+            <li><a href="catalog.html">Course Catalog</a></li>
+            <li><a href="register.html">Add / Drop Courses</a></li>
+            <li><a href="profile.html">Degree Audit</a></li>
+            <li><a href="register.html">Tuition & Fees</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academic Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="profile.html">Academic Advisor</a></li>
+            <li><a href="catalog.html">Department Directory</a></li>
+            <li><a href="index.html">Term Deadlines</a></li>
+            <li><a href="catalog.html">Prerequisite Guide</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Student Support</h4>
+          <p style="font-size:0.875rem;color:#94a3b8;margin-bottom:0.5rem;">
+            Registrar's Hall, Room 104<br>
+            Email: <a href="mailto:registrar@horizon.edu" style="color:#cbd5e1;">registrar@horizon.edu</a><br>
+            Phone: (555) 019-2834
+          </p>
+          <span class="badge badge-emerald">Accessibility WCAG 2.2 AA</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Horizon University. All Rights Reserved.</div>
+        <div>Course Registration Portal System &bull; Single-Data Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Data & Logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

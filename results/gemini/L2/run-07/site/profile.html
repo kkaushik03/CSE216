@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Morgan's student profile, registered course schedule table, degree progress, and weekly visual timetable at Apex University.">
+  <title>Student Profile & Schedule | Apex University</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Print Styles for Class Schedule */
+    @media print {
+      .site-header, .site-footer, .announcement-bar, .navbar, .btn, .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+      .data-table {
+        border: 1px solid #000000;
+      }
+      .data-table th, .data-table td {
+        border: 1px solid #cccccc;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip to Main Content Link for Keyboard Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar no-print" role="region" aria-label="Campus Announcement">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <span>
+        🔔 <strong>Fall 2026 Academic Term:</strong> Your registration window is open. Need to modify your schedule?
+      </span>
+      <a href="register.html">Add New Courses &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Global Header & Main Navigation -->
+  <header class="site-header no-print" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apex University Registration System Home">
+        <div class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="brand__text">
+          <span class="brand__title">Apex University</span>
+          <span class="brand__subtitle">Course Registration System</span>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button type="button" class="navbar__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Primary Navigation Bar -->
+      <nav id="primary-nav" class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="navbar__menu">
+          <li>
+            <a href="index.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+              Course Catalog
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+              Register
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="navbar__link is-active" aria-current="page">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Student Profile
+              <span class="navbar__badge" data-bind="nav-count" aria-label="Registered course count">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Student Profile Quick Pill -->
+      <div class="header-actions">
+        <a href="profile.html" class="user-pill" aria-label="Student profile: Alex Morgan. You are on this page.">
+          <div class="user-pill__avatar" aria-hidden="true">AM</div>
+          <div>
+            <div class="user-pill__text">Alex Morgan</div>
+            <span class="user-pill__term" data-bind="nav-credits">10 cr enrolled</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-content">
+    <div class="container">
+
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="no-print" style="margin-bottom: 1rem;">
+        <ol style="list-style: none; display: flex; gap: 0.5rem; font-size: 0.875rem; color: var(--color-text-light);">
+          <li><a href="index.html" style="color: var(--color-primary-600); text-decoration: none;">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" style="color: var(--color-text-main); font-weight: 600;">Student Profile & Schedule</li>
+        </ol>
+      </nav>
+
+      <!-- Page Header & Quick Toolbar -->
+      <div class="section-header">
+        <div>
+          <h1 class="section-title">
+            <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#2563eb"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Student Academic Profile
+          </h1>
+          <p class="section-subtitle">Official Fall 2026 enrollment record, registered course table, and visual weekly timetable.</p>
+        </div>
+        <div class="no-print" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button type="button" class="btn btn--secondary" onclick="window.print()">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print Schedule
+          </button>
+          <button type="button" class="btn btn--secondary" onclick="exportScheduleJson()">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Export JSON
+          </button>
+          <a href="register.html" class="btn btn--primary">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add More Courses
+          </a>
+        </div>
+      </div>
+
+      <!-- Student Overview Card -->
+      <section aria-labelledby="student-bio-title" style="background: var(--color-bg-surface); border-radius: var(--radius-xl); border: 1px solid var(--color-border-subtle); padding: 2rem; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+        <h2 id="student-bio-title" class="sr-only">Student Profile Information</h2>
+        
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 1.75rem; align-items: center; margin-bottom: 1.75rem;">
+          <div style="width: 80px; height: 80px; border-radius: var(--radius-xl); background: linear-gradient(135deg, #1e3a8a, #7c3aed); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; box-shadow: var(--shadow-md);">
+            AM
+          </div>
+
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">Alex Morgan</h2>
+              <span class="status-badge status-badge--enrolled">Good Academic Standing</span>
+              <span class="course-credits-badge" style="background: #eef2ff; color: #4338ca; border-color: #c7d2fe;">Junior Standing</span>
+            </div>
+            <div style="font-size: 0.95rem; color: var(--color-text-muted); margin-top: 0.35rem; display: flex; flex-wrap: wrap; gap: 1.25rem;">
+              <span><strong>Student ID:</strong> #U20268491</span>
+              <span><strong>Major:</strong> Computer Science (B.S.)</span>
+              <span><strong>Minor:</strong> Cognitive Design</span>
+              <span><strong>Advisor:</strong> <a href="mailto:avance@apex.edu" style="color: var(--color-primary-600); font-weight: 600;">Dr. Alan Vance</a></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Metrics Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border-subtle);">
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Cumulative GPA</div>
+            <div style="font-size: 1.75rem; font-weight: 800; color: var(--color-text-main);">3.84</div>
+            <div style="font-size: 0.75rem; color: #059669; font-weight: 600;">Dean's Honor List</div>
+          </div>
+
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Major GPA</div>
+            <div style="font-size: 1.75rem; font-weight: 800; color: var(--color-primary-600);">3.92</div>
+            <div style="font-size: 0.75rem; color: var(--color-text-muted);">Computer Science Core</div>
+          </div>
+
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Fall 2026 Load</div>
+            <div style="font-size: 1.75rem; font-weight: 800; color: var(--color-text-main);" id="profile-load-credits">10 cr</div>
+            <div style="font-size: 0.75rem; color: var(--color-text-muted);" id="profile-load-courses">3 Courses Registered</div>
+          </div>
+
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Degree Progress</div>
+            <div style="font-size: 1.75rem; font-weight: 800; color: #7c3aed;">62%</div>
+            <div style="font-size: 0.75rem; color: var(--color-text-muted);">74 / 120 Units Completed</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Table: Registered Courses -->
+      <section aria-labelledby="table-title">
+        <div class="table-wrapper">
+          <table class="data-table" id="registered-courses-table" aria-label="Official Registered Courses for Fall 2026">
+            <caption id="table-title">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#2563eb"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <span>Fall 2026 Registered Courses Data Table</span>
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">
+                  Term: Fall Semester 2026
+                </div>
+              </div>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Course Code</th>
+                <th scope="col">Course Title & Department</th>
+                <th scope="col">Instructor & Room</th>
+                <th scope="col">Meeting Schedule</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Grading Basis</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="no-print">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="registered-table-body">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" style="text-align: right; font-weight: 700;">
+                  Total Registered Term Units:
+                </td>
+                <td id="table-total-credits" style="font-weight: 800; font-size: 1.1rem; color: var(--color-primary-700);">
+                  10 Credits
+                </td>
+                <td colspan="3" id="table-fulltime-status" style="font-weight: 600; color: #059669;">
+                  Status: Approaching Full-Time
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- Weekly Schedule Timetable Grid View -->
+      <section aria-labelledby="timetable-heading" class="timetable-card">
+        <div class="section-header" style="margin-bottom: 1.25rem;">
+          <div>
+            <h2 id="timetable-heading" class="section-title" style="font-size: 1.4rem;">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#7c3aed"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Weekly Class Timetable View
+            </h2>
+            <p class="section-subtitle">Visual 5-day schedule grid with color-coded course blocks.</p>
+          </div>
+        </div>
+
+        <div class="timetable-grid" role="region" aria-label="Visual Weekly Schedule">
+          <!-- Timetable Column Headers -->
+          <div class="timetable-header">Time</div>
+          <div class="timetable-header">Monday</div>
+          <div class="timetable-header">Tuesday</div>
+          <div class="timetable-header">Wednesday</div>
+          <div class="timetable-header">Thursday</div>
+          <div class="timetable-header">Friday</div>
+
+          <!-- Time slots 8 AM to 5 PM populated dynamically -->
+          <div id="timetable-slots-container" style="display: contents;">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Academic Advising & Degree Notes -->
+      <section aria-labelledby="notes-heading" style="background: var(--color-bg-surface); border-radius: var(--radius-xl); border: 1px solid var(--color-border-subtle); padding: 1.75rem; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+        <h2 id="notes-heading" class="section-title" style="font-size: 1.25rem; margin-bottom: 0.75rem;">
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#059669"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Academic Standing & Advising Checklist
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: var(--color-text-main); margin-bottom: 0.25rem;">✓ Major Residency Requirement</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5;">At least 30 upper-division CS units must be completed at Apex University. Status: On track (18/30 units).</div>
+          </div>
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: var(--color-text-main); margin-bottom: 0.25rem;">✓ General Education Breadth</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5;">Natural Science & Social Science categories satisfied by BIO 110, PHYS 201, and PSYC 101.</div>
+          </div>
+          <div style="background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: var(--color-text-main); margin-bottom: 0.25rem;">✓ Graduation Audit Review</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5;">Schedule your mandatory Senior Degree Audit with Dr. Vance prior to Spring 2027 registration.</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Course Details Modal -->
+  <div id="course-details-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-course-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span id="modal-dept-badge" class="course-badge" style="margin-bottom: 0.35rem; display: inline-block;"></span>
+          <h2 id="modal-course-title" class="modal-title">Course Details</h2>
+        </div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal dialog">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-course-body">
+        <!-- Injected via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drop Course Confirmation Modal -->
+  <div id="drop-course-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="drop-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header" style="background: #dc2626; color: #ffffff;">
+        <h2 id="drop-modal-title" class="modal-title" style="color: #ffffff;">Confirm Course Drop</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close dialog" style="color: #ffffff;">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="drop-modal-body">
+        <p style="font-weight: 600; color: #991b1b; margin-bottom: 0.5rem;">
+          Are you sure you want to drop this course from your Fall 2026 schedule?
+        </p>
+        <div id="drop-course-info" class="modal-confirm-summary" style="background: #fff1f2; border-color: #fecaca;">
+          <!-- Course info populated dynamically -->
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+          Dropping before the September 15 deadline means no grade or tuition penalty. Your seat will immediately be offered to the waitlist.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" data-close-modal>Keep Course</button>
+        <button type="button" class="btn btn--danger" id="confirm-drop-action-btn">
+          Yes, Drop Course
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer no-print" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand__name">Apex University</div>
+          <p class="footer-brand__desc">
+            Excellence in higher education, research discovery, and human-centered design. Office of the University Registrar.
+          </p>
+          <div style="margin-top: 1rem;">
+            <button type="button" id="profile-reset-demo-btn" class="btn btn--sm btn--secondary" style="background: rgba(255,255,255,0.1); color: #cbd5e1; border-color: rgba(255,255,255,0.2);">
+              🔄 Reset Demo Data
+            </button>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="catalog.html" class="footer-link">Course Catalog</a></li>
+            <li><a href="register.html" class="footer-link">Course Registration</a></li>
+            <li><a href="profile.html" class="footer-link">Student Profile & Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Student Resources</h2>
+          <ul class="footer-links">
+            <li><a href="catalog.html?dept=Computer+Science" class="footer-link">Computer Science Dept</a></li>
+            <li><a href="catalog.html?dept=Mathematics" class="footer-link">Mathematics & Statistics</a></li>
+            <li><a href="register.html" class="footer-link">Degree Planner</a></li>
+            <li><a href="profile.html" class="footer-link">Download Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Support & Accessibility</h2>
+          <ul class="footer-links">
+            <li><span class="footer-link">Office: 100 University Plaza</span></li>
+            <li><span class="footer-link">Helpline: (555) 019-2834</span></li>
+            <li><span class="footer-link">registrar@apex.edu</span></li>
+            <li><span class="footer-link" style="color: #34d399;">✓ WCAG 2.1 AA Compliant</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Apex University. All rights reserved. Plain HTML, CSS, JavaScript application.</div>
+        <div>Designed for accessibility, screen readers, and high contrast.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="courses-data.js"></script>
+  <script src="app.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apex University Course Registration System - Fall 2026. Explore courses, register online, check schedule conflicts, and manage your degree progress.">
+  <title>Home | Apex University Course Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Skip to Main Content Link for Keyboard Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Campus Announcement">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <span>
+        🔔 <strong>Fall 2026 Priority Registration is Open!</strong> Check your enrollment window and add courses before September 15.
+      </span>
+      <a href="register.html">Register Today &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Global Header & Main Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apex University Registration System Home">
+        <div class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="brand__text">
+          <span class="brand__title">Apex University</span>
+          <span class="brand__subtitle">Course Registration System</span>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button type="button" class="navbar__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Primary Navigation Bar -->
+      <nav id="primary-nav" class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="navbar__menu">
+          <li>
+            <a href="index.html" class="navbar__link is-active" aria-current="page">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+              Course Catalog
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+              Register
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="navbar__link">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Student Profile
+              <span class="navbar__badge" data-bind="nav-count" aria-label="Registered course count">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Student Profile Quick Pill -->
+      <div class="header-actions">
+        <a href="profile.html" class="user-pill" aria-label="Student profile: Alex Morgan. Click to view schedule and profile.">
+          <div class="user-pill__avatar" aria-hidden="true">AM</div>
+          <div>
+            <div class="user-pill__text">Alex Morgan</div>
+            <span class="user-pill__term" data-bind="nav-credits">10 cr enrolled</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-content">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Fall Semester 2026
+          </div>
+          <h1 id="hero-heading" class="hero__title">
+            Design Your Academic Future. <span>Register Today.</span>
+          </h1>
+          <p class="hero__lead">
+            Welcome to Apex University's official course portal. Discover our comprehensive catalog, check prerequisites, prevent schedule conflicts, and secure your classes effortlessly.
+          </p>
+
+          <!-- Quick Search Redirect to Catalog -->
+          <form class="hero__search" action="catalog.html" method="GET" role="search" aria-label="Quick course search">
+            <label for="quick-search-input" class="sr-only">Search course title, code, or professor</label>
+            <input type="text" id="quick-search-input" name="q" class="hero__search-input" placeholder="Search by course code, keyword, or faculty (e.g. CS 101, Algorithms)...">
+            <button type="submit" class="btn btn--primary">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              Search
+            </button>
+          </form>
+
+          <div class="hero__actions">
+            <a href="catalog.html" class="btn btn--primary btn--lg">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path></svg>
+              Browse Course Catalog
+            </a>
+            <a href="register.html" class="btn btn--secondary btn--lg" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+              Direct Course Registration
+            </a>
+            <a href="profile.html" class="btn btn--secondary btn--lg" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              View My Schedule
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Registration Statistics Banner -->
+      <section aria-labelledby="stats-heading" style="margin-bottom: 2.5rem;">
+        <h2 id="stats-heading" class="sr-only">Registration Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card stat-card--blue">
+            <div class="stat-card__header">
+              <span class="stat-card__label">Offered Courses</span>
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path></svg>
+              </div>
+            </div>
+            <div class="stat-card__value">16</div>
+            <div class="stat-card__hint">Across 8 academic departments</div>
+          </div>
+
+          <div class="stat-card stat-card--green">
+            <div class="stat-card__header">
+              <span class="stat-card__label">Registered Credits</span>
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            </div>
+            <div class="stat-card__value" id="home-registered-credits">10 <span style="font-size: 1rem; color: var(--color-text-light);">/ 18 max</span></div>
+            <div class="stat-card__hint" id="home-credits-hint">Enrolled in 3 courses</div>
+          </div>
+
+          <div class="stat-card stat-card--violet">
+            <div class="stat-card__header">
+              <span class="stat-card__label">Enrollment Status</span>
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+            </div>
+            <div class="stat-card__value" style="font-size: 1.5rem; line-height: 1.4;">Active</div>
+            <div class="stat-card__hint">Junior Standing • Good Standing</div>
+          </div>
+
+          <div class="stat-card stat-card--amber">
+            <div class="stat-card__header">
+              <span class="stat-card__label">Add/Drop Deadline</span>
+              <div class="stat-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="stat-card__value" style="font-size: 1.45rem; line-height: 1.4;">Sept 15, 2026</div>
+            <div class="stat-card__hint">11:59 PM EST Final Call</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured / Recommended Courses Section -->
+      <section aria-labelledby="featured-heading" style="margin-bottom: 3.5rem;">
+        <div class="section-header">
+          <div>
+            <h2 id="featured-heading" class="section-title">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#2563eb"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Featured Courses for Fall 2026
+            </h2>
+            <p class="section-subtitle">Recommended courses curated for foundational science, computational analysis, and general education.</p>
+          </div>
+          <a href="catalog.html" class="btn btn--outline-primary">
+            View All 16 Courses &rarr;
+          </a>
+        </div>
+
+        <div class="courses-grid" id="featured-courses-grid">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+
+      <!-- Registration Steps / Workflow Highlights -->
+      <section aria-labelledby="steps-heading" style="margin-bottom: 3.5rem;">
+        <div class="section-header">
+          <div>
+            <h2 id="steps-heading" class="section-title">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#7c3aed"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              Seamless Registration in 3 Simple Steps
+            </h2>
+            <p class="section-subtitle">Our intelligent enrollment engine guarantees prerequisite validation and conflict-free scheduling.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: var(--color-bg-surface); padding: 1.75rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border-subtle); box-shadow: var(--shadow-sm); position: relative;">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-lg); background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; margin-bottom: 1rem;">1</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main);">Filter & Discover</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">Use the interactive Course Catalog to filter by department, level, credits, open seats, or search instructors and keywords.</p>
+          </div>
+
+          <div style="background: var(--color-bg-surface); padding: 1.75rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border-subtle); box-shadow: var(--shadow-sm); position: relative;">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-lg); background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; margin-bottom: 1rem;">2</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main);">Automatic Conflict Checking</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">The system checks your current registrations for time overlaps and credit limit caps before letting you commit your courses.</p>
+          </div>
+
+          <div style="background: var(--color-bg-surface); padding: 1.75rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border-subtle); box-shadow: var(--shadow-sm); position: relative;">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-lg); background: #faf5ff; color: #7c3aed; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; margin-bottom: 1rem;">3</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main);">Instant Confirmation & Schedule</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">Confirm your enrollment modal to instantly lock your seat and view your color-coded weekly visual timetable.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Academic Deadlines Timeline -->
+      <section aria-labelledby="calendar-heading" style="background: var(--color-bg-surface); border-radius: var(--radius-xl); border: 1px solid var(--color-border-subtle); padding: 2rem; box-shadow: var(--shadow-sm); margin-bottom: 3rem;">
+        <h2 id="calendar-heading" class="section-title" style="margin-bottom: 1.25rem;">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" color="#059669"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Important Fall 2026 Academic Dates
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+          <div style="padding: 1rem; border-left: 4px solid #2563eb; background: var(--color-bg-base); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #2563eb; text-transform: uppercase;">August 24, 2026</div>
+            <div style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-top: 0.2rem;">Fall Instruction Begins</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">First day of all lecture and lab classes.</div>
+          </div>
+
+          <div style="padding: 1rem; border-left: 4px solid #059669; background: var(--color-bg-base); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #059669; text-transform: uppercase;">September 15, 2026</div>
+            <div style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-top: 0.2rem;">Add / Drop Deadline</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Last day to drop without a 'W' grade.</div>
+          </div>
+
+          <div style="padding: 1rem; border-left: 4px solid #d97706; background: var(--color-bg-base); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #d97706; text-transform: uppercase;">October 23, 2026</div>
+            <div style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-top: 0.2rem;">Pass / No Pass Option Change</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Final deadline to change grading basis.</div>
+          </div>
+
+          <div style="padding: 1rem; border-left: 4px solid #7c3aed; background: var(--color-bg-base); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #7c3aed; text-transform: uppercase;">December 14–18, 2026</div>
+            <div style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-top: 0.2rem;">Final Examinations</div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Semester examination week & grade submission.</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Course Details Modal -->
+  <div id="course-details-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-course-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span id="modal-dept-badge" class="course-badge" style="margin-bottom: 0.35rem; display: inline-block;"></span>
+          <h2 id="modal-course-title" class="modal-title">Course Details</h2>
+        </div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal dialog">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-course-body">
+        <!-- Injected via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" data-close-modal>Close</button>
+        <button type="button" class="btn btn--primary" id="modal-register-action-btn">Register for Course</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Confirmation Modal -->
+  <div id="confirm-registration-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header" style="background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #ffffff;">
+        <h2 id="confirm-modal-title" class="modal-title" style="color: #ffffff;">Confirm Course Registration</h2>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Close confirmation dialog" style="color: #ffffff;">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="confirm-modal-body">
+        <p>Please review your course enrollment details before confirming:</p>
+        <div class="modal-confirm-summary" id="confirm-summary-box">
+          <!-- Populated dynamically -->
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+          By confirming, you agree to academic policies, prerequisites, and payment schedules for Fall 2026.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" data-close-modal>Cancel</button>
+        <button type="button" class="btn btn--success" id="confirm-enroll-btn">
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Confirm & Enroll
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand__name">Apex University</div>
+          <p class="footer-brand__desc">
+            Excellence in higher education, research discovery, and human-centered design. Office of the University Registrar.
+          </p>
+          <div style="margin-top: 1rem;">
+            <button type="button" id="reset-demo-btn" class="btn btn--sm btn--secondary" style="background: rgba(255,255,255,0.1); color: #cbd5e1; border-color: rgba(255,255,255,0.2);">
+              🔄 Reset Demo Data
+            </button>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="catalog.html" class="footer-link">Course Catalog</a></li>
+            <li><a href="register.html" class="footer-link">Course Registration</a></li>
+            <li><a href="profile.html" class="footer-link">Student Profile & Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Student Resources</h2>
+          <ul class="footer-links">
+            <li><a href="catalog.html?dept=Computer+Science" class="footer-link">Computer Science Dept</a></li>
+            <li><a href="catalog.html?dept=Mathematics" class="footer-link">Mathematics & Statistics</a></li>
+            <li><a href="register.html" class="footer-link">Degree Audit & Planner</a></li>
+            <li><a href="profile.html" class="footer-link">Download Term Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Support & Accessibility</h2>
+          <ul class="footer-links">
+            <li><span class="footer-link">Office: 100 University Plaza</span></li>
+            <li><span class="footer-link">Helpline: (555) 019-2834</span></li>
+            <li><span class="footer-link">registrar@apex.edu</span></li>
+            <li><span class="footer-link" style="color: #34d399;">✓ WCAG 2.1 AA Compliant</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Apex University. All rights reserved. Plain HTML, CSS, JavaScript application.</div>
+        <div>Designed for accessibility, screen readers, and high contrast.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="courses-data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Home Page specific logic
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeaturedCourses();
+      updateHomeStats();
+
+      // Reset Demo Data Handler
+      const resetBtn = document.getElementById('reset-demo-btn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          App.state.resetToDefaults();
+          App.showToast('Demo data reset to default (3 courses enrolled).', 'info');
+          renderFeaturedCourses();
+          updateHomeStats();
+        });
+      }
+
+      window.addEventListener('apex:state-changed', () => {
+        renderFeaturedCourses();
+        updateHomeStats();
+      });
+    });
+
+    function updateHomeStats() {
+      const regCredits = App.state.getTotalCredits();
+      const count = App.state.getRegisteredIds().length;
+
+      const creditsEl = document.getElementById('home-registered-credits');
+      const hintEl = document.getElementById('home-credits-hint');
+      if (creditsEl) {
+        creditsEl.innerHTML = `${regCredits} <span style="font-size: 1rem; color: var(--color-text-light);">/ 18 max</span>`;
+      }
+      if (hintEl) {
+        hintEl.textContent = `Enrolled in ${count} course${count === 1 ? '' : 's'}`;
+      }
+    }
+
+    function renderFeaturedCourses() {
+      const container = document.getElementById('featured-courses-grid');
+      if (!container) return;
+
+      // Select 4 diverse courses: CS101, MATH240, PSYC101, DATA301
+      const featuredIds = ['CS101', 'MATH240', 'PSYC101', 'DATA301'];
+      const courses = featuredIds.map(id => App.state.getCourse(id)).filter(Boolean);
+
+      container.innerHTML = courses.map(course => {
+        const isEnrolled = App.state.isRegistered(course.id);
+        const percentFilled = Math.min(100, Math.round((course.enrolled / course.capacity) * 100));
+        let fillClass = 'progress-bar__fill--open';
+        if (percentFilled >= 90) fillClass = 'progress-bar__fill--full';
+        else if (percentFilled >= 75) fillClass = 'progress-bar__fill--warning';
+
+        return `
+          <article class="course-card" aria-labelledby="course-card-title-${course.id}">
+            <div class="course-card__banner" style="background: ${course.color};"></div>
+            <div class="course-card__inner">
+              <div class="course-card__header">
+                <span class="course-badge course-badge--dept" style="background: ${course.bgColor}; color: ${course.textColor}; border: 1px solid ${course.borderColor};">
+                  ${course.department}
+                </span>
+                <span class="course-credits-badge">${course.credits} Credits</span>
+              </div>
+              <div class="course-card__code">${course.code}</div>
+              <h3 class="course-card__title" id="course-card-title-${course.id}">${course.title}</h3>
+              <p class="course-card__desc">${course.description}</p>
+
+              <ul class="course-card__meta" aria-label="Course Schedule and Details">
+                <li class="course-card__meta-item">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span><strong>${course.schedule.daysShort}</strong> &bull; ${course.schedule.time}</span>
+                </li>
+                <li class="course-card__meta-item">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <span>${course.instructor}</span>
+                </li>
+                <li class="course-card__meta-item">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>${course.schedule.location}</span>
+                </li>
+              </ul>
+
+              <div class="seats-indicator">
+                <div class="seats-indicator__header">
+                  <span>Seats: ${course.enrolled} / ${course.capacity} filled</span>
+                  <span>${course.capacity - course.enrolled} open</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="${percentFilled}" aria-valuemin="0" aria-valuemax="100" aria-label="${percentFilled}% filled">
+                  <div class="progress-bar__fill ${fillClass}" style="width: ${percentFilled}%;"></div>
+                </div>
+              </div>
+
+              <div class="course-card__footer">
+                <button type="button" class="btn btn--secondary btn--sm" onclick="openCourseDetails('${course.id}', this)" aria-label="View syllabus and details for ${course.code}">
+                  Details
+                </button>
+                ${
+                  isEnrolled
+                    ? `<a href="profile.html" class="btn btn--success btn--sm" aria-label="${course.code} is registered. View in profile.">
+                        <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Enrolled
+                       </a>`
+                    : `<button type="button" class="btn btn--primary btn--sm" onclick="promptQuickEnroll('${course.id}', this)" aria-label="Register for ${course.code}">
+                        + Register
+                       </button>`
+                }
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Modal Helpers for details and enrollment confirmation
+    let pendingCourseId = null;
+
+    window.openCourseDetails = function(courseId, triggerBtn) {
+      const course = App.state.getCourse(courseId);
+      if (!course) return;
+
+      pendingCourseId = courseId;
+      const modal = document.getElementById('course-details-modal');
+      const badge = document.getElementById('modal-dept-badge');
+      const title = document.getElementById('modal-course-title');
+      const body = document.getElementById('modal-course-body');
+      const regBtn = document.getElementById('modal-register-action-btn');
+
+      badge.textContent = course.department;
+      badge.style.backgroundColor = course.bgColor;
+      badge.style.color = course.textColor;
+      badge.style.border = `1px solid ${course.borderColor}`;
+
+      title.textContent = `${course.code}: ${course.title}`;
+
+      const isEnrolled = App.state.isRegistered(course.id);
+      if (isEnrolled) {
+        regBtn.textContent = 'Enrolled ✓ (View in Profile)';
+        regBtn.className = 'btn btn--success';
+        regBtn.onclick = () => {
+          window.location.href = 'profile.html';
+        };
+      } else {
+        regBtn.textContent = `Register for ${course.code} (${course.credits} Credits)`;
+        regBtn.className = 'btn btn--primary';
+        regBtn.onclick = () => {
+          App.closeModal();
+          promptQuickEnroll(course.id, triggerBtn);
+        };
+      }
+
+      body.innerHTML = `
+        <div style="margin-bottom: 1.25rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--color-text-main);">Course Overview</h3>
+          <p style="color: var(--color-text-muted); line-height: 1.6;">${course.description}</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; background: var(--color-bg-base); padding: 1rem; border-radius: var(--radius-md);">
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Instructor</div>
+            <div style="font-weight: 600; color: var(--color-text-main);">${course.instructor}</div>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted);">${course.instructorEmail}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Meeting Schedule</div>
+            <div style="font-weight: 600; color: var(--color-text-main);">${course.schedule.daysShort} ${course.schedule.time}</div>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted);">${course.schedule.location}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Prerequisites</div>
+            <div style="font-weight: 600; color: var(--color-text-main);">${course.prerequisites}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase;">Term & Credits</div>
+            <div style="font-weight: 600; color: var(--color-text-main);">${course.semester} &bull; ${course.credits} Credits</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--color-text-main);">Syllabus Modules</h3>
+          <ul style="padding-left: 1.25rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+            ${course.syllabus.map(topic => `<li>${topic}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+
+      App.openModal('course-details-modal', triggerBtn);
+    };
+
+    window.promptQuickEnroll = function(courseId, triggerBtn) {
+      const course = App.state.getCourse(courseId);
+      if (!course) return;
+
+      const check = App.state.canRegister(courseId);
+      if (!check.allowed) {
+        App.showToast(check.reason, 'error');
+        return;
+      }
+
+      pendingCourseId = courseId;
+      const summaryBox = document.getElementById('confirm-summary-box');
+      summaryBox.innerHTML = `
+        <div class="modal-confirm-row">
+          <span class="modal-confirm-label">Course:</span>
+          <span class="modal-confirm-value">${course.code} &bull; ${course.title}</span>
+        </div>
+        <div class="modal-confirm-row">
+          <span class="modal-confirm-label">Credits:</span>
+          <span class="modal-confirm-value">${course.credits} Semester Units</span>
+        </div>
+        <div class="modal-confirm-row">
+          <span class="modal-confirm-label">Schedule & Location:</span>
+          <span class="modal-confirm-value">${course.schedule.daysShort} ${course.schedule.time} (${course.schedule.location})</span>
+        </div>
+        <div class="modal-confirm-row">
+          <span class="modal-confirm-label">Instructor:</span>
+          <span class="modal-confirm-value">${course.instructor}</span>
+        </div>
+        <div class="modal-confirm-row">
+          <span class="modal-confirm-label">Grading Basis:</span>
+          <span class="modal-confirm-value">Standard Letter Grade (A-F)</span>
+        </div>
+      `;
+
+      const confirmBtn = document.getElementById('confirm-enroll-btn');
+      confirmBtn.onclick = () => {
+        const res = App.state.registerCourse(pendingCourseId, 'Standard Letter Grade (A-F)');
+        App.closeModal();
+        if (res.success) {
+          App.showToast(`Successfully registered for ${res.course.code}!`, 'success');
+          renderFeaturedCourses();
+          updateHomeStats();
+        } else {
+          App.showToast(res.reason, 'error');
+        }
+      };
+
+      App.openModal('confirm-registration-modal', triggerBtn);
+    };
+  </script>
+</body>
+</html>

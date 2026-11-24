@@ -14,3 +14,5 @@ Write one line for each failed or unusual run.
 | claude | 3 | 01 | 2026-10-22 | Failed (exit 1): invalid API key, 401. Subscription token was in ANTHROPIC_API_KEY instead of CLAUDE_CODE_OAUTH_TOKEN. Setup error, no output. Redone as run 02. |
 | claude | 2-3 | 01 | 2026-10-22 | Failed setup runs (L2 run 01, L3 run 01) moved to results/claude/claude-failed-runs/ as L<level>-run-<NN>. The valid runs reuse run number 01. |
 | claude | 3 | 02 | 2026-10-22 | Failed (exit 1) after 7 min: subscription session limit (429). Partial site generated. Moved to results/claude/claude-failed-runs/L3-run-02; valid run reuses run number 02. |
+| gemini | 1-3 | 01-04 | 2026-11-05 | Pilot runs used earlier prompt revisions and meta-wrapper text. Superseded by runs 05–07 using verbatim latest repository prompts in isolated sessions. |
+| gemini | 1-3 | 05-07 | 2026-11-23 | Successful clean runs generated with verbatim latest prompts (Gemini 3.8 Flash, exit 0). |
